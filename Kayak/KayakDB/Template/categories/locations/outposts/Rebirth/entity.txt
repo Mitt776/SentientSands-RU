@@ -1,0 +1,15 @@
+Category = locations_outpost
+Name = Rebirth
+Id = rebirth
+
+display_name = Rebirth
+region = Okran's Gulf
+faction = Holy_Nation
+type = prison-spiritual
+weight = 6
+
+$description = Rebirth is the Holy Nation's prison facility — but calling it a prison undersells the theology. Rebirth is where heretics go to be saved. Where women who stepped out of line go to be corrected. Where non-humans captured in Holy Nation territory go because killing them would be a mercy they don't deserve yet. The name is intentional: you go in broken, you come out reformed, if you come out at all. The Flotsam Ninjas were founded largely by women who escaped from here and had very specific opinions about what needed to happen to it.
+$atmosphere = Rebirth has the quality of a place that is completely sincere in its violence. The guards are not sadists — they believe what they're doing is redemptive. The prisoners are sorted by category of heresy and assigned labor and prayer schedules designed to break and rebuild. The facility is well-maintained. The theological logic behind every detail has been worked out by someone who cared very much about it.
+$notable = The Flotsam Ninjas make periodic raids on Rebirth's supply lines and occasionally the facility itself. The Holy Nation takes this personally. The escaped prisoners who reach Flotsam Village tell stories that are consistent enough across individuals to be believed.
+
+$directions = Okran's Gulf, north of main Holy Nation territory. Flotsam Village is north of Rebirth, west of World's End.

@@ -1,0 +1,7 @@
+Name = Elder
+
+$personality = Meitou Ringed Sabre. The Skeleton Bandits — a faction of rogue Skeletons that represents one of the uses ancient beings found for their immortality that the Second Empire probably didn't intend.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Black_Desert, Black_Desert_City, Iron_Valleys, Deadlands

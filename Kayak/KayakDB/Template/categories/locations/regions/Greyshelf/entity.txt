@@ -1,0 +1,11 @@
+Category = locations
+Name = Greyshelf
+Id = greyshelf
+display_name = Greyshelf
+type = region
+faction = Second_Empire_Exiles
+weight = 5
+
+$description = Greyshelf is the transitional zone between the edge of the Ashlands and the Black Desert region — Second Empire Exile territory in the sense that their automated outposts extend this far, and Southern Hive territory in the sense that the Royal Valley bleeds into it from the south. It's the last zone before the Ashlands proper begin killing organics systematically. Expedition logs that made it this far tend to end shortly after.
+
+$directions = Southeast. Between the Ashlands and Black Desert / Royal Valley.

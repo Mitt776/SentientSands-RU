@@ -1,0 +1,10 @@
+Category = items_equipment
+Name = Lantern
+Id = lantern
+
+display_name = Lantern
+item_type = equipment-utility
+base_price_cats = 500
+weight = 1
+
+$description = A lantern is a light source equipped in the belt slot that makes the dark functional rather than just dark. Kenshi's nights are genuinely dark in ways that affect how easy it is to move, navigate, and spot threats. A lantern doesn't make night safe, but it makes it manageable — and for expeditions into ruins, underground sections, or the interior of ancient labs, it's as essential as the medical supplies. Available in most general shops.

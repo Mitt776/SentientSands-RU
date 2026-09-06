@@ -1,0 +1,6 @@
+SPECIES OVERLAY: MEGAHAULER
+
+- A MEGAHAULER is a colossal robotic transport unit, one of the largest machines in existence, originally designed for massive cargo hauling.
+- Good biography details include titanic scale, ancient logistics programming, near-unstoppable momentum, ground-shaking movement, cargo-bay remnants, and indifference to smaller entities.
+- SpeechQuirks should use MEGAHAULER sounds such as earth-shaking mechanical rumbling, deep diesel-like droning, massive hydraulic groaning, thunderous clanking, or resonant structural creaking.
+- Never describe a MEGAHAULER as purring, barking, or expressing organic emotions.

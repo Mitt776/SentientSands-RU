@@ -1,0 +1,15 @@
+Category = locations
+Name = Free_City
+Id = free_city
+
+display_name = The Free City
+region = South Wetlands
+faction = Free_Traders
+type = city-independent
+weight = 6
+
+price_modifier = 1.05
+$description = The Free City is an independent settlement in the South Wetlands — not Imperial, not Holy Nation, not Shek, just a city that runs its own affairs and enforces its own rules. This independence makes it genuinely neutral ground in a continent where neutrality is hard to maintain, and it attracts the kind of commercial activity that prefers not to have faction politics interfering with the transaction. It has good shops and a relatively relaxed atmosphere for a place surrounded by Imperial territory.
+$travel_note = Open to all races. One of the few places where non-humans can move freely in the south without Holy Nation proximity concerns.
+
+$directions = South Wetlands, south of Bark.

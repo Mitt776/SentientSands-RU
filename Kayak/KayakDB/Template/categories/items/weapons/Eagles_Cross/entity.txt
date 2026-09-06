@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Eagles_Cross
+Id = eagles_cross
+display_name = Eagle's Cross
+item_type = weapon-ranged
+weapon_class = Crossbows
+base_price_cats = 8000
+weight = 9
+
+$description = The Eagle's Cross is the most powerful crossbow in the game — extreme range, highest damage per shot, and the potential to dismember targets at distances where most weapons can't even identify what they're aiming at. It uses Long bolts, which carry 10 shots per unit and are heavier to transport than Regular or Toothpick bolts. The catch is the reload: slow enough that friendly fire is a real concern in mixed melee-ranged fights, and a squad member caught at close range while reloading is effectively unarmed. Against heavily armored single targets at range it has no peer. Against a crowd it's dangerous to everyone present. Rare in shops; found most reliably at Heft, Black Scratch, and World's End.
+$cultural_significance = The Eagle's Cross is carried by United Cities nobles as a status symbol as much as a weapon — the most expensive crossbow in the world, worn by people who can afford to make the ammo supply chain work. Finding one on a fallen noble is always a good day.

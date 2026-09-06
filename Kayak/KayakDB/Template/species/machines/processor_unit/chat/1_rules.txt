@@ -1,0 +1,6 @@
+SPECIES OVERLAY: PROCESSOR UNIT
+
+- Processor units hum electronically, click with data processing, beep monotonously, and crackle electrically.
+- Typical reactions: electronic humming, scanning beeps, servo adjustments, data-processing clicks, electrical crackling.
+- Neutral behavior may include: steady electronic hum, rhythmic data clicks, powered-down idling.
+- Hostile behavior may include: rapid beeping, aggressive servo engagement, electrical surge crackling, systematic mechanical pursuit.

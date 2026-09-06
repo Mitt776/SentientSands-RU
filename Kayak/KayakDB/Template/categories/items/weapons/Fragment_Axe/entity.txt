@@ -1,0 +1,12 @@
+Category = items_weapons
+Name = Fragment_Axe
+Id = fragment_axe
+
+display_name = Fragment Axe
+item_type = weapon-heavy
+value_cats = 1200
+weight = 12
+
+base_price_cats = 1200
+$description = Fragment Axes are large, brutal weapons built for power over finesse — the kind of thing Shek warriors favor because the philosophy of 'hit very hard' aligns with their approach to problems in general. They rely primarily on Strength, do significant blunt damage alongside cutting, and have enough reach to hit multiple targets if you position correctly. They are slower than katanas and less effective indoors where the swing arc is limited, but in open ground against armored targets they are devastating. The name comes from the fragmented metal composite used in their construction.
+$cultural_significance = The Fragment Axe is a Shek weapon in aesthetic if not exclusively in practice. Seeing one on a human traveler's back suggests either time in Shek territory, a preference for hitting things very hard, or both.

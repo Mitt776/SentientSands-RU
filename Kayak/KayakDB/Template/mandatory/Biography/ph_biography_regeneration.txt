@@ -1,0 +1,7 @@
+Placeholder for future biography regeneration rules.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- how to evolve an existing NPC
+- relation-based personality drift
+- memory-aware regeneration logic

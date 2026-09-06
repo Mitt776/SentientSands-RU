@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Raw_Stone
+Id = raw_stone
+display_name = Raw Stone
+item_type = raw-material
+base_price_cats = 36
+weight = 10
+
+$description = Raw stone comes out of quarries and stone deposits as the basic building material of Kenshi's construction economy. Stone Camp and Port South are built around its extraction. It processes into building materials and is used in base construction directly. Less economically interesting than iron ore but more fundamental to settlement building — most walls, gates, and structural elements require stone in significant quantity. Heavy per unit, which is the practical constraint on how far most operations move it.

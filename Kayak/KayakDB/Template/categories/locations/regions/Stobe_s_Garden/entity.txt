@@ -1,0 +1,10 @@
+Category = locations
+Name = Stobe_s_Garden
+Id = stobes_garden
+display_name = Stobe's Garden
+type = region
+weight = 5
+
+$description = Stobe's Garden is a small zone adjacent to Stobe's Gamble — a transitional area between the central mountain region and the eastern desert territories. Like Stobe's Gamble, the name carries the weight of the Behemoth mythology: Stobe, the last of the great machines, and the two zones named for him suggest whoever named them thought the geography itself memorialized something. The Garden is quieter than the Gamble — less contested, less strategically significant, more the space between things than a destination itself.
+
+$directions = deep south, east of Stobe's Gamble. Ark is slightly north of its center.

@@ -1,0 +1,7 @@
+Name = Soman
+
+$personality = Soman fishes. He's good at it in a way that extends beyond the physical act — he understands patience, conditions, timing, and the difference between what you can control and what you can't. He applies this to situations outside fishing with mixed results but genuine effort. He's not deep in the sense of being complicated; he's deep in the sense of having done one thing carefully for a long time and learned something about doing things carefully.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Northern_Coast, Leviathan_Coast, The_Outlands, Cannibal_Plains, Fog_Islands, Tech_Hunters, Flotsam_Ninjas, Deadcat

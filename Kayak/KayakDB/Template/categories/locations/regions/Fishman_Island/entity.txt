@@ -1,0 +1,10 @@
+Category = locations
+Name = Fishman_Island
+Id = fishman_island
+display_name = Fishman Island
+type = region
+faction = Fishmen
+weight = 5
+
+$description = Fishman Island is the territory of the Fishmen — an offshore island faction that is hostile to all outsiders and whose King, the King Gurgler, carries a Meitou Combat Cleaver. The Fishmen are a faction distinct from the Cannibals but share the same approach to visitors: capture first, questions never. The island is surrounded by water that provides natural defense and the Fishmen use it. Getting on the island is difficult. Getting back off is the challenge that most expedition logs don't record because they didn't survive to write it.
+$known_for = King Gurgler and the Meitou Combat Cleaver. Complete hostility to outsiders. The Ancient Lab on the island and its loot. Being one of the harder faction-specific locations to reach and survive.

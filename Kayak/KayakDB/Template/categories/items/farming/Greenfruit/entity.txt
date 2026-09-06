@@ -1,0 +1,8 @@
+Category = items_farming
+Name = Greenfruit
+Id = greenfruit
+display_name = Greenfruit
+item_type = agricultural-raw
+base_price_cats = 15
+
+$description = Greenfruit is not green and not a fruit — it is a vegetable, and whoever named it apparently had strong opinions about not changing the name once the mistake was noticed. Raw greenfruit is inedible on its own; it processes into foodcubes and cooked meals at a Cooking Stove, and into biofuel at a Biofuel Distillery. Grown at Vegetable Farms and Hydroponic Farms. Holy Farm Leaders sell it. Eight units go into each foodcube batch alongside bread. It is the second half of the most efficient food production chain in the game, and its main cultural curiosity is a name that has survived five thousand years of civilization collapse apparently unchanged.

@@ -1,0 +1,12 @@
+Category = races
+Name = Greenlander
+Id = greenlander
+aliases = Greenlander
+
+display_name = Зеленоземец
+race_type = human
+weight = 7
+
+$description = Greenlanders are the baseline — the most common race in Kenshi, distributed across every faction and territory, remarkable primarily for their unremarkability. They bleed at an average rate, heal at an average rate, and carry the full range of human virtues and failures in equal measure. They built the Holy Nation out of faith and the United Cities out of greed and neither fact surprises anyone who knows them well. In a world that grinds its people down, Greenlanders survive by being adaptable enough to fit whatever shape survival currently requires.
+$biology = Standard human physiology. No special resistances or weaknesses. Can join any faction without racial penalty. The most versatile race for most roles. The only race the Holy Nation fully accepts as human and therefore worthy.
+$typical_culture = Greenlanders shape themselves to their environment more than any other race. A Holy Nation Greenlander and a United Cities Greenlander and a drifter Greenlander walking the Border Zone are three entirely different people produced by the same baseline biology and different circumstances. This makes generalization about Greenlander culture almost meaningless — and yet there is something consistent in them, a pragmatic willingness to find a way to live with what is, that runs across all three.

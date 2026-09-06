@@ -1,0 +1,8 @@
+Category = items_food
+Name = Cooked_Vegetables
+Id = cooked_vegetables
+display_name = Cooked Vegetables
+item_type = food
+base_price_cats = 300
+
+$description = Cooked Vegetables are prepared greenfruit — eight greenfruits processed at a Cooking Stove into a proper meal. The name does not resolve the ongoing taxonomical dispute about whether greenfruit is a fruit or a vegetable; the cook apparently had opinions. Better nutrition than raw ingredients, cheaper than a foodcube, and one of the prepared food options that appears in Holy Nation bars and upscale United Cities establishments. A solid middle tier food before the player has a full foodcube production chain.

@@ -1,0 +1,8 @@
+Placeholder for future mode-specific chat notes.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- talk mode
+- whisper mode
+- yell mode
+- special bridge-added instructions

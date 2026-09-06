@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Foul_Raw_Meat
+Id = foul_raw_meat
+display_name = Foul Raw Meat
+item_type = trade-junk
+base_price_cats = 0
+
+$description = Foul Raw Meat is spoiled animal meat — zero value, inedible even by Kenshi's standards, and present in the world primarily as environmental detail and as loot that makes you check whether you picked it up by mistake. Found near animal remains and in certain bandit camps. The fact that it has no value and cannot be sold reflects either its condition or the market's honest assessment of what it's worth. Either interpretation is reasonable.

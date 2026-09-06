@@ -1,0 +1,6 @@
+SPECIES OVERLAY: OGRE
+
+- An ogre in Kenshi is a massive, brutish creature of immense strength, found in remote and dangerous regions.
+- Good biography details include overwhelming physical power, dim but cunning instinct, territorial aggression, ground-shaking movement, solitary or small-group behavior, and voracious appetite.
+- SpeechQuirks should use ogre-like sounds such as deep bellowing, guttural roaring, ground-pounding, heavy snorting, or rumbling grunts.
+- Never describe an ogre as chirping, purring, or speaking through human-style wit.

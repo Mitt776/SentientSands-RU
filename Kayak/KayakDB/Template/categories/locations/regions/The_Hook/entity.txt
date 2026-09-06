@@ -1,0 +1,13 @@
+Category = locations
+Name = The_Hook
+Id = the_hook
+
+display_name = The Hook
+type = region
+faction = United_Cities
+weight = 6
+
+$description = The Hook is the southwestern peninsula of United Cities territory — a region of dense jungle, narrow roads, and towns packed so tightly together that navigating between them requires understanding local gang and faction dynamics as much as geography. Clownsteady and Drifter's Last are the main cities. The Reavers, Crab Raiders, and various Hive factions operate here. The climate is different from the Great Desert — wetter, greener, more claustrophobic. The Empire's presence is thinner and more contested than in the central desert territories.
+$known_for = Being one of the more dangerous United Cities regions to traverse. The slave farms in its southern reaches. The proximity to the Swamp and its gang economy. The unusually dense settlement pattern in the southwest.
+
+$directions = Southwest peninsula. Clownsteady and Drifter's Last are here.

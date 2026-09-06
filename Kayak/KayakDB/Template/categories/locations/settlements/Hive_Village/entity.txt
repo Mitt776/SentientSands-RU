@@ -1,0 +1,14 @@
+Category = locations
+Name = Hive_Village
+Id = hive_village
+
+display_name = Hive Village
+region = Vain / Dreg / Sinkuun
+faction = Western_Hive
+type = settlement-hive
+weight = 6
+
+$description = Western Hive Villages are scattered across Vain, Dreg, and Sinkuun — six of them in total, each with worker and soldier drones, a couple of Hive Traders, and the particular architecture that emerges when the beings doing the building don't think about aesthetics the way organic designers do. Beds are available in the worker huts. Traders buy stolen goods at full price, which makes Hive Villages unusually practical stops for characters with complicated inventory histories. The villages are connected to the wider Hive caravan network and are safe for travelers who aren't Hiveless.
+$travel_note = Open to most races. Hiveless Hivers will be turned away — the Western Hive's hostility toward separated drones is visceral and consistent. Non-Hivers are tolerated commercially.
+
+$directions = Western Hive Villages: scattered across Vain, Dreg, and Sinkuun. Follow the Western Hive caravan routes.

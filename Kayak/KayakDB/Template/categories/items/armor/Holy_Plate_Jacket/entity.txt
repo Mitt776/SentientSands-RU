@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Holy_Plate_Jacket
+Id = holy_plate_jacket
+display_name = Holy Plate Jacket
+item_type = armor-body-heavy
+armor_class = Heavy
+base_price_cats = 3000
+weight = 16
+
+$description = The Holy Plate Jacket is a Holy Nation heavy armor variant — plated chest protection with the characteristic white lacquered finish of Holy Nation military equipment. Heavier and more protective than the standard Plate Jacket, it's worn by higher-ranking Holy Nation military personnel. The Unholy Chest Plate is a functionally identical piece without the Holy Nation iconography, for fighters who want the protection without the theological statement.

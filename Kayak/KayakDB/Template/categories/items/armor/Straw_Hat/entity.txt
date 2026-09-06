@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Straw_Hat
+Id = straw_hat
+
+display_name = Straw Hat
+item_type = armor-head-light
+armor_class = Light
+base_price_cats = 100
+weight = 1
+
+$description = A straw hat is not combat armor. It is sun protection for people who work in fields, and it happens to be worn by Holy Nation farmers, Nomads, and anyone else who spends time in the sun and can't afford anything better. Its armor value is essentially decorative. Its cultural value is enormous — a straw hat on an NPC tells you immediately where they are in the social hierarchy. It's also, in a world that can feel relentlessly harsh, one of the few objects that looks like something a person chose to wear rather than something they survived long enough to acquire.

@@ -1,0 +1,8 @@
+Category = locations
+Name = Forbidden_Isle
+Id = forbidden_isle
+display_name = Forbidden Isle
+type = region
+weight = 3
+
+$description = Forbidden Isle is an offshore island zone — the name suggesting either formal prohibition by some past authority or the practical prohibition of the hostile fauna that lives there. In either case the result is the same: it is not easily reached, not easily survived, and not worth the journey for most travelers without specific purpose.

@@ -1,0 +1,12 @@
+Category = items_armor
+Name = Crab_Armour
+Id = crab_armour
+
+display_name = Crab Armour
+item_type = armor-body-heavy
+armor_class = Heavy
+base_price_cats = 8000
+weight = 35
+
+$description = Crab Armour is the highest cut resistance body armor in Kenshi — wide ridged steel plates strapped over chainmail, built by the Crab Raiders in their coastal workshops using manufacturing techniques nobody else bothers to replicate. At Masterwork quality it reaches the game's 90% cut resistance cap, which means bladed weapons hitting someone in full Crab Armour are primarily exercising. The tradeoff is extreme: 50% dexterity penalty, -10 attack, significant combat speed reduction. It turns its wearer into an impenetrable wall that swings slowly and predictably. For certain builds — high-strength, heavy-weapon characters who plan to absorb incoming attacks while dealing enormous outgoing damage — this is the correct trade.
+$cultural_significance = Crab Armour doesn't appear in normal shops. The blueprints come from Crab Town. Encountering someone in full Crab kit usually means one of two things: they made a deliberate and expensive choice, or they took it off someone who did.

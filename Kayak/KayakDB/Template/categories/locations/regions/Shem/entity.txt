@@ -1,0 +1,8 @@
+Category = locations
+Name = Shem
+Id = shem
+display_name = Shem
+type = region
+weight = 4
+
+$description = Shem is a zone in the swamp-adjacent south — a transitional area between the more organized Swamp gang territories and the open desert approaches. The terrain is damp and the visibility is reduced. Neither the Swamp gangs nor the United Cities patrol this zone with consistency, which makes it the kind of space that bandits use as staging area and travelers use as a route when they want to avoid notice.

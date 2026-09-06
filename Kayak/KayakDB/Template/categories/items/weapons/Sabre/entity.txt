@@ -1,0 +1,12 @@
+Category = items_weapons
+Name = Sabre
+Id = sabre
+
+display_name = Sabre
+item_type = weapon-blade
+weapon_class = Sabres
+base_price_cats = 600
+weight = 5
+
+$description = The sabre is the starting weapon of most desert wanderers — a broad, slightly curved blade that balances cutting and blunt damage in a way that works against both armored and unarmored targets without being exceptional against either. It asks for neither extreme strength nor exceptional dexterity, which is why it ends up in the hands of new recruits, outpost guards, and anyone who needs a weapon that simply works. The Desert Sabre variant has no stat penalties at all, making it the most forgiving option for fighters still finding their footing.
+$cultural_significance = The sabre is the Holy Nation's standard military sidearm for lower-ranked soldiers. It's also what most bandits carry when they can afford better than a plank. In the Great Desert, a sabre on your hip reads as 'I'm armed' rather than 'I'm dangerous,' which is sometimes exactly the signal you want.

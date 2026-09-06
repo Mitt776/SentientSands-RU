@@ -1,0 +1,9 @@
+Category = items_merchandise
+Name = Narcotics
+Id = narcotics
+display_name = Narcotics
+item_type = trade-contraband
+base_price_cats = 282
+weight = 1
+
+$description = Narcotics are a distinct category from hashish — processed chemical substances rather than plant material, available through specific criminal supply chains. They occupy a similar legal space to hashish but with different production origins. The Shinobi Thieves handle them in cities where possession is technically tolerated with the right arrangement. The exact composition and production source of most narcotics in circulation is not publicly documented.

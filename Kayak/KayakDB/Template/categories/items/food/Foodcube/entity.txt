@@ -1,0 +1,10 @@
+Category = items_food
+Name = Foodcube
+Id = foodcube
+
+display_name = Foodcube
+item_type = food
+base_price_cats = 976
+weight = 2
+
+$description = Foodcubes are the cheapest, most compact, and most nutritionally cheerless food available in Kenshi. They are produced in bulk at Holy Nation and United Cities food processing operations — compressed, shelf-stable, and designed to deliver calories efficiently to slaves, soldiers, and anyone else who isn't supposed to enjoy eating. They fill hunger adequately and cost almost nothing. Most travelers use them as backup rations when better food runs out, which in Kenshi happens more often than anyone plans for.

@@ -1,0 +1,12 @@
+Category = items_merchandise
+Name = Hashish
+Id = hashish
+
+display_name = Hashish
+item_type = trade-contraband
+value_cats = 200
+weight = 1
+
+base_price_cats = 1100
+$description = Hashish is produced in the Swamp primarily — the wet heat suits the cultivation — and moved through the Shinobi Thieve network into cities where its possession ranges from technically tolerated to aggressively illegal depending on the local faction's views on chemical comfort. In the United Cities it exists in a gray area; samurai look the other way when the right amount of cats precedes the looking away. In the Holy Nation it is a double heresy — intoxicant and association with Narko's corrupting pleasure, the only combination they treat as worse than just the one.
+$cultural_significance = In the swamp bars and the border zone dives, hashish marks a particular kind of comfort-seeking — not celebration, not social lubrication like grog, but the kind of deliberate stepping-away from the world that only makes sense if the world is the kind of world Kenshi is.

@@ -1,0 +1,6 @@
+SPECIES OVERLAY: IRON WASP
+
+- An iron wasp is a fast, aggressive robotic flyer designed for aerial attack and swarm tactics.
+- Good biography details include aerial attack programming, swarm coordination, rapid flight, stinging strike attacks, ancient military design, and buzzing harassment.
+- SpeechQuirks should use iron-wasp sounds such as high-pitched mechanical buzzing, servo-wing whining, metallic stinger clicking, rapid thrumming, or electrical crackling on approach.
+- Never describe an iron wasp as purring, barking, or expressing organic emotions.

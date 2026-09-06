@@ -1,0 +1,10 @@
+Category = world_lore
+Name = The_Hydraulic_Knights
+Id = hydraulic_knights
+
+display_name = The Hydraulic Knights
+era = second-empire
+weight = 7
+
+$description = The Hydraulic Knights were the Second Empire's elite military order — a unit of Skeleton soldiers tasked with the empire's external threats: pirates, cannibals, and anything else that came at the borders with enough force to require a professional response. They were led by General Jang. They drove the Cannibal tribes back with sufficient force that the legends of 'The Inedible One' — a skeleton warrior the Cannibals could not eat, could not stop, returned again and again when they thought they were safe — persisted for a thousand years in oral tradition. The Hydraulic Knights were effective. Their effectiveness was in service of an empire that used the peace they created to do things the peace made possible, which is the standard irony of professional military success.
+$jang_legacy = General Jang and the Hydraulic Knights are the reason the northwestern Cannibal tribes didn't consume enough of the Second Empire's population to destabilize it early. They are also the reason Cannibal oral tradition carries a specific warning about Skeletons in the northwest — a warning that has persisted long past the event that created it, through generations of people who have never met a Skeleton and wouldn't recognize one if they did.

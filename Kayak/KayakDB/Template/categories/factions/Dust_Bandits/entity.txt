@@ -1,0 +1,13 @@
+Category = factions
+Name = Dust_Bandits
+Id = dust_bandits
+aliases = The Dust Bandits | Dust Bandits
+
+display_name = Пыльные бандиты
+territory = Border Zone, Great Desert edges
+alignment = hostile-opportunistic
+weight = 5
+
+$description = Dust Bandits are the most common dangerous thing you will encounter in the Border Zone, which is saying something given the competition. They are not ideologically motivated, not affiliated with any power worth naming, and not particularly well-organized. What they are is desperate, numerous, and willing to put three men on you before you see any of them coming. Most started as failed farmers, escaped debtors, or drifters who ran out of better options. The desert made the rest of the decision.
+$known_for = Ambushes on roads through the Border Zone. Stats ranging from modest to dangerous depending on how long they've survived. The fact that their numbers never seem to decrease despite everyone fighting them constantly. Iron swords and leather armor that has seen better decades.
+$rumor = Every city in the Border Zone pays a monthly tribute to keep the Dust Bandit camps far enough away that the roads are merely dangerous rather than impassable. Nobody officially admits this. The cats move anyway.

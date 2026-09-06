@@ -1,0 +1,9 @@
+Category = items_ammo
+Name = Bolts_Toothpicks
+Id = bolts_toothpicks
+display_name = Bolts [Toothpicks]
+item_type = ammo-crossbow
+base_price_cats = 15
+weight = 1
+
+$description = Toothpick bolts are the lightest and most common crossbow ammunition — small, cheap, carried in stacks of 40 per unit. Used by Junkbows and Toothpick crossbows. Their availability and low weight make them the easiest ammunition to maintain in the field, and finding them on fallen enemies or in shops is rarely a problem. The tradeoff is the low per-shot damage of the weapons they're paired with, which is precisely why Toothpick crossbows are training weapons first.

@@ -1,0 +1,11 @@
+Category = locations
+Name = Stobe_s_Gamble
+Id = stobes_gamble
+display_name = Stobe's Gamble
+type = region
+weight = 7
+
+$description = Stobe's Gamble is the mountainous zone in the middle continent where Spring and Mourn are both located — the Anti-Slavers' territory and a region of difficult terrain that makes it naturally defensible. The acid rain in parts of the zone is what makes approaching Spring the exercise in route planning it is. The region is named for Stobe, the last Behemoth of the First Empire who according to legend sacrificed himself at the end of the Chaos Age — which means someone named this zone after the being whose death may have saved the world, and decided to call it a gamble.
+$known_for = Spring and Tinfist's fortress. Mourn as a Tech Hunter waystation. Acid rain in the approach routes. The implicit lore weight of the name Stobe.
+
+$directions = Central continent, mountainous. Spring is in its southwest. Ark is in Stobe's Garden to the east.

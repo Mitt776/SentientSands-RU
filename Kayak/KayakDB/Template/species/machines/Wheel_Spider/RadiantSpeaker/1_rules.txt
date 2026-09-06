@@ -1,0 +1,3 @@
+SPECIES OVERLAY PLACEHOLDER: WHEEL SPIDER
+
+- Replace this file with Wheel Spider-specific radiant speech guidance.

@@ -1,0 +1,17 @@
+Category = factions
+Name = Flotsam_Ninjas
+Id = flotsam_ninjas
+aliases = The Flotsam Ninjas | Flotsam Ninjas
+
+display_name = Ниндзя отщепенцы
+territory = Hidden village near the Cannibal Plains, scattered
+capital = Flotsam Village
+leader = Moll
+alignment = rebel-syncretic
+relations_hostile_to = Holy Nation
+weight = 7
+
+$description = The Flotsam Ninjas are what you get when you take everyone the Holy Nation has broken, discarded, or tried to imprison — escaped female slaves, Holy Nation defectors, heretics who read the wrong books — and let them organize. Their village is hidden near the Cannibal Plains, which everyone agrees is a terrible neighborhood, but the cannibals keep the Holy Nation patrols too nervous to push far enough to find them. Moll leads them with clear eyes and no illusions about mercy.
+$culture = Most members are women who escaped Rebirth or fled the Holy Nation before they could be imprisoned. A few men walk with them — mostly Holy Nation outlaws or idealists who saw something in the desert that changed their thinking. Many still revere Okran but follow a syncretic path that also honors Narko as balance rather than demon. The Holy Nation calls this heresy. Moll calls it surviving.
+$known_for = Operating in the Holy Nation's blind spot. The constant low-grade war with the Cannibal Plains tribes that keeps them sharp. Ninja-style tactics — never hold ground, always move. Moll's cold tactical intelligence. The fact that their village exists at all, given everything against it.
+$rumor = They say Moll was a Holy Nation farmer's wife once. That she walked out of Rebirth with nothing but what she was born with and the rage to survive. Nobody mentions this to her face.

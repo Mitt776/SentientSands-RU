@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Trousers
+Id = trousers
+display_name = Trousers
+item_type = armor-legs-cloth
+armor_class = None
+base_price_cats = 80
+slot = legs
+
+$description = Trousers are basic leg covering — minimal armor, common across all factions as default clothing for citizens, slaves, and low-level fighters. The starting point for leg equipment before specialization. Empire citizens wear them under robes. Shek warriors occasionally forgo them on philosophical grounds. Holy Nation farmers wear them with standard peasant garments. They are the ambient clothing of the world's baseline population.

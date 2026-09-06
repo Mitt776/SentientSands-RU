@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Crab_Trousers
+Id = crab_trousers
+display_name = Crab Trousers
+item_type = armor-legs-heavy
+armor_class = Heavy
+base_price_cats = 3500
+weight = 10
+
+$description = Crab Trousers are the leg armor component of the Crab set — the same ridged steel construction as the chest piece, providing high cut resistance at significant movement penalty. Part of the Crab Raiders' armor tradition, craftable from their blueprint. The full Crab set — armor, helmet, trousers, shoes — represents the most protective available loadout in exchange for accepting that the wearer moves like they're made of armored plates, which they are.

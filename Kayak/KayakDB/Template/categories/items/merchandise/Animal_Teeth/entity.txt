@@ -1,0 +1,9 @@
+Category = items_merchandise
+Name = Animal_Teeth
+Id = animal_teeth
+display_name = Animal Teeth
+item_type = trade-junk
+base_price_cats = 30
+weight = 1
+
+$description = Animal teeth are looted from defeated animals and sold as junk to merchants — low value per unit, light, and essentially always available wherever animals are being fought. They represent the background economy of wilderness travel: not worth hunting specifically, but worth pocketing when they're already in your hands. Most merchants buy them. Most experienced travelers stop picking them up once they have better things to carry.

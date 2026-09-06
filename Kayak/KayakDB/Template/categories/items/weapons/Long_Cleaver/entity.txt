@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Long_Cleaver
+Id = long_cleaver
+
+display_name = Long Cleaver
+item_type = weapon-hacker
+weapon_class = Hackers
+base_price_cats = 1300
+weight = 11
+
+$description = The Long Cleaver is a hacker-class weapon with extra reach — the same cut-blunt mix and armor penetration as other hackers but with a longer arc that can catch multiple targets in a sweep. Shek warriors favor it because the reach advantage plays to their preference for hitting more than one thing at once and because carrying something this heavy feels natural to a people for whom strength is a point of pride. It's commonly sold in Shek Kingdom shops, making it one of the more accessible hacker-class options outside bandit loot.

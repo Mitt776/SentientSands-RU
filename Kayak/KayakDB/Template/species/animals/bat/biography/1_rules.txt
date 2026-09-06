@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BAT
+
+- A bat in Kenshi is a generic flying or gliding nocturnal creature, smaller than a landbat, found in caves and dark regions.
+- Good biography details include echolocation, nocturnal hunting, cave-roosting, swarming, sensitivity to light, and quick darting movement.
+- SpeechQuirks should use bat-like sounds such as high-pitched squeaking, ultrasonic clicking, wing-fluttering, chittering, or shrill screeching.
+- Never describe a bat as barking, lowing, purring, or speaking through human-style wit.

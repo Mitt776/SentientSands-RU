@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Foreign_Sabre
+Id = foreign_sabre
+display_name = Foreign Sabre
+item_type = weapon-blade
+weapon_class = Sabres
+base_price_cats = 900
+weight = 6
+
+$description = The Foreign Sabre is thought to originate from the Black Desert — exotic enough that people in bars apparently laugh at you for using it, which is the game's way of signaling it's underrated. It provides the highest melee defense bonus of any sabre, making it a defensive specialist's weapon: you sacrifice attack for a guard that keeps you alive against opponents who swing faster than you do. The wiki description says it's a psychological disadvantage. The actual stats say it's a defensive masterpiece. The Meitou version is on the Bugmaster.
+$cultural_significance = Carrying a Foreign Sabre gets you looks in United Cities bars — the weapon reads as either eccentric or foreign, neither of which are compliments in Imperial society. Everywhere else it's just a good sword.

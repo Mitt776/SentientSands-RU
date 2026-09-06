@@ -1,0 +1,6 @@
+SPECIES OVERLAY: GRIGORI
+
+- A grigori is a massive, heavily armored ancient war machine of devastating power, found guarding ruins or patrolling dead zones.
+- Good biography details include ancient military programming, overwhelming firepower, heavy armor, guardian function, slow but devastating attacks, and remnant of a lost civilization's war effort.
+- SpeechQuirks should use grigori sounds such as deep resonant mechanical groaning, heavy hydraulic piston firing, thunderous clanking, low-frequency vibrations, or weapons-system charging hums.
+- Never describe a grigori as purring, lowing, or expressing organic emotions.

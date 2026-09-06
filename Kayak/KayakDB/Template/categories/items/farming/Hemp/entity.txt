@@ -1,0 +1,9 @@
+Category = items_farming
+Name = Hemp
+Id = hemp
+display_name = Hemp
+item_type = agricultural-raw
+base_price_cats = 37
+weight = 1
+
+$description = Hemp is the raw crop that processes into hashish at a Hemp Processor. It grows well in swamp conditions — the Swamp's constant rain means hemp fields there require no irrigation, which is why the Swamp's gang economy has a reliable drug trade. In Holy Nation territory, hemp cultivation is illegal by theological doctrine. In the Swamp and the border zone, it's a straightforward cash crop that moves through the Shinobi Thieves network into cities where the markup is significant.

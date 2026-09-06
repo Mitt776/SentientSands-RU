@@ -1,0 +1,12 @@
+Category = locations
+Name = Venge
+Id = venge
+display_name = Venge
+type = region
+weight = 6
+
+$description = Venge is a unique zone in the central continent — a region of intense solar radiation caused by ancient mirror technology or orbital infrastructure that has been focusing energy on this area for centuries. The radiation damages organic characters who stay too long. Skeletons are unaffected. There are ancient structures here including the Old Control Tower and ruins that suggest the zone was once deliberately managed rather than simply dangerous. The tech involved is First Empire scale: nothing current civilization could have built, and nothing it knows how to stop.
+$known_for = The solar radiation that limits organic travel time. Ancient mirror or orbital infrastructure as the implied cause. Ruins including the Old Control Tower and the Tower of Abuse in the region's vicinity. The zone as evidence that the First Empire could redirect ambient energy at the planetary scale.
+$travel_note = Organic characters take radiation damage over time in Venge. Fast travel through is possible. Extended stays require either Skeleton physiology or very specific preparation.
+
+$directions = Central-east continent. Tower of Abuse is here. Between the Outlands and the Ashlands approach.

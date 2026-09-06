@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Police_Helmet
+Id = police_helmet
+display_name = Police Helmet
+item_type = armor-head-medium
+armor_class = Medium
+base_price_cats = 1500
+slot = head
+
+$description = The Police Helmet is the standard headgear of United Cities law enforcement — full-face visor design, similar coverage to the Visored Helmet, with the specific visual language of Imperial authority. Worn by UC Police who enforce law in Imperial cities. Outside of the Empire it reads as salvaged Imperial equipment. Inside the Empire, wearing one while not being UC police creates interesting social situations depending on how well-observed the law enforcement gap currently is.

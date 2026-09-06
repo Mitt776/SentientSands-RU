@@ -1,0 +1,9 @@
+Category = locations
+Name = Raptor_Island
+Id = raptor_island
+display_name = Raptor Island
+type = region
+weight = 4
+
+$description = Raptor Island is a coastal zone named for its River Raptor population — aggressive predators that make the island their territory and make travelers crossing it a matter of numbers and preparation. There is a small Nomad village here with four buildings, offering animals and backpacks to travelers who make it through. The Raptors are the reason most people don't stay.
+$known_for = River Raptor population. The small Nomad village with unusual trade options including pack animals. Being one of the few places to buy animals without going to a Hive Village.

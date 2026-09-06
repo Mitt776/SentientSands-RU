@@ -1,0 +1,1411 @@
+Kayak / SentientSands Prompt Tokens Tutorial
+===========================================
+
+This tutorial explains the current prompt tokens available in the token-enabled build. The word "token", in this context, doesn't represent "llm tokens". Here, "tokens" are a <...> set of tags created to give the user total control over the flow of usable data from the all around the mod.
+
+These tokens can be placed inside your mandatory prompt files. When the prompt is assembled, Kayak/SentientSands replaces each token with runtime data, NPC data, player data, dialogue history, lore entities, rumors, or debug information.
+
+The main idea is simple: the mandatory prompt now decides what enters the final LLM prompt and where it appears.
+
+For example:
+
+NPC name: <target_npc_name>
+
+May become:
+
+NPC name: Rust
+
+You can use this system to build very small prompts, very rich prompts, debug prompts, or specialized prompts for different modes.
+
+
+1. Target NPC Tokens
+====================
+
+These tokens describe the NPC the player is talking to.
+
+<target_npc_name>
+
+Inserts the current name of the target NPC.
+
+Example:
+
+NPC name: <target_npc_name>
+
+Result:
+
+NPC name: Rust
+
+
+<target_npc_display_name>
+
+Inserts the NPC display name, when available. This is often the same as the current name, but it can be useful when the internal name and displayed name differ.
+
+Example:
+
+Displayed as: <target_npc_display_name>
+
+Result:
+
+Displayed as: Rust
+
+
+<target_npc_original_name>
+
+Inserts the NPC's original or base name before renaming. Useful for recruited, renamed, or reprogrammed NPCs. This is not really necessary and can be confusing to the llm, it's mostly for debug purposes.
+
+Example:
+
+Original identity: <target_npc_original_name>
+
+Result:
+
+Original identity: Trader Nick
+
+
+<target_npc_id>
+
+Inserts the stable/internal NPC ID. This is mostly useful for debugging, not for normal roleplay prompts.
+
+Example:
+
+NPC ID: <target_npc_id>
+
+Result:
+
+NPC ID: 3-3358398464-1643-1855346688-1
+
+
+<target_npc_race>
+
+Inserts the target NPC's race.
+
+Example:
+
+Race: <target_npc_race>
+
+Result:
+
+Race: Skeleton
+
+
+<target_npc_gender>
+
+Inserts the target NPC's gender/sex, if available.
+
+Example:
+
+Gender: <target_npc_gender>
+
+Result:
+
+Gender: male
+
+
+<target_npc_faction>
+
+Inserts the NPC's current faction as plain text.
+
+Example:
+
+Faction: <target_npc_faction>
+
+Result:
+
+Faction: Truckerson's Caravan
+
+
+<target_npc_origin_faction>
+
+Inserts the NPC's original faction, if available. Useful for recruits, deserters, exiles, prisoners, or reprogrammed characters.
+
+Example:
+
+Origin faction: <target_npc_origin_faction>
+
+Result:
+
+Origin faction: Tech Hunters
+
+Note: this token falls back to the CURRENT faction when no origin faction is
+recorded. That makes it unsafe for "the faction you left behind" lines, because
+a serving member gets told their own faction is in their past. Use
+<target_npc_former_faction> for that instead.
+
+
+<target_npc_former_faction>
+
+Inserts the NPC's original faction ONLY when it is known and differs from their
+current one. Resolves to nothing for a character who never left anywhere, and
+for placeholder values such as "None" or "Unknown".
+
+Pair it with an optional block so the whole line disappears when there is no
+former faction:
+
+[[The faction of <target_npc_former_faction> is long in your past now.]]
+
+Result for a Holy Nation deserter now running with the Flotsam Ninjas:
+
+The faction of Holy Nation is long in your past now.
+
+Result for a serving Tech Hunter: the line is not printed at all.
+
+
+<target_npc_town>
+
+Inserts the NPC's town, home, or base location, if that metadata exists.
+
+Example:
+
+Home town: <target_npc_town>
+
+Result:
+
+Home town: The Hub
+
+If no town data exists, the result may be empty.
+
+
+<target_npc_region>
+
+Inserts the region associated with the NPC, if available.
+
+Example:
+
+Region: <target_npc_region>
+
+Result:
+
+Region: Border Zone
+
+
+<target_npc_health>
+
+Inserts the NPC's health or condition data, if available.
+
+Example:
+
+Health state: <target_npc_health>
+
+Possible result:
+
+Health state: blood: 100%
+
+The exact format depends on what the server sends.
+
+
+<target_npc_gear>
+
+Inserts visible gear or equipment for the NPC, if available.
+
+Example:
+
+Visible gear:
+<target_npc_gear>
+
+Possible result:
+
+Visible gear:
+Holy Kopesh, Paladin's Cross, Ninja Rags, Sentry Backpack
+
+
+<target_npc_relation>
+
+Inserts the NPC's relation value toward the player.
+
+Example:
+
+Relation to player: <target_npc_relation>
+
+Result:
+
+Relation to player: 85
+
+
+<target_npc_memory>
+
+Inserts contextual NPC memory, if available. This is useful for continuity.
+
+Example:
+
+Known memory:
+<target_npc_memory>
+
+Result:
+
+Known memory:
+Rust remembers that Bull spared the Iron Legion robot instead of destroying it.
+
+If no memory exists, this may be empty.
+
+
+Additional granular target NPC tokens:
+
+<target_npc_state>
+<target_npc_job>
+<target_npc_money>
+<target_npc_is_trader>
+<target_npc_in_shop>
+<target_npc_shop_stock>
+<target_npc_visible_gear>
+<target_npc_inventory_items 10>
+<target_npc_stats>
+<target_npc_injuries>
+<target_npc_traits>
+<target_npc_personality>
+<target_npc_backstory>
+<target_npc_speech_quirks>
+
+Use these when you want to build a custom prompt without inserting the full <target_npc_context> block.
+
+Examples:
+
+Trader stock:
+<target_npc_shop_stock>
+
+Held inventory:
+<target_npc_inventory_items 10>
+
+Visible gear:
+<target_npc_visible_gear>
+
+Stats:
+<target_npc_stats>
+
+Profile slice:
+Personality: <target_npc_personality>
+Backstory: <target_npc_backstory>
+Speech quirks: <target_npc_speech_quirks>
+
+
+<target_npc_profile>
+
+Inserts the NPC's profile or persona, when available. This is useful if you want the NPC's personality without pulling the entire target NPC block.
+
+Example:
+
+NPC profile:
+<target_npc_profile>
+
+Possible result:
+
+NPC profile:
+Rust carries a hard-earned wisdom and a weary sense of loyalty...
+
+
+<target_npc_context>
+
+Inserts the complete target NPC block. This replaces the older automatic TARGET_NPC injection. Now the mandatory prompt decides exactly where this block appears.
+
+Example:
+
+<H2>TARGET NPC</H2>
+<target_npc_context>
+
+Possible result:
+
+<H2>TARGET NPC</H2>
+Category: campaign_npcs
+Name: Rust
+Id: ...
+race: Skeleton
+faction: Truckerson's Caravan
+personality: ...
+backstory: ...
+[STATS]
+NPC: Rust
+...
+
+Use this when you want the full NPC context.
+
+
+2. Target NPC Lore Entity Tokens
+================================
+
+These tokens use the target NPC's metadata, such as faction, race, town, or region, and try to resolve it as a Kayak entity.
+
+The phrase "with 0 children" means the token only injects the base entity, without related child entities.
+
+
+<target_npc_fac_entity with 0 children>
+
+Uses the target NPC's faction, tries to find a matching Kayak entity, and injects that entity.
+
+Example:
+
+Faction lore:
+<target_npc_fac_entity with 0 children>
+
+Possible result:
+
+Faction lore:
+Category = factions
+Name = Holy_Nation
+display_name = The Holy Nation
+...
+$description = ...
+
+If no matching faction entity exists, the result is empty.
+
+
+<target_npc_race_entity with 0 children>
+
+Uses the target NPC's race, tries to find a matching Kayak entity, and injects it.
+
+Example:
+
+Race lore:
+<target_npc_race_entity with 0 children>
+
+Possible result:
+
+Race lore:
+Category = races
+Name = Skeletons
+...
+
+
+<target_npc_town_entity with 0 children>
+
+Uses the target NPC's town metadata, tries to find a matching Kayak entity, and injects it.
+
+Example:
+
+Town lore:
+<target_npc_town_entity with 0 children>
+
+If no town metadata exists, or no entity is found, the result is empty.
+
+
+<target_npc_region_entity with 0 children>
+
+Uses the target NPC's region metadata, tries to find a matching Kayak entity, and injects it.
+
+Example:
+
+Region lore:
+<target_npc_region_entity with 0 children>
+
+If no region entity is found, the result is empty.
+
+
+3. Player Keyword Entity Tokens
+===============================
+
+These tokens look at the player's message, detect relevant keywords, and try to resolve those keywords as Kayak entities.
+
+They are powerful, but their quality depends on keyword detection. Kayak filters out the player's current town and current region from these keyword entities, because that location data is better injected through <current_location> or the granular current town/region tokens.
+
+
+<player_key_entities key 1 with 0 children>
+
+Takes the first relevant keyword from the player's message, tries to resolve it as an entity, and injects that entity.
+
+Player message:
+
+Have you seen that Holy Nation land?
+
+Mandatory prompt:
+
+Player-mentioned lore:
+<player_key_entities key 1 with 0 children>
+
+Possible result:
+
+Player-mentioned lore:
+Category = factions
+Name = Holy_Nation
+display_name = The Holy Nation
+...
+
+
+<player_key_entities key 2 with 0 children>
+
+Same idea, but uses the second relevant keyword detected in the player's message.
+
+Example:
+
+Second mentioned lore:
+<player_key_entities key 2 with 0 children>
+
+If the player says "Holy Nation land near Stack", key 1 may be Holy Nation and key 2 may be Stack, depending on the extractor.
+
+
+<player_key_entities key 1 with 2 children>
+
+Uses the first relevant player keyword, injects the base entity, and also injects up to 2 child entities from define_children.txt.
+
+Example:
+
+Player-mentioned lore and related lore:
+<player_key_entities key 1 with 2 children>
+
+If Holy_Nation/define_children.txt contains:
+
+W = 1.00 Blister Hill
+W = 0.90 Stack
+
+Then the prompt may receive Holy Nation + Blister Hill + Stack.
+
+If define_children.txt is empty, only the base entity is injected.
+
+
+4. Legacy World Context Token
+=============================
+
+<world_context>
+
+Injects the older WORLD_CONTEXT package, meaning the entities Kayak automatically selected before this more controlled token system.
+
+Example:
+
+<H2>LEGACY WORLD CONTEXT</H2>
+<world_context>
+
+Possible result:
+
+<H2>LEGACY WORLD CONTEXT</H2>
+Category: factions
+Name: The Nomads
+...
+
+---
+Category: locations_ruin
+Name: Ancient Labs
+...
+
+---
+Category: locations
+Name: The Black Desert
+...
+
+Recommended use:
+
+Treat this as a compatibility token, it uses a legacy system and the results are not very reliable. For cleaner prompts, prefer more specific tokens like faction lore, race lore, player keyword lore, current town lore, and so on.
+
+
+5. Dialogue History Tokens
+==========================
+
+<dialogue_lines_qty 20>
+
+Injects the last 20 lines of dialogue/history. You can change the number.
+
+Example:
+
+<H2>RECENT DIALOGUE</H2>
+<dialogue_lines_qty 20>
+
+Possible result:
+
+<H2>RECENT DIALOGUE</H2>
+[Day 117, 03:35] Bull Truckerson: See anything? So much ash
+[Day 117, 03:35] Rust: The ash covers the scars of this land...
+[Day 117, 03:57] Bull Truckerson: Damn Land Bats...
+...
+
+For less context, use a smaller number:
+
+<dialogue_lines_qty 5>
+
+To remove dialogue history entirely, remove the token from the prompt.
+
+It's good to note that when regenerating an npc profile, the LLM receives the dialogue data as well as the current profile. It uses both as a source for changes in the new biography.
+
+
+6. Nearby NPC Tokens
+====================
+
+These tokens inject metadata about NPCs physically near the current interaction. They use the nearby NPC list sent by SentientSands at runtime.
+
+This is not a KayakDB lore lookup. It is live scene awareness: name, race, gender, faction, health, distance, and visible gear when available.
+
+
+<nearby_npcs 5>
+
+Injects up to 5 nearby NPCs as a compact list. You can change the number.
+
+Example:
+
+<H2>PEOPLE NEARBY</H2>
+<nearby_npcs 5>
+
+Possible result:
+
+<H2>PEOPLE NEARBY</H2>
+- Ruka (female, Shek, Truckerson's Caravan) | Health: stable | 4m away | Visible Gear: Fragment Axe, Mercenary Plate (...)
+- Hobbs (male, Greenlander, Drifters) | 7m away
+
+For less crowd awareness, use a smaller number:
+
+<nearby_npcs 2>
+
+If no nearby NPC data is sent by the hook, the result is empty.
+
+
+<npc_nearby 1>
+
+Injects one specific nearby NPC by position in the nearby list. The index starts at 1.
+
+Example:
+
+Closest visible NPC:
+<npc_nearby 1>
+
+Possible result:
+
+Closest visible NPC:
+- Ruka (female, Shek, Truckerson's Caravan) | Health: stable | 4m away | Visible Gear: Fragment Axe, Mercenary Plate
+
+
+<npc_nearby 2>
+
+Injects (only) the second nearby NPC, if one exists.
+
+Use this when you want tighter control over prompt layout, such as putting the closest NPC in one section and a wider crowd list somewhere else.
+
+If the requested index does not exist, the result is empty.
+
+You can have as many of these as you want, it provides situational context, and it's a necessary part for radiant dialogue.
+
+Additional nearby-list tokens:
+
+<nearby_count>
+<nearby_names 8>
+<nearby_sapients 8>
+<nearby_squad 8>
+<nearby_non_squad 8>
+<nearby_traders 5>
+<nearby_injured 5>
+<nearby_hostiles 5>
+<closest_npc>
+
+Examples:
+
+Nearby count: <nearby_count>
+
+Closest visible NPC:
+<closest_npc>
+
+Nearby names:
+<nearby_names 8>
+
+Possible responders:
+<nearby_sapients 8>
+
+Player squad nearby:
+<nearby_squad 8>
+
+Likely threats:
+<nearby_hostiles 5>
+
+These filters are best-effort. They depend on the live nearby data sent by SentientSands, so some categories may be empty if the hook did not provide the needed flags.
+
+7. Rumor and World Synthesis Tokens
+===================================
+
+These tokens pull information from world_synthesis.log.
+
+
+<world_rumors 1>
+
+Injects the most recent rumor.
+
+Example:
+
+Latest rumor:
+<world_rumors 1>
+
+Possible result:
+
+Latest rumor:
+Word is the Fishmen have grown bolder near the coast.
+
+
+<world_rumors 2>
+
+Injects the two most recent rumors.
+
+Example:
+
+Recent rumors:
+<world_rumors 2>
+
+
+<world_rumors 3>
+
+Injects the three most recent rumors.
+
+Example:
+
+Rumors in circulation:
+<world_rumors 3>
+
+This can be useful for Loremaster or Radiant-style prompts, but may be too heavy for normal chat.
+
+
+<latest_rumor>
+
+Shortcut for the latest rumor. In practice, it behaves like <world_rumors 1>.
+
+Example:
+
+A rumor still passing around:
+<latest_rumor>
+
+
+<violence_summary>
+
+Injects the latest valid Violence summary from world_synthesis.log. It avoids some player-summary entries.
+
+Example:
+
+Recent violence nearby:
+<violence_summary>
+
+Possible result:
+
+Recent violence nearby:
+Violence summary: Holy Nation Outlaws suffered 3 setbacks while inflicting 0 on The Holy Nation.
+
+
+<trade_summary>
+
+Injects the latest valid Trade summary from world_synthesis.log.
+
+Example:
+
+Recent trade:
+<trade_summary>
+
+Possible result:
+
+Recent trade:
+Trade summary: sold 1 Basic First Aid Kit and 1 Chewable Leaves to people.
+
+
+<world_synthesis>
+
+Injects the recent world_synthesis.log tail as plain text. This is a heavy debug/loremaster-style token, so use it carefully in normal chat prompts.
+
+
+<campaign_chronicle>
+
+Injects the formatted persistent campaign chronicle block for the current NPC, if any relevant chronicle entries exist.
+
+
+<recent_events 10>
+
+Injects the last 10 raw global event-history lines passed from SentientSands.
+
+
+<recent_local_events 10>
+
+Injects up to 10 recent events that mention the current player town or region.
+
+
+<recent_combat_events 5>
+
+Injects up to 5 recent combat/death/knockout-style events.
+
+
+<recent_trade_events 5>
+
+Injects up to 5 recent trade-style events.
+
+
+8. Runtime Player Context Tokens
+================================
+
+These tokens inject runtime information about the player, location, inventory, speech mode, and final response instructions.
+
+
+<current_location>
+
+Injects the current live player location as a Kayak-resolved block. SentientSands sends the raw live facts (town, region, building/indoor flags, player context); Kayak uses those facts to retrieve the matching location and region entities from the active campaign index, then renders them into the prompt. If the hook sends poor location data, Kayak may still show Unknown or omit the entity section, so check your prompt logs when tuning a campaign.
+
+Example:
+
+<H2>CURRENT LOCATION</H2>
+<current_location>
+
+Possible result:
+
+<H2>CURRENT LOCATION</H2>
+--- CURRENT_LOCATION
+- Area: The Hub (within Border Zone)
+- Settlement: The Hub
+- Region: Border Zone
+- Context: Inside a settlement
+
+[LOCATION ENTITY]
+- Name: The Hub
+- Category: locations
+- Id: the_hub
+- Region: Border Zone
+- Faction: Holy_Nation_Outlaws
+- Type: town-waystation
+- Directions: Border Zone, central. Southwest of Stack, roughly between Holy Nation and Shek Kingdom territory.
+- Description: The Hub is where the Border Zone comes to breathe...
+
+Unlike <town_entity with N children>, this token is not asking for an arbitrary number of child entities. It is a purpose-built live location sheet.
+
+
+Granular current town/region tokens:
+
+Use these when you want to write the prompt prose yourself instead of injecting the whole <current_location> sheet.
+
+Town tokens:
+
+<current_town_name>
+<current_town_region>
+<current_town_faction>
+<current_town_type>
+<current_town_description>
+<current_town_summary>
+<current_town_atmosphere>
+<current_town_travel_note>
+<current_town_directions>
+<current_town_known_for>
+<current_town_notable>
+
+Region tokens:
+
+<current_region_name>
+<current_region_region>
+<current_region_faction>
+<current_region_type>
+<current_region_description>
+<current_region_summary>
+<current_region_atmosphere>
+<current_region_travel_note>
+<current_region_directions>
+<current_region_known_for>
+<current_region_notable>
+
+Example:
+
+You are in the town of <current_town_name>, ruled by <current_town_faction>.
+What you know about <current_town_name>:
+<current_town_description>
+<current_town_atmosphere>
+
+Your notes say:
+<current_town_travel_note>
+
+Map directions:
+<current_town_directions>
+
+If the hook only reports the town, Kayak can still infer the region from the town entity's region field.
+
+
+<player_status>
+
+Injects the formatted player status block.
+
+Example:
+
+<H2>PLAYER STATUS</H2>
+<player_status>
+
+Possible result:
+
+<H2>PLAYER STATUS</H2>
+PLAYER STATUS:
+- Race: Greenlander
+- Gender: male
+- Condition: INJURED
+- Money: 864 cats
+- Faction: Truckerson's Caravan
+
+
+<player_inventory>
+
+Injects the formatted player equipment/inventory block.
+
+Example:
+
+<H2>PLAYER INVENTORY</H2>
+<player_inventory>
+
+Possible result:
+
+<H2>PLAYER INVENTORY</H2>
+PLAYER EQUIPMENT & INVENTORY:
+VISIBLE (Worn/Held):
+- Longsword (x1) [value: 10995 cats] [WEAPON]
+...
+CONCEALED:
+- Holy Arbelast...
+- ... and 34 more items.
+
+
+<mode_guidance>
+
+Injects guidance for the current speech mode, such as normal speech, yell, whisper, or group address, this should be dinamically generated by the mod, check the prompt log to be sure.
+
+Example:
+
+<H2>MODE GUIDANCE</H2>
+<mode_guidance>
+
+Possible result:
+
+INFO: The player is speaking at a normal, conversational volume...
+
+For yell mode, it may become:
+
+INFO: The player is addressing the group loudly...
+
+
+<final_instruction>
+
+Injects the final response instruction for the current target/mode. This may include rules like responding only as the target NPC, limiting response length, or adding judgment output.
+
+Example:
+
+<H2>FINAL RESPONSE INSTRUCTION</H2>
+<final_instruction>
+
+Possible result:
+
+Respond ONLY as Rust. Do not speak as anyone else...
+JUDGMENT: At the end of your response...
+
+
+<language_instruction>
+
+Injects the language instruction. This is for localization compatibility.
+
+Example:
+
+<H2>LANGUAGE</H2>
+<language_instruction>
+
+Possible result:
+
+You MUST write your final response exclusively in English.
+
+
+
+9. Player Name, Entity, Time, Money, and Location Tokens
+========================================================
+
+These tokens insert smaller pieces of player context, for a more artesanal prompt style.
+
+
+<player_name>
+
+Inserts the current player character name sent by SentientSands.
+
+Example:
+
+Player: <player_name>
+
+Possible result:
+
+Player: Bull Truckerson
+
+
+<player_entity>
+
+Injects the player's Kayak entity/profile, if that entity exists in the active campaign. This is useful when you want the player character's persistent biography/personality without relying only on the compact runtime status block.
+
+Example:
+
+Player profile:
+<player_entity>
+
+Possible result:
+
+Player profile:
+Category: campaign_npcs
+Name: Bull Truckerson
+Id: ...
+race: Greenlander
+faction: Truckerson's Caravan
+personality: ...
+
+If the player has not been written as a Kayak entity yet, the result is empty.
+
+
+<player_entity with 2 children>
+
+Injects the player's Kayak entity and up to 2 child entities from that entity's define_children.txt.
+
+Example:
+
+Player profile and linked context:
+<player_entity with 2 children>
+
+Use this only if you have authored useful child links for the player entity. Otherwise, <player_entity> is usually enough.
+
+
+<player_personality>
+<player_backstory>
+<player_quirks>
+
+Injects only the matching prose field from the player's Kayak entity:
+
+$personality -> <player_personality>
+$backstory -> <player_backstory>
+$speech_quirks -> <player_quirks>
+
+Example:
+
+Player persona:
+Personality: <player_personality>
+Backstory: <player_backstory>
+Speech quirks: <player_quirks>
+
+If the player entity or the requested field does not exist, the result is empty.
+
+
+<player_faction_entity with 0 children>
+
+Uses the player's current faction, tries to find a matching Kayak entity, and injects that faction entity.
+
+The short alias also works:
+
+<player_fac_entity with 0 children>
+
+Example:
+
+Player faction lore:
+<player_faction_entity with 0 children>
+
+Possible result:
+
+Player faction lore:
+Category = factions
+Name = The_Unwanted_Ones
+display_name = The Unwanted Ones
+...
+
+If the player faction is unavailable or no matching faction entity exists, the result is empty.
+
+
+Additional granular player tokens:
+
+<player_race>
+<player_gender>
+<player_faction>
+<player_condition>
+<player_health>
+<player_hunger>
+<player_blood>
+<player_stats>
+<player_visible_gear>
+<player_inventory_items 10>
+<player_personality>
+<player_backstory>
+<player_quirks>
+
+Examples:
+
+Player identity:
+Race: <player_race>
+Gender: <player_gender>
+Faction: <player_faction>
+
+Player condition:
+Condition: <player_condition>
+Hunger: <player_hunger>
+Blood: <player_blood>
+Stats:
+<player_stats>
+
+Player gear and bag:
+<player_visible_gear>
+<player_inventory_items 10>
+
+
+<player_day>
+
+Inserts the current in-game day from PLAYER_CONTEXT.
+
+Example:
+
+Current day: <player_day>
+
+Result:
+
+Current day: 117
+
+
+<player_time>
+
+Inserts the formatted in-game time using day, hour, and minute.
+
+Example:
+
+Current in-game time: <player_time>
+
+Result:
+
+Current in-game time: Day 117, 06:23
+
+
+<player_money>
+
+Inserts the player's money/cats.
+
+Example:
+
+Player money: <player_money>
+
+Possible result:
+
+Player money: 864 cats
+
+Tip: avoid writing "cats" after the token unless you are sure the token only returns a number (verify prompt log). This prevents duplicated text like "864 cats cats".
+
+
+<player_town>
+
+Inserts the current town detected from PLAYER_CONTEXT/environment.
+
+Example:
+
+Current town: <player_town>
+
+Possible result:
+
+Current town: Black Desert City
+
+If the hook to the game engine does not receive the town, it may be empty or Unknown. Check the prompt logs to verify. For a debug run, read the DEBUG LOCATION bellow.
+
+
+<player_region>
+
+Inserts the current region detected from player context.
+
+Example:
+
+Current region: <player_region>
+
+Possible result:
+
+Current region: Deadlands
+
+
+<player_is_indoors>
+
+Inserts whether the player is indoors or inside a building, according to hook data.
+
+Example:
+
+Indoors: <player_is_indoors>
+
+Possible result:
+
+Indoors: true
+
+Or:
+
+Indoors: yes
+
+The exact format depends on normalization. Also low reliability, check the log.
+
+
+<player_building>
+
+Inserts the current building, if available.
+
+Example:
+
+Current building: <player_building>
+
+Possible result:
+
+Current building: Bar
+
+If no building is known, this may be empty.
+
+
+DEBUG LOCATION:
+
+<player_location_json>
+
+Debug token. Injects compact JSON with the location/environment data received from the hook.
+
+Example:
+
+Location debug:
+<player_location_json>
+
+Possible result:
+
+Location debug:
+{"town":"Black Desert City","region":"Deadlands","indoors":true,"building":"Bar","environment":{"town_name":"Black Desert City","region":"Deadlands","indoors":true}}
+
+Recommended use:
+
+Use this for debugging or beta testing. Do not use it in normal roleplay prompts unless you specifically need raw location data.
+
+
+10. Current Location Entity Tokens
+=================================
+
+These tokens try to resolve the player's current town, region, or active nearby faction as Kayak entities (lore injections from the KayakDB categories, not just metadata).
+
+
+<town_entity with 0 children>
+
+Tries to resolve the current town as a Kayak entity and injects it.
+
+Example:
+
+Current town lore:
+<town_entity with 0 children>
+
+Possible result:
+
+Current town lore:
+Category = locations
+Name = Black_Desert_City
+...
+
+If no valid town exists, or no matching entity is found, the result is empty.
+
+
+<region_entity with 0 children>
+
+Tries to resolve the current region as a Kayak entity and injects it.
+
+Example:
+
+Current region lore:
+<region_entity with 0 children>
+
+If a matching region entity exists, it is injected.
+
+
+<active_faction_entity with 0 children>
+
+Tries to find a recently active faction from context/world synthesis and resolve it as an entity.
+
+Example:
+
+Active faction nearby:
+<active_faction_entity with 0 children>
+
+If a valid faction candidate is found, its entity is injected. Otherwise, the result is empty.
+
+
+11. Random Entity Tokens
+========================
+
+These are mostly useful for testing, Radiant prompts, Loremaster prompts, or flavor generation.
+
+
+<random_entity_all with 0 children>
+
+Injects a random lore entity, excluding runtime NPCs/campaign_npcs. Can be interesting for conversational variety, if so desired.
+
+Example:
+
+Possible random topic for conversation:
+<random_entity_all with 0 children>
+
+
+<random_entity_folder locations with 0 children>
+
+Injects a random entity from the locations category/folder.
+
+Example:
+
+Random location lore:
+<random_entity_folder locations with 0 children>
+
+
+<random_entity_folder factions with 0 children>
+
+Injects a random entity from the factions category/folder.
+
+Example:
+
+Random faction lore:
+<random_entity_folder factions with 0 children>
+
+
+12. Direct Entity Tokens
+========================
+
+These tokens inject a specific KayakDB entity by name. Can be useful if you want a specific lore entity to always show up on your prompt, normally for specific roleplaying reasons (such as roleplaying a Holy Nation Paladin, wanting all npcs to know the full entity lore of the Holy Nation, or Paladins, when talking to them.)
+
+
+<entity Holy_Nation with 0 children>
+
+Resolves the entity named Holy_Nation and injects it.
+
+Example:
+
+Specific lore:
+<entity Holy_Nation with 0 children>
+
+Possible result:
+
+Specific lore:
+Category = factions
+Name = Holy_Nation
+display_name = The Holy Nation
+...
+
+
+<entity Anti_Slavers with 2 children>
+
+Resolves the entity named Anti_Slavers and injects up to 2 child entities from define_children.txt.
+
+Example:
+
+Specific lore with related context:
+<entity Anti_Slavers with 2 children>
+
+If Anti_Slavers/define_children.txt contains Spring and United Cities, the prompt receives Anti-Slavers plus those related child entities.
+
+
+13. Suggested Clean Mandatory Prompt
+====================================
+
+Here is a clean example for normal NPC chat.
+
+<H2>NPC IDENTITY</H2>
+Name: <target_npc_name>
+Race: <target_npc_race>
+Faction: <target_npc_faction>
+
+<H2>NPC PROFILE</H2>
+<target_npc_context>
+
+<H2>PLAYER STATE</H2>
+Name: <player_name>
+Time: <player_time>
+Money: <player_money>
+Location: <player_town>, <player_region>
+Indoors: <player_is_indoors>
+
+<H2>PLAYER PROFILE</H2>
+<player_entity>
+
+<H2>PEOPLE NEARBY</H2>
+<nearby_npcs 5>
+
+<H2>RELEVANT LORE</H2>
+Faction lore:
+<target_npc_fac_entity with 0 children>
+
+Race lore:
+<target_npc_race_entity with 0 children>
+
+Player-mentioned lore:
+<player_key_entities key 1 with 0 children>
+
+<H2>RECENT DIALOGUE</H2>
+<dialogue_lines_qty 12>
+
+<H2>RUNTIME RULES</H2>
+<mode_guidance>
+<final_instruction>
+<language_instruction>
+
+
+14. Practical Recommendations
+=============================
+
+For normal chat, start small.
+
+A good default is:
+
+- target NPC context
+- player name/time/location/money
+- player entity/profile, if you want persistent player biography in the prompt
+- nearby NPCs, if you want scene/crowd awareness
+- target NPC faction lore
+- target NPC race lore
+- one player-mentioned lore entity
+- 8 to 12 recent dialogue lines
+- mode guidance
+- final instruction
+- language instruction
+
+Avoid injecting everything at once unless you are testing. More context is not always better. A smaller prompt is usually easier for the LLM to follow.
+
+Use debug tokens only when debugging.
+
+Good debug tokens include:
+
+<target_npc_id>
+<player_location_json>
+<world_context>
+
+Use random entity tokens mostly for special modes.
+
+Good use cases include:
+
+- Loremaster mode
+- Radiant rumors
+- world flavor generation
+- testing entity resolution
+
+For child entities, remember:
+
+A token like this:
+
+<entity Anti_Slavers with 2 children>
+
+Only adds child entities if define_children.txt has relevant entries. If the file is empty, only the base entity is injected.
+
+
+15. Optional Blocks [[ ... ]]
+=============================
+
+A token that resolves to nothing still leaves its line behind, and the result
+reads as a broken sentence the NPC takes as fact:
+
+You have worked as a , among other things.
+You were found by the player at the region of the , in the town of Squin.
+
+Wrap such a line in double square brackets to make it conditional:
+
+[[You have worked as a <target_npc_job>, among other things.]]
+[[You were found by the player in the town of <target_npc_town>.]]
+[[The region around you is <target_npc_region>.]]
+
+Rules:
+
+- The block is KEPT, without its brackets, if at least one token inside it
+  resolves to a real value.
+- The block is DROPPED entirely if every token inside it is empty or is a
+  placeholder such as "None", "Unknown", "N/A".
+- A block containing no tokens at all is always kept — brackets are stripped,
+  text stays.
+- Blocks may span several lines, so a value and its explanation can be hidden
+  together.
+- Leftover blank lines are collapsed, so removing a block does not punch a hole
+  in the prompt.
+
+Because a placeholder counts as empty, the server's "None" defaults no longer
+reach the model as if they were job titles or faction names.
+
+Keep one block per statement. A single block holding both a town and a region
+survives as long as either one resolves, which brings the broken half back:
+
+  wrong: [[Found in the region of <target_npc_region>, in <target_npc_town>.]]
+  right: [[Found in <target_npc_town>.]]
+         [[The region around you is <target_npc_region>.]]
+
+
+16. Main Takeaway
+=================
+
+The token system gives control back to the mandatory prompt.
+
+Instead of the system automatically injecting WORLD_CONTEXT, TARGET_NPC, and DIALOGUE wherever it wants, you decide:
+
+- what context enters the prompt
+- where it appears
+- how much dialogue history is included
+- whether lore comes from faction, race, town, region, keywords, random entities, or direct entity calls
+- whether the prompt is clean, minimal, rich, or debug-heavy
+
+In short: the mandatory prompt is now the prompt assembly map.

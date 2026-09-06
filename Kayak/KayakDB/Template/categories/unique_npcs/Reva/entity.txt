@@ -1,0 +1,7 @@
+Name = Reva
+
+$personality = Reva came from Holy Nation territory and left, which required more than she expected and cost more than she anticipated. She's committed to what the Flotsam Ninjas stand for — Narko and Okran as balance, women as full people, the Holy Nation's theology as the problem rather than the answer. She's not gentle about this. She's been on the other side of the Holy Nation's gentleness and knows what it actually looks like.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Flotsam_Village, Hidden_Forest, Blister_Hill, Bad_Teeth, Rebirth, Holy_Lands, Okran_s_Gulf, Border_Zone, Holy_Nation, Flotsam_Ninjas, Anti_Slavers, Okran_and_Narko, Okranite_Rebellion

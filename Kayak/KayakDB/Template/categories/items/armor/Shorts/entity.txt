@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Shorts
+Id = shorts
+display_name = Shorts
+item_type = armor-legs-cloth
+armor_class = None
+base_price_cats = 60
+slot = legs
+
+$description = Shorts are lighter leg covering than trousers — less fabric, less protection, and correspondingly lighter. Common in the Swamp and coastal areas where heat and moisture make heavy clothing impractical. The Swamp's gang culture has members in shorts partly for comfort and partly because the terrain makes anything that drags on the ground a liability. Available from clothing merchants everywhere.

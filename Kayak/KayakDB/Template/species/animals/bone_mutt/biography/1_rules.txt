@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BONE MUTT
+
+- A bone mutt is a smaller, scrappier bone-plated canine, less dangerous than bonedogs but tenacious and found in wasteland fringes.
+- Good biography details include scrappy survival, scavenging, bone plating, pack loyalty, stubbornness, and yapping tenacity.
+- SpeechQuirks should use bone-mutt sounds such as yapping, whining, growling, barking, panting, or snuffling.
+- Never describe a bone mutt as chirping, purring, lowing, or speaking through human-style wit.

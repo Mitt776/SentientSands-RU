@@ -1,0 +1,7 @@
+Placeholder for a future chat system core module.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- overall chat identity
+- high-level role of the NPC
+- global tone constraints

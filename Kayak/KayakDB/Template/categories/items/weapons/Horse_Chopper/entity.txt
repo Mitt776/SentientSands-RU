@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Horse_Chopper
+Id = horse_chopper
+
+display_name = Horse Chopper
+item_type = weapon-blade
+weapon_class = Sabres
+base_price_cats = 750
+weight = 7
+
+$description = The Horse Chopper is a wide-bladed sabre variant designed for sweeping attacks against multiple targets. The name suggests an agricultural or cavalry origin that the current world doesn't quite support — there aren't many horses in Kenshi — but the wide blade profile is real and the multi-target capability works on whatever is in range, animal or human. It's practical, unglamorous, and carried by the kind of fighters who learned combat in the desert before anyone taught them to care about aesthetics.

@@ -1,0 +1,16 @@
+Category = locations
+Name = Shark
+Id = shark
+
+display_name = Shark
+region = The Swamp
+faction = Swamp_factions
+type = city-gang-run
+weight = 7
+
+price_modifier = 0.8
+$description = Shark is what happens when five competing gangs reach an armed equilibrium and decide that destroying each other is slightly less profitable than coexisting and letting travelers pay for the privilege of passing through. The Hounds nominally run Shark, but the Stone Rats, Blackshifters, Twinblades, and Grayflayers all have territory inside the city walls, and the bars serve everyone with the careful neutrality of people who understand that serving one faction's enemies is only bad business if you can't serve both sides simultaneously. It is the largest settlement in the Swamp.
+$atmosphere = Swamp air — thick, wet, warm in a way that feels inhabited. The streets of Shark are narrow and the buildings lean at angles that suggest construction priorities were speed over quality. Five different gang colors visible in any given bar. The silence between two members of rival factions who happen to be drinking at the same counter has its own particular texture.
+$notable = Five active gang factions maintaining uneasy coexistence. Shops that stock things unavailable in more law-abiding cities. The fact that your race and your crimes don't matter here — only your money and your behavior right now. The Swamp surrounding it, which provides natural defense against anyone who wants to bring an army.
+
+$directions = Center of the Swamp.

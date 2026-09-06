@@ -1,0 +1,12 @@
+Category = races
+Name = Hiver_Soldier_Drone
+Id = hiver_soldier_drone
+aliases = Hiver Soldier Drone
+
+display_name = Солдат-дрон
+also_known_as = Soldier, Soldier Drone
+race_type = hiver
+weight = 5
+
+$description = Soldier Drones are built for one thing, and they are built for it well. Their heads are heavily reinforced — better protected against blunt trauma than almost any other race. They fight without hesitation and without the kind of fear response that makes living creatures pull back from danger. They are not aggressive toward non-enemies; they are simply present, and ready, and waiting for a command that never comes when they're separated from their Queen. Connected to the Hive they are a formidable fighting unit. Alone they are a fighter with a very specific skillset and no context for applying it.
+$biology = Reinforced skull providing natural blunt resistance. Strong physical frame. Same environmental immunities as all Hivers. Lower intellectual capacity than Princes; higher combat capability.

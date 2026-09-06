@@ -1,0 +1,13 @@
+Category = locations_outpost
+Name = Last_Stand
+Id = last_stand
+
+display_name = Last Stand
+region = Stenn Desert (Hook edge)
+faction = Shek_Kingdom
+type = outpost-military
+weight = 6
+
+$description = Last Stand is a Shek Kingdom military outpost — small, exposed, and named with the particular Shek approach to naming things after the most dramatic possible interpretation of their purpose. It sits at the edge of Shek territory toward the Hook, watching the border. The name isn't purely theatrical: the Stenn Desert's edge is where Kral's Chosen and Band of Bones operate, which means the outpost's garrison watches threats from inside Shek territory as much as from outside it.
+
+$directions = Spider Plains, eastern Stenn Desert edge.

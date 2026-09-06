@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Oldworld_Bow_MkI
+Id = oldworld_bow_mki
+display_name = Oldworld Bow MkI
+item_type = weapon-ranged
+weapon_class = Crossbows
+base_price_cats = 2500
+weight = 7
+
+$description = The Oldworld Bow MkI is the baseline Old World crossbow — pre-Chaos Age technology that outperforms anything current manufacturers produce at equivalent quality. Uses Regular bolts, has meaningfully longer range and higher damage than the Ranger, and represents the transition from scrappy early-game crossbow use to dedicated ranged combat. It's a significant investment but a genuine upgrade. The MkII blueprint is at the Scraphouse; the MkI is available in ranger shops with some searching.

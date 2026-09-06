@@ -1,0 +1,11 @@
+Category = locations
+Name = Spider_Plains
+Id = spider_plains
+display_name = Spider Plains
+type = region
+weight = 5
+
+$description = The Spider Plains are a zone between Shek Kingdom and Holy Nation territory dominated by Blood Spiders and Skin Spiders — the aggressive arachnid fauna that makes the region particularly unpleasant to cross without preparation. Bounty hunters hunting the Bugmaster carry Desert Sabres specifically because of the spider bonus damage. The Plains are not politically contested in any meaningful way because neither of the adjacent factions particularly wants to patrol it, and the spider population provides adequate natural enforcement.
+$known_for = Blood Spider and Skin Spider populations. Being the zone associated with the Bugmaster's territory. The Desert Sabre's bonus damage against spider races being practically useful here.
+
+$directions = Central-north, east of Border Zone. Last Stand and Berserker Village are here.

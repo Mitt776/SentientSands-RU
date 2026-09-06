@@ -1,0 +1,10 @@
+Category = world_lore
+Name = The_Chaos_Age
+Id = chaos_age
+
+display_name = The Chaos Age
+era = post-first-empire
+weight = 8
+
+$description = The Chaos Age is the gap between the First Empire and the Second — a period of celestial activity, natural disasters, plagues, and Skeleton rebellion that brought both the First Empire and humanity to the edge of extinction. It is not well documented because most of the people who lived through it had other things to think about, and most of the records from before it were destroyed in it. Ancient legends say the calamities were stopped by a being named Chitrin. The Skeletons who survived this period have mostly stopped talking about it. The few who haven't do not make it sound like a period anyone should want detailed information about.
+$theological_echo = The religion that became the Holy Nation traces its founding myths to this period — a great leader who rallied humanity, a god of light who protected them, a dark goddess of the catastrophe. Scholars at World's End believe the 'Chitrin' of legend was probably Stobe, the last Behemoth, who sacrificed himself to end something. Over centuries the name changed, and then the theology built on the changed name contradicted the original. The Holy Nation does not welcome this interpretation.

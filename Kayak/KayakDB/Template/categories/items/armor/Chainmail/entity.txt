@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Chainmail
+Id = chainmail
+
+display_name = Chainmail
+item_type = armor-body-medium
+armor_class = Medium
+base_price_cats = 1800
+weight = 12
+
+$description = Chainmail is the reliable middle ground of Kenshi's armor options — interlocked iron rings woven into a torso-covering layer that provides meaningful cut resistance without the crushing stat penalties of heavy plate. It's heavier than leather but lighter than samurai steel, and its coverage is solid enough to be the right choice for characters who need protection without sacrificing all their combat speed. The Blackened Chainmail variant is worth noting separately: same construction, different treatment, somewhat better stats, and genuinely the best medium armor undergarment for most mid-to-late-game builds.

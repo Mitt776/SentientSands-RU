@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Ninja_Gi
+Id = ninja_gi
+display_name = Ninja Gi
+item_type = armor-body-light
+armor_class = Light
+base_price_cats = 2200
+weight = 2
+
+$description = The Ninja Gi is martial arts specialist armor — a light cloth garment that provides a bonus to the Martial Arts stat rather than physical protection. For characters built around unarmed combat, it's the primary body armor choice since it amplifies their actual combat capability rather than providing armor that their fighting style doesn't benefit from. Available in tech hunter shops and some specialized vendors. The Ninja Rags are a lighter, cheaper variant with similar martial arts bonuses.

@@ -1,0 +1,9 @@
+Category = items_food
+Name = Dustwich
+Id = dustwich
+display_name = Dustwich
+item_type = food
+base_price_cats = 856
+weight = 1
+
+$description = A dustwich is bread plus eight cactus, cooked at a camping stove after researching Desert Cooking. The name is accurate. It is a sandwich made in a desert from ingredients that grow in a desert, and it tastes like something that has been exposed to desert conditions for an appropriate length of time. It provides meaningful nutrition at a reasonable production cost — better than plain bread, cheaper to produce than foodcubes, and one of the first processed foods available to new settlements in arid regions where greenfruit won't grow.

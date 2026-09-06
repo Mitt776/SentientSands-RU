@@ -1,0 +1,7 @@
+Placeholder for future player context prompt text.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- player biography
+- faction framing
+- custom campaign player notes

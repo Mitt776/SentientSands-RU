@@ -1,0 +1,11 @@
+Category = items_materials
+Name = Raw_Iron
+Id = raw_iron
+
+display_name = Raw Iron
+item_type = raw-material
+value_cats = 16
+weight = 10
+
+base_price_cats = 90
+$description = Raw iron ore comes out of the ground in chunks that require processing before they're useful for anything. The Great Desert has significant iron deposits. The Border Zone has accessible surface outcroppings. The economy of the continent runs on processed iron the way it runs on dried meat — everything ultimately depends on it, and the supply chains that move it from ground to finished product are both critical and fragile. Slave miners in United Cities territory dig most of it; the irony that the iron that makes the collars comes from the labor of the collared is not lost on the Anti-Slavers.

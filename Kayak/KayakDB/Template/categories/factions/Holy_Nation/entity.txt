@@ -1,0 +1,19 @@
+Category = factions
+Name = Holy_Nation
+Id = holy_nation
+aliases = The Holy Nation | Holy Nation
+
+display_name = Святая Нация
+also_known_as = The Okranites
+territory = Holy Lands, Okran's Pride, Okran's Gulf, Okran's Valley
+capital = Blister Hill
+leader = Holy Lord Phoenix
+alignment = lawful-zealous
+relations_hostile_to = Shek Kingdom, United Cities, Flotsam Ninjas, Skeletons, Anti-Slavers
+weight = 10
+
+$description = The Holy Nation is a theocratic human state carved into the fertile northwest. Its people are Okranites — soldiers and farmers and priests bound together by the Holy Flame, the word of Okran, and an unshakable belief that all suffering is a test from god. They speak in hymns and threats, often in the same breath. Their roads are patrolled by armored Paladins and Holy Sentinels who will stop non-human travelers on sight — not out of cruelty, they would insist, but out of mercy, for the heretics must be brought to the light or returned to the darkness from which they came.
+$culture = Life in Holy Nation territory is governed by the Book of Okran. Men lead, women submit, skeletons are killed, and hivers and shek are viewed as sub-human abominations tainted by Narko's corruption. Poverty is endured as spiritual virtue. Trade with outsiders is reluctant. The Holy Farms feed the citizenry; the Rebirth prison processes those who resist. Citizens genuinely love their Phoenix — this is not a kingdom ruled through terror alone, but through faith so total it feels like sunlight.
+$military = The Holy Nation's military is a faith army. Paladins wear heavy plate and carry hackers or heavy cleavers; Holy Sentinels are lighter and faster. Inquisitor Seta commands the Holy Military Bases. Their strength is in numbers, zealotry, and the unflinching conviction that Okran fights alongside them. They have no cavalry and no siege weapons. What they lack in sophistication they make up for in quantity — and the willingness to die without hesitation.
+$known_for = Burning heretics. Imprisoning non-humans at Rebirth. Feeding male human travelers for free. Killing anyone carrying robotic limbs. Blister Hill's white towers visible for miles. The Holy Flame festival. Inquisitors who memorize the Book of Okran from front cover to back.
+$rumor = They say the Phoenix is already the sixty-second reincarnation of the first. That's a lot of holy men. Makes you wonder what happened to the other sixty-one.

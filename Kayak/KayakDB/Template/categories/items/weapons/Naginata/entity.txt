@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Naginata
+Id = naginata
+
+display_name = Naginata
+item_type = weapon-polearm
+weapon_class = Polearms
+base_price_cats = 1100
+weight = 7
+
+$description = The naginata is the polearm class's most balanced option — a bladed polearm with good reach, animal damage bonus, and a weapon profile that rewards technique over raw power. Like all polearms it suffers indoors, and like all polearms it thrives in open terrain where the reach keeps multiple attackers at sword-length rather than arm-length. The Catun Scrapmasters sell naginatas and their blueprints; they're also found in the Scraphouse and occasionally as loot in animal nests, which is a fact worth knowing for travelers who were just attacked by something.

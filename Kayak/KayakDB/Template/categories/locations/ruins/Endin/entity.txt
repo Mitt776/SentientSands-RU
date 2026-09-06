@@ -1,0 +1,13 @@
+Category = locations_ruin
+Name = Endin
+Id = endin
+
+display_name = Endin
+region = Bast zone
+faction = United_Cities
+type = city-ruined
+weight = 4
+
+$description = Endin is another casualty of the Holy Nation's eastward military pressure — a ruined city in the Bast zone, destroyed alongside Bast itself, now inhabited by peasants, exiles, and outlaws without samurai protection. Unlike Bast, there's a single intact storm house that serves as communal shelter. The people inside are harmless unless you're hostile to the United Cities. The camp beds are free to use. What Endin was before the Holy Nation's army came through it is part of the general information the Holy Nation prefers not to discuss.
+
+$directions = Bast zone, east of Heng. Near Bast ruins. Northeast of Stoat.

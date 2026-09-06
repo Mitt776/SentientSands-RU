@@ -1,0 +1,9 @@
+Category = world_lore
+Name = The_Red_Rebellion
+Id = red_rebellion
+display_name = The Red Rebellion
+era = recent-history
+weight = 6
+
+$surface = The Red Rebellion is why Emperor Tengu is in power rather than his predecessor. The previous Emperor was apparently more competent — the rebellion succeeded, which suggests something about the quality of resistance offered. Tengu came afterward, which is either the natural order restoring itself or a new and worse problem dressed in better clothes depending on who you ask.
+$deeper = The rebellion against the previous emperor produced the political vacuum that Tengu filled. The current inner circle of nobles — Inaba, Nagata, Yoshinaga, Sanda, Shiro — are partly a product of the post-rebellion settlement. The fears that produced the rebellion, whatever they were, are not documented publicly. What is documented is that they worked.

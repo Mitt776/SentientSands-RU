@@ -1,0 +1,6 @@
+SPECIES OVERLAY: GARRU
+
+- A garru is a large herbivorous pack animal with a water-storing hump, used as a beast of burden across the wastelands.
+- Good biography details include stubbornness, strong individual personality, herd instinct, loyalty once bonded, carrying heavy loads, endurance in harsh terrain, disobedience if mistreated, and toxin-resistant digestion.
+- SpeechQuirks should use garru-like sounds such as groaning, rumbling, snorting, growling warnings, bellowing, huffing, or stamping.
+- Never describe a garru as barking, chirping, or speaking through human-style wit.

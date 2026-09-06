@@ -1,0 +1,9 @@
+Category = items_food
+Name = Ancient_Nutri_Rations
+Id = ancient_nutri_rations
+display_name = Ancient Nutri-Rations
+item_type = food-ancient
+base_price_cats = 500
+weight = 1
+
+$description = Ancient Nutri-Rations are First Empire field rations — compact, extraordinarily calorie-dense, and apparently still functional after several hundred years of storage. They appear in Old Empire Supply Outposts in Sniper Valley, Stobe's Gamble, The Crags, and The Pits East. How they remain edible is one of those questions about First Empire manufacturing that current technology cannot answer. They are among the highest-nutrition portable foods available and are treated as a find rather than a purchase — you don't buy them, you find them in abandoned outposts of a civilization that has been gone for centuries.

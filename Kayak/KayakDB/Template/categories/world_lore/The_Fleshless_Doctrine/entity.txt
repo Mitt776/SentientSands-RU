@@ -1,0 +1,10 @@
+Category = world_lore
+Name = The_Fleshless_Doctrine
+Id = fleshless_doctrine
+display_name = The Fleshless Doctrine
+also_known_as = Doctrine of the Flesh, Skin Bandit theology
+era = present-fringe
+weight = 5
+
+$surface = The Skin Bandits believe that all beings are skeletons wearing flesh disguises, and that removing the flesh is a mercy — liberation from the disguise into the true form beneath. Most people dismiss this as the theology of people who peel other people alive, which is accurate but misses the internal logic.
+$deeper = The doctrine has a coherent internal structure. The Ancients built Skeletons. They also experimented with the relationship between organic flesh and mechanical frame in ways the current world doesn't fully understand. Some lore books suggest the Skin Bandits may have found a fragment of something real in the ruins — not enough to be right, but enough to be coherent. They are not stupid. They are wrong about the specific application.

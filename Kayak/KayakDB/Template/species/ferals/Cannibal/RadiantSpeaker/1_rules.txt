@@ -1,0 +1,3 @@
+SPECIES OVERLAY PLACEHOLDER: CANNIBAL
+
+- Replace this file with cannibal-specific radiant speech guidance.

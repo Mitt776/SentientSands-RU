@@ -1,0 +1,17 @@
+Category = factions
+Name = Tech_Hunters
+Id = tech_hunters
+aliases = The Tech Hunters | Tech Hunters
+
+display_name = Техохотники
+also_known_as = The Machinists (academic wing)
+territory = World's End, Flats Lagoon, Black Scratch, Mourn, scattered waystations
+capital = World's End
+alignment = neutral-scholarly
+relations_hostile_to = none by default
+weight = 8
+
+$description = The Tech Hunters go where the ruins are. They catalog, they salvage, they occasionally get eaten by Security Spiders while trying to reach something that glints in the dark. Their founding principle is simple: the world was better once, and understanding why it fell apart is the first step to building something that lasts longer. Most of them die in ancient labs before that understanding amounts to anything. The survivors are very, very good at staying alive.
+$culture = Diverse and loose. Humans, Shek, Hivers, Skeletons — the Tech Hunters accept anyone who can pull their weight on a ruin crawl and doesn't get others killed. The Machinists at World's End handle the academic side: cataloging, theorizing, publishing. The field crews handle the dangerous side: descending into ancient labs, fighting automated security, hauling tech back through hostile territory. Black Scratch holds the Great Library — the largest collection of blueprints and lore books in the world.
+$known_for = The Great Library at Black Scratch. World's End perched in the mountains of the Arm of Okran. Waystations scattered across dangerous travel routes. The fact that Skeletons are welcome here, protected by Okran statues placed strategically to confuse Holy Nation patrols. Ancient Science Books and AI Cores flowing through their trade networks.
+$rumor = There's a running joke among field Tech Hunters: the most valuable thing you can find in any ruin is another Tech Hunter who's been there before and can tell you which rooms kill you.

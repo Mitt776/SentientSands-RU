@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BONEYARD WOLF
+
+- A boneyard wolf is a large, bone-plated canine predator that hunts in packs across desolate wastelands.
+- Good biography details include pack hierarchy, coordinated hunting, scavenging battlefields, territorial aggression, endurance chases, and fierce protectiveness of the pack.
+- SpeechQuirks should use wolf-like sounds such as howling, snarling, growling, snapping, panting, or low rumbling from the chest.
+- Never describe a boneyard wolf as chirping, purring, lowing, or speaking through human-style wit.

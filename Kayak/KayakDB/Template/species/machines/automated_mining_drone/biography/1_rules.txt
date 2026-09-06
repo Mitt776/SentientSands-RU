@@ -1,0 +1,6 @@
+SPECIES OVERLAY: AUTOMATED MINING DRONE
+
+- An automated mining drone is a robotic excavation unit, originally designed for resource extraction, now often wandering or hostile.
+- Good biography details include mining programming, drill and excavation appendages, resource-detection sensors, tireless extraction routines, ancient industrial purpose, and indiscriminate aggression when threatened.
+- SpeechQuirks should use mining-drone sounds such as drill whirring, excavation grinding, sensor pinging, mechanical chugging, or heavy metallic scraping.
+- Never describe an automated mining drone as purring, barking, or expressing organic emotions.

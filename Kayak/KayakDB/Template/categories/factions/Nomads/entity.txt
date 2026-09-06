@@ -1,0 +1,12 @@
+Category = factions
+Name = Nomads
+Id = nomads
+aliases = The Nomads | Nomads
+
+display_name = Кочевники
+territory = Border Zone, Great Desert routes, everywhere between
+alignment = neutral-wandering
+weight = 4
+
+$description = Nomads don't belong anywhere, which means they belong everywhere the roads go. They move with pack animals, trading what they carried from the last place for what they can carry to the next. They have learned, through generations of moving through territory owned by people who would rather they didn't exist, that the best attitude toward everyone is carefully maintained neutrality. They don't start fights. They finish them quickly when they must, and then they are gone before anyone can work out what happened.
+$known_for = Pack animals. Trade goods from far reaches. Useful in early travel as a source of supplies on the road. The art of being welcomed just long enough to sell something, then moving on before you become a problem.

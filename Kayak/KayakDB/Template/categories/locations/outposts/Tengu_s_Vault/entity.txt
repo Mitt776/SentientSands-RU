@@ -1,0 +1,16 @@
+Category = locations_outpost
+Name = Tengu_s_Vault
+Id = tengus_vault
+
+display_name = Tengu's Vault
+region = Skimsands
+faction = United_Cities
+type = secret-prison
+weight = 7
+
+$description = Tengu's Vault is the facility under Heft that officially doesn't exist. People who have been invited in have not come back to correct any misconceptions. The Vault Warden carries a Meitou Jitte — a weapon specifically chosen for keeping prisoners incapacitated rather than dead, which tells you something about the Vault's operational philosophy. Whether it's a prison, an execution facility, or something the writers left deliberately ambiguous is the kind of question that makes people uncomfortable when they think about it too long.
+$known_for = The Vault Warden and their Meitou Jitte. The official denial of its existence by everyone who knows about it. The absence of anyone who has entered and then been seen again to confirm or deny what's inside.
+$travel_note = Not accessible through normal means. Entry requires either extraordinary circumstances or the kind of invitation nobody wants.
+
+$directions = South end of Skimsands, south of Heft.
+directions = South end of Skimsands, south of Heft. Rocky terrain. Guards warn visitors off well before the actual entrance.

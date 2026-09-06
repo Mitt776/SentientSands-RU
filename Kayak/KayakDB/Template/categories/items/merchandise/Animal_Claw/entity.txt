@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Animal_Claw
+Id = animal_claw
+display_name = Animal Claw
+item_type = trade-raw
+base_price_cats = 90
+
+$description = Animal claws are harvested from larger predators — Beak Things primarily, but also Gorillos and similar fauna. Heavier and more valuable than teeth. Sold to merchants as trade goods. The Beak Thing claw trade is informally tracked by travelers who make a habit of hunting them near Bad Teeth, where the gate guards produce a reliable stream of defeated River Raptors whose claws are also worth picking up. Like most animal loot, the practical constraint is inventory weight versus value versus what else you need to carry.

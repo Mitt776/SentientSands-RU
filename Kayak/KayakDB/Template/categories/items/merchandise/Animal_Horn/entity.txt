@@ -1,0 +1,9 @@
+Category = items_merchandise
+Name = Animal_Horn
+Id = animal_horn
+display_name = Animal Horn
+item_type = trade-junk
+base_price_cats = 150
+weight = 2
+
+$description = Animal horns come from Gorillos, Wild Bulls, and similar large fauna. More valuable than teeth, lighter than skins. They sell reasonably well as trade goods given their weight-to-value ratio. Some faction traders have specific interest in them. Like most animal loot, their main value is that they exist as a byproduct of fights you were going to have anyway.

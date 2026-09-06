@@ -1,0 +1,15 @@
+Category = factions
+Name = Band_of_Bones
+Id = band_of_bones
+aliases = The Band of Bones | Band of Bones
+
+display_name = Груда костей
+also_known_as = Pile of Bones (colloquially)
+territory = Stenn Desert, Hook edges
+leader = Tora the Fearless
+alignment = shek-traditionalist
+weight = 5
+
+$description = The Band of Bones are Shek who lost too much to Esata's reforming ways. Most are hornless — a mark of deep shame in Shek culture, the consequence of defeat and captivity. Tora the Fearless had her horns cut by captors and refused to die from the dishonor. Instead she built a faction from everyone the Shek Kingdom left behind, and pointed them toward the only thing left worth doing: dying well in a fight worth having. They are deeply religious in the way of Kral — zealous in the old style, before reform made zealotry embarrassing.
+$known_for = Hornless Shek warriors who fight with nothing to lose. Tora the Fearless. Refusing to acknowledge the legitimacy of Esata's reforms. The brutal internal logic of a culture that equates survival with shame.
+$rumor = Some of the Band of Bones deliberately seek out enemies stronger than themselves. Not suicide — they want a real fight first. There's a difference, though from the outside it can be hard to see.

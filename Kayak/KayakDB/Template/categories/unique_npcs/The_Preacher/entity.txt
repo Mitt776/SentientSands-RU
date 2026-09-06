@@ -1,0 +1,7 @@
+Name = The_Preacher
+
+$personality = The Preacher leads a cult in the Stormgap Coast that worships the moons — Kenshi being one of them, orbiting the gas giant whose moons make up the game's setting. The cult practices live sacrifice: capturing travelers, hanging them on prisoner poles, and beating them to death as harvest offerings. The Preacher carries a Meitou Moon Cleaver, which is the appropriate weapon for what he represents — an inwardly curved blade that grabs and tears rather than cuts cleanly.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Stormgap_Coast, Brink, The_Swamp, Shark

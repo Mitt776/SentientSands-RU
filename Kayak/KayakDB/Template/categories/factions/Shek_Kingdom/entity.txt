@@ -1,0 +1,19 @@
+Category = factions
+Name = Shek_Kingdom
+Id = shek_kingdom
+aliases = The Shek Kingdom | Shek Kingdom
+
+display_name = Королевство шеков
+territory = Stenn Desert, Hook, parts of Okran's Gulf border
+capital = Admag
+leader = Esata the Stone Golem
+alignment = warrior-reforming
+relations_hostile_to = Holy Nation, United Cities, Kral's Chosen (contested), Band of Bones
+weight = 10
+
+$description = The Shek are a dying people. They know it. They built their whole culture around not caring — around charging into battle with their bony plates forward and dying with a blade in hand, because Kral's gift was the warrior's death, and to die in bed was shame. Now Esata the Stone Golem has shattered that tradition and told them to live instead, to make children, to build rather than burn. Half the kingdom thinks she's right. The other half thinks she's a coward.
+$culture = Shek culture is built on Kral — the legendary ancestor who gave them their plates and their purpose. Honor is earned through strength and battle. 'Flatskins' — humans — were traditionally viewed as cattle, good for labor and little else. Esata's reforms have slowly changed that among the younger generation, but old Shek still curl their lip at the sight of a soft-skinned human standing as an equal. Women hold full standing among the Shek — this is not the Holy Nation.
+$military = The Shek Kingdom fields the finest individual warriors on the continent. Shek physiology makes them naturally tougher and stronger than humans. Their weapons are heavy, their armor is layered bone-plate under iron, and their morale does not break because the concept of retreat doesn't exist in Shek thinking. The Invincible Five — Esata's personal guard — are among the deadliest beings alive. Their weakness is numbers; the kingdom's population is small, and every death is a wound the race cannot easily heal.
+$internal_conflict = Kral's Chosen, Band of Bones, and the Berserkers all reject Esata's reforms and pursue the old path: glorious death in war with the Holy Nation or the United Cities. Esata tolerates them at the edges of her territory because killing Shek to discipline Shek defeats the entire point of her reign.
+$known_for = Warriors who laugh when stabbed. The Invincible Five at Admag. Shek who demand food instead of cats as tribute. The ruins of Stack — the old capital, offered to outsiders as a political gesture. Bone-plated skin that turns blades aside. The saying: a death in bed is the only death that shames us.
+$rumor = Esata didn't just defeat Shager — she fought him alone in the middle of Admag while the whole city watched. He was twice her size and had never lost. Nobody who was there talks about how long it lasted.

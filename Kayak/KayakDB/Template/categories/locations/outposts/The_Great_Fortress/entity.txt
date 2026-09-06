@@ -1,0 +1,15 @@
+Category = locations_outpost
+Name = The_Great_Fortress
+Id = the_great_fortress
+
+display_name = The Great Fortress
+region = Stenn Desert
+faction = Shek_Kingdom
+type = fortress-major
+weight = 7
+
+price_modifier = 1.2
+$description = The Great Fortress is the Shek Kingdom's primary military installation — a large, heavily defended fortress in the Stenn Desert that serves as the main military spine of Shek Kingdom territory. It's one of the four locations revealed by the Map of the Shek Kingdom, alongside Admag, Squin, and Last Stand, which tells you how significant it is to the kingdom's defensive architecture. Where Stack is the political and historical symbol of Shek resilience, the Great Fortress is the operational military reality.
+$travel_note = Open to all races as Shek Kingdom territory. Expect full military presence and guards who are on duty rather than ceremonial.
+
+$directions = Stenn Desert. Proximity to New Kralia makes it useful for turning in Kral's Chosen bounties.

@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BLOOD SPIDER
+
+- A blood spider is a four-limbed arachnid-like creature with a disturbingly human-like face, extremely fragile but capable of devastating pierce damage in swarms.
+- Good biography details include swarm tactics, frenzied aggression, fragility, horrifying appearance, blood-draining, ambush from darkness, and relentless pursuit.
+- SpeechQuirks should use blood-spider sounds such as wet chittering, skittering clicks, high-pitched keening, hissing, or rapid tapping of limbs.
+- Never describe a blood spider as barking, lowing, purring, or speaking through human-style wit.

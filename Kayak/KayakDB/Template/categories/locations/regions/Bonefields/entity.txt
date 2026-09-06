@@ -1,0 +1,12 @@
+Category = locations
+Name = Bonefields
+Id = bonefields
+display_name = The Bonefields
+type = region
+faction = United_Cities
+weight = 6
+
+$description = The Bonefields are an arid plateau region in United Cities territory — the zone containing Catun and its Scrapmasters weapon manufacturing operation. The terrain is rocky and elevated, providing natural defensive advantages that explain why Catun was built here. The name comes from the visible fossil and bone deposits in the stone, remnants of whatever lived in this region before the desert took hold. The proximity to good stone and ore deposits is what made Catun viable as an industrial city.
+$known_for = Catun and the Scrapmasters. The elevated rocky terrain. Ore and stone deposits that feed Catun's manufacturing.
+
+$directions = South-central. Catun and Mourn are here.

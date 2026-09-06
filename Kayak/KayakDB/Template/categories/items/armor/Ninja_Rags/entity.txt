@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Ninja_Rags
+Id = ninja_rags
+display_name = Ninja Rags
+item_type = armor-body-cloth
+armor_class = None
+base_price_cats = 500
+slot = body
+
+$description = Ninja Rags are the lightweight version of the Ninja Gi — same stealth bonus concept, less durable, cheaper, and with a name that acknowledges the aesthetic honestly. For stealth-focused characters who prioritize movement speed and the Stealth skill over protection, they serve the same function as the Gi does for martial arts builds. Worn by certain Shinobi Thieves operatives and available through appropriate channels. The rags designation is accurate.

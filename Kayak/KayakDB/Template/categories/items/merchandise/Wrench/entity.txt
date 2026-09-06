@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Wrench
+Id = wrench
+display_name = Wrench
+item_type = trade-junk
+base_price_cats = 150
+
+$description = A wrench is a specific tool with slightly higher value than generic tools — probably because it has mechanical applications beyond carpentry. Found in workshops and ancient ruins. Tech Hunter camps occasionally have them. The fact that it has a specific name and higher value than the generic 'Tools' item suggests the market distinguishes between tool types, which says something about the level of mechanical sophistication still present in some parts of the economy.

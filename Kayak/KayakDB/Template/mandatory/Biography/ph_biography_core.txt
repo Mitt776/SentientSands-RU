@@ -1,0 +1,7 @@
+Placeholder for future biography generation rules.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- canon-first rules
+- JSON output schema
+- personality generation style

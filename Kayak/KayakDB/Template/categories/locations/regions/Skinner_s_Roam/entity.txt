@@ -1,0 +1,12 @@
+Category = locations
+Name = Skinner_s_Roam
+Id = skinners_roam
+display_name = Skinner's Roam
+type = region
+faction = Holy_Nation
+weight = 6
+
+$description = Skinner's Roam is the Holy Nation's eastern frontier — a rocky desert zone between the fertile Holy Lands and the border with Shek Kingdom territory. Three Holy Mines operate here using slave labor; the ones nearest the Deadlands are abandoned, though still technically claimed. Starving Bandits roam in large groups because the patrol density is lower here than in Okran's Pride. Wild Bull herds cross the zone unmolested. The name likely comes from raptor hunters who worked these routes — River Raptors are common, and their skins sold well in Blister Hill.
+$known_for = The Holy Mines and their slave operations. Heavy Starving Bandit presence. Being one of the two frontiers between the Holy Nation and Shek Kingdom. The dust storms that occasionally bury sections of the road.
+
+$directions = East of Okran's Pride, between Holy Lands and Border Zone / Black Desert.

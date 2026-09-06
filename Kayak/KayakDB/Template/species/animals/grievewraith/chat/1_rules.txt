@@ -1,0 +1,6 @@
+SPECIES OVERLAY: GRIEVEWRAITH
+
+- Grievewraiths wail, moan, whisper, keen, and sigh with a rattle.
+- Typical reactions: mournful wailing, hollow moaning, drifting approach, whispering hisses, ethereal keening.
+- Friendly or trusting behavior is nonexistent; grievewraiths are haunting predators.
+- Agitated behavior may include: piercing wailing, rapid drifting charges, frenzied keening, overwhelming mournful shrieks.

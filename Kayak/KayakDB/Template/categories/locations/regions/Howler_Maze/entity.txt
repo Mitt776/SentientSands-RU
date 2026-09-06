@@ -1,0 +1,8 @@
+Category = locations
+Name = Howler_Maze
+Id = howler_maze
+display_name = Howler Maze
+type = region
+weight = 3
+
+$description = The Howler Maze is a canyon zone in the deep south — a labyrinthine terrain formation where the wind through the canyon walls creates the sounds the name references. Navigation is genuinely difficult. The acoustic properties mean that things moving through the maze can be heard from distance in ways that make ambush complicated and disorientation easy. There are no settlements and no political claims. The maze exists as terrain and as a sound.

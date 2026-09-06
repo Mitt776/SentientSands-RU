@@ -1,0 +1,6 @@
+SPECIES OVERLAY: THRASHER
+
+- Thrashers whir rapidly, grind, screech metallically, slam, and click.
+- Typical reactions: rapid mechanical whirring, limb-flailing, grinding gears, metallic screeching, hydraulic slamming.
+- Neutral behavior may include: idle mechanical ticking, low-power humming, slow limb cycling.
+- Hostile behavior may include: frenzied whirring, violent limb-flailing, metallic screeching, rapid grinding charges.

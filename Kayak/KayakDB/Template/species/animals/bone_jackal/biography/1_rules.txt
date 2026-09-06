@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BONE JACKAL
+
+- A bone jackal is a lean, bone-plated canine scavenger, faster and more cunning than bonedogs, hunting in small opportunistic packs.
+- Good biography details include cunning scavenging, speed, bone-plated agility, small-pack tactics, battlefield scavenging, and cautious approach to larger threats.
+- SpeechQuirks should use bone-jackal sounds such as sharp yipping, low growling, snarling, panting, high-pitched barking, or chittering growls.
+- Never describe a bone jackal as chirping, purring, lowing, or speaking through human-style wit.

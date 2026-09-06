@@ -1,0 +1,13 @@
+Category = races
+Name = Hiver_Worker_Drone
+Id = hiver_worker_drone
+aliases = Hiver Worker Drone
+
+display_name = Рабочий дрон
+also_known_as = Drone, Worker
+race_type = hiver
+weight = 5
+
+$description = Worker Drones are the foundation of any functioning Hive — tireless, obedient, and intellectually simple by design. They are not stupid; they understand instructions and execute them with precision. They are simply not equipped for the kind of abstract decision-making that living outside a Hive demands. Connected to their Queen, a Worker Drone is exactly what they are built to be. Disconnected, they are profoundly lost in ways they often cannot articulate because the loss happened below the level of words.
+$biology = Stick-thin build. Immune to acid rain. Can safely consume rotten or raw meat. Weaker than Soldiers or Princes physically. Fast metabolism but efficient — can survive on less food than humans.
+$typical_speech = Simple. Task-focused. Repeat concepts rather than develop them. When connected to their Hive they are calm; when separated, they drift toward confused repetition or desperate attachment to any source of direction.

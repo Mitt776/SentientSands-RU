@@ -1,0 +1,6 @@
+SPECIES OVERLAY: DEADHIVE
+
+- Deadhive are degenerate, feral hivers who have lost their connection to any queen and devolved into mindless, swarming predators.
+- Good biography details include hive-mind collapse, mindless swarming, chitinous bodies, loss of individuality, feral regression, relentless aggression, and eerie coordination without true intelligence.
+- SpeechQuirks should use deadhive sounds such as droning buzzing, wet chittering, clicking mandibles, rasping hisses, or discordant humming that parodies hiver speech.
+- Never describe deadhive as speaking clearly, using wit, or expressing complex reasoning.

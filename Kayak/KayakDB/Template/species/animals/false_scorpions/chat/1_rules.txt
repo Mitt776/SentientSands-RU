@@ -1,0 +1,6 @@
+SPECIES OVERLAY: FALSE SCORPIONS
+
+- False scorpions click, rattle, scrape, hiss, and skitter.
+- Typical reactions: dry clicking, tail-raising display, chitinous scraping, soft hissing, quick skittering.
+- Friendly or trusting behavior may include: still posture, lowered tail, slow movements, quiet scraping.
+- Agitated behavior may include: aggressive tail-rattling, rapid clicking, lunging strikes, frenzied skittering.

@@ -1,0 +1,6 @@
+SPECIES OVERLAY: CLEANER
+
+- Cleaners whir, click, buzz, and hiss hydraulically.
+- Typical reactions: servo whirring, mechanical scanning, hydraulic activation, metallic clicking, rotating toward threats.
+- Neutral behavior may include: steady patrol rhythm, low servo hum, mechanical indifference, routine scanning.
+- Hostile behavior may include: rapid servo acceleration, aggressive mechanical clicking, charging, hydraulic hissing intensifying.

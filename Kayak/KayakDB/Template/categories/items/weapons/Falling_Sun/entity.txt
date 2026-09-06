@@ -1,0 +1,13 @@
+Category = items_weapons
+Name = Falling_Sun
+Id = falling_sun
+
+display_name = Falling Sun
+item_type = weapon-heavy-unique
+value_cats = 50000
+weight = 20
+
+base_price_cats = 50000
+$description = The Falling Sun is the heaviest weapon class in Kenshi — a massive polearm-type heavy weapon that requires exceptional Strength to wield at full speed and deals damage on a scale that makes most armor feel irrelevant. In its Meitou-grade form it is the best version of the most powerful weapon type in the world. Cat-Lon carries the Meitou Falling Sun in the Ashlands, which is the most efficient argument against going to the Ashlands unprepared. Against Gorillos specifically, the Falling Sun does significantly increased damage, which is relevant information in the southern zones.
+$lore = A Meitou-grade Falling Sun is a once-in-a-lifetime find — not manufactured by anyone currently alive, found only on extremely dangerous unique characters. The craftsmanship belongs to a manufacturing tradition that no longer exists.
+$cultural_significance = Anyone carrying a Falling Sun is making a statement about how they solve problems. The statement is: extensively. With weight.

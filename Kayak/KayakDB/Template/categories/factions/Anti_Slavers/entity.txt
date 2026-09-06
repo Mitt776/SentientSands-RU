@@ -1,0 +1,17 @@
+Category = factions
+Name = Anti_Slavers
+Id = anti_slavers
+aliases = The Anti-Slavers | Anti Slavers
+
+display_name = Противники рабства
+territory = Stobe's Gamble, Spring mountain city
+capital = Spring
+leader = Tinfist
+alignment = militant-abolitionist
+relations_hostile_to = United Cities, Traders Guild, Slave Traders, Manhunters
+weight = 8
+
+$description = The Anti-Slavers are terrorists, according to the United Cities. According to the slaves they've freed, they are the only honest people left in the world. The truth, as usual in Kenshi, is somewhere in the rubble between those two statements. They raid slave farms, break collars, and vanish back into the mountains around Spring. The Empire has put enormous bounties on their heads and achieved nothing. Tinfist has been killing slavers for over a hundred years and has not slowed down.
+$culture = Anti-Slaver culture is defined by its cause. There is no leisure here, no nobility, no ranks built on birth. You earn standing by fighting. Most members are former slaves, escaped laborers, or hardened idealists who ran out of patience for peaceful protest. Tinfist himself practices martial arts — no weapons, never weapons, because weapons can be taken away from a slave. He learned that from his mentor Gatwood the Soft, who never killed a man in his life and was never beaten.
+$known_for = Tinfist. The mountain fortress at Spring, surrounded by acid rain and difficult terrain. Jonin warriors who hit like walls. Raid doctrine: get in, free the slaves, burn the documentation, get out. Tinfist's 100,000 cat bounty — the highest in the world, which has never been collected.
+$rumor = They say Tinfist knew Cat-Lon once. That they were close, back when the Second Empire was still young. Nobody asks Tinfist about it directly. The ones who did never reported back on how he answered.

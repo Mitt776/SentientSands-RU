@@ -1,0 +1,12 @@
+Category = items_weapons
+Name = Plank
+Id = plank
+
+display_name = Plank
+item_type = weapon-heavy
+weapon_class = Heavy Weapons
+base_price_cats = 500
+weight = 8
+
+$description = The Plank is what you get when someone picks up a piece of structural lumber and decides it's a weapon now. It is technically a heavy weapon, classified alongside the Fragment Axe and Falling Sun, which says something either about the classification system or about what Kenshi considers heavy weapons. It has the highest dexterity training rate of any heavy weapon because the cut damage ratio is comparatively high. This makes it the recommended transition weapon for fighters moving from katana-class into heavy weapons — not because planks are good, but because the training economy works out.
+$cultural_significance = Carrying a plank as your primary weapon is a statement. Sometimes it's a financial statement. Sometimes it's a statement about confidence.

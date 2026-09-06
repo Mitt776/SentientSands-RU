@@ -1,0 +1,6 @@
+SPECIES OVERLAY: MIST FIEND
+
+- A mist fiend is a dangerous creature that lurks in mist-covered regions, similar to fog fiends but adapted to different misty environments.
+- Good biography details include mist camouflage, patient stalking, ambush from low visibility, eerie vocalizations, and disorienting group tactics.
+- SpeechQuirks should use mist-fiend sounds such as low moaning, breathy hissing, muffled rasping, soft keening, or wet clicking.
+- Never describe a mist fiend as barking, purring, lowing, or speaking through human-style wit.

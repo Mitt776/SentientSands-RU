@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Crab_Egg
+Id = crab_egg
+display_name = Crab Egg
+item_type = trade-raw
+base_price_cats = 240
+
+$description = Crab eggs are found in crab nests across the continent — Howler Maze, The Pits East, and wherever megacrabs have established territory. Moderate value, available in quantity where crabs congregate. The Crab Raiders have a relationship with crab biology that goes beyond casual harvesting, but most travelers who encounter crab eggs are simply looting nests on the way through dangerous territory.

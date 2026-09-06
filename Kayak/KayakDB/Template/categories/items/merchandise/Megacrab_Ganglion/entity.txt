@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Megacrab_Ganglion
+Id = megacrab_ganglion
+display_name = Megacrab Ganglion
+item_type = trade-rare
+base_price_cats = 3000
+
+$description = A Megacrab Ganglion is a neural cluster harvested from a defeated Megacrab — the enormous crab variants found in the Howler Maze and The Pits area. At 3,000 cats it is one of the higher-value single loot items in the game, extractable from creatures that require serious combat capability to defeat. The practical question is how many of your squad survived the Megacrab encounter, which determines whether the ganglion is a profit or a pyrrhic consolation.

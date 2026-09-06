@@ -1,0 +1,8 @@
+# SentientSongs configuration
+host = 127.0.0.1
+port = 4999
+heartbeat_timeout = 30
+heartbeat_interval = 10
+default_volume = 70
+shuffle = off
+loop = off

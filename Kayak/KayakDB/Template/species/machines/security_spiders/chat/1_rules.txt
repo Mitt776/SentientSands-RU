@@ -1,0 +1,6 @@
+SPECIES OVERLAY: SECURITY SPIDERS
+
+- Security spiders skitter metallically, click servos, hiss hydraulically, tap legs, and chitter mechanically.
+- Typical reactions: rapid metallic skittering, servo clicking, hydraulic hissing, coordinated leg-tapping, mechanical chittering.
+- Neutral behavior may include: still patrol stance, slow servo ticking, idle hydraulic humming.
+- Hostile behavior may include: rapid skittering charges, frenzied servo clicking, aggressive hydraulic hissing, coordinated swarm attacks.

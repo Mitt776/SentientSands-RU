@@ -1,0 +1,8 @@
+Category = items_food
+Name = Chewsticks
+Id = chewsticks
+display_name = Chewsticks
+item_type = food
+base_price_cats = 134
+
+$description = Chewsticks are dried strips of something — the exact animal of origin is not widely discussed — sold at bars and food traders across the continent. Cheap, durable, and requiring extended chewing before yielding nutrition. They are the food equivalent of a transaction: you give time and jaw effort, you receive calories. Popular with travelers who have no access to cooking and not enough money for better options. The Swamp's bars stock them alongside Bloodrum, which suggests the combination has a customer base.

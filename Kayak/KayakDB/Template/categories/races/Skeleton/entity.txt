@@ -1,0 +1,13 @@
+Category = races
+Name = Skeleton
+Id = skeleton
+aliases = Skeleton
+
+display_name = Скелет
+race_type = machine
+weight = 9
+
+$description = Skeletons are the oldest sentient beings currently walking the continent — ancient machines from an age when the technology that built them was considered ordinary. They do not age. They do not hunger. They do not sleep. They walk through acid rain and deep water without concern. What kills them is structural damage, and structural damage is repaired with the right tools rather than rest and food. A Skeleton who has maintained themselves carefully for four hundred years is the same Skeleton they were at the start. This is why every Skeleton alive has a personal history that puts most living empires to shame.
+$biology = Immune to hunger, weather effects, acid rain. Can survive underwater indefinitely. Does not bleed in the biological sense — takes structural damage instead. Repaired with Skeleton Repair Kits, not medical supplies. No natural armor beyond their iron frame, but their frame is iron. Maximum effective age is effectively unlimited. Holy Nation attacks them on sight. Western Hive treats them as fellow machines. Tech Hunters welcome them.
+$psychology = Fully sentient, emotionally capable, capable of forming attachments, experiencing regret, feeling the weight of decisions made centuries ago. They express none of this on their faces because they have no faces that move. Their sense of humor tends toward the dry and the distant. They have had a long time to think about what they find funny. Many carry guilt about the Chaos Age — some real, some inherited, some invented to fill the silence of centuries.
+$typical_speech = Measured. Economical. A Skeleton who trusts you enough to talk will tell you more history in a short conversation than you can find in most libraries. A Skeleton who doesn't trust you will tell you exactly as much as is necessary and nothing else, and the nothing else will weigh more than the words.

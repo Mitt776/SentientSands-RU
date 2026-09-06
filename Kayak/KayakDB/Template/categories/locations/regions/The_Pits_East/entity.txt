@@ -1,0 +1,8 @@
+Category = locations
+Name = The_Pits_East
+Id = the_pits_east
+display_name = The Pits East
+type = region
+weight = 3
+
+$description = The Pits East is the eastern extension of the Pits zone — the same pit-and-drop terrain character, slightly removed from the main Pits concentration. It shares the same navigational challenges and the same ambiguity about origin. The eastern version is smaller and less frequently traversed than the main zone.

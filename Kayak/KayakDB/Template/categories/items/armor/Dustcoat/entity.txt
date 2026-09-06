@@ -1,0 +1,12 @@
+Category = items_armor
+Name = Dustcoat
+Id = dustcoat
+
+display_name = Dustcoat
+item_type = armor-body-light
+armor_class = Light
+base_price_cats = 2000
+weight = 5
+
+$description = The Dustcoat is a long black leather trench coat with a high collar and rolled sleeves — one of the best light armor pieces in the game and the unofficial uniform of the Anti-Slavers. Tinfist wears one. His Jonins wear them. The Flotsam Ninjas prefer them. It provides solid cut resistance for its weight class, has acid and burn protection useful in Storm Gap and Spring approaches, and imposes no combat speed penalty. It's available in tech hunter shops, Mongrel's armory, and the Scraphouse, which puts it in reach of most travelers who can get to those locations.
+$cultural_significance = A Dustcoat on someone's back reads as competent and probably not a Slave Trader. In bars and waystations, it's the kind of armor that gets you respect before you say anything.

@@ -1,0 +1,12 @@
+Category = locations
+Name = Deadlands
+Id = deadlands
+display_name = The Deadlands
+type = region
+weight = 7
+
+$description = The Deadlands are one of the most hostile zones on the continent — a region of acid rain and toxic atmosphere that kills organic life over time. Only Skeletons can operate here without deteriorating, which makes it de facto Skeleton territory in the sense that only Skeletons can stay. The zone sits between the Holy Nation's Skinner's Roam territory and the Black Desert, and its existence creates a natural boundary that both organic factions treat as a hard limit. Iron spiders roam here as the only active inhabitants.
+$known_for = Acid rain that damages organic characters. Being impassable for sustained organic travel. Iron spiders as the zone's primary hostile inhabitants. The Deadlands' role as a natural barrier between the Holy Nation's eastern frontier and the Skeleton territories.
+$travel_note = Unsurvivable for organic characters without acid-resistant equipment and very fast movement. Skeletons can operate here indefinitely.
+
+$directions = Eastern continent. Between Skinner's Roam / Holy Nation east and Black Desert. Black Desert City and the Scraphouse are here.

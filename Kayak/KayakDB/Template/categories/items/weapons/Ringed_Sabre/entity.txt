@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Ringed_Sabre
+Id = ringed_sabre
+display_name = Ringed Sabre
+item_type = weapon-blade
+weapon_class = Sabres
+base_price_cats = 1500
+weight = 7
+
+$description = The Ringed Sabre is the heaviest-hitting weapon in the sabre class — wider blade, higher total damage than the other sabres, and the visual distinction of the ring cutout in the blade that makes it immediately recognizable. It's wielded by Arc and similar prominent bandit leaders, which tells you something about who carries the most damaging swords in the world: not the samurai, not the holy warriors, but the men who took them from people who didn't hold on hard enough. The Meitou version belongs to Elder, leader of the Skeleton Bandits.
+$cultural_significance = A high-quality Ringed Sabre on someone's back places them firmly in the 'experienced, dangerous, and not a soldier' category. Soldiers carry katanas. The ringed sabre is a weapon for people who chose it rather than being issued it.

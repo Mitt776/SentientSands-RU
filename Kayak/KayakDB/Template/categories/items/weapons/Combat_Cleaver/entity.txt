@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Combat_Cleaver
+Id = combat_cleaver
+
+display_name = Combat Cleaver
+item_type = weapon-hacker
+weapon_class = Hackers
+base_price_cats = 950
+weight = 8
+
+$description = The Combat Cleaver is the hacker class's general-purpose option — cut-and-blunt mix, decent armor penetration, bonus damage against robots, and the reliable performance of a weapon that was designed to work rather than to impress. Band of Bones fighters carry them at rusted quality in early encounters, which makes them the first hackers most travelers see. The standard-quality version is meaningfully better, which is one of those statements that seems obvious but matters more when you're the one being cleaved at.

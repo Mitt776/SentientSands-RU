@@ -1,0 +1,12 @@
+Category = items_weapons
+Name = Katana
+Id = katana
+
+display_name = Katana
+item_type = weapon-blade
+value_cats = 800
+weight = 8
+
+base_price_cats = 800
+$description = The katana is the standard weapon of United Cities samurai and the most commonly encountered quality blade in the Great Desert. It is a slashing weapon — optimized for cutting, relying on Dexterity and weapon skill more than raw Strength. In the hands of a trained fighter it is fast and precise. In the hands of someone who picked it up off a dead samurai without any background in the relevant skills, it still cuts, which is the minimum qualification for a weapon in Kenshi. Quality ranges from Rusted Junk to Masterwork, with the gap in performance being significant enough that two fighters of equal skill but different weapon quality will have predictably different outcomes.
+$use = Common in United Cities, Traders Guild, and Samurai faction inventories. The baseline sword of the world. Reasonable for training; excellent at high quality.

@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Moon_Cleaver
+Id = moon_cleaver
+display_name = Moon Cleaver
+item_type = weapon-hacker
+weapon_class = Hackers
+base_price_cats = 1000
+weight = 9
+
+$description = The Moon Cleaver has an inwardly curved blade unlike any other weapon in the game — hooked and heavy, designed to grab into armor and tear rather than slice through. At higher qualities it becomes the only blunt-majority hacker, which changes its damage math considerably. The Cannibal Grand Wizard uses one. So does Dack. So do the Blackshifters in the Swamp. The aesthetic of the thing is immediately recognizable: it looks less like a weapon and more like something a cult would use in a ceremony, which is probably intentional given who carries them. The Preacher has the Meitou version.
+$cultural_significance = A Moon Cleaver is associated with Swamp culture and certain cult fringes — not the weapon of soldiers or mercenaries, but of people who operate outside the normal order. Carrying one in polite company reads accordingly.

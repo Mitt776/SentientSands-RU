@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Mercenary_Plate
+Id = mercenary_plate
+display_name = Mercenary Plate
+item_type = armor-body-heavy
+armor_class = Heavy
+base_price_cats = 3200
+weight = 18
+
+$description = Mercenary Plate is a heavy armor alternative to Samurai Armour — similar protection profile, worn by Manhunters, Slave Trader guards, and general mercenary types throughout the Empire. It's arguably better than Samurai Armour after the rebalancing that made coverage and protection the key metrics rather than raw resistance numbers. Available in armor shops across United Cities territory. The visual difference from Samurai Armour marks the wearer as a hired professional rather than an Imperial soldier — practically equivalent protection, different political statement.

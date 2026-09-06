@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Spring_Bat
+Id = spring_bat
+display_name = Spring Bat
+item_type = weapon-ranged
+weapon_class = Crossbows
+base_price_cats = 1500
+weight = 6
+
+$description = The Spring Bat uses Heavy bolts — larger, heavier ammunition that carries more force per shot than Regular bolts, giving it damage output that exceeds the Ranger and Oldworld MkI. The tradeoff is the Heavy bolt supply chain: they're heavier per unit, carried in smaller stacks, and harder to source than Regulars. The Spring Bat is the choice for players whose crossbow characters can reliably maintain ammo, and who want front-line fighters to land a shot or two before entering melee range.

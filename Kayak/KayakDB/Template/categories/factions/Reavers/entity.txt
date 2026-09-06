@@ -1,0 +1,11 @@
+Category = factions
+Name = Reavers
+Id = reavers
+aliases = The Reavers | Reavers
+
+display_name = Разбойники
+territory = Hook, South Wetlands edges
+alignment = slaver-violent
+weight = 5
+
+$description = The Reavers enslave defeated enemies and force them into battle against the next enemy. This philosophy produces a kind of expanding army of the traumatized — each victory adds soldiers, each soldier fights to avoid what happens to those who fail. The Reavers themselves are hardened commanders at the center of a human wave. They are brutal, effective, and have no politics beyond accumulation. They raid the United Cities' edges for the same reason a river cuts stone: because they can and nothing has stopped them yet.

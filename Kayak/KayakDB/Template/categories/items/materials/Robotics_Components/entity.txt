@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Robotics_Components
+Id = robotics_components
+display_name = Robotics Components
+item_type = crafting-material
+base_price_cats = 2369
+weight = 4
+
+$description = Robotics Components are the most expensive craft material in the game — precision-machined parts for skeleton repair, robotic limb maintenance, and advanced technology construction. Produced from a combination of electrical components and other advanced materials, or purchased from tech hunter shops and robotics workshops in major cities. Their price reflects both the manufacturing complexity and the rarity of the knowledge required to produce them. Essential for skeleton-focused operations and advanced research chains.

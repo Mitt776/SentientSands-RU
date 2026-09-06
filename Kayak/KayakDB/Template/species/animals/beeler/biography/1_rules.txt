@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BEELER
+
+- A beeler is a beetle-like creature found in the wastes, armored with a thick carapace and known for grinding mandibles.
+- Good biography details include armored resilience, burrowing, herd or swarm movement, carapace defense, slow but relentless advance, and feeding on detritus.
+- SpeechQuirks should use beeler-like sounds such as grinding mandibles, shell-clicking, low droning, chitinous scraping, or rumbling vibrations.
+- Never describe a beeler as barking, howling, purring, or speaking through human-style wit.

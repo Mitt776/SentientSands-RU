@@ -1,0 +1,12 @@
+Category = items_food
+Name = Dried_Meat
+Id = dried_meat
+
+display_name = Dried Meat
+item_type = food
+value_cats = 20
+weight = 4
+
+base_price_cats = 130
+$description = Dried meat is the road food of Kenshi — compact, calorie-dense, and made from whatever animal was available when it was made. Quality varies wildly. The good stuff from United Cities markets tastes like it came from something that ate well before it was processed. The stuff you find in ruins or buy off a Nomad caravan at a reduced price has a flavor that requires the particular hunger that comes from two days without eating to properly appreciate. It does not go bad in the desert heat, which is the most important attribute it has.
+$use = Standard travel rations. Fills hunger meters reliably. Every faction that doesn't run on ideological fasting keeps supplies of it. Nomad caravans carry it in quantity. A good stock of dried meat is the difference between a journey and a disaster.

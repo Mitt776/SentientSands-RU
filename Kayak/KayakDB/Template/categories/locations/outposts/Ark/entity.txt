@@ -1,0 +1,16 @@
+Category = locations_outpost
+Name = Ark
+Id = ark
+
+display_name = Ark
+region = Stobe's Garden (north-center)
+faction = Reavers
+type = settlement-reaver
+weight = 6
+
+price_modifier = 0.95
+$description = Ark is the Reavers' home settlement on the southern Hook coast — a town run by the people who built their society on enslaved fighters forced to battle their way to freedom or death. Valamon, the Shek leader of the Reavers, rules here with a Meitou Longsword. The settlement is hostile to most outside visitors but has its own commerce in the brutal economy the Reavers have built — if you can deal with them, there are goods to be found here that aren't in the standard Imperial supply chain.
+$travel_note = Hostile to most visitors. Approaching requires either Reavers faction standing or the kind of force that makes standing irrelevant.
+
+$directions = Slightly north of center of Stobe's Garden.
+directions = Stobe's Garden, slightly north of center. No major city nearby — the Reavers built here specifically to be hard to find and approach.

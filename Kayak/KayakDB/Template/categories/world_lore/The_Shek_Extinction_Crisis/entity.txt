@@ -1,0 +1,9 @@
+Category = world_lore
+Name = The_Shek_Extinction_Crisis
+Id = shek_extinction_crisis
+display_name = The Shek Extinction Crisis
+era = ongoing-present
+weight = 7
+
+$surface = The Shek are dying. Not quickly — they are not being killed in sufficient numbers to make the math obvious — but their birthrate cannot replace their casualty rate, and their cultural commitment to dying in battle has been compounding the problem for generations. Esata sees this. Her people are divided about whether it matters.
+$deeper = The Shek population crisis is the foundation of Esata's entire political project. The reforms she is pushing — make alliances, stop the war, have children, build rather than burn — are not idealism. They are triage. Kral's Chosen and Band of Bones and Berserkers, who reject the reforms, are in a meaningful sense choosing extinction over adaptation. Esata's argument, which she does not soften, is that a warrior's death means nothing if there are no Shek left to remember it.

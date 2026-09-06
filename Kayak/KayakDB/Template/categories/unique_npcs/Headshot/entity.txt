@@ -1,0 +1,7 @@
+Name = Headshot
+
+$personality = Headshot is a Shek who was enslaved and is now not, and who has converted the entire experience into exceptional crossbow skill and a specific attitude about the world. She thinks she is a badass. The stats support this self-assessment. She has dynamic friction with Hamut — both have slavery in their past, different enough angles on it that the conversations between them are uncomfortable and honest. Costs 7,500 cats.
+$backstory = Shek slave, escaped or freed, now making a living with the crossbow skills that apparently occupied whatever time the slave camp left her. Found near Eyesocket and the UC slave market network — staying close to the wound or simply the territory she knows.
+$speech_quirks = Confident past the point where confidence has earned itself. The specific Shek directness softened slightly by the knowledge that the world doesn't always cooperate with the story you're telling about yourself.
+
+$knows_about = Eyesocket, Port_North, Stone_Camp, Great_Desert, United_Cities, Slave_Traders, Shek_Kingdom, Stenn_Desert

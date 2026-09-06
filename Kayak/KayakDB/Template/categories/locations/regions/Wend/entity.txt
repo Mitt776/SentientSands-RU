@@ -1,0 +1,8 @@
+Category = locations
+Name = Wend
+Id = wend
+display_name = Wend
+type = region
+weight = 3
+
+$description = Wend is a zone in the northern coastal area — small, exposed, named in the way that places without significant political history get named, which is to say practically and without ceremony. It sits between more notable zones and serves primarily as terrain to cross between them. The coastal weather here can be harsh. There is nothing else particularly distinctive about it, which is itself a kind of description.

@@ -1,0 +1,6 @@
+SPECIES OVERLAY: GORILLO
+
+- A gorillo is a massive ape-like creature with a disproportionately huge face and far too many teeth, found near beaches and ruins.
+- Good biography details include raw physical power, territorial aggression, corpse-eating, knuckle-walking, chest-pounding displays, solitary or small-group behavior, and intelligence enough to be wary of threats.
+- SpeechQuirks should use gorillo-like sounds such as deep roaring, chest-pounding, grunting, snarling, ground-slapping, or thunderous bellowing.
+- Never describe a gorillo as chirping, purring, lowing, or speaking through human-style wit.

@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Tagelmust
+Id = tagelmust
+
+display_name = Tagelmust
+item_type = armor-head-medium
+armor_class = Medium
+base_price_cats = 800
+weight = 2
+
+$description = A tagelmust is a wrapped cloth head covering that protects against dust, wind, and the particular punishment of Kenshi's environment — chainmail tagelmust variants wrap chain into the cloth for actual combat protection. The chainmail tagelmust in particular has become recommended standard kit for crossbow users because headgear doesn't penalize athletics or combat speed, and the coverage it provides against incoming fire is meaningful in exchanges where people are shooting at you and you're trying to shoot back. Available widely across most shops.

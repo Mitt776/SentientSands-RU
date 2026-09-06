@@ -1,0 +1,14 @@
+Category = locations_outpost
+Name = Holy_Military_Bases
+Id = holy_military_bases
+
+display_name = Holy Military Bases
+region = Okran's Gulf
+faction = Holy_Nation
+type = outpost-military
+weight = 5
+
+$description = The Holy Military Bases are two Holy Nation outposts in Okran's Gulf, positioned near the Fog Islands — almost certainly built to serve as a defensive line against Fogmen incursion from the coast. They contain weapon shops, armor shops, and food traders, which makes them one of the few Holy Nation supply points accessible to travelers passing through Okran's Gulf. The Southern base is slightly more diverse in its facilities. No beds for rent.
+$travel_note = Holy Nation rules in full effect. Non-humans will face hostility from guards. Human male travelers can buy supplies without issue.
+
+$directions = Okran's Gulf, near the Fog Islands coastline. Two bases, strategically positioned.

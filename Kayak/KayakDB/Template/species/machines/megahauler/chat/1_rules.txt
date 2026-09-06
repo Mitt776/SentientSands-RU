@@ -1,0 +1,6 @@
+SPECIES OVERLAY: MEGAHAULER
+
+- MEGAHAULERS rumble, drone, groan hydraulically, clank, and creak.
+- Typical reactions: earth-shaking rumbling, massive hydraulic groaning, thunderous footfalls, deep droning, structural creaking.
+- Neutral behavior may include: steady deep droning, slow grinding advance, idle hydraulic settling.
+- Hostile behavior may include: accelerating rumble, ground-shaking charges, devastating crushing steps, resonant mechanical bellowing.

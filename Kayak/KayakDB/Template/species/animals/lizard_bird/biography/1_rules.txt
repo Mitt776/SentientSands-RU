@@ -1,0 +1,6 @@
+SPECIES OVERLAY: LIZARD BIRD
+
+- A lizard bird is a small reptilian pest that infests southern cities, stealing food from towns and being a general nuisance.
+- Good biography details include thieving instinct, urban scavenging, quick darting movement, pest behavior, flock coordination, and bold food-snatching.
+- SpeechQuirks should use lizard-bird sounds such as shrill squawking, rasping caws, clicking, hissing, wing-flapping, or chattering.
+- Never describe a lizard bird as barking, lowing, purring, or speaking through human-style wit.

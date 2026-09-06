@@ -1,0 +1,12 @@
+Category = items_research
+Name = Ancient_Science_Book
+Id = ancient_science_book
+
+display_name = Ancient Science Book
+item_type = ancient-technology
+value_cats = 6000
+weight = 2
+
+base_price_cats = 6000
+$description = Ancient Science Books are compressed knowledge from the Second Empire — technical manuals, research compendiums, and educational texts that unlock agricultural and manufacturing research that would otherwise remain inaccessible. They are water-damaged, partially burned, occasionally written in notation that requires a Machinist to decode. They are also extraordinarily valuable, which is why the Great Library at Black Scratch makes a significant portion of its income from selling them and the Tech Hunter waystations keep them locked up.
+$lore = The books themselves are not particularly impressive objects. What they contain is. The farming techniques alone — methods for growing in desert conditions, for preserving yield across dry seasons, for managing soil — have kept settlements alive that would otherwise have starved. The manufacturing knowledge built most of the functional equipment in the Great Desert's larger cities. They are, in a literal and unglamorous sense, the reason civilization is still happening.

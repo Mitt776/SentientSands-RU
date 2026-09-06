@@ -1,0 +1,9 @@
+Category = items_merchandise
+Name = Leviathan_Pearl
+Id = leviathan_pearl
+display_name = Leviathan Pearl
+item_type = trade-rare
+base_price_cats = 12000
+weight = 1
+
+$description = Leviathan Pearls come from the massive Leviathans that walk the northern coast — extracted from defeated creatures and worth 12,000 cats per unit. The Leviathan Coast exists as a named zone partly because of this trade. The weight-to-value ratio is extraordinary: one pearl is worth as much as some players earn in their first several hours of play, weighs almost nothing, and comes from hunting something that is among the largest creatures in the world. The hunt is the constraint. Everything else about the transaction is straightforward.

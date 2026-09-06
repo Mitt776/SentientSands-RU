@@ -1,0 +1,13 @@
+Category = factions
+Name = Shinobi_Thieves
+Id = shinobi_thieves
+aliases = The Shinobi Thieves | Shinobi Thieves
+
+display_name = Воры шиноби
+territory = Hidden towers in most major cities, Mongrel
+alignment = neutral-criminal
+weight = 6
+
+$description = The Shinobi Thieves don't control any territory you can see on a map. What they control is information, movement, and the fact that every major city has a hidden tower full of people who are very good with knives. They are smugglers, fences, and information brokers. They will store stolen goods for a fee and ask no questions about their origin. They are not moral. They are professional. The distinction matters in Kenshi.
+$known_for = Hidden towers in Mongrel, The Hub, and elsewhere. Fencing stolen goods. Providing access to underground trade networks. The saying: we only steal from people who deserve it, and everyone deserves it eventually. Their neutrality with most factions — they have clients on every side of every war.
+$rumor = There are Shinobi Thieve assets in cities they've supposedly never visited. More than one Holy Nation Paladin has visited a certain tower in Blister Hill after dark and come out carrying something that wasn't there before.

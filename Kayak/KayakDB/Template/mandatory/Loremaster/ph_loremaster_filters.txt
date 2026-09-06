@@ -1,0 +1,7 @@
+Placeholder for future loremaster filtering rules.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- rumor deduplication
+- anti-exaggeration guidance
+- faction and scope weighting

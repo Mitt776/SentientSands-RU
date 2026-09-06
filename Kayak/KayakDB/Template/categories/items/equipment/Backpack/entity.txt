@@ -1,0 +1,10 @@
+Category = items_equipment
+Name = Backpack
+Id = backpack
+
+display_name = Backpack
+item_type = equipment-storage
+base_price_cats = 800
+weight = 2
+
+$description = A standard backpack increases carrying capacity significantly — the foundational reason every serious traveler wears one. The tradeoff is a stealth penalty that makes sneaking meaningfully harder, which is why thieves use specialized thief backpacks that minimize this. Most backpacks in Kenshi also allow item stacking inside them, which lets you carry far more of something than its individual units would suggest. The largest backpack options are available at Flats Lagoon, which has built its commercial niche on exactly this distinction.

@@ -1,0 +1,17 @@
+Category = locations
+Name = Worlds_End
+Id = worlds_end
+
+display_name = World's End
+region = Arm of Okran (despite the name, independent of Holy Nation control)
+faction = Tech_Hunters
+type = city-academic
+weight = 8
+
+price_modifier = 1.3
+$description = World's End is a mountain-top city in Holy Nation territory that is somehow not Holy Nation. The Tech Hunters maintain it through a combination of strategic positioning, carefully placed Okran statues, and the general acknowledgment that destroying the world's primary academic institution would be bad for everyone including the Holy Nation, who occasionally want to buy things from it. The University of the Machinists is here — the closest thing to a research institute that exists in this age — and its halls contain more genuine knowledge about the world than any other place outside the Ashlands.
+$atmosphere = Cool at altitude. The mountain air is clean. The streets are narrow and the buildings lean toward each other overhead. Skeletons move freely here, which is why you can sometimes find Tech Hunter Skeletons examining things in the library with the focused attention of people who remember when the things being studied were new. Scholars argue in the bars. Field crews with damaged equipment drink in the corners. The whole city smells faintly of ancient paper and iron oil.
+$notable = The University and its lecture halls. The Science HQ containing the most complete collection of lore books outside ancient ruins. The tech shops, which sell blueprints for things that would be impossible to find elsewhere. The presence of Skeletons moving openly — notable because you can see the Holy Nation from the battlements.
+$travel_note = Safe for all races. The Okran statues are adequate deterrent for Holy Nation patrols. Skeletons can exist here without fear. Bring cats; the blueprints are expensive and worth every one.
+
+$directions = Arm of Okran, mountaintop. Northern Holy Nation territory, but Tech Hunter controlled.

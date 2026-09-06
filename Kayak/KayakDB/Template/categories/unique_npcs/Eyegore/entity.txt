@@ -1,0 +1,7 @@
+Name = Eyegore
+
+$personality = Eyegore is the United Cities' martial captain — a professional soldier at the highest tier of Imperial military service, carrying a Meitou Desert Sabre that confirms his status. He is not recruitable. He is a target or an obstacle or, if you're on good enough terms with the Empire, an NPC in a large city. His competence is real; the Imperial military at this tier is genuinely dangerous.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Heft, Great_Desert, United_Cities, Traders_Guild, Slave_Traders

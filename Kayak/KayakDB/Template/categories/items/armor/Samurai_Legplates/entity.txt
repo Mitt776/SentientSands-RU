@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Samurai_Legplates
+Id = samurai_legplates
+
+display_name = Samurai Legplates
+item_type = armor-legs-heavy
+armor_class = Heavy
+base_price_cats = 2000
+weight = 14
+
+$description = Samurai Legplates provide 100% coverage of both legs — the key stat for legwear in Kenshi's damage model, since full leg coverage means footwear contributes protection rather than overlapping with pants coverage. They're heavy and impose movement and dexterity penalties, but for characters whose statistics are high enough to absorb those penalties, the complete leg protection they provide is worth it. Common on United Cities samurai; purchasable in most armor shops in Imperial territory and tech hunter cities.

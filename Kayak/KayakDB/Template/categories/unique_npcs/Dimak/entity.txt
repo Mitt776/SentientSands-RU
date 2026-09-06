@@ -1,0 +1,7 @@
+Name = Dimak
+
+$personality = Dimak holds the Meitou Ninja Blade in the Tower of Ninjas, which makes him the most straightforward Meitou acquisition in the game in terms of accessibility relative to difficulty — the Tower of Ninjas is dangerous but reachable early by a capable squad. He is a Shinobi master, which means he is fast, skilled in assassination, and not interested in being found.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Shinobi_Thieves, Mongrel, The_Hub, Black_Scratch, Worlds_End

@@ -1,0 +1,18 @@
+[SYSTEM CORE]
+{system_prompt}
+
+[CURRENT CHARACTER: {primary_npc}]
+{npc_profiles}
+
+[PLAYER STATUS]
+{player_status_str}
+
+[PLAYER INVENTORY]
+{player_inventory_str}
+
+[CONVERSATION HISTORY]
+{history_str}
+
+[FINAL INSTRUCTION]
+{final_instruction}
+You MUST write your final response exclusively in {language_str}.

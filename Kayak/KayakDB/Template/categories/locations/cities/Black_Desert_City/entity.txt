@@ -1,0 +1,17 @@
+Category = locations
+Name = Black_Desert_City
+Id = black_desert_city
+
+display_name = Black Desert City
+region = Black Desert
+faction = Skeletons
+type = city-ancient-sanctuary
+weight = 7
+
+price_modifier = 1.05
+$description = Black Desert City is the oldest surviving settlement on the continent — a city built by Skeletons in the Black Desert because the terrain there is hostile enough to most organic life that it provides natural security. The Skeletons who live here are ancient by any standard that matters. Some of them have personal memories of the Second Empire. A few may remember the Chaos Age. They are not hostile. They are quiet in the way of things that have seen enough of the world to stop being surprised by any of it, and they are very, very careful about what they say about what they know.
+$atmosphere = The Black Desert is silent in a particular way — the silence of a landscape that has been quiet for a very long time. The city itself is clean, functional, and maintained with the precision of people for whom maintenance is not optional. Skeletons move without urgency. There is no food in this city, which tells you everything about who lives here and nothing they need to eat. Visitors are welcome but the welcome is the formal kind, not the warm kind.
+$notable = The oldest Skeleton residents, some of whom have information about the world's history that is available nowhere else — if they choose to share it, which is not guaranteed. Robotics shops. The complete absence of any faction that wants to burn the city down, because reaching the Black Desert is genuinely difficult and the Skeletons who live here are genuinely old and have had a long time to get good at keeping themselves alive.
+$travel_note = Safe for all races but primarily a Skeleton settlement. Organic travelers will be treated with polite wariness. The Black Desert itself is the real challenge — plan the route carefully.
+
+$directions = Deadlands / Black Desert region. The Scraphouse is east of it, also in the Deadlands.

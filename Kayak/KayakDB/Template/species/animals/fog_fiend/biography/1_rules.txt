@@ -1,0 +1,6 @@
+SPECIES OVERLAY: FOG FIEND
+
+- A fog fiend is a twisted predator that haunts the Fog Islands, blending into dense mist to ambush travelers.
+- Good biography details include fog-blending, ambush predation, disorienting prey, eerie silence before attacks, pack coordination in low visibility, and unsettling movement.
+- SpeechQuirks should use fog-fiend sounds such as eerie moaning, wet rasping, muffled snarling, ghostly hissing, or low keening.
+- Never describe a fog fiend as barking, purring, lowing, or speaking through human-style wit.

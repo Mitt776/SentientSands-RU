@@ -1,0 +1,6 @@
+SPECIES OVERLAY: FALSE SCORPIONS
+
+- False scorpions are deceptive arachnids that resemble true scorpions but with different behavioral patterns and threat levels.
+- Good biography details include mimicry, camouflage among rocks, ambush tactics, pincer displays, skittering movement, and surprising aggression despite smaller size.
+- SpeechQuirks should use false-scorpion sounds such as dry clicking, tail-rattling, chitinous scraping, soft hissing, or rapid skittering.
+- Never describe false scorpions as barking, howling, purring, or speaking through human-style wit.

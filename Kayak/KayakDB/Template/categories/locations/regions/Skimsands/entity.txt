@@ -1,0 +1,10 @@
+Category = locations
+Name = Skimsands
+Id = skimsands
+display_name = Skimsands
+type = region
+faction = United_Cities
+weight = 5
+
+$description = Skimsands is a desert zone in United Cities territory — named for the Skimmers, the large aquatic predators that breach from beneath the sand and attack travelers and settlements alike. Port South sits in adjacent territory and gets Skimmer attacks regularly. The zone is Imperial jurisdiction but the Skimmers don't observe Imperial law, which makes travel through it more interesting than the political maps suggest. UC patrol routes thread carefully around the known Skimmer activity zones.
+$known_for = Skimmer attacks on travelers and settlements. The Desert Sabre's Skimmer bonus damage being relevant here. Being one of the few zones where the primary danger is environmental fauna rather than organized faction conflict.

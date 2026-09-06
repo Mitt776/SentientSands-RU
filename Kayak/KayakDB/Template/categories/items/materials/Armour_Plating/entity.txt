@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Armour_Plating
+Id = armour_plating
+display_name = Armour Plating
+item_type = crafting-material
+base_price_cats = 504
+weight = 8
+
+$description = Armour Plating is the heavy crafting material for plate and heavy armor construction — processed metal panels shaped and hardened for armor smithing. Required for most heavy armor pieces at the Heavy Armour Smithy. Produced from iron plates and steel bars, or purchased from suppliers in major armor shops. The price reflects the processing time and material cost — armour plating is where most of the manufacturing value in heavy armor production sits.

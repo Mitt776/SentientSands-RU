@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Beak_Thing_Egg
+Id = beak_thing_egg
+display_name = Beak Thing Egg
+item_type = trade-rare
+base_price_cats = 4200
+
+$description = Beak Thing Eggs are the high-value animal product of the continent — enormous eggs that fetch 4,200 cats each and weigh proportionally. Found in Beak Thing nests, which requires either fighting past the Beak Thing guarding them or locating nests in less-patrolled territory. The weight-to-value ratio is competitive with almost anything else a traveler can carry, making egg runs near Border Zone nesting areas a viable early income strategy for groups with the combat skill to handle what guards them.

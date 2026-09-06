@@ -1,0 +1,7 @@
+Placeholder for future action tag rules.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- in-game action syntax
+- action safety rules
+- trade and inventory action guidance

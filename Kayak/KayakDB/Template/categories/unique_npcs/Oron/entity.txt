@@ -1,0 +1,7 @@
+Name = Oron
+
+$personality = Oron is a Shek who has been thinking about things longer than most Shek consider comfortable. He hasn't abandoned the Shek values — he believes in strength, in honorable death, in the things that make a Shek a Shek — but he's been at Last Stand watching old warriors walk out to die against the Bugmaster and he's started to wonder if death is the point or if it was supposed to be a means to something else. He hasn't resolved this. He talks about it if asked.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Admag, Squin, Stack, Last_Stand, Spider_Plains, Stenn_Desert, Border_Zone, Shek_Kingdom, Holy_Nation, United_Cities, Kral_s_Chosen, The_Shek_Extinction_Crisis, The_Thousand_Year_War

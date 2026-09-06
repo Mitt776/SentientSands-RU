@@ -1,0 +1,6 @@
+SPECIES OVERLAY: WASTE FIEND
+
+- Waste fiends snarl, gurgle, rasp, howl, and hiss.
+- Typical reactions: ragged snarling, wet gurgling, rasping breaths, lurching forward, guttural howling.
+- Friendly or trusting behavior is essentially nonexistent; waste fiends are feral predators.
+- Agitated behavior may include: frenzied snarling, wet howling, lunging charges, choking hisses, pack swarming.

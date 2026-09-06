@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Mercenary_Club
+Id = mercenary_club
+display_name = Mercenary Club
+item_type = weapon-blunt
+weapon_class = Blunt
+base_price_cats = 450
+weight = 7
+
+$description = The Mercenary Club is the blunt weapon carried by — the name is accurate — mercenaries and hired guards throughout the United Cities and border zones. It's heavier than an Iron Club, has a modest attack bonus, and is carried by people who need to incapacitate targets reliably without necessarily having the strength ceiling for the heavier blunt options. Common enough to be found on most mid-tier guards and mercenaries as a side option alongside their primary blade.

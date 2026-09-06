@@ -1,0 +1,16 @@
+Category = locations_outpost
+Name = Scraphouse
+Id = scraphouse
+
+display_name = The Scraphouse
+region = Deadlands (east of Black Desert City)
+faction = Tech_Hunters
+type = outpost-trading
+weight = 7
+
+price_modifier = 1.35
+$description = The Scraphouse is a Tech Hunter trading post in the Crags — remote, well-stocked, and carrying some of the best weapon and armor quality available outside ancient ruins. It stocks all polearms, mid-to-high quality weapons and armor including some Specialist and Masterwork pieces, and the Oldworld Bow MkII blueprint. Reaching it requires traveling through difficult terrain, which is part of why the prices there reflect a certain respect for the journey. It's the destination for players who have outgrown what the major cities offer and need something better.
+$notable = Polearms in all varieties. Mid-to-high quality weapons that are rare in standard shops. Armor quality running into Specialist and Masterwork. One of the few places the Oldworld Bow MkII blueprint can be found.
+
+$directions = Deadlands, east of Black Desert City.
+directions = Deadlands, east of Black Desert City. Inside an ancient factory. The Scraphouse is not on any standard map — you need an Old Treasure Map to mark it.

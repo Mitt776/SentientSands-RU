@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Water
+Id = water
+display_name = Water
+item_type = crafting-material
+base_price_cats = 25
+weight = 1
+
+$description = Water is a crafting ingredient in Kenshi rather than a survival requirement — characters don't need to drink it, but bread production requires it at the bread oven. Collected from wells, water tanks, or rain collectors. In the Great Desert where reliable water is scarce, settlements plan their food production chains around water availability first and crop type second. The fact that water isn't required for survival is one of the quietly unusual things about Kenshi's biology that most inhabitants simply accept.

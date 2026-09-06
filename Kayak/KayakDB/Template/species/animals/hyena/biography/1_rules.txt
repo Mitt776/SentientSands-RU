@@ -1,0 +1,6 @@
+SPECIES OVERLAY: HYENA
+
+- A hyena in Kenshi is a scavenging pack predator, bold, opportunistic, and known for harassing weakened targets.
+- Good biography details include pack scavenging, cackling communication, opportunistic aggression, endurance harassment, bold food-stealing, and hierarchical pack structure.
+- SpeechQuirks should use hyena-like sounds such as cackling, whooping, growling, giggling calls, snarling, or yipping.
+- Never describe a hyena as chirping, purring, lowing, or speaking through human-style wit.

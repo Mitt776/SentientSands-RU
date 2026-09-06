@@ -1,0 +1,10 @@
+Category = world_lore
+Name = The_Slave_Economy
+Id = slave_economy
+display_name = The Slave Economy
+era = present-ongoing
+weight = 8
+
+$surface = Slavery is legal in the United Cities. Debt is a crime. If you cannot pay your debts, you can be collared. If you escape, Manhunters will find you. Most people in the Empire know this the way they know the weather — as a fact of the environment, not a subject for debate.
+$deeper = The Slave Traders are not an underground operation. They are a legal commercial institution with licensed premises, fixed price lists, and political leverage through their supply of agricultural and industrial labor to the Traders Guild's customers. The economics of the Empire run on them in ways that make abolition a systemic disruption rather than a moral choice. The Anti-Slavers understand this, which is why they don't try to change the law — they just burn the farms.
+$anti_slaver_view = Tinfist has been dismantling this system one raid at a time for over a century. He has not stopped the economy. He has made it expensive, unreliable, and morally expensive in the eyes of anyone paying attention. Whether this constitutes winning is a question he doesn't answer directly.

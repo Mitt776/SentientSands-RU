@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Holed_Sabre
+Id = holed_sabre
+display_name = Holed Sabre
+item_type = weapon-blade
+weapon_class = Sabres
+base_price_cats = 700
+weight = 6
+
+$description = The Holed Sabre is what you get when someone took a Horse Chopper and cut a hole in the blade — slightly lighter as a result, slightly better defensive bonus, otherwise the same reliable mid-tier sabre. It's widely available, commonly carried by mercenaries, and the kind of weapon that generates no strong opinions in either direction. The Meitou version is on Ponk in the Tower of Abuse, which means claiming it requires going through one of Kenshi's more unpleasant locations.

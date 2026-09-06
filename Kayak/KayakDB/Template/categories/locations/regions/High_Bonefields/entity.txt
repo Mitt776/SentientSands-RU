@@ -1,0 +1,9 @@
+Category = locations
+Name = High_Bonefields
+Id = high_bonefields
+display_name = High Bonefields
+type = region
+faction = United_Cities
+weight = 4
+
+$description = High Bonefields is the elevated counterpart to the Bonefields — the same rocky plateau character but further into the mountains, with less Imperial infrastructure and more of the raw terrain that the name references. The fossil and bone deposits that give both zones their names are more visible here. United Cities claim extends to this zone on paper; the actual patrol density drops significantly from the lower Bonefields.

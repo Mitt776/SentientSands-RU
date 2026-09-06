@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Capacitor
+Id = capacitor
+display_name = Capacitor
+item_type = crafting-material
+base_price_cats = 90
+weight = 1
+
+$description = Capacitors are electrical components used in advanced electronics construction and research. They feed into the electrical components production chain and certain advanced building constructions. Available from tech hunter shops and some specialty merchants. Low weight, high value-to-weight ratio — one of the few crafting materials worth carrying in quantity on long journeys, since the margin between purchase price in distant markets and sale price in tech hubs is meaningful.

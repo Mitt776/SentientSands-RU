@@ -1,0 +1,11 @@
+Category = locations
+Name = Okran_s_Valley
+Id = okrans_valley
+display_name = Okran's Valley
+type = region
+faction = Holy_Nation
+weight = 6
+
+$description = Okran's Valley is the eastern border of the Holy Nation's core territory — flatter than the Pride, more exposed, where the Holy Nation's patrol routes thin out and the dust of Skinner's Roam starts to encroach. Okran's Shield watchtower stands here watching the approaches. It's Holy Nation territory by law and patrol frequency, but it feels more like a frontier than a heartland.
+
+$directions = North of Okran's Pride, between the two Arm of Okran mountain ranges.

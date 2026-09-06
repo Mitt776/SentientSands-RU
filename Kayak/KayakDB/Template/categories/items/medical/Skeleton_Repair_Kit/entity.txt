@@ -1,0 +1,13 @@
+Category = items_medical
+Name = Skeleton_Repair_Kit
+Id = skeleton_repair_kit
+
+display_name = Skeleton Repair Kit
+item_type = medical-mechanical
+value_cats = 200
+weight = 2
+
+base_price_cats = 4341
+$description = A Skeleton Repair Kit contains the tools and materials needed to address structural damage to a Skeleton — replacement components for worn joints, sealant compounds for cracked plating, calibration tools for systems that have drifted out of specification. For Skeletons, this is what a medical kit is for everyone else, except that First Aid Kits don't work on Skeletons at all, and repair kits don't work on organic tissue. The tools are different because the damage is different. Available in most tech-friendly cities; rare in Holy Nation territory for obvious reasons.
+$use = Required for healing Skeleton characters. Heals structural damage the way First Aid Kits heal biological damage. High repair skill increases effectiveness.
+$cultural_significance = Skeletons who travel frequently carry multiple repair kits and are extremely reluctant to give them away. In Holy Nation territory, carrying repair kits marks you as either a Skeleton sympathizer or someone with business in Black Desert City, both of which invite scrutiny.

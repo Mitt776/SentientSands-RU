@@ -1,0 +1,12 @@
+Category = locations
+Name = The_Swamp
+Id = the_swamp
+
+display_name = The Swamp
+type = region
+weight = 6
+
+$description = The Swamp is exactly what it sounds like — a large, hot, wet, miserable region in the south where multiple bandit gangs have reached territorial equilibrium because fighting each other to the death would disturb the profitable transit of travelers through Shark. The Red Sabres, Swamp Ninjas, Green Katanas, and Blue Cleavers contest the roads. Shark acts as the neutral commercial center. The Hounds nominally rule Shark and thus nominally rule the Swamp, though 'rule' is doing heavy lifting in that sentence.
+$known_for = Shark. Five competing gang factions. The atmospheric misery of perpetually damp terrain. The fact that the Swamp's insularity protects it from most of the political conflicts happening elsewhere — nobody important enough to change things cares enough about the Swamp to try.
+
+$directions = Southwest, between Border Zone and South Wetlands. Shark is at its center.

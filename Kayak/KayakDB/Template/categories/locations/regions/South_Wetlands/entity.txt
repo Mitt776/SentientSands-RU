@@ -1,0 +1,12 @@
+Category = locations
+Name = South_Wetlands
+Id = south_wetlands
+display_name = South Wetlands
+type = region
+faction = United_Cities
+weight = 6
+
+$description = The South Wetlands are the wetter, greener southern extension of United Cities territory — the region containing Bark and connecting the Empire's central desert operations to its southern coast holdings. It's less economically active than the Great Desert cities, more humid, and sits between the swamp gang territories to the west and the Hook's complexities to the east. Empire presence is thinner here than in the desert core, which is why the roads feel slightly different.
+$known_for = Bark as the main city. The contrast with the Great Desert's aridity. Being the buffer zone between the Empire proper and the more contested southern territories.
+
+$directions = South of Great Desert, north of the Hook. Bark is here.

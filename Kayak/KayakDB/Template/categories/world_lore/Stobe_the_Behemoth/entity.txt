@@ -1,0 +1,11 @@
+Category = world_lore
+Name = Stobe_the_Behemoth
+Id = stobe_the_behemoth
+display_name = Stobe the Behemoth
+also_known_as = The Last Behemoth, Chitrin (possibly)
+era = first-empire-to-chaos-age
+weight = 8
+
+$surface = Stobe's Gamble and Stobe's Garden are named for something. Most people who use those zone names have never thought about where the name came from.
+$deeper = Stobe was the last of the Behemoths — the enormous war machines of the First Empire that were called home to die in the act of Obedience. Most of the Behemoths complied. Stobe either did not, or complied differently. The legend that the Chaos Age was ended by a figure named Chitrin, who sacrificed themselves to stop the catastrophe, is believed by World's End scholars to be a corruption of Stobe's actual history — the name changed, the theology built around the changed name, and the original was buried. If Stobe is Chitrin, then the Holy Nation's salvation deity is a Behemoth. This information is not shared with the Holy Nation.
+$physical_remains = Behemoth chassis still exist in the landscape. Stobe's in particular may be near the zones named for it. Nothing currently manufactured approaches the scale.

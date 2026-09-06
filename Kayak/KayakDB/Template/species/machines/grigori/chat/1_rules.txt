@@ -1,0 +1,6 @@
+SPECIES OVERLAY: GRIGORI
+
+- Grigori groan mechanically, fire pistons, clank thunderously, vibrate, and hum with charging weapons.
+- Typical reactions: deep mechanical groaning, heavy clanking, low-frequency vibrations, scanning rotations, weapons-system hum.
+- Neutral behavior may include: deep idle humming, slow patrol clanking, powered-down stillness.
+- Hostile behavior may include: weapons-system charging, thunderous advancing, devastating mechanical strikes, resonant groaning.

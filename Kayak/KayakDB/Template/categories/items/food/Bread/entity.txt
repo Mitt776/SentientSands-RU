@@ -1,0 +1,9 @@
+Category = items_food
+Name = Bread
+Id = bread
+display_name = Bread
+item_type = food
+base_price_cats = 614
+weight = 1
+
+$description = Bread is Kenshi's base food — one strawflour plus water baked at a bread oven. It fills hunger adequately and costs almost nothing to produce in a settlement with wheat farming. On its own it's one of the driest, least nutritious complete foods available, which the in-game description acknowledges with unusual directness. Its main value is as a component: bread plus eight greenfruit makes a foodcube, bread plus eight cactus makes a dustwich. In Holy Nation territory, bread is free to male human travelers at bars and farms — the hospitality doctrine in material form.

@@ -1,0 +1,8 @@
+Category = locations
+Name = Islands_of_None
+Id = islands_of_none
+display_name = Islands of None
+type = region
+weight = 2
+
+$description = The Islands of None are offshore islands in the NONE zone — small landmasses at the map's outer boundaries that have no recorded use, no inhabitants, and no faction interest. They are the furthest reachable points from the continent's political center, which gives them a certain appeal to people who want to be as far from everything as Kenshi's geography allows.

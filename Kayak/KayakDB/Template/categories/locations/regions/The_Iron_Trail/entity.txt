@@ -1,0 +1,8 @@
+Category = locations
+Name = The_Iron_Trail
+Id = the_iron_trail
+display_name = The Iron Trail
+type = region
+weight = 3
+
+$description = The Iron Trail is a narrow corridor zone in the far north — the route connecting the extreme northwestern reaches with the continent's more populated areas. Traveling it means accepting that the trail exists for geographic necessity rather than political safety. It is exposed and thin and the kind of place that has a name because travelers needed to call it something while crossing it.

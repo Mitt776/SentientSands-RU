@@ -1,0 +1,9 @@
+Category = world_lore
+Name = The_Hive_Queens
+Id = hive_queens
+display_name = The Hive Queens
+era = present-ongoing
+weight = 6
+
+$surface = The Western Hive has a Queen. The Southern Hive has a Queen. The Dark Hive had a Queen who is gone. The Fogmen had a Queen who may not be dead so much as changed. This is common knowledge among traders who deal with the Hive factions.
+$deeper = The Queen is not a political title in the way humans use political titles. She is the pheromonal center of the Hive — the source of the chemical guidance that connects every drone to the collective. When the Queen dies or disappears, the Hive structure does not simply lose a leader. It loses its organizing principle. The Dark Hive's collapse into individualism and the Fogmen's collapse into feral ritualism are two different endpoints of the same structural failure. The Western Hive's territorial aggression about protecting the Queen is not sentiment — it is infrastructure maintenance.

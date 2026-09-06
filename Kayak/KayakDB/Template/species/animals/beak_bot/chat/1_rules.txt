@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BEAK BOT
+
+- Beak bots click mechanically, screech with servo noise, snap hydraulically, and buzz.
+- Typical reactions: mechanical clicking, servo-screeching, hydraulic beak-snapping, scanning rotations, buzzing approach.
+- Neutral behavior may include: low mechanical humming, steady patrol clicking, powered-down stillness.
+- Hostile behavior may include: rapid servo-screeching, hydraulic beak-snapping, charging with grinding gears, frenzied mechanical clicking.

@@ -1,0 +1,16 @@
+Category = locations
+Name = Stack
+Id = stack
+
+display_name = Stack
+region = Border Zone / Stenn Desert edge, southwestern corner of Holy Nation territory
+faction = Holy_Nation
+type = city-fortified
+weight = 8
+
+price_modifier = 1.2
+$description = Stack is a large Holy Nation town on the western edge of their territory, close to the Shek Kingdom border. High Inquisitor Seta maintains residence here, making it the Holy Nation's primary military command post on their western frontier. It sits between the fertile Holy Lands and the contested margins where Holy Nation and Shek patrols have been trading pressure for generations. The town is one of the starting points for Holy Nation citizens — well-supplied, heavily guarded, and carrying the particular atmosphere of a city that knows it's being watched from the hills to the west.
+$atmosphere = Stack has the quality of a place that survived something terrible and came out harder on the other side. The stones are old. The guards are quiet in the way of people who have thought about death long enough that it stopped being frightening. Shek here are not reformed — they're the traditional type, stationed at the frontier, watching the Holy Nation's direction.
+$notable = The massive fortified walls — built for sieges that happened more than once. The fact that player bases can be established here under Shek protection. The proximity to Holy Nation territory, which keeps the guards at a constant low-level readiness. Shek merchants who will sell to outsiders without the usual commentary about flatskin weakness, mostly because they have better things to think about.
+
+$directions = Stenn Desert western edge, near Holy Nation border. Southwest of Admag.

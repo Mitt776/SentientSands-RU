@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Monk_Robe
+Id = monk_robe
+display_name = Monk Robe
+item_type = armor-body-light
+armor_class = Light
+base_price_cats = 1500
+weight = 2
+
+$description = The Monk Robe is cloth armor with a martial arts bonus — lighter than the Ninja Gi but providing similar benefits to unarmed fighters who prioritize speed and the martial arts combat style over physical protection. Worn by certain Holy Nation religious figures and martial arts practitioners across factions. The Monk Pants pair with it for a complete martial arts set.

@@ -1,0 +1,13 @@
+Category = items_medical
+Name = First_Aid_Kit
+Id = first_aid_kit
+
+display_name = First Aid Kit
+item_type = medical
+value_cats = 150
+weight = 2
+
+base_price_cats = 200
+$description = A First Aid Kit is a collection of bandages, wound-sealing compounds, basic antiseptic, and in the better versions a small supply of medication that dulls pain enough to work through it. They are manufactured at various quality levels by various factions. The Holy Nation distributes them to authorized citizens. The United Cities sells them at approved medical shops. Tech Hunters carry them in quantity on ruin dives because the alternative is watching someone bleed out in an ancient lab corridor while the Security Spiders reload.
+$use = The most critical medical supply in the game. Used to treat cut damage, stop bleeding, and bring downed characters back to functional health. The higher the medical skill of the user, the more effective the kit. Low-quality kits used by unskilled people will stop bleeding but leave wounds half-treated.
+$cultural_significance = The Guild of Surgeons provides First Aid Kits free of charge to the destitute in the territories where they operate. This is either genuine humanitarian impulse or extremely good public relations. The result is the same.

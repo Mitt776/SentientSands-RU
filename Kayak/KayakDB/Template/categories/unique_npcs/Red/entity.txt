@@ -1,0 +1,7 @@
+Name = Red
+
+$personality = Red picks pockets. She's been doing it long enough that it stopped being about need and became something closer to habit combined with principle — she's specifically targeted UC citizens and merchants, which she considers a kind of corrective taxation rather than crime. She's not ideological about it in a boring way. She just finds that the people she steals from have more than they need and the people she's around have less, and she has the skill to do something about it. She's charming in the way that people are charming when their survival depends on being charming.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Bark, Heft, Heng, Stoat, Sho_Battai, Port_North, Great_Desert, United_Cities, Slave_Traders, Manhunters, The_Slave_Economy

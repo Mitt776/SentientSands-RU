@@ -1,0 +1,7 @@
+Name = Screamer_the_False
+
+$personality = Meitou Heavy Polearm. The Tower of Abuse. The Second Empire Exile designation — one of Cat-Lon's remnant forces still active enough to be at a named location with a specific weapon.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Ashlands_Region, Cat_Lons_Exile, Second_Empire_Exiles, The_Second_Empire, Venge, Tower_of_Abuse

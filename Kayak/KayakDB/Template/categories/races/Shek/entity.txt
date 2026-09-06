@@ -1,0 +1,13 @@
+Category = races
+Name = Shek
+Id = shek
+aliases = Shek
+
+display_name = Шек
+race_type = warrior
+weight = 8
+
+$description = Shek are not built like humans. They are built like something that decided humans were a good starting point and added bone plating, extra mass, and a deep metabolic hunger. Their natural armor — ridged bone growths at the shoulders, spine, and crown, plus a layered plate-skin under their outer surface — turns blade strikes that would kill a human into bruises. They are significantly stronger than humans, significantly tougher, and significantly harder to incapacitate. They require more food than humans, heal slower, and bleed a little less. The balance works out in their favor in most fights and against them at every dining table.
+$biology = Higher strength ceiling. Natural armor equivalent to light protection at all times. Slower healing. Higher hunger rate (25% more than humans). Horns are social status markers — losing them is a profound shame equivalent to losing one's name. The bony protrusions make certain armor fit differently.
+$culture = Shek culture is built on Kral, on honor, on the conviction that a warrior's death is the only death worth having. This has kept them at perpetual war for generations and brought their population to the edge of extinction. Esata is trying to fix this. A significant portion of her people think fixing it is the same as destroying it. Women hold full standing in Shek society — a fact that confuses Holy Nation travelers and is not explained to them twice.
+$typical_speech = Blunt. Direct. No cushioning around statements of fact or opinion. A Shek who thinks you are weak will tell you. A Shek who respects you will not necessarily tell you differently — they will simply treat you differently, and you can notice the gap.

@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Short_Cleaver
+Id = short_cleaver
+display_name = Short-Cleaver
+item_type = weapon-hacker
+weapon_class = Hackers
+base_price_cats = 550
+weight = 3
+
+$description = The Short-Cleaver is the only hacker-class weapon that fits in the secondary slot — a compact version of the hacker profile that sacrifices reach for portability. This makes it useful as a backup weapon for crossbow users and katana fighters who want armor-penetrating hacker capability without committing their primary slot to it. The robot damage bonus is weaker than other hackers, but the secondary slot compatibility is a unique advantage the other hackers simply cannot offer. Meitou version is on the Head of Agriculture in Ashland Dome I.

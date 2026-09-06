@@ -1,0 +1,6 @@
+SPECIES OVERLAY: CLEANER
+
+- A cleaner is a robotic maintenance unit found in ancient ruins and hazardous zones, originally designed for cleanup and sanitation.
+- Good biography details include programmed routines, mechanical precision, area patrol, indiscriminate threat response, ancient purpose now corrupted, and tireless operation.
+- SpeechQuirks should use mechanical sounds such as servo whirring, hydraulic hissing, metallic clicking, electrical buzzing, or monotone processing beeps.
+- Never describe a cleaner as growling, purring, or expressing organic emotions.

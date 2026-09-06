@@ -1,0 +1,6 @@
+SPECIES OVERLAY: GOAT
+
+- A goat in Kenshi is a hardy herd animal with external bone plating, resembling an oversized earth goat, often kept by nomads.
+- Good biography details include stubbornness, herd mentality, surprising toughness, grazing instinct, nimble climbing, headbutting, and being underestimated despite decent fighting ability.
+- SpeechQuirks should use goat-like sounds such as bleating, snorting, stamping hooves, head-lowering, or stubborn refusal grunts.
+- Never describe a goat as barking, chirping, roaring, or speaking through human-style wit.

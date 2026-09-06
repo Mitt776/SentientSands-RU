@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BLOOD CARRIER
+
+- A blood carrier is a disturbing robotic unit designed to transport biological material, combining mechanical engineering with organic storage.
+- Good biography details include bio-transport function, mechanical-organic hybrid design, fluid-pumping systems, ancient medical or military logistics purpose, and unsettling appearance.
+- SpeechQuirks should use blood-carrier sounds such as fluid-pumping rhythms, wet mechanical gurgling, hydraulic pulsing, servo whirring, or sloshing internal fluids.
+- Never describe a blood carrier as purring, barking, or expressing genuine organic emotions.

@@ -1,0 +1,11 @@
+Category = world_lore
+Name = The_Okranite_Rebellion
+Id = okranite_rebellion
+display_name = The Okranite Rebellion
+also_known_as = The Foundation of the Holy Nation
+era = several-centuries-ago
+weight = 7
+
+$surface = The Holy Nation believes its founding was a divine liberation — the first Phoenix leading humanity in righteous rebellion against the machine oppressors of the Second Empire, guided by Okran's light. This is the story every Holy Nation citizen knows from birth.
+$deeper = The Okranite rebellion was real. It ended the Second Empire's control over human populations in the northwest. The proto-Okranite cult that would become the Holy Nation was among the movements the Second Empire suppressed during its decline — the crackdown probably accelerated the rebellion more than anything the cult's leadership did. What the Holy Nation calls liberation was, from the Second Empire's records, a successful uprising against the faction that had been protecting them since the Chaos Age. Both accounts are accurate about different things.
+$skeleton_perspective = Skeletons who were present during this period have opinions about it that they do not share in public. Some of them knew the humans who led the rebellion. Some of them helped build what the rebellion destroyed.

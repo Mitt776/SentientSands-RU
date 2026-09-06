@@ -1,0 +1,3 @@
+SPECIES OVERLAY PLACEHOLDER: IRON HOUND
+
+- Replace this file with Iron Hound-specific radiant speech guidance.

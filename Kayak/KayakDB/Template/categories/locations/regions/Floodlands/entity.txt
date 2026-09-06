@@ -1,0 +1,10 @@
+Category = locations
+Name = Floodlands
+Id = floodlands
+display_name = Floodlands
+type = region
+weight = 4
+
+$description = The Floodlands are a low-lying zone prone to the weather effects the name implies — periodic flooding that alters terrain accessibility and creates the kind of unpredictable ground that military planners avoid and travelers learn to respect. No major settlements. The abandoned watchtowers here are among the Fallen Towers that appear across several Kenshi zones, aesthetic markers of something that used to watch this territory before whatever watched it stopped.
+
+$directions = Between Cannibal Plains and Okran's Gulf. North of the Fog Islands' eastern edge.

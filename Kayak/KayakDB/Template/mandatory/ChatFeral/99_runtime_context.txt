@@ -1,0 +1,15 @@
+<H2>RUNTIME CONTEXT</H2>
+
+Ниже — данные времени выполнения, которые подаёт SentientSands и подставляет Kayak через свои токены. Они заменяют прежние скрытые блоки, дописывавшиеся в коде.
+
+<current_location>
+
+<player_status>
+
+<player_inventory>
+
+<mode_guidance>
+
+<final_instruction>
+
+<language_instruction>

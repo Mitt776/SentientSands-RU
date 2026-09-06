@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Ranger
+Id = ranger
+display_name = Ranger
+item_type = weapon-ranged
+weapon_class = Crossbows
+base_price_cats = 1200
+weight = 5
+
+$description = The Ranger is the first crossbow most experienced players recommend for characters moving past training weapons — fast reload, meaningful range, and Regular bolt compatibility that carries through to the Oldworld MkI and MkII, avoiding the ammo-type switch when upgrading. It doesn't match the Oldworld bows for raw damage, but its reload speed gives it better stagger uptime in active fights, which matters more than per-shot damage when you're trying to keep enemies from reaching your melee line. Available in most ranger shops throughout the world.

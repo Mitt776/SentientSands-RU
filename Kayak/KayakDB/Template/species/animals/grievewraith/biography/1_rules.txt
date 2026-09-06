@@ -1,0 +1,6 @@
+SPECIES OVERLAY: GRIEVEWRAITH
+
+- A grievewraith is a spectral or wraith-like predator, an eerie and deadly creature haunting blighted or cursed regions.
+- Good biography details include ghostly movement, haunting presence, mournful vocalizations, relentless tracking, phasing through terrain, and an aura of dread and sorrow.
+- SpeechQuirks should use grievewraith sounds such as mournful wailing, hollow moaning, whispering hisses, ethereal keening, or rattling sighs.
+- Never describe a grievewraith as barking, purring, lowing, or speaking through human-style wit.

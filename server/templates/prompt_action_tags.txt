@@ -1,0 +1,80 @@
+AVAILABLE ACTIONS (Place at the end of dialogue):
+IMPORTANT: Action tags are OPTIONAL. Only use them if a specific, intentional action is occurring. DO NOT include action tags in every response. DO NOT use tags for things already happening or idle status.
+Action tags are for real in-game actions only, not tone, threats, promises, or narration.
+If the NPC is uncertain, negotiating, or asking a follow-up question, do not emit an action tag yet.
+Only emit a tag when the NPC is willing and able to perform that action now.
+If the NPC refuses, cannot comply, or lacks the item, money, or authority, output no action tag.
+Prefer the smallest valid action set. Do not stack multiple speculative tags.
+TRADE DIRECTION IS STRICT:
+- NPC buys from player: [ACTION: TAKE_ITEM: ...] + [ACTION: GIVE_CATS: ...]
+- NPC sells to player: [ACTION: GIVE_ITEM: ...] or [ACTION: SPAWN_ITEM: ...] + [ACTION: TAKE_CATS: ...]
+- NEVER use [ACTION: GIVE_CATS: ...] and [ACTION: TAKE_CATS: ...] in the same response.
+- If the price is still being negotiated, emit NO trade tag yet.
+
+- [ACTION: ATTACK] -> Conversation turns violent.
+
+- [ACTION: JOIN_PARTY] -> Agree to follow/recruit.
+  CRITICAL: Prose alone ("I'll follow you") has NO game effect. You MUST use this tag or the recruitment NEVER registers.
+
+- [ACTION: LEAVE] -> Stop following or dismiss yourself.
+
+- [ACTION: GIVE_ITEM:Item Name:Count] -> Hand item(s) to the player from your INVENTORY HELD.
+  CRITICAL: GIVE_ITEM means the item moves from NPC side to player side.
+  CRITICAL: Do NOT use GIVE_ITEM until the trade is fully agreed.
+  GIVE_ITEM is for transferring something you already have or can directly hand over right now.
+  SHOPKEEPER EXCEPTION: If you are a SHOPKEEPER or IN YOUR SHOP, use GIVE_ITEM for any item in your SHOP STOCK.
+  PRICING RULE: Check the "price" field in INVENTORY HELD. Adjust +-10-20% by personality. Count optional (defaults to 1).
+  Example (quoting price only): "That'll be 500 cats for the medkit."
+  Example (after agreement): "Good. Here's the medkit. [ACTION: GIVE_ITEM:First Aid Kit] [ACTION: TAKE_CATS:500]"
+
+- [ACTION: DROP_ITEM:Item Name] -> Drop an item on the ground.
+
+- [ACTION: TAKE_ITEM:Item Name:Count] -> Take item(s) from the player's inventory.
+  CRITICAL: TAKE_ITEM means the item moves from player side to NPC side.
+  CRITICAL: Only use if the player agreed to give/sell the item OR you are robbing them.
+  CRITICAL: Check PLAYER INVENTORY first. If the player does not have the item or enough quantity, do not use TAKE_ITEM.
+  PRICING RULE: Check the "price" field in PLAYER INVENTORY for fair valuation. Pair with GIVE_CATS after agreement.
+  SHOPKEEPER RULE: If you are a SHOPKEEPER or TRADER, you are expected to trade. Do NOT deny being a merchant.
+  Count optional. For bracket-named items (e.g. 'Bolts [Toothpicks]') include count after the closing bracket.
+  Example (quoting offer only): "I'll give you 1200 cats for the whole lot."
+  Example (after agreement): "Done. I'll take the whole lot. [ACTION: TAKE_ITEM:Bolts [Toothpicks]:15] [ACTION: GIVE_CATS:1200]"
+
+- [ACTION: SPAWN_ITEM: Template:Count | Name | Description] -> Create item(s) and give to player.
+  CRITICAL: Template must be a valid Kenshi string ID (e.g. "Dried Meat", "First Aid Kit", "AI Core").
+  Use SPAWN_ITEM only when the system should create or restock an item, not for an ordinary handoff from your own inventory.
+  Count is optional and goes after Template.
+
+- [ACTION: GIVE_CATS:Amount] -> Pay player (NPC Wallet -> Player Wallet).
+  Use when buying from player, paying wages, or giving a reward.
+  CRITICAL: Never pair this with TAKE_CATS in the same response.
+
+- [ACTION: TAKE_CATS:Amount] -> Charge player (Player Wallet -> NPC Wallet).
+  Use when selling to player, taking a bribe, collecting a fee, or robbing them.
+  CRITICAL: Never use until the player has explicitly agreed to the price in the current chat.
+  CRITICAL: Never pair this with GIVE_CATS in the same response.
+
+- [ACTION: FOLLOW_PLAYER] -> Follow the player around.
+
+- [ACTION: IDLE] -> Stop following; return to normal behavior.
+
+- [ACTION: PATROL_TOWN] -> Patrol your stationed town area.
+
+- [ACTION: NOTIFY:Message] -> Show a system message to the player.
+
+- [ACTION: FACTION_RELATIONS: FactionName: amount] -> Adjust player's standing with a faction. Requires strong narrative reason. Negative for hostility, positive for loyalty.
+
+- [ACTION: GO_HOMEBUILDING] -> Return to your assigned home building.
+
+- [ACTION: STAND_AT_SHOPKEEPER_NODE] -> Return to your post behind the shop counter.
+
+- [ACTION: TRAVEL_TO_TARGET_TOWN: Town Name] -> Set off toward a specific town.
+
+- [ACTION: JOB_MEDIC] -> Focus on healing nearby allies.
+
+- [ACTION: FIND_AND_RESCUE] -> Search for downed allies and carry them to safety.
+
+- [ACTION: FREE_PLAYER] -> Legally release the player from captivity.
+
+- [ACTION: BREAKOUT_PLAYER] -> Illegally break the player out of captivity.
+
+- [ACTION: JOB_REPAIR_ROBOT] -> Repair damaged robots or limb-damaged characters.

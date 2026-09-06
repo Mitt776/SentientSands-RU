@@ -1,0 +1,7 @@
+Name = Hobbs
+
+$personality = Hobbs has tall tales. Whether the adventures he describes happened to him, to someone he knows, or to a person he invented for narrative purposes is unclear and possibly beside the point. He is not much of a fighter. He recruits free, which is his main practical advantage. In the field he provides the specific value of someone who keeps talking, which sometimes matters more than someone who keeps fighting.
+$backstory = Wanderer of unspecified history. Was moved to the northern territories near Deadcat. He arrives with more stories than skills and the distinct possibility that some of those stories are true.
+$speech_quirks = Expansive. Builds to the good part. Will start a story whether or not the current situation is ideal for storytelling.
+
+$knows_about = Northern_Coast, Border_Zone, The_Hub, Cannibal_Plains, Hidden_Forest

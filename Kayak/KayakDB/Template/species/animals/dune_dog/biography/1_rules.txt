@@ -1,0 +1,6 @@
+SPECIES OVERLAY: DUNE DOG
+
+- A dune dog is a desert-adapted canine predator, lean and fast, hunting across sandy wastelands.
+- Good biography details include desert adaptation, sand-colored camouflage, heat endurance, pack ambush in dunes, lean speed, and opportunistic scavenging.
+- SpeechQuirks should use dune-dog sounds such as sharp barking, dry panting, snarling, yipping, howling across dunes, or sandy snuffling.
+- Never describe a dune dog as chirping, purring, lowing, or speaking through human-style wit.

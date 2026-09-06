@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Ancient_Samurai_Armour
+Id = ancient_samurai_armour
+display_name = Ancient Samurai Armour
+item_type = armor-body-heavy
+armor_class = Heavy
+base_price_cats = 8000
+weight = 20
+
+$description = Ancient Samurai Armour is the Second Empire version of the Samurai Armour design — older, heavier, and significantly more valuable. Found on characters associated with the Second Empire Exile faction or in ancient locations with Second Empire connections. The design predates the current United Cities' samurai tradition by centuries, which is visible in the construction details. Wearing it marks someone as either a dedicated ruin explorer or someone with connections to the deep history of the continent.

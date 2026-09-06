@@ -1,0 +1,12 @@
+Category = locations
+Name = Arm_of_Okran
+Id = arm_of_okran
+display_name = Arm of Okran
+type = region
+faction = Tech_Hunters
+weight = 6
+
+$description = The Arm of Okran is a mountain range that the Holy Nation claims in name and the Tech Hunters occupy in practice — the zone containing World's End, perched at altitude where the Holy Nation patrols can see the Okran statues from the road and decide they have business elsewhere. It is the most striking example of the Tech Hunters' strategy of using the Holy Nation's own iconography as a shield: the statues are real, the implied sanctity is real, and the Skeletons walking freely inside are simply not mentioned.
+$known_for = World's End and the University of Machinists. The Okran statues that provide cover for non-human inhabitants. The altitude and the clean mountain air that feels alien after the Great Desert. Being a place where Skeletons can stand in sight of Holy Nation territory without immediate consequence.
+
+$directions = Mountain range running north of Holy Nation territory. World's End is on its peak.

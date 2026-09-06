@@ -1,0 +1,13 @@
+Category = locations_outpost
+Name = Okran_s_Shield
+Id = okrans_shield
+
+display_name = Okran's Shield
+region = Okran's Valley
+faction = Holy_Nation
+type = outpost-watchtower
+weight = 5
+
+$description = Okran's Shield is a Holy Nation watchtower in Okran's Valley — a strategic scouting post watching the approaches from the United Cities and the routes used by Flotsam Ninjas and cannibal raiders. The guards inside are on rotation between active duty and rest. There are food stocks, weapons, and armor available — the Holy Nation keeps its frontier outposts supplied. Like all Holy Nation military positions, it exists to see threats coming before they arrive at the farmlands.
+
+$directions = Border between Skinner's Roam, Iron Valleys, and Arm of Okran.

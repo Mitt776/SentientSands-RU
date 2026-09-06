@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Ninja_Mask
+Id = ninja_mask
+display_name = Ninja Mask
+item_type = armor-head-light
+armor_class = Light
+base_price_cats = 800
+slot = head
+
+$description = The Ninja Mask is a face covering worn by Shinobi Thieves and stealth-oriented characters — provides minor armor, slight stealth bonus, and the clear visual statement that the wearer does not want to be recognized. Available through Shinobi Thieves shops and certain black market vendors. Paired with the Ninja Gi or Assassin's Rags for a complete stealth-oriented loadout. The Holy Nation finds it suspicious for reasons that mostly have to do with who tends to be wearing it.

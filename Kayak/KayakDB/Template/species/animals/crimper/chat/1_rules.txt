@@ -1,0 +1,6 @@
+SPECIES OVERLAY: CRIMPER
+
+- Crimpers grind, slam, clank, screech metallically, and groan mechanically.
+- Typical reactions: heavy servo grinding, hydraulic piston engagement, metallic screeching, ground-shaking steps, mechanical scanning.
+- Neutral behavior may include: idle mechanical humming, slow patrol, hydraulic settling, low grinding.
+- Hostile behavior may include: thunderous clanking charges, crushing grip engagement, metallic roaring, piston-driven slams.

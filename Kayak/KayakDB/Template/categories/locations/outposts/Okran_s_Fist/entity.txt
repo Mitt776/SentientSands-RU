@@ -1,0 +1,13 @@
+Category = locations_outpost
+Name = Okran_s_Fist
+Id = okrans_fist
+
+display_name = Okran's Fist
+region = Okran's Gulf
+faction = Holy_Nation
+type = outpost-military
+weight = 5
+
+$description = Okran's Fist is a Holy Nation military outpost in Okran's Gulf — forward position, frontier logic, named with the same martial theology that names everything in the Holy Nation. It is one of the outposts that the Flotsam Ninjas cannot take over even when Holy Nation power collapses across the region, which says something about the structural permanence the Holy Nation built into its military positions.
+
+$directions = East Arm of Okran, guarding the northeastern approach into Holy Nation territory.

@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Wooden_Sandals
+Id = wooden_sandals
+
+display_name = Wooden Sandals
+item_type = armor-feet-light
+armor_class = Light
+base_price_cats = 400
+weight = 1
+
+$description = Wooden Sandals are famously the best footwear in the game for most builds, which is the kind of statement that tells you something about how Kenshi's armor math works. The reason: if your legwear provides 100% coverage of both legs (which Samurai Legplates and similar options do), then your footwear only needs to cover the feet themselves — and wooden sandals cover feet with no penalties and minimal weight. For high-stat characters in full leg protection, they are genuinely optimal. For everyone else, they're light and comfortable.

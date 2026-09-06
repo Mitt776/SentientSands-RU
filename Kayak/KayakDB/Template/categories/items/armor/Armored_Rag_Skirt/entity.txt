@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Armored_Rag_Skirt
+Id = armored_rag_skirt
+display_name = Armored Rag Skirt
+item_type = armor-legs-light
+armor_class = Light
+base_price_cats = 400
+slot = legs
+
+$description = The Armored Rag Skirt is a light leg covering with reinforcing plates sewn or lashed onto torn fabric — the aesthetic of someone who has been surviving with whatever they could find and has made it more protective over time. Common among bandits and scrappy mid-tier fighters. Provides reasonable leg protection at light weight. The visual indicates a character who prioritizes function over appearance, which in Kenshi is usually the right call.

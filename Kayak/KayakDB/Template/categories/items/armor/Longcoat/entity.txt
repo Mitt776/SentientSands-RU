@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Longcoat
+Id = longcoat
+display_name = Longcoat
+item_type = armor-body-light
+armor_class = Light
+base_price_cats = 1800
+weight = 4
+
+$description = The Longcoat is a light armor option in the same general category as the Dustcoat — a long leather outer garment providing decent cut resistance without the heavy armor penalties. It has several variants including a Sleeveless Longcoat. Available in adventure shops and some tech hunter locations. Slightly less protective than the Dustcoat but a solid alternative for characters who want the long coat aesthetic without the specific Anti-Slaver connotations of the Dustcoat.

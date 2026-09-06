@@ -1,0 +1,9 @@
+Category = items_food
+Name = Bloodrum
+Id = bloodrum
+display_name = Bloodrum
+item_type = food-alcohol
+base_price_cats = 420
+weight = 4
+
+$description = Bloodrum is the Swamp's local alcohol — darker, heavier, and more specifically associated with the gang culture of Shark and its satellite villages than grog or cactus rum. The Swamp Village bars stock it. Clownsteady pays a premium for it despite being in Hook territory, which creates a minor alcohol trade route opportunity. The exact production method is not widely documented outside the Swamp, which is either a trade secret or the result of nobody outside the Swamp particularly wanting to know.

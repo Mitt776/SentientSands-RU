@@ -1,0 +1,9 @@
+Category = world_lore
+Name = Kenshi_the_Moon
+Id = kenshi_the_moon
+display_name = Kenshi is a Moon
+era = cosmological-present
+weight = 5
+
+$surface = Most people have never thought about this. They live here. It is the world.
+$deeper = Kenshi is tidally locked — the same face always points toward the gas giant it orbits, meaning one side faces the giant permanently and one side faces away. This produces the particular quality of the sky, the perpetual visibility of the moons, the climate patterns. The 'sun' is actually the gas giant's reflected light and the sun beyond it. Tech Hunters who have studied the ancient astronomical records know this. The Preacher Cult worships the moons explicitly, making them perhaps the only current religious group whose theology is cosmologically accurate, which is a fact nobody has brought to the Phoenix's attention.

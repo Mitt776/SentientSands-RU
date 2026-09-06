@@ -1,0 +1,7 @@
+Placeholder for future batch biography generation rules.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- multi-NPC generation
+- chunk formatting
+- compact JSON response shape

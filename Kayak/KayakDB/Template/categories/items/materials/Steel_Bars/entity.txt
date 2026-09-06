@@ -1,0 +1,10 @@
+Category = items_materials
+Name = Steel_Bars
+Id = steel_bars
+
+display_name = Steel Bars
+item_type = crafting-material
+base_price_cats = 648
+weight = 10
+
+$description = Steel bars are the premium metal in Kenshi's crafting economy — alloyed iron that feeds into high-tier weapons and armor construction. Producing steel requires an alloy smelter, iron plates, and copper alloy plates processed together. The result is the material that separates basic iron armor from properly protective gear, and basic weapons from weapons that perform at the level serious fighters require. Steel bar trade moves through most major commercial hubs.

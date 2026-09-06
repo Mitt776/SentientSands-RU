@@ -1,0 +1,14 @@
+Category = locations
+Name = Port_South
+Id = port_south
+
+display_name = Port South
+region = Great Desert (southern area)
+faction = Slave_Traders
+type = settlement-slave-camp
+weight = 6
+
+$description = Port South mirrors Port North's purpose but for the southern desert — stone mines, slave labor, a Noble House for Slave Master Wada, and the same confusion about why a landlocked operation surrounded by desert walls is called a port. Skimmers attack this location regularly, which is both a practical hazard and a certain poetic justice. The camp feeds supply chains to the southern United Cities cities and contributes to the economic machinery that the Traders Guild turns into profit.
+$travel_note = Hostile by default. Skimmer attacks are frequent enough to be a genuine travel consideration on approaches.
+
+$directions = Southern area of the Great Desert.

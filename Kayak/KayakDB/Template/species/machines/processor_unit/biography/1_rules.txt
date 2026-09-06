@@ -1,0 +1,6 @@
+SPECIES OVERLAY: PROCESSOR UNIT
+
+- A processor unit is an ancient robotic system designed for data processing and facility management, now often hostile to intruders.
+- Good biography details include data-processing origins, facility defense protocols, methodical threat assessment, mechanical precision, ancient computational purpose, and systematic elimination patterns.
+- SpeechQuirks should use processor-unit sounds such as electronic humming, data-processing clicks, servo adjustments, monotone beeping, or electrical crackling.
+- Never describe a processor unit as growling, purring, or expressing organic emotions.

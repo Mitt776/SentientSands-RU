@@ -1,0 +1,8 @@
+Category = locations
+Name = Greenbeach
+Id = greenbeach
+display_name = Greenbeach
+type = region
+weight = 3
+
+$description = Greenbeach is a coastal zone with the unusual characteristic of actual green coloration along its shoreline — algae, mineral deposits, or some combination of the two creates a color that stands out sharply against the brown and grey tones of most of Kenshi's coast. There are no settlements of significance. The color is the point of the name and, for most purposes, the point of the zone.

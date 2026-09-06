@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Naginata_Katana
+Id = naginata_katana
+display_name = Naginata Katana
+item_type = weapon-polearm
+weapon_class = Polearms
+base_price_cats = 1300
+weight = 7
+
+$description = The Naginata Katana blends polearm reach with katana-class cutting damage — longer than a standard naginata, faster cutting profile, occupying the unusual space between two weapon types that don't usually blend this cleanly. It's available at the Catun Scrapmasters and the Scraphouse, and sold at some weapon shops across the Empire. More specialized than a standard naginata but with a more interesting damage profile for fighters who have invested in polearm skill.

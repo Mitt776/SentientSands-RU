@@ -1,0 +1,10 @@
+Category = items_materials
+Name = Electrical_Components
+Id = electrical_components
+
+display_name = Electrical Components
+item_type = crafting-material
+base_price_cats = 216
+weight = 1
+
+$description = Electrical Components are the high-technology crafting material — small, light, expensive, and required for research that pushes into advanced manufacturing and automation. They're produced using copper alloy and specific research, or purchased from tech hunter shops and some specialty merchants. Their value-to-weight ratio is excellent, which makes them a preferred trade good for travelers who can access the markets that stock them and the markets that pay well for them.

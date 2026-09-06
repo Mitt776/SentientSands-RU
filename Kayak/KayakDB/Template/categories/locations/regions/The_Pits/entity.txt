@@ -1,0 +1,8 @@
+Category = locations
+Name = The_Pits
+Id = the_pits
+display_name = The Pits
+type = region
+weight = 4
+
+$description = The Pits are a zone in the deep southern continent — terrain characterized by deep excavations and pit formations that create a landscape of holes, drops, and unstable ground. Whether these are natural geological features, ancient mining operations, or something related to the First Empire's industrial activities is not definitively settled. Travel through the Pits requires careful navigation and the awareness that falling is an option.

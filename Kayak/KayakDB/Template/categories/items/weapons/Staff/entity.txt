@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Staff
+Id = staff
+
+display_name = Staff
+item_type = weapon-polearm
+weapon_class = Polearms
+base_price_cats = 200
+weight = 4
+
+$description = A staff is a piece of wood long enough to be dangerous and light enough to not require much strength to swing. Farmers carry them. Nomads carry them. Anyone who needs something that reaches and doesn't break the budget carries them. Combat-wise they're outclassed by almost everything else with actual metallurgy, but the range is real, they're fast, and in the hands of someone with good polearm skill they remain functional well past the point where people expect them to. The Holy Nation farmers who use them have occasionally surprised raiders who expected easier work.

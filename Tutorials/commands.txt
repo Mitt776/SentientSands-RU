@@ -1,0 +1,283 @@
+SentientSands and Kayak Command Reference
+
+This file lists the in-game slash commands currently handled by SentientSands
+and the Kayak bridge.
+
+SENTIENTSANDS COMMANDS
+
+/help
+/commands
+Show the built-in test/debug command list.
+
+/speaker
+Show who is currently talking to NPCs, and list your squad.
+
+/speaker [name]
+Talk as that squad member instead of the first character of squad 1.
+The name can be partial. They must be near you: the game only sends race,
+gender, faction and condition for characters in your vicinity, so a distant
+squad member would have to borrow someone else's body, and the command
+refuses instead.
+
+Their own biography and personality are used, because Kayak looks the
+character up by the id that comes with them. Exact hunger, blood, stats and
+carried items are not sent for anyone but squad 1, so those are left blank
+rather than filled in with the wrong character's values.
+
+/speaker off
+Go back to the default speaker (first character of squad 1).
+
+The choice lasts until you change it or reload. If the optional
+SelectedSpeaker plugin is installed, the character you have selected in-game
+wins over this command. Set EnableSelectedSpeaker = 0 in
+SentientSands_Config.ini to disable both.
+
+/attack
+Triggers the ATTACK action.
+
+/follow
+Makes the NPC follow the player.
+
+/idle
+Stops following and makes the NPC idle.
+
+/patrol
+Makes the NPC patrol the town.
+
+/join
+Makes the NPC join the player's party.
+
+/leave
+Makes the NPC leave or dismiss themselves.
+
+/free
+Triggers the FREE_PLAYER action.
+
+/breakout
+Triggers the BREAKOUT_PLAYER action.
+
+/move
+Makes the NPC move on free will.
+
+/movefast
+Makes the NPC move on free will faster.
+
+/home
+Sends the NPC to their home building.
+
+/shop
+Makes the NPC stand at a shopkeeper node.
+
+/raid [Town]
+Triggers a raid action targeting the specified town.
+
+/travel [Town]
+Makes the NPC travel to the specified town.
+
+/medic
+Assigns the medic job.
+
+/rescue
+Triggers the find-and-rescue action.
+
+/repair
+Assigns the robot repair job.
+
+/notify [msg]
+Shows or sends a notification message action.
+
+/give_cats [n]
+Gives the specified amount of cats.
+
+/take_cats [n]
+Takes the specified amount of cats.
+
+/take_item [item]
+Takes the specified item.
+
+/take
+Takes the first known item from the player's inventory.
+
+/drop [item]
+Drops the specified item.
+
+/spawn [Templ|Name|Desc]
+Spawns an item using the provided spawn arguments.
+
+/relations [Fact] [n]
+Adjusts faction relations using the provided fact and value.
+
+/task [TASK]
+Sets a task tag using the provided task text.
+
+
+KAYAK COMMANDS
+
+/k_help
+Shows the Kayak command list.
+
+/k_visited <place>
+Adds or updates a visited place for the current NPC in Kayak.
+
+/k_job <text>
+Sets or updates the NPC's job text in Kayak.
+
+/k_backstory <text>
+Sets or updates the NPC's backstory in Kayak.
+
+/k_speech <text>
+Sets or updates the NPC's speech/personality speech notes in Kayak.
+
+/k_note <field> <value>
+Writes an arbitrary field/value note to the NPC's Kayak entity.
+
+/k_npc_prices <x>
+Sets the current NPC's price multiplier.
+
+/k_global_prices <x>
+Sets the global price multiplier for the active campaign.
+
+/k_city_prices <city> <x>
+Sets a city-specific price multiplier.
+
+/k_speak <line>
+Makes the NPC say the exact line immediately. It can also carry embedded
+[ACTION: ...] or [TASK: ...] tags.
+
+/k_clean
+Cleans pending NPC profiles and reports how many were removed or kept.
+
+/k_restorename
+Restores the current NPC's original/default name.
+
+/k_restorename all
+Restores original/default names for all applicable NPCs in the campaign.
+
+/m_help
+Shows the SentientSongs music command list.
+
+/m_play <song_name>
+Plays a specific indexed song by name.
+
+/m_folder <folder_name>
+Builds a playlist from an indexed folder and starts playback.
+
+/m_pause
+Pauses the current song.
+
+/m_resume
+Resumes paused playback.
+
+/m_stop
+Stops playback.
+
+/m_next
+Skips to the next song in the active queue.
+
+/m_prev
+Returns to the previous song in the active queue.
+
+/m_vol <0-100>
+Sets volume as a percentage.
+
+/m_playlist <list_name>
+Loads playlists/<list_name>.txt and starts that playlist.
+
+/m_find <keyword>
+Builds a playlist from indexed songs matching a keyword.
+
+/m_shuffle on|off
+Enables or disables shuffle for future folder, playlist, and search queues.
+
+/m_loop off|track|folder
+Sets loop mode for playback.
+
+/m_reload
+Rebuilds the SentientSongs in-memory index after manual file changes.
+
+/m_status
+Shows the current playback status.
+
+KayakDB editing commands:
+
+The following commands are meant to help add compatibility with mods. The list below is organized in a suggested order of use.
+
+====== Adding titles for the renaming system ======
+
+/db_originalname = show stored original name
+
+If you find an npc named "Bob" and believe it originally had a title such as "Hungry Bandit", this command will show you its original in-game name.
+
+Exceptions:
+It will not work if the npc has been renamed with the vanilla surgeon.
+It will not work for npcs generated on a mod version older than this one.
+
+In other words, it only works for newly generated npcs with this version of the mod, v0.35+.
+
+/db_title <title> = add title under faction
+
+Once you use /db_originalname to see which title the renaming system deleted, you can use this command to add that title manually into the KayakDB renaming_list.txt. From then on, when the renamer finds npcs with this title, it will preserve it.
+
+===== Adding an npc to the biography generation system with custom rules =====
+
+The following commands allow you to add races that are not yet covered by the KayakDB into the specific race biography generation and speech style generation system.
+
+Npcs from races not present in the KayakDB will fall back to normal humanoid biography generation and humanoid speech. That means modded animals may talk like humans unless you use the following commands, or edit the KayakDB files manually.
+
+/db_species <animals|ferals|machines|sapients> = scaffold race/species data
+/db_race_biogen <text> = add race bio generation rule
+/db_race_chatgen <text> = add race chat generation rule
+/db_addrace_final = register race in persona_races.json
+/db_clear_dialogue = clear stored dialogue history
+/db_clear_entity = clear generated entity prose fields
+
+Use example:
+
+Say you meet a modded npc whose in-game race is "Winter Wolf". No such race exists yet in the prompt generation system. If it gets a biography, it may lean slightly toward being an animal, but it will still follow humanoid rules, so its chat will be prose-speech like a humanoid npc.
+
+First, use:
+/db_originalname
+
+This lets you check whether it originally had a title.
+
+Then use:
+/db_title Winter Wolf
+
+Now the renaming system will rename future Winter Wolves properly. Use spaces to separate words.
+
+Now the actual race creation commands:
+
+Create the Winter_Wolf folder with:
+/db_species animals
+
+That is all for this step. A folder named Winter_Wolf will be created at:
+SentientSands\Kayak\KayakDB\Campaigns<campaign_name>\species\animals\Winter_Wolf\
+
+/db_race_biogen <text> = add race bio generation rule
+
+This edits the rules for biography generation for npcs of this race.
+You can send more than one line.
+New uses of this command are additive, they do not replace previous text in biography/1_rules.txt.
+
+/db_race_chatgen <text> = add race chat generation rule
+
+This adds rules for how npcs of this race should "speak".
+It works the same way.
+Every line you send adds a rule inside chat/1_rules.txt.
+
+/db_addrace_final = register race in persona_races.json
+
+This is mainly to handle fallback cases. It does not hurt to be safe.
+
+/db_clear_dialogue = clear stored dialogue history
+
+If you had a previous chat with an animal and it responded with human-like text, then even if you regenerate its new biography with the new animal rules, the dialogue history itself can still influence the llm to continue responding that way.
+
+This command clears all content of dialogue.txt inside that npc's folder in your campaign, so you can start fresh.
+
+/db_clear_entity = clear generated entity prose fields
+
+If you do not use this before regenerating the biography of an animal that was previously generated as a human, the older biography will still be sent to the regeneration prompt and may influence the new one.
+
+So if you want a truly animal-like biography, this will create a placeholder folder with this species so you can edit outside the game, in KayakDB.
+

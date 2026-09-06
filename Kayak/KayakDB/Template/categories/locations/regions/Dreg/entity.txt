@@ -1,0 +1,9 @@
+Category = locations
+Name = Dreg
+Id = dreg
+display_name = Dreg
+type = region
+faction = Deadcat
+weight = 4
+
+$description = Dreg is a small coastal zone in the south where the Deadcat Fishermen have a minor presence — a wet, rocky strip of coast that doesn't attract significant political attention from anyone. The Deadcat faction fishes here alongside their other coastal operations. The zone has the quality of somewhere that exists at the margins of everything, which is precisely why the Deadcat chose it.

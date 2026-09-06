@@ -1,0 +1,8 @@
+Category = locations
+Name = None_Coast
+Id = none_coast
+display_name = None Coast
+type = region
+weight = 2
+
+$description = None Coast is a stretch of shoreline at the continent's outer edge — part of the NONE zone that encompasses the coastline beyond the main continental areas. It has no resources, no inhabited locations, no faction claims, and no significant fauna. It exists as geography: the edge of the map rendered as terrain rather than void.

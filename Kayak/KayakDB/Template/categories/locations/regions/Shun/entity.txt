@@ -1,0 +1,11 @@
+Category = locations
+Name = Shun
+Id = shun
+display_name = Shun
+type = region
+weight = 6
+
+$description = Shun is the southern peninsula — a zone of abandoned towns, ancient ruins, and the Library Ruins that were once part of Second Empire infrastructure. It's one of the more isolated regions of the continent, difficult to reach and mostly empty of current political activity. The abandoned towns here predate the current age and whatever emptied them isn't recorded clearly. Tech Hunters have surveyed parts of it. Most of what they found is useful primarily for understanding what this part of the continent looked like when the Second Empire was still operating.
+$known_for = Abandoned towns and ancient ruins. The Library Ruins on the Hook coast shore. Armoury Ruins that occasionally contain worth finding. The particular isolation of a peninsula that most factions don't have reason to patrol.
+
+$directions = South, coastal peninsula. Library Ruins and Abandoned Towns here.

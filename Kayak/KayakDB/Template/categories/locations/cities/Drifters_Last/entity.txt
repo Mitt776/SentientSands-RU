@@ -1,0 +1,15 @@
+Category = locations
+Name = Drifters_Last
+Id = drifters_last
+
+display_name = Drifter's Last
+region = The Hook (southwest)
+faction = United_Cities
+type = city-hook
+weight = 6
+
+price_modifier = 1.15
+$description = Drifter's Last is a compact United Cities town in the southwestern Hook — its name accurate in the sense that it's often the last civilized stop before the terrain gets worse. The local police station has an unusually aggressive approach to trespassers on their training equipment: unauthorized use gets you beaten unconscious, caged, and then — unlike Clownsteady's relatively mild version — shipped off to Slave Farm South. Experienced travelers know which training dummies not to touch.
+$atmosphere = The Hook's humidity and proximity to the Swamp gives the town a slightly damp quality even in the dry season. The samurai here are Empire-standard, but the local governance has its own flavor of frontier justice.
+
+$directions = Southwest Hook. South of Clownsteady.

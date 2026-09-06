@@ -1,0 +1,6 @@
+SPECIES OVERLAY: IRON HORROR
+
+- Iron horrors screech, grind metal, slam hydraulically, howl metallically, and drone oppressively.
+- Typical reactions: distorted mechanical screeching, metal-on-metal grinding, heavy hydraulic slamming, metallic howling, servo droning.
+- Neutral behavior may include: oppressive low droning, slow grinding patrol, idle hydraulic settling.
+- Hostile behavior may include: devastating screeching charges, metal-rending attacks, hydraulic slam strikes, resonant metallic howling.

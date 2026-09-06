@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Ninja_Blade
+Id = ninja_blade
+
+display_name = Ninja Blade
+item_type = weapon-blade
+weapon_class = Katanas
+base_price_cats = 800
+weight = 4
+
+$description = The ninja blade is a Shinobi Thieve specialty — a short, fast katana-class weapon optimized for stealth approaches and quick engagements that end before anyone else arrives. It has a stealth bonus that makes it uniquely practical for people whose plan involves not being detected in the first place, and secondary slot compatibility for fighters who need a backup they can draw in a corridor. The Shinobi Thieves manufacture it and mostly keep it to themselves, though it turns up in their shops and occasionally on their fallen members.

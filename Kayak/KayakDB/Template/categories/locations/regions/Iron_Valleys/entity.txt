@@ -1,0 +1,11 @@
+Category = locations
+Name = Iron_Valleys
+Id = iron_valleys
+display_name = Iron Valleys
+type = region
+weight = 5
+
+$description = The Iron Valleys are the primary territory of the Mechanical Hive — a zone of considerable iron ore deposits where the Hive's automated operations run on schedules that predate most current civilizations. The Mechanical Hive is distinct from the Western Hive: fully automated, no organic Queen, machine-built and machine-maintained. The valleys themselves have good resource deposits, which is why the Mechanical Hive established here.
+$known_for = Mechanical Hive presence and their automated operations. Iron ore deposits. Being one of the few zones in Kenshi where the main faction is entirely machine rather than biological.
+
+$directions = Eastern continent, between Black Desert and the Arm of Okran.

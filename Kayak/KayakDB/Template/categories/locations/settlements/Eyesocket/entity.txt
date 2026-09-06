@@ -1,0 +1,15 @@
+Category = locations
+Name = Eyesocket
+Id = eyesocket
+
+display_name = Eyesocket
+region = Great Desert (eastern)
+faction = Slave_Traders
+type = settlement-slave-market
+weight = 6
+
+price_modifier = 0.95
+$description = Eyesocket is the Slave Traders' main commercial hub — a settlement built around the most active slave market in the Empire. Captured people are brought here, processed, collared, and sold. The operation is legal, licensed, and efficient. There are shops. There is a bar. There are people in collars who are not allowed to leave. The Slave Traders who run it are professional enough to be polite to buyers and firm enough to not worry much about anyone else's feelings about the business.
+$travel_note = Technically open to anyone who isn't on the slave side of the transaction. Anti-Slavers avoid it for obvious reasons. The roads approaching from the west are monitored by Manhunters who are alert for escaped property.
+
+$directions = Stormgap Coast, small hill. Inland from Brink.

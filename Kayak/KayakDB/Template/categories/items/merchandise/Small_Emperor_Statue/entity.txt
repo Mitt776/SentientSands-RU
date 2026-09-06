@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Small_Emperor_Statue
+Id = small_emperor_statue
+display_name = Small Emperor Statue
+item_type = trade-junk
+base_price_cats = 90
+
+$description = Small Emperor Statues are decorative objects — miniature representations of the Emperor, found in United Cities noble houses, guard posts, and upscale establishments. They have junk value outside Imperial territory and modest value within it. They are the kind of object that makes looting a UC noble house feel historically specific: someone made these, someone bought them, someone put them somewhere they thought mattered.

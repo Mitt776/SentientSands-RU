@@ -1,0 +1,12 @@
+Category = items_materials
+Name = Iron_Plates
+Id = iron_plates
+
+display_name = Iron Plates
+item_type = crafting-material
+value_cats = 60
+weight = 8
+
+base_price_cats = 135
+$description = Iron Plates are the intermediate product between raw iron ore and finished armor — smelted, compressed, and shaped into the flat sections that armorsmiths cut and rivet into proper protection. They move through the economy as a trade good in their own right: smelters produce them, merchants carry them, builders buy them. In a world where most things are made by hand from materials that have to be dug out of the ground, iron plates are the unit of industrial production that everyone counts.
+$use = Required crafting material for most iron and medium armors. Available from many merchants; produced from iron ore at smelters.

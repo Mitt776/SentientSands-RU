@@ -1,0 +1,12 @@
+Category = items_weapons
+Name = Wakizashi
+Id = wakizashi
+
+display_name = Wakizashi
+item_type = weapon-blade
+weapon_class = Katanas
+base_price_cats = 500
+weight = 3
+
+$description = The wakizashi is a short katana — compact enough for the secondary weapon slot, fast enough to use in tight spaces where longer blades become liabilities. It's the indoor specialist among katana-class weapons, with a bonus that activates in buildings and close quarters rather than the open-field penalties that plague longer weapons. Shinobi Thieves use it for obvious reasons. Anyone who expects to spend meaningful time in ruins, city interiors, or anywhere with ceilings starts seeing the appeal quickly.
+$cultural_significance = In United Cities culture the wakizashi is a samurai's backup blade — traditionally the weapon you draw when the main blade is impractical or lost. Outside the Empire it's carried by anyone who needs something short and fast and doesn't care about the cultural connotations.

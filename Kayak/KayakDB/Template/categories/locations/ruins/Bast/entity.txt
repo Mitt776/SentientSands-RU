@@ -1,0 +1,14 @@
+Category = locations_ruin
+Name = Bast
+Id = bast
+
+display_name = Bast
+region = Bast zone (United Cities territory)
+faction = United_Cities
+type = city-ruined
+weight = 5
+
+$description = Bast was a United Cities city. It's a ruin now — largely destroyed by the Holy Nation during a military engagement, and currently inhabited by UC-affiliated squatters, exiles, and outlaws who moved into what was left. Two intact houses remain out of what was once a functioning settlement. The name of the Bast zone and the Bast zone's place on the map speak to what this location used to mean to the Empire; the current state of the ruins speaks to what happens to cities caught between the Holy Nation and the United Cities in their long cold war.
+$atmosphere = The ruins have the specific quality of something that was abandoned in a hurry and never reclaimed — belongings still inside, structures half-collapsed, the occasional squatter using a storm house as shelter.
+
+$directions = Bast zone, east of the Great Desert. Between Heng and the Stormgap Coast. Three cities here: Bast (ruined), Endin (ruined), Drin (partly standing).

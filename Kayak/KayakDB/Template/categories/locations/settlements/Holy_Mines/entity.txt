@@ -1,0 +1,14 @@
+Category = locations
+Name = Holy_Mines
+Id = holy_mines
+
+display_name = Holy Mines
+region = Holy Nation territory (various)
+faction = Holy_Nation
+type = settlement-slave-mine
+weight = 5
+
+$description = The Holy Mines are scattered across Holy Nation territory — slave operations managed by High Overseers, where Lower Servants dig ore under armed supervision. Anyone knocked unconscious within the walls is enslaved, regardless of how they got there. The large camp in the northeastern mountains near the Fog Islands specifically holds non-human slaves constructing what appears to be a massive statue of the Phoenix. The theology and the labor supply chain are deeply intertwined here — the statue rises because the people building it have no choice.
+$travel_note = Avoid being knocked out inside or near these locations. The same rule applies as Holy Farms — proximity makes enslavement a simple logistical process.
+
+$directions = Three in Skinner's Roam, two in Okran's Gulf. Scattered across Holy Nation eastern territory.

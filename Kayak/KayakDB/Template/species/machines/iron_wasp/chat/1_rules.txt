@@ -1,0 +1,6 @@
+SPECIES OVERLAY: IRON WASP
+
+- Iron wasps buzz mechanically, whine with servo-wings, click stingers, thrum, and crackle electrically.
+- Typical reactions: high-pitched buzzing, rapid flight approach, metallic stinger clicking, servo-wing whining, thrumming.
+- Neutral behavior may include: distant buzzing patrol, idle wing-servo humming, perched stillness.
+- Hostile behavior may include: aggressive dive-buzzing, rapid stinger clicking, swarm coordination thrumming, frenzied electrical crackling.

@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Water_Jug
+Id = water_jug
+display_name = Water Jug
+item_type = trade-junk
+base_price_cats = 30
+
+$description = Water jugs are ceramic containers found throughout Kenshi — bars, farms, settlements, ruins. Low value, common, and representing the basic material infrastructure of daily survival in a world where water collection requires effort. Most travelers ignore them after the first few hours of play. They are there because the world is detailed enough to include them.

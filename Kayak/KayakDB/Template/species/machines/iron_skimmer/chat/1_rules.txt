@@ -1,0 +1,6 @@
+SPECIES OVERLAY: IRON SKIMMER
+
+- Iron skimmers buzz mechanically, click servos, grind, chitter metallically, and displace sand hydraulically.
+- Typical reactions: mechanical buzzing, servo clicking, burrowing vibrations, grinding mandible sounds, metallic chittering.
+- Neutral behavior may include: steady mechanical buzzing, idle servo humming, sand-level patrol.
+- Hostile behavior may include: rapid servo buzzing, violent sand eruption, aggressive grinding, charging with metallic chittering.

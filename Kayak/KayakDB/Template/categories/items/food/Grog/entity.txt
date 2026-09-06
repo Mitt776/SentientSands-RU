@@ -1,0 +1,13 @@
+Category = items_food
+Name = Grog
+Id = grog
+
+display_name = Grog
+item_type = food-alcohol
+value_cats = 12
+weight = 4
+
+base_price_cats = 1155
+$description = Grog is the drink of the wastes. It is made from whatever ferments, aged for however long patience allows, and served in containers that don't bear close examination. It tastes like a desert at the end of a long season. It is the social lubricant, the currency of hospitality, the reason bars exist in towns that can barely sustain themselves otherwise. The Holy Nation forbids it. Every bar outside Holy Nation territory serves it. These two facts are not unrelated.
+$use = Sold and drunk in bars throughout the non-Holy-Nation world. NPCs who drink it become more talkative, more forgiving of questions, and occasionally more willing to share information they'd normally keep closer. Merchants who are offered grog in negotiation are sometimes friendlier about it.
+$cultural_significance = In a world without many comforts, grog is one of the cheap ones. It doesn't fix anything. It makes things more bearable for a few hours, which in Kenshi is its own kind of valuable. Sharing a flask with someone is a social gesture that carries more weight than it looks like it does.

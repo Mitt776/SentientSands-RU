@@ -1,0 +1,16 @@
+Category = locations
+Name = Mongrel
+Id = mongrel
+
+display_name = Mongrel
+region = Fog Islands
+faction = Mongrel_faction
+type = city-isolated
+weight = 7
+
+price_modifier = 1.2
+$description = Mongrel is a city that probably shouldn't exist. It sits in the middle of the Fog Islands, which means it is surrounded on all sides by the Fogmen — the feral remnants of a dead Hive, screaming and swarming in the perpetual grey mist. The Shinobi Thieves guard Mongrel's perimeter and have done so long enough that the art of killing Fogmen efficiently has become an actual academic discipline here. Getting to Mongrel requires crossing Fogman territory, which most groups attempt once and either succeed at or don't attempt again. The city itself is safe once reached, well-stocked, and relieved to see almost any living thing arrive.
+$atmosphere = Mongrel carries the quality of a place under long siege — not desperate, but permanently aware. The citizens have long since stopped reacting to the sounds outside the walls the way outsiders do. The shops carry goods unavailable in Holy Nation territory, partly because the Holy Nation has never successfully delivered a shipment here and partly because Mongrel's artisans have had a long time to develop their own crafts in isolation.
+$notable = Exceptionally powerful guards who have been fighting Fogmen their entire careers. Shops with unusual stock. The journey to reach it as the primary gate-keeping mechanism for who lives here. A population that is extremely accepting of anyone who managed to get through the Fog Islands alive.
+
+$directions = Deep in the Fog Islands, surrounded by Fogmen territory on all sides.

@@ -1,0 +1,14 @@
+Category = locations
+Name = Southern_Hive
+Id = southern_hive
+
+display_name = Southern Hive (Location)
+region = Royal Valley / Greyshelf
+faction = Southern_Hive
+type = settlement-hostile-hive
+weight = 5
+
+$description = The Southern Hive is the territory and nest-complex of the Southern Hive faction — pink-skinned, white-patterned Hivers who are aggressively territorial and focused on sacrificing or consuming intruders to their King. Unlike the Western Hive's commerce-oriented xenophobia, the Southern Hive's xenophobia expresses itself more directly and more immediately. The Queen of the South carries a Meitou Polearm. Tech Hunters have mapped the general region; explorers have confirmed that armed exploration is the only kind that works here.
+$travel_note = Hostile to all outsiders without exception. The Royal Valley and Greyshelf approaches require significant combat capability.
+
+$directions = Royal Valley and Greyshelf, southeast continent.

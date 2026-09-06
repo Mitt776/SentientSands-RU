@@ -1,0 +1,14 @@
+Category = factions
+Name = Slave_Traders
+Id = slave_traders
+aliases = The Slave Traders | Slave Traders
+
+display_name = Рабовладельцы
+territory = Eyesocket, Stone Camp, scattered operations throughout UC territory
+alignment = commercial-predatory
+relations_hostile_to = Anti-Slavers
+weight = 7
+
+$description = The Slave Traders are not outlaws. That is the first thing to understand about them. They are a legal commercial institution operating under Imperial sanction. They run slave farms, slave markets, and debt-collection services. They have fixed prices posted in their establishments. They offer receipts. The machinery of the United Cities runs on their product and they know it, which is why they have more political leverage than their manners suggest and more security than their storefronts imply.
+$known_for = The slave pits at Eyesocket. Stone Camp's stone mines where slaves work until they can't. The collar — iron and uncomfortable and very difficult to remove without a key. Manhunters who retrieve escaped merchandise. The polite euphemism of calling a human being inventory.
+$rumor = They say some of the slaves in the deeper farms have been there so long they've forgotten their own names. That they answer to their collar numbers instead, and when they're freed they don't know who they are anymore. The Slave Traders call this efficiency. The Anti-Slavers call it something that cannot be repeated in polite company.

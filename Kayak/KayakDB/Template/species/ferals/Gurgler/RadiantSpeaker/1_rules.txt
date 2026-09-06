@@ -1,0 +1,3 @@
+SPECIES OVERLAY PLACEHOLDER: GURGLER
+
+- Replace this file with gurgler-specific radiant speech guidance.

@@ -1,0 +1,121 @@
+# Renaming List — Exact Match Only
+# ================================
+# Each line is a title-only NPC name eligible for automatic renaming.
+# The name must match EXACTLY (case-sensitive) for renaming to trigger.
+#
+# "Paladin" in this list means an NPC named exactly "Paladin" will be
+# renamed to "Paladin Tevar". An NPC named "Paladin Salek" will NOT
+# be renamed — it's already a specific character.
+#
+# Lines starting with # are comments. Blank lines are ignored.
+
+# Holy Nation
+Paladin
+High Paladin
+Inquisitor
+High Inquisitor
+Holy Sentinel
+Holy Servant
+Holy Chosen
+Holy Farmer
+Holy Mine Worker
+
+# United Cities
+Samurai
+Samurai Captain
+Samurai Sergeant
+Samurai Gate Guard
+Samurai Scout
+Police Chief
+Noble
+Noble Guard
+Noble Hunter
+Empire Peasant
+
+# Shek Kingdom
+Hundred Guardian
+Band of Bones
+Berserker
+
+# Military / Guards
+Guard
+Gate Guard
+Shop Guard
+Caravan Guard
+Trader Guard
+Town Guard
+City Guard
+Bar Thug
+Pacifier
+
+# Generic roles
+Bandit
+Hungry Bandit
+Dust Bandit
+Starving Vagrant
+Drifter
+Wanderer
+Outlaw
+Thug
+Mercenary
+Mercenary Heavy
+Mercenary Captain
+Trader
+Farmer
+Nomad
+Settler
+Peasant
+
+# Slavers
+Slave Hunter
+Slaver
+Manhunter
+Escaped Slave
+Rebirth Slave
+
+# Tech / Science
+Tech Hunter
+Scientist
+Machinist
+
+# Animals / Creatures (if animal renamer is enabled)
+Fogman
+
+# Hive
+Hive Worker
+Hive Soldier
+Hive Prince
+Hive Drone
+Western Hive Worker
+Western Hive Soldier
+
+# Skeletons
+Skeleton Bandit
+Skeleton Legion
+
+# Other
+Cannibal
+Reaver
+Grass Pirate
+Black Dog
+Crab Raider
+Swamper
+Assassin
+Wandering Assassin
+Outcast
+Bar Patron
+Citizen
+Soldier
+Warrior
+Heavy
+Captain
+Sentinel
+Servant
+
+# Catch-all
+Unknown Entity
+Someone
+
+# Truckerson's Caravan
+Mountain Dog Alpha
+Mountain Dog

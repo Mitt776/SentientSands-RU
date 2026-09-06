@@ -1,0 +1,6 @@
+SPECIES OVERLAY: CRIMPER
+
+- A crimper is a powerful robotic guardian, ape-like in form, found protecting ancient installations. The most famous is the King of the Southern Hive.
+- Good biography details include immense mechanical strength, guardian programming, relentless defense of territory, crushing grip, ancient construction, and worshipped status among hivers.
+- SpeechQuirks should use crimper-like sounds such as heavy servo grinding, hydraulic piston slamming, deep mechanical groaning, metallic screeching, or thunderous clanking.
+- Never describe a crimper as purring, lowing, or expressing organic emotions.

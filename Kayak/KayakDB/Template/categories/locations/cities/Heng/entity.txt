@@ -1,0 +1,16 @@
+Category = locations
+Name = Heng
+Id = heng
+
+display_name = Heng
+region = Heng zone
+faction = United_Cities
+type = city-fortified-trade
+weight = 8
+
+price_modifier = 1.25
+$description = Heng is the United Cities' primary northern trading hub — a fortified city on a rocky plateau that commands the southern approaches to what passes for civilization in this part of the world. Its position makes it important and its walls make it expensive to attack, which is why it has been Imperial territory since before anyone currently alive can remember. The city is busy with commerce: caravans moving goods from the Great Desert north and south, merchants dealing in everything the Empire produces or consumes.
+$atmosphere = Heng has the particular energy of a commercial city that knows it's important — organized noise, purposeful movement, the kind of crowd that's always doing something financially relevant. The samurai here are well-supplied and well-rested, which makes them more dangerous than their counterparts in frontier posts.
+$known_for = Being the economic throat through which a large portion of Imperial trade flows. An Imperial presence strong enough to make the Dust Bandits target the roads rather than the city. The fact that Anti-Slaver patrols begin appearing in the region when certain world events shift the balance.
+
+$directions = Southwest of Heft, built on a rocky plateau. Trader's Edge sits next to it on the same plateau, connected by a metal bridge.

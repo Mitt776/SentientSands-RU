@@ -1,0 +1,17 @@
+Category = locations
+Name = Heft
+Id = heft
+
+display_name = Heft
+region = Great Desert
+faction = United_Cities
+type = city-imperial-capital
+weight = 9
+
+price_modifier = 1.4
+$description = Heft is the capital of the United Cities — a massive desert fortress-city in the heart of the Great Desert, rising from the sand like proof that enough wealth and enough slaves can build anything anywhere. Emperor Tengu's palace is here, along with the inner circle of Imperial nobles, the most dangerous gate guards in the Empire, and a subterranean structure called the Vault that officially doesn't exist. The city is clean, guarded, prosperous, and deeply unpleasant if you arrive without cats in your pocket.
+$atmosphere = The scale of Heft is the first thing you notice. The heat is the second. Everything here is proportioned to impress — wide streets, tall walls, guards in lacquered armor who look like they were born standing at attention. The wealthy move between their mansions in private palanquins. Everyone else moves quickly and doesn't make eye contact with the samurai.
+$notable = Tengu's palace complex. The notorious Vault, entry by invitation only and departure not guaranteed. The Noble district, walled within the city walls. The market, which has everything you can afford and several things you can't. The slave market operated by the Slave Traders, which the Traders Guild pretends it doesn't profit from.
+$travel_note = Heft is safe for any race provided you can pay the gate toll and have no outstanding bounties. The samurai gate guards check bounty papers. Arrive clean, arrive with cats, and avoid looking like you're evaluating the Vault's structural weaknesses.
+
+$directions = Central Great Desert. The Imperial capital. Heng is southwest. Tengu's Vault lies southeast in Skimsands.

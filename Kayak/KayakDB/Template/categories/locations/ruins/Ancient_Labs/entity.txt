@@ -1,0 +1,14 @@
+Category = locations_ruin
+Name = Ancient_Labs
+Id = ancient_labs
+
+display_name = Ancient Labs
+region = Various (scattered across the continent)
+type = ruin-ancient
+weight = 7
+
+$description = Ancient Labs are First Empire ruins scattered across Kenshi — automated facilities from the age of the Ancients, now populated by Security Spiders and Broken Skeletons that have been running their patrol routines for centuries without anyone to report to. The labs contain some of the best loot in the game: AI Cores, Ancient Science Books, and occasionally Meitou-grade weapons. They are also genuinely dangerous — the Security Spiders inside are not low-level threats, and the lab layouts are designed in ways that suggest the Ancients anticipated the need to stop things from leaving.
+$known_for = AI Cores and Ancient Science Books as primary loot. Security Spiders that have been protecting empty corridors for four hundred years. The Reprogramming Workshop among them, which is relevant for skeleton-related quests. Tech Hunter expedition logs that end mid-sentence.
+$travel_note = Require a capable team. Security Spiders hit hard and hit in groups. The loot justifies the trip but the preparation needs to match the contents.
+
+$directions = Scattered across the continent. Fourteen labs total. Tech Hunters have maps to some. Generally in remote or dangerous zones.

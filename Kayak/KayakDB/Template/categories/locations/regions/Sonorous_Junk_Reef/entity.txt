@@ -1,0 +1,8 @@
+Category = locations
+Name = Sonorous_Junk_Reef
+Id = sonorous_junk_reef
+display_name = Sonorous Junk Reef
+type = region
+weight = 3
+
+$description = Sonorous Junk Reef is a coastal zone adjacent to Sonorous Dark — named for both the acoustic properties of the area and the debris field visible along its coast. The junk suggests maritime activity at some point in the world's history, or perhaps wreckage from something larger. The reef itself is navigable but not welcoming. The sound carries here in the same disorienting way as in Sonorous Dark.

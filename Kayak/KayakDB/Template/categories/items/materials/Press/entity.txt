@@ -1,0 +1,8 @@
+Category = items_materials
+Name = Press
+Id = press
+display_name = Press
+item_type = crafting-material
+base_price_cats = 324
+
+$description = A press is a mechanical component used in advanced production machinery — part of the industrial equipment tier that sits between basic construction and robotics. Used in certain crafting chains and research processes. Available from tech-oriented shops and some machinery traders. Like most mid-tier mechanical components, its value comes from being required in multiple production chains rather than having a single specific purpose.

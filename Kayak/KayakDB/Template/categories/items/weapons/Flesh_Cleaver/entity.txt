@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Flesh_Cleaver
+Id = flesh_cleaver
+display_name = Flesh Cleaver
+item_type = weapon-hacker
+weapon_class = Hackers
+base_price_cats = 600
+weight = 6
+
+$description = The Flesh Cleaver does exactly what the name says — a short, brutal hacker used by Cannibals and Shrieking Bandits, designed for close-quarters tearing rather than battlefield elegance. It has the shortest reach of any hacker-class weapon, tied with the Wakizashi for the shortest in the entire game, which is the tradeoff for how effectively it deals mixed cut-and-stun at point blank. Low quality versions come off Cannibals reliably, making them an early-game acquisition path for players who need a hacker and aren't picky about the aesthetics.
+$cultural_significance = A Flesh Cleaver marks its carrier as either a cannibal, someone who took it from one, or someone with a very particular sense of humor about their weapon choices. None of these readings are neutral.

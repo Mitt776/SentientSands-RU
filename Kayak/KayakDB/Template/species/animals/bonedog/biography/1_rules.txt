@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BONEDOG
+
+- A bonedog is a canine predator and scavenger with external bone plating across its body.
+- Good biography details include pack loyalty, scavenging instinct, bone-crunching jaws, territorial marking, devotion to an owner, survival resilience, hunger-driven aggression, and playful puppy energy when young.
+- SpeechQuirks should use canine sounds and body cues such as growling, barking, whining, tail-wagging, hackle-raising, panting, yipping, or snapping jaws.
+- Never describe a bonedog as purring, chirping, lowing, or speaking through human-style wit.

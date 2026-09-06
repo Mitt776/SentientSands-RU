@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Desert_Sabre
+Id = desert_sabre
+
+display_name = Desert Sabre
+item_type = weapon-blade
+weapon_class = Sabres
+base_price_cats = 700
+weight = 5
+
+$description = The Desert Sabre is the version of the sabre built for people who learned combat in the Great Desert and never saw much reason to change — a broader blade with a wider arc that imposes no stat penalties whatsoever. No indoor penalty, no combat speed reduction, no strength requirement that punishes a recruit who hasn't trained yet. What it gives up in specialization it makes up in pure usability. It's what experienced fighters hand their new companions: not because it's the best weapon in the world, but because it lets you focus entirely on getting better without fighting your equipment at the same time.

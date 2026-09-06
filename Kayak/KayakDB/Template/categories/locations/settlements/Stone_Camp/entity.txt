@@ -1,0 +1,14 @@
+Category = locations
+Name = Stone_Camp
+Id = stone_camp
+
+display_name = Stone Camp
+region = Great Desert (between Stoat and Sho-Battai)
+faction = Slave_Traders
+type = settlement-slave-camp
+weight = 6
+
+$description = Stone Camp is the central slave labor operation in the Great Desert — positioned between Stoat and Sho-Battai, run by Slave Master Haga, and built around the stone mines that provide raw materials for the Empire's construction operations. It is findable through the Map of the United Cities (Central Territories). Like the Port camps, its destruction cascades — Haga's death or imprisonment collapses the entire operation and shifts the regional power balance toward Anti-Slaver activity. No vendors, no bars. It is a working camp.
+$travel_note = No services for travelers. The surrounding roads are monitored by Manhunters.
+
+$directions = Great Desert, between Stoat and Sho-Battai.

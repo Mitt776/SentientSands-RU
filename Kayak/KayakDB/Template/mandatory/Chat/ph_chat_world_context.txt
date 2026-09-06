@@ -1,0 +1,7 @@
+Placeholder for future world context prompt text.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- global lore framing
+- dynamic world narration rules
+- context shaping notes

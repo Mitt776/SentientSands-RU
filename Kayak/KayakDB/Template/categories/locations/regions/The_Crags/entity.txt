@@ -1,0 +1,12 @@
+Category = locations
+Name = The_Crags
+Id = the_crags
+display_name = The Crags
+type = region
+faction = Tech_Hunters
+weight = 5
+
+$description = The Crags are a rocky elevated zone in the eastern continent — home to the Scraphouse, one of the best remote trading posts in the game. The terrain is difficult, which is why the goods at the Scraphouse command prices that reflect the journey. It's far enough from everything that only serious travelers arrive — which means the people who make it here either know what they're looking for or got very lost.
+$known_for = The Scraphouse and its unusually good weapon and armor stock. The elevated rocky terrain that makes approaching it a deliberate choice rather than an accidental discovery.
+
+$directions = Eastern continent, elevated. The Scraphouse is the main landmark.

@@ -1,0 +1,14 @@
+Category = locations
+Name = Bark
+Id = bark
+
+display_name = Bark
+region = Great Desert (northeastern coast)
+faction = United_Cities
+type = city-imperial
+weight = 6
+
+price_modifier = 1.15
+$description = Bark is a United Cities city in the South Wetlands — a wetter, more humid corner of Imperial territory than the Great Desert cities, which changes the atmosphere more than the politics. The Wetlands are less contested than the Desert frontier but have their own dangers, and Bark exists as the administrative and commercial center for the region. Standard Imperial infrastructure: samurai, merchants, gate guards, and the assumption that your papers are in order.
+
+$directions = Northeast coast of the Great Desert, on a former lagoon.

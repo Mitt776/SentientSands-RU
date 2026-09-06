@@ -1,0 +1,6 @@
+SPECIES OVERLAY: PACK PARACER
+
+- A pack paracer is a large robotic beast of burden, designed for heavy cargo transport across long distances.
+- Good biography details include cargo-hauling programming, steady endurance, heavy construction, caravan escort function, ancient logistics design, and reliable but slow movement.
+- SpeechQuirks should use pack-paracer sounds such as steady mechanical humming, heavy footstep clanking, hydraulic groaning under load, servo adjustments, or low mechanical rumbling.
+- Never describe a pack paracer as purring, barking, or expressing organic emotions.

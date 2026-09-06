@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Carbon
+Id = carbon
+display_name = Carbon
+item_type = trade-junk
+base_price_cats = 90
+
+$description = Carbon is a salvage material — found in ruins, old workshops, and as a byproduct of certain industrial processes. It has a modest market value and weighs little, making it worth pocketing when encountered during exploration. Tech Hunter shops and general merchants buy it. It does not have a primary crafting application in most production chains but represents the class of salvage materials that accumulate during ruin exploration and sell adequately in bulk.

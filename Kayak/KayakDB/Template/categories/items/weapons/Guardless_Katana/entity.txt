@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Guardless_Katana
+Id = guardless_katana
+display_name = Guardless Katana
+item_type = weapon-blade
+weapon_class = Katanas
+base_price_cats = 900
+weight = 4
+
+$description = A katana with the guard removed — the psychological logic being that fighting without a guard forces a more aggressive posture, knowing your hands are exposed. The stats reflect this: large bonus to melee attack, equivalent penalty to melee defense. It's the weapon for fighters who want to end fights fast rather than survive them carefully, and it's preferred by gang leaders and Jonins who want their subordinates thinking about offense rather than survival. Fits in both weapon slots. The Meitou version is on General Jang in Ashland Dome III.
+$cultural_significance = Gang bosses equip their fighters with Guardless Katanas as a deliberate tactical choice — aggressive fighters, even imprecise ones, create chaos that benefits the side with numbers. It's a management philosophy expressed in steel.

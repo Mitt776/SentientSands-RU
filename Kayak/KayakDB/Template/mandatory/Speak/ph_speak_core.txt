@@ -1,0 +1,7 @@
+Placeholder for future speak prompt rules.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- exact echo behavior
+- formatting guarantees
+- speech bubble output constraints

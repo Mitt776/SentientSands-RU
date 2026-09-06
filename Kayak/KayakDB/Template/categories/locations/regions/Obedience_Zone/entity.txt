@@ -1,0 +1,9 @@
+Category = locations
+Name = Obedience_Zone
+Id = obedience_zone
+display_name = Obedience (Zone)
+type = region
+weight = 5
+
+$description = The Obedience zone is a region in the northern continent named for the event in First Empire history — the moment the Behemoths were called home to die, the wound that started everything. Whether the naming is intentional memorial or geographic accident is unclear; what's clear is that the terrain is hostile and the name sits differently in the mouths of Skeletons who know what it references than in the mouths of humans who don't.
+$known_for = The name and its lore weight. The hostile terrain that makes the zone itself difficult to operate in. Being one of the few named geographic features that directly references First Empire history.

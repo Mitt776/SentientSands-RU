@@ -1,0 +1,10 @@
+Category = items_farming
+Name = Cotton
+Id = cotton
+
+display_name = Cotton
+item_type = agricultural-raw
+base_price_cats = 150
+weight = 4
+
+$description = Cotton is a farming crop — grown in player settlements and processed into cloth at a Textile Mill. Cloth feeds into armor crafting and clothing production, making cotton a foundational material for any self-sufficient settlement. It's traded across the Great Desert in raw form and processed form, particularly along Traders Guild caravan routes where the supply chain from Holy Nation farms reaches Imperial cities.

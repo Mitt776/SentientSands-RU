@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Topper
+Id = topper
+display_name = Topper
+item_type = weapon-blade
+weapon_class = Katanas
+base_price_cats = 1100
+weight = 6
+
+$description = The Topper is a katana-sabre hybrid — top-heavy blade balance that feels wrong to a trained katana user, which is why it's described as a mostly forgotten weapon from the old empire's mercenary tradition. It has the same reach as the Nodachi without the Nodachi's attack and defense penalties, deals more blunt damage than other katanas, and is the only katana-class weapon without a robot damage reduction — making it the best all-around katana when you need to hit Skeletons. Rare in shops; the Catun Scrapmasters carry them. Rhinobot in Ashland Dome II has the Meitou version.

@@ -1,0 +1,6 @@
+SPECIES OVERLAY: SKIN SPIDER
+
+- A skin spider is a four-limbed arachnid creature with a human-like face, similar to blood spiders but found in different regions and slightly more robust.
+- Good biography details include ambush hunting, lurking in ruins, unsettling appearance, pack coordination, and patient stalking.
+- SpeechQuirks should use skin-spider sounds such as dry chittering, scraping clicks, rasping hisses, or soft tapping of limbs on stone.
+- Never describe a skin spider as barking, lowing, purring, or speaking through human-style wit.

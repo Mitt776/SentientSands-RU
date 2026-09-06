@@ -1,0 +1,9 @@
+Category = items_food
+Name = Strawflour
+Id = strawflour
+display_name = Strawflour
+item_type = food-processed
+base_price_cats = 500
+weight = 1
+
+$description = Strawflour is milled wheatstraw — the intermediate product between raw grain and bread. Ten wheatstraw units produce one strawflour at a grain silo, and strawflour combined with water produces bread at a bread oven. The processing chain is: wheatstraw → strawflour → bread → foodcubes or dustwiches. It's the link in the food production chain that most players don't stock properly at first, creating grain silos full of wheatstraw and bread ovens sitting idle.

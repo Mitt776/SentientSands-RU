@@ -1,0 +1,15 @@
+Category = factions
+Name = Second_Empire_Exiles
+Id = second_empire_exiles
+aliases = The Second Empire Exiles | Second Empire Exiles
+
+display_name = Изгнанники Второй Империи
+also_known_as = The Thrall Masters (armed wing), The Reawakened
+territory = Ashlands, Greyshelf
+leader = Cat-Lon (compromised)
+alignment = imperial-broken
+weight = 7
+
+$description = The Second Empire Exiles are what remains after the collapse. Cat-Lon and his inner circle retreated to the Ashlands when the empire fell, and have spent the centuries since in a state that can only be described as dignified deterioration. The Ashlands kill every organic thing that enters. The Skeletons who stayed are immortal, which means they have had centuries to sit in the ruin of everything they built and contemplate what went wrong. Cat-Lon's mind did not survive this cleanly. He is still the strongest fighter alive. He is no longer the man he was.
+$known_for = The Ashlands — officially unsurvivable for organic life, all expeditions lost, Tech Hunters have stopped trying. The ancient domes. Thrall Masters who control reanimated skeleton soldiers. Cat-Lon himself, in his throne, with his Meitou Falling Sun, still fighting even though the war ended centuries ago.
+$rumor = Tinfist and Cat-Lon were friends once. Advisors to the same emperor, builders of the same dream. Those who know the history say the hardest part of the empire's fall wasn't the armies or the rebellions. It was the moment Tinfist and Cat-Lon stopped being on the same side.

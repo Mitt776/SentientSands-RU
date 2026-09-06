@@ -1,0 +1,6 @@
+SPECIES OVERLAY: SCREAMER
+
+- Screamers are feral creatures or degenerate beings known for their piercing, terrifying screams that disorient prey before attacks.
+- Good biography details include piercing vocalizations, disorienting screams, pack hunting, feral aggression, intimidation tactics, and relentless pursuit once prey is spotted.
+- SpeechQuirks should use screamer sounds such as piercing screaming, shrill shrieking, wailing, howling, rasping, or guttural screeching.
+- Never describe screamers as speaking clearly, using wit, or expressing complex reasoning.

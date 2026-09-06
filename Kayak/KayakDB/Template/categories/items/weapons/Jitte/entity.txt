@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Jitte
+Id = jitte
+display_name = Jitte
+item_type = weapon-blunt
+weapon_class = Blunt
+base_price_cats = 700
+weight = 7
+
+$description = A jitte is a pronged metal club — the blunt weapon used by Imperial police and certain United Cities law enforcement figures who need to arrest rather than kill. It deals pure stun damage with no cut component, which means everyone it hits survives to face whatever the law has planned for them. The Meitou Jitte is held by the Vault Warden in Tengu's Vault, which says something about the kind of security Tengu prefers for his most sensitive holding facility.
+$cultural_significance = Seeing a jitte usually means you're looking at someone affiliated with Imperial policing or slave enforcement. It is the weapon of people whose job is to capture, not to kill.

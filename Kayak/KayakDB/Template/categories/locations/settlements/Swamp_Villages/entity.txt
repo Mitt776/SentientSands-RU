@@ -1,0 +1,14 @@
+Category = locations
+Name = Swamp_Villages
+Id = swamp_villages
+
+display_name = Swamp Villages
+region = The Swamp
+faction = Swampers
+type = settlement-swamp-gang
+weight = 4
+
+$description = The Swamp Villages are the smaller settlements scattered through the Swamp controlled by the various gangs — Grayflayer Village (headquarters of the Grayflayers, led by Big Gray), Mud Town, Red Sabre Hideout, Rot, Stone Rat Village, and two generic Swamp Villages. Each is a gang territory node in the broader equilibrium that makes Shark possible. None of them are particularly safe, but none of them are actively hunting travelers who aren't affiliated with a rival gang.
+$known_for = The five-gang power structure of the Swamp expressed in physical settlements. Grayflayer Village with Big Gray as the local faction leader. The possibility of finding unusual goods off the standard supply chain.
+
+$directions = The Swamp. Grayflayer Village, Mud Town, Stone Rat Village, Red Sabre Hideout, and two generic Swamp Villages. All within the Swamp region.

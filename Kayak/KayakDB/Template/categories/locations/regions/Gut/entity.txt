@@ -1,0 +1,8 @@
+Category = locations
+Name = Gut
+Id = gut
+display_name = The Gut
+type = region
+weight = 5
+
+$description = The Gut is an isolated zone in the deep south — one of the more hostile regions on the continent, cut off from most trade routes and populated by things that kill travelers efficiently. It has the quality of a place that exists primarily to test whether you're prepared enough to be there, and the answer for most expeditions is no. Tech Hunters have documented it as a zone that rewards preparation and punishes everything else. There are no major settlements. There is no reason to be here unless you specifically need something that can only be found here.

@@ -1,0 +1,13 @@
+Category = locations
+Name = Cannibal_Plains
+Id = cannibal_plains
+
+display_name = The Cannibal Plains
+type = region
+faction = Cannibals
+weight = 7
+
+$description = The Cannibal Plains are the northwestern region where the Cannibal tribes have territory — a wide, open area that travelers crossing toward the Fog Islands must pass through, which is why Flotsam Village exists where it does and why the Flotsam Ninjas cull the cannibal population regularly. The Plains contain the Cannibal Capital and scattered villages where the Grand Wizards organize their tribes. There is no safe passage through the Plains without either significant force or the specific knowledge of when and where the patrols thin.
+$known_for = The Cannibal Capital and the Grand Wizard hierarchy. The necessity of crossing them to reach the Fog Islands or Flotsam Village. The Flotsam Ninja cull operations that keep the Plains from becoming completely impassable. The Cannibal's particular patience in following unconscious targets back to camp.
+
+$directions = Northwest, between Fog Islands coast and Holy Nation's northwestern border.

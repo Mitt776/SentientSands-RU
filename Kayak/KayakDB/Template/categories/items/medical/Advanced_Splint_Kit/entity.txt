@@ -1,0 +1,8 @@
+Category = items_medical
+Name = Advanced_Splint_Kit
+Id = advanced_splint_kit
+display_name = Advanced Splint Kit
+item_type = medical
+base_price_cats = 600
+
+$description = The Advanced Splint Kit is a higher-quality bone and limb damage treatment — better materials, more effective immobilization, better outcomes for serious structural injuries. At high Field Medic skill levels it meaningfully outperforms the standard Splint Kit in recovery quality. Available from Guild of Surgeons shops. The cost reflects that you need it specifically when someone has taken the kind of damage that makes the difference between a functional and a non-functional limb afterward.

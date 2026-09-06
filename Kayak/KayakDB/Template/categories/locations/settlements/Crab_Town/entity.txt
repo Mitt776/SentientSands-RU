@@ -1,0 +1,15 @@
+Category = locations
+Name = Crab_Town
+Id = crab_town
+
+display_name = Crab Town
+region = Shun / southern coast
+faction = Crab_Raiders
+type = settlement-unique
+weight = 6
+
+price_modifier = 0.9
+$description = Crab Town is the settlement of the Crab Raiders — a coastal faction that has built their economy around crabbing, fishing, and selling the blueprints and finished products of the only crafting tradition that produces Crab Armour. The Raiders themselves are aggressive to strangers by default, which makes acquiring the Crab Armour blueprints a matter of either diplomacy, trade, or taking what you need from people who hit back. The armour's reputation is such that the effort is frequently considered worth it.
+$notable = The Crabsmith who sells Crab Armour blueprints — the only legitimate commercial source of the most protective body armor in the game. Crab Raiders in full kit who serve as a demonstration of what you're shopping for.
+
+$directions = Northeast of The Pits East, southeastern continent.

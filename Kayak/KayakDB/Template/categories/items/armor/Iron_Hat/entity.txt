@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Iron_Hat
+Id = iron_hat
+
+display_name = Iron Hat
+item_type = armor-head-medium
+armor_class = Medium
+base_price_cats = 900
+weight = 5
+
+$description = The Iron Hat is exactly what it sounds like and significantly better than it sounds. It's a simple iron cap that provides solid head protection with no stat penalties and decent coverage, which makes it one of the most frequently recommended early helmet options. The lack of penalties is the key feature — most head armor in Kenshi either provides minimal protection or imposes significant penalties, and the Iron Hat occupies the comfortable middle where 'good enough protection, no downside' means it stays useful for a long time. Available in most armor shops.

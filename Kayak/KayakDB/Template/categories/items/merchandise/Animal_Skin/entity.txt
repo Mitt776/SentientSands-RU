@@ -1,0 +1,9 @@
+Category = items_merchandise
+Name = Animal_Skin
+Id = animal_skin
+display_name = Animal Skin
+item_type = trade-raw
+base_price_cats = 360
+weight = 3
+
+$description = Animal skins are harvested from defeated animals — River Raptors, Beak Things, Gorillos, and others — and sold to merchants or processed into leather at a Tanning Vat. The Leviathan Coast gets its name partly from the trade in Leviathan Pearls, but animal skins from the abundant wildlife are a secondary trade good for anyone operating in the outer territories. Early-game hunting in the Border Zone produces River Raptor skins that gate guards in Bad Teeth will actually fight, which can be looted.

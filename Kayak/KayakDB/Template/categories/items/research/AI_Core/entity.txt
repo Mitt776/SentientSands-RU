@@ -1,0 +1,13 @@
+Category = items_research
+Name = AI_Core
+Id = ai_core
+
+display_name = AI Core
+item_type = ancient-technology
+value_cats = 20000
+weight = 3
+
+base_price_cats = 20000
+$description = AI Cores are the pinnacle of First Empire engineering that most people will ever touch — compact units of processing architecture from an age when computation meant something different than it does now. Nobody in the current world fully understands what they did originally. What they understand is that certain research processes require one to unlock, which makes them extraordinarily valuable to anyone advancing down the technological research tree. Tech Hunters find them in ancient labs surrounded by Security Spiders who are very unhappy about the visit. Certain rare Skeleton enemies carry them. The Machinists at World's End will pay extremely well for intact units.
+$lore = These cores are not built with the tools currently available to anyone. The manufacturing processes that created them belong to the First Empire and are not reconstructable from present knowledge. Every AI Core that exists is a relic of something that no longer knows how to make more of itself — a finite supply that diminishes every time one is used for research or lost to a Security Spider's protection protocols.
+$cultural_significance = Owning an AI Core marks you as someone who went somewhere very dangerous and came back. Selling one marks you as someone who understands that twenty thousand cats is a lot of cats. Tech Hunters who find one in the field have been known to carry it in their personal pack rather than the group inventory, a habit that says something about trust and something else about the weight of twenty thousand cats.

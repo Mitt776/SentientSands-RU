@@ -1,0 +1,14 @@
+Category = locations_ruin
+Name = Drin
+Id = drin
+
+display_name = Drin
+region = Bast zone
+faction = United_Cities
+type = city-partially-damaged
+weight = 5
+
+price_modifier = 1.1
+$description = Drin is the Bast zone's survivor — damaged like Bast and Endin by the Holy Nation's military campaign, but unlike those two it still has Samurai guards and a functioning settlement. This makes it the only viable city in the zone for travelers who need services, and puts it in the peculiar position of being an Imperial city surrounded by the ruins of former Imperial cities. The contrast is either proof of the Empire's resilience or a reminder of how much was lost.
+
+$directions = Bast zone, east of Heng. Same zone as Bast and Endin, the only one with surviving samurai.

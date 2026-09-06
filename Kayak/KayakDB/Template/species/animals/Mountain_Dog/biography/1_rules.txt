@@ -1,0 +1,4 @@
+SPECIES OVERLAY PLACEHOLDER: Mountain Dog
+
+- No species-specific biography guidance has been written yet.
+- Follow the base animals biography rules for this race until this file is customized.

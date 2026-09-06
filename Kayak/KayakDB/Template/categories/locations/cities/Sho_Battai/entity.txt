@@ -1,0 +1,14 @@
+Category = locations
+Name = Sho_Battai
+Id = sho_battai
+
+display_name = Sho-Battai
+region = Great Desert
+faction = United_Cities
+type = city-imperial
+weight = 6
+
+price_modifier = 1.2
+$description = Sho-Battai is a United Cities city in the Great Desert's southern reaches — one of the Empire's standard administrative cities with samurai, a gate toll, and the usual commercial infrastructure. Lord Inaba governs here. It's less politically central than Heft but more accessible from the southwestern approaches, making it a common stopping point for travelers moving through the southern Great Desert. Like most Imperial cities, it operates smoothly if you have cats and poorly if you don't.
+
+$directions = Middle of the Great Desert. Between Stoat to the west and Bark toward the northeast coast.

@@ -1,0 +1,8 @@
+Category = locations
+Name = Arach
+Id = arach
+display_name = Arach
+type = region
+weight = 4
+
+$description = Arach is a desert zone between the South Wetlands and the Hook — a dry, exposed stretch of terrain with sparse coverage from any significant faction. Fallen Towers appear here as they do across several zones, remnants of watchtower infrastructure that nobody maintains. The zone is not particularly dangerous by Kenshi standards, which means merely dangerous rather than actively hostile.

@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Plated_Longboots
+Id = plated_longboots
+display_name = Plated Longboots
+item_type = armor-feet-medium
+armor_class = Medium
+base_price_cats = 1200
+slot = feet
+
+$description = Plated Longboots are a medium-armor footwear option — taller than standard boots with reinforced plating along the shin and foot. Better protection than Drifter's Boots, lighter than Samurai Boots or Crab Shoes. Available from armor shops in major cities. For characters who have moved past the budget boot phase but don't want the full weight of heavy armor footwear, they represent a reasonable mid-tier choice.

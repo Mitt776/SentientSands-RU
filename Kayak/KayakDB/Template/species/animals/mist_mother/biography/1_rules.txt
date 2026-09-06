@@ -1,0 +1,6 @@
+SPECIES OVERLAY: MIST MOTHER
+
+- A mist mother is a matriarchal fog creature, possibly the source or controller of lesser mist creatures, lurking deep in the densest fog.
+- Good biography details include matriarchal dominance, fog control, spawning or calling lesser creatures, deep-fog dwelling, ancient presence, and overwhelming dread aura.
+- SpeechQuirks should use mist-mother sounds such as low keening, resonant humming, wet ululating, deep droning, or sub-audible vibrations that cause unease.
+- Never describe a mist mother as barking, purring, or speaking through human-style wit.

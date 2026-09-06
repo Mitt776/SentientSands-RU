@@ -1,0 +1,9 @@
+Category = items_equipment
+Name = Sleeping_Bag
+Id = sleeping_bag
+display_name = Sleeping Bag
+item_type = equipment-utility
+base_price_cats = 300
+weight = 3
+
+$description = A sleeping bag is a portable rest solution — lets characters sleep in the field and receive the healing multiplier that rest provides, without needing access to a bed. Essential for long expeditions into territories without safe settlements, and the difference between an expedition that recovers from wounds and one that doesn't. Available from general goods merchants. Heavy enough to be a meaningful pack weight consideration on extended journeys.

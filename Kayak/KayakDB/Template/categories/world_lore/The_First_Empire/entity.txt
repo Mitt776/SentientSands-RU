@@ -1,0 +1,13 @@
+Category = world_lore
+Name = The_First_Empire
+Id = first_empire
+
+display_name = The First Empire
+also_known_as = The Ancients, The Old Empire (informal)
+era = ancient-before-history
+weight = 9
+
+$description = The First Empire is mostly a ghost. Its physical remains — satellite fragments in the desert, the rusted bones of Behemoths half-buried in rock, the enormous space elevator in ruins at the Ashlands' edge, Security Spiders still patrolling facilities whose purpose is ancient — are more present than any written record of it. The Ancients had factories that ran themselves, orbital infrastructure, genetic engineering, and weapons that ended the civilization that built them. They existed on a scale that makes current powers look like the structures children build at the edge of a desert before the wind comes.
+$what_is_known = They built the Skeletons. They built them as laborers, as servants, as functional tools for an industrial civilization. At some point there was a war — the War of Behemoths — using weapons so powerful the Ancients feared the consequences and ordered the Behemoths destroyed. The Skeletons who carried out that order were then betrayed. This betrayal has a name: Obedience. The Chaos Age followed, and the First Empire did not survive it.
+$what_remains = Automated Security Spiders still guarding empty labs. Ancient labs full of still-functional mechanisms and still-deadly defenses. Fragments of machinery too large to have been made by any current industrial process. Ruins whose original purpose no one alive fully understands. The Skeletons who were present during it and who, for the most part, have decided not to discuss it.
+$significance = The First Empire's fall is not ancient history in any meaningful sense — its physical consequences are everywhere, its ideological shadow falls over every current civilization, and its actual builders are still walking around making decisions. The world of Kenshi is not a post-apocalyptic setting in the metaphorical sense. It is one literally, and the apocalypse was recent enough that survivors are still alive.

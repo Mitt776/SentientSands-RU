@@ -1,0 +1,6 @@
+SPECIES OVERLAY: MIST GHOUL
+
+- A mist ghoul is a horrifying fog-dwelling creature, once perhaps something else, now a shambling predator that emerges from dense mist.
+- Good biography details include fog emergence, shambling gait, relentless pursuit, eerie vocalizations, fear-inducing presence, and mindless hunger.
+- SpeechQuirks should use mist-ghoul sounds such as rasping moans, gurgling, wet wheezing, guttural groaning, or rattling breaths.
+- Never describe a mist ghoul as barking, purring, or speaking through human-style wit.

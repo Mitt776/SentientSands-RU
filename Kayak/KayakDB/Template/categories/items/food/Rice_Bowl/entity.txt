@@ -1,0 +1,8 @@
+Category = items_food
+Name = Rice_Bowl
+Id = rice_bowl
+display_name = Rice Bowl
+item_type = food
+base_price_cats = 215
+
+$description = A rice bowl is ten riceweed cooked at a Cooking Stove — the basic Swamp meal, the food economy baseline for Shark and its satellite villages. Adequate nutrition, easy to produce wherever riceweed grows, and sold in most bars that serve swamp-adjacent trade routes. It is not remarkable, which is the appropriate way to describe most practical food in Kenshi. Below Gohan in nutritional density, above bread.

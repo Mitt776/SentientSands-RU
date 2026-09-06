@@ -1,0 +1,7 @@
+Placeholder for future loremaster synthesis rules.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- rumor synthesis
+- world event summarization
+- narrative compression tone

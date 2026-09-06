@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Blackened_Chainmail
+Id = blackened_chainmail
+
+display_name = Blackened Chainmail
+item_type = armor-body-medium
+armor_class = Medium
+base_price_cats = 3500
+weight = 12
+
+$description = Blackened Chainmail is the treated version of standard chainmail — the same iron-ring construction, hardened and darkened through a process that produces meaningfully better cut resistance at equivalent coverage. It's considered the best medium armor undergarment for most combat builds: high protection-to-weight ratio, solid coverage of the upper body, and no penalties severe enough to significantly hurt combat performance. It's expensive relative to standard chainmail and not available everywhere, but the Scraphouse, Mongrel, and tech hunter shops carry it for those who can reach them.

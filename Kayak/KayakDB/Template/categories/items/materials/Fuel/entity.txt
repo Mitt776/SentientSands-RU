@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Fuel
+Id = fuel
+display_name = Fuel
+item_type = crafting-material
+base_price_cats = 480
+weight = 4
+
+$description = Fuel powers generators — the electricity that runs most advanced settlement infrastructure. Produced from hemp or greenfruit at a Biofuel Distillery, which means fuel production is downstream of farming and creates a competition between food and power for the same crops. In practice, most functional settlements run hemp operations partly for hashish trade and partly for the fuel that keeps the lights on and the research benches running. Running out of fuel stops advanced production chains entirely.

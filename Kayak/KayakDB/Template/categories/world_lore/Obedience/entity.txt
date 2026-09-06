@@ -1,0 +1,10 @@
+Category = world_lore
+Name = Obedience
+Id = obedience
+
+display_name = Obedience
+era = first-empire-final-period
+weight = 8
+
+$description = Obedience is what the Ancients called the order. The Behemoths — massive Skeleton war machines used in the War of Behemoths — had become too destructive, too powerful, too frightening to their creators. The solution the Ancients settled on was to call the Behemoths home. To have them walk into a pit. To seal it. To use their unquestioning obedience against them. The Skeletons carried out the order. They remember it. They do not speak about it in terms that suggest they have forgiven it, or themselves for complying. The word 'Obedience' in conversation with older Skeletons has a particular weight that most people without context cannot parse.
+$significance = Obedience is the founding wound of Skeleton psychology — the moment when being built to obey produced an outcome that compliance could not undo. The Chaos Age that followed may have been, at least in part, the Skeleton rebellion that was the delayed response to it. The Second Empire was, at least in part, an attempt to build something without the dynamic that made Obedience possible.

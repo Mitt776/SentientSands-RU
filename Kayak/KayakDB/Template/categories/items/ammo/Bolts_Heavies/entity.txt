@@ -1,0 +1,9 @@
+Category = items_ammo
+Name = Bolts_Heavies
+Id = bolts_heavies
+display_name = Bolts [Heavies]
+item_type = ammo-crossbow
+base_price_cats = 40
+weight = 2
+
+$description = Heavy bolts are the Spring Bat's dedicated ammunition — 20 shots per unit, heavier than Regulars, and harder to source in most shops outside major tech hunter hubs. They hit harder per shot than anything Regular bolts provide, which is the entire reason for the Spring Bat's existence. The supply challenge is real: a crossbow fighter running Heavy bolts needs to plan resupply more carefully than one running Regulars.

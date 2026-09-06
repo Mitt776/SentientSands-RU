@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Junkbow
+Id = junkbow
+display_name = Junkbow
+item_type = weapon-ranged
+weapon_class = Crossbows
+base_price_cats = 300
+weight = 3
+
+$description = The Junkbow is the cheapest crossbow in Kenshi — visually cobbled together, statistically a step below even the Toothpick, and the weapon that most people immediately replace when something better shows up. It uses Toothpick bolts, fires at a similar rate, and is primarily useful as a training tool for characters who need to develop crossbow skill before they can reliably handle anything that requires real precision. The price difference between a Junkbow and a Toothpick is modest; the stat difference is also modest, which is the only reason anyone ever uses a Junkbow deliberately.

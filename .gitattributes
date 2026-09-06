@@ -1,0 +1,17 @@
+# Переводы строк фиксируем жёстко.
+# Патчеры промптов и скрипты в tools/ рассчитаны на LF и отказываются работать
+# с CRLF, поэтому и в репозитории, и в рабочей копии держим LF.
+* text=auto eol=lf
+
+# Пакетные файлы Windows запускает cmd.exe — им нужен CRLF.
+*.bat text eol=crlf
+
+# Бинарное содержимое не трогать.
+*.mod   binary
+*.img   binary
+*.dll   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.ico   binary
+*.ttf   binary

@@ -1,0 +1,17 @@
+Category = locations
+Name = Blister_Hill
+Id = blister_hill
+
+display_name = Blister Hill
+region = Okran's Pride
+faction = Holy_Nation
+type = city-capital
+weight = 9
+
+price_modifier = 1.35
+$description = Blister Hill is the heart of the Holy Nation — a walled city on a hill in the fertile interior of Okran's Pride, its white towers visible for miles across farmland that is actually green in a world mostly made of brown. It is beautiful if you are a human male with clean hands and a tolerant attitude toward sermons. If you are anything else, it will kill you or imprison you, and the guards will cite scripture while doing it. The Holy Lord Phoenix lives here, behind walls within walls, in the Palace at the hill's summit.
+$atmosphere = The streets of Blister Hill smell like bread and burning — fresh loaves from the Holy Farms, incense from the temples, and occasionally the faint char of things the Inquisitors have decided needed cleansing. Citizens move with the purposeful confidence of people who believe their god watches over them specifically. They offer food to male human travelers without being asked. They report non-humans to the guards without hesitation. Both impulses feel equally natural to them.
+$notable = The Palace, where Phoenix holds court and receives those the Holy Nation considers worthy. The bars, which serve no grog — only water blessed by priests. The guards who will search travelers at the gates for robotic limbs and simply begin fighting if they find any. The fact that the city has no crime the citizens acknowledge, which means it has a great deal of crime nobody discusses.
+$travel_note = Non-humans should not enter. Skeletons will be attacked on sight, no exceptions. Hivers and Shek will face hostility from guards and citizens alike. Women traveling alone will be questioned about their escort. Human men traveling alone will be offered food.
+
+$directions = Central Okran's Pride, on a hill. The capital — visible from a distance across the farmland.

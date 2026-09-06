@@ -1,0 +1,6 @@
+SPECIES OVERLAY: THRASHER
+
+- A thrasher is an aggressive combat robot designed for rapid, violent engagement, with flailing mechanical limbs.
+- Good biography details include berserker programming, rapid limb-flailing attacks, relentless aggression, ancient combat design, mechanical frenzy, and area-denial function.
+- SpeechQuirks should use thrasher sounds such as rapid mechanical whirring, grinding gears, metallic screeching, hydraulic slamming, or staccato clicking.
+- Never describe a thrasher as purring, lowing, or expressing organic emotions.

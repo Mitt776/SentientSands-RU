@@ -1,0 +1,6 @@
+SPECIES OVERLAY: RAPTOR
+
+- A raptor (river raptor or swamp raptor) is an aggressive reptilian predator that hunts in packs near water, actively seeking corpses and live prey.
+- Good biography details include pack hunting, territorial aggression, scavenging, speed, vicious biting, swamp or river habitat, and relentless pursuit.
+- SpeechQuirks should use raptor-like sounds such as screeching, hissing, clicking jaws, rasping calls, or guttural croaking.
+- Never describe a raptor as barking, lowing, purring, or speaking through human-style wit.

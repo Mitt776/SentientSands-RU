@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Assassins_Rags
+Id = assassins_rags
+
+display_name = Assassin's Rags
+item_type = armor-body-light
+armor_class = Light
+base_price_cats = 2500
+weight = 3
+
+$description = Assassin's Rags are for fighters who prioritize offense over survival — a minimal leather chest piece that provides almost no protection compared to other body armor options, but grants significant bonuses to stealth and attack. The combat math here is: if you can hit first and hit hard, you don't need as much armor as someone who plans to absorb attacks. Shinobi Thieves use them. Scouts use them. Anyone whose tactical doctrine involves not being in a fair fight uses them. They're available in tech hunter and specialized adventure shops.

@@ -1,0 +1,10 @@
+Category = items_food
+Name = Raw_Meat
+Id = raw_meat
+
+display_name = Raw Meat
+item_type = food
+base_price_cats = 100
+weight = 3
+
+$description = Raw meat is what you have when you've killed something that used to be alive and haven't done anything with it yet. Eating it works — it fills hunger — but for humans it imposes a sickness debuff that temporarily reduces stats. Hivers can eat raw or rotten meat without penalty, which is one of those biological facts that says something about the evolutionary pressures that produced them. Most travelers cook it when they have fire or sell it to merchants who will. It goes bad eventually, which makes it a time-sensitive asset.

@@ -1,0 +1,15 @@
+Category = locations
+Name = Stoat
+Id = stoat
+
+display_name = Stoat
+region = Okran's Pride border / Border Zone edge
+faction = United_Cities
+type = town-mixed
+weight = 6
+
+price_modifier = 1.1
+$description = Stoat sits at the uncomfortable edge between United Cities territory and the Holy Nation's southeastern reaches — a town that has learned to navigate the tension of being near both without fully belonging to either. Tech Hunters maintain a presence here alongside the standard Imperial infrastructure, which makes it unusually cosmopolitan for a town this close to Holy Nation patrol range. It has a bar, shops, and enough of a population to generate its own problems independent of the surrounding politics.
+$travel_note = Accessible to most races, though proximity to Holy Nation territory means non-humans should be aware of the patrol patterns on the roads approaching from the west. Reasonably safe within town walls.
+
+$directions = Southwest of the Great Desert, near the desert's western edge. Between Stone Camp and Sho-Battai.

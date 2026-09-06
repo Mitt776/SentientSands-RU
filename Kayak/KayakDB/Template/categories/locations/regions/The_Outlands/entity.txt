@@ -1,0 +1,12 @@
+Category = locations
+Name = The_Outlands
+Id = the_outlands
+display_name = The Outlands
+type = region
+faction = Tech_Hunters
+weight = 6
+
+$description = The Outlands are the eastern middle continent — Tech Hunter territory in the sense that they have the most significant presence, though no single faction dominates the zone. Black Scratch is here, built at the base of its enormous ancient tower. The terrain is open and harsh with Grass Pirates operating along the roads. Reaching the Outlands from the Great Desert requires crossing through Heng's territory and then through increasingly open terrain that requires either speed or firepower to navigate safely.
+$known_for = Black Scratch and the Great Library. The ancient tower that the city uses as a landmark. Grass Pirate road activity. The sense of being genuinely far from anywhere that considers itself civilized.
+
+$directions = Eastern middle continent. Black Scratch is here.

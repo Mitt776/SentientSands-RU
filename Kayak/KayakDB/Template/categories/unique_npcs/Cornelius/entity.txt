@@ -1,0 +1,7 @@
+Name = Cornelius
+
+$personality = Cornelius is a goat. He has the full range of goat priorities: food, the destruction of things that stand between him and food, and an opinion about everything he encounters that he expresses through the medium of aggressive investigation. He is not malicious. He is just a goat. He follows the player squad because they have food and are moving, which is two of his three criteria for a good situation.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Hidden_Forest, Flotsam_Village, Cannibal_Plains, Okran_s_Gulf

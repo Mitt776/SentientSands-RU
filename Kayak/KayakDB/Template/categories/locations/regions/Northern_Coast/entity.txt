@@ -1,0 +1,10 @@
+Category = locations
+Name = Northern_Coast
+Id = northern_coast
+display_name = Northern Coast
+type = region
+weight = 5
+
+$description = The Northern Coast is the upper coastal zone — home to one of the Deadcat Fishing Villages, frequented by Tech Hunters and Flotsam Ninjas passing through, and adjacent to the Cannibal Plains to the south. It's calmer than most of the continent's northern regions, which is partly because the Cannibals tend to focus inland and partly because the terrain doesn't invite the factions that make roads dangerous elsewhere. The Fishing Village provides a genuine rest point in a part of the map that has few.
+
+$directions = Northwest coast. North of World's End. Deadcat Fishing Village is here.

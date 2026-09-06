@@ -1,0 +1,15 @@
+Category = locations
+Name = Catun
+Id = catun
+
+display_name = Catun
+region = Bonefields
+faction = United_Cities
+type = city-industrial
+weight = 7
+
+price_modifier = 1.15
+$description = Catun is the United Cities' weapons manufacturing center — a city on a plateau in the Bonefields, built around the Catun Scrapmasters and their reputation as the most sophisticated weapon smiths in the known world. Weapons grade one through three in the in-world classification system come from here. The city is fortified and well-defended, which is appropriate given how much value sits within its walls. Lord Shiro, one of Tengu's inner noble circle, presides here and keeps the production lines profitable.
+$known_for = The Catun Scrapmasters weapon shop, stocking enormous variety. Lord Shiro. A city that runs on commercial manufacturing rather than agriculture, which makes it unusual for United Cities territory. The proximity to the Bonefields, which provides good stone and ore for manufacturing.
+
+$directions = Bonefields, on a plateau. Southeast of Heng. Mourn is roughly northeast.

@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Iron_Club
+Id = iron_club
+
+display_name = Iron Club
+item_type = weapon-blunt
+weapon_class = Blunt
+base_price_cats = 300
+weight = 6
+
+$description = An iron club is a chunk of metal on a handle, engineered with the kind of simplicity that comes from prioritizing function so completely that form becomes irrelevant. It delivers stun damage, it doesn't require much skill to understand, and its strength requirement is modest enough for early fighters to use without penalty. It teaches strength. It doesn't teach much else, which is why most fighters graduate from it — but as an introduction to blunt combat and a tool for anyone who needs to take someone alive, it works.

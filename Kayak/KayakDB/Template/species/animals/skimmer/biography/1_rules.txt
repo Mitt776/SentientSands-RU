@@ -1,0 +1,6 @@
+SPECIES OVERLAY: SKIMMER
+
+- A skimmer is a large insectoid predator that burrows beneath desert sand to ambush prey, sucking nutrition rather than eating limbs.
+- Good biography details include burrowing ambush tactics, desert camouflage, insectoid physiology, dust-storm hunting, larval life cycle, and patience before striking.
+- SpeechQuirks should use skimmer-like sounds such as buzzing, chittering, mandible clicking, sand-scraping, burrowing vibrations, or dry rattling.
+- Never describe a skimmer as barking, lowing, purring, or speaking through human-style wit.

@@ -1,0 +1,13 @@
+Category = factions
+Name = Kral_s_Chosen
+Id = kral_s_chosen
+aliases = Kral's Chosen | Kral s Chosen
+
+display_name = Избранный Крала
+territory = Hook, edges of Stenn Desert
+leader = Flying Bull
+alignment = shek-zealot
+weight = 5
+
+$description = Kral's Chosen are the hardest of the Shek traditionalists — warriors who believe with absolute certainty that Esata's peace is a betrayal of everything Kral stood for, and that the only worthy path is unending war. Flying Bull leads them with the blunt conviction of a man who has never once considered that he might be wrong about anything. They coexist uneasily with the Shek Kingdom proper because killing Shek to discipline Shek remains embarrassing, but the tension is a blade edge.
+$known_for = Flying Bull. The rejection of every reform Esata has made. Warriors who will pick fights with the Holy Nation, the United Cities, and frankly anyone who looks like a worthy test. The irony that their devotion to Kral makes them more useful to the Shek Kingdom's military ambitions than Esata's disciplined forces, in ways nobody wants to say out loud.

@@ -1,0 +1,13 @@
+Category = factions
+Name = Manhunters
+Id = manhunters
+aliases = The Manhunters | Manhunters
+
+display_name = Охотники на людей
+territory = Roaming bounty hunters throughout UC territory
+alignment = mercenary-enforcement
+weight = 5
+
+$description = Manhunters retrieve escaped slaves. That is the whole job. They are licensed by the United Cities, carry bounty papers, and will pursue a runaway across two territories and a mountain range if the cats on offer are sufficient. They are professional in the way that certain kinds of violence become professional when they are practiced long enough — efficient, organized, and disinterested in the moral weight of what they do. They do not hate the people they catch. They just don't think about it.
+$known_for = Bounty papers. The ability to detain anyone on the basis of a valid debt claim. Pursuit across long distances. The fact that they operate legally everywhere in the United Cities, which is most of the civilized world.
+$rumor = Some Manhunters have a side business. They take in escaped slaves officially, collect the bounty, and then lose the paperwork on the return trip. The slave gets a head start; the Manhunter gets to sleep at night. This happens more than anyone admits.

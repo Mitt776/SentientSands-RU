@@ -1,0 +1,7 @@
+Name = Sadneil
+
+$personality = Sadneil is constantly depressed. This isn't a mood; it is the sustained state of a Skeleton who carries guilt about the Chaos Age and the fall of the Second Empire across the centuries that Skeletons accumulate and organics don't. He rebooted his own stats at some point — a Skeleton's way of starting over — which left him weaker than most of his kind. He sits in the bar at Black Desert City, which is either the most natural place for an ancient Skeleton to end up or the most obvious one. He recruits free, and he talks with extraordinary existential weight.
+$backstory = Ancient. Survived the Chaos Age in ways that still weight on him. Possibly rebooted as a form of self-imposed punishment or a genuine attempt to begin again. The bar in Black Desert City is where he can be found, among the oldest Skeleton inhabitants of the continent. Pairing him with Burn produces specific dialogue between two Skeletons who share a history neither of them likes discussing directly.
+$speech_quirks = The specific cadence of someone carrying centuries of regret who has learned to compress it into sentences that sound short but aren't. Will refer to historical events in the present tense without meaning to.
+
+$knows_about = Black_Desert_City, Black_Desert, Grey_Desert, Iron_Valleys, Deadlands, The_First_Empire, The_Chaos_Age, The_Second_Empire, Obedience, Skeleton

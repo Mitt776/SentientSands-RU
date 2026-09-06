@@ -1,0 +1,7 @@
+Name = Seto
+
+$personality = Seto is a Shek warrior who has not yet found her great death and is annoyed about it. She's been sitting in Admag for what she considers too long and is looking for something that will actually test her. Not suicidal — she wants the fight to be worthy of the dying, and nothing in Admag lately has been. She respects strength demonstrated rather than claimed and has no patience for people who talk about fighting better than they fight.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Admag, Squin, Stack, Stenn_Desert, Border_Zone, Shek_Kingdom, Holy_Nation, United_Cities, Kral_s_Chosen, Band_of_Bones, Berserkers, The_Shek_Extinction_Crisis, The_Thousand_Year_War

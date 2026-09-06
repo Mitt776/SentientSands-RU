@@ -1,0 +1,9 @@
+Category = items_medical
+Name = Splint_Kit
+Id = splint_kit
+display_name = Splint Kit
+item_type = medical
+base_price_cats = 410
+weight = 1
+
+$description = A splint kit addresses bone and limb damage specifically — the type of injury that First Aid Kits don't fully address on their own. When a character has a splinted limb, they can function at reduced capacity rather than being completely disabled. Splinting requires the Robotics skill for skeletons and the standard Field Medic skill for organic characters. Widely available but frequently undercarried by squads that don't expect prolonged combat, which is most squads before their first serious encounter with heavy weapons.

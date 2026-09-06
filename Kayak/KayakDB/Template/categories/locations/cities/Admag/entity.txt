@@ -1,0 +1,17 @@
+Category = locations
+Name = Admag
+Id = admag
+
+display_name = Admag
+region = Stenn Desert
+faction = Shek_Kingdom
+type = city-capital
+weight = 8
+
+price_modifier = 1.15
+$description = Admag is the capital of the Shek Kingdom — a sun-blasted desert city that looks like it was built by people who expected to be attacked from multiple directions simultaneously and designed accordingly. Esata the Stone Golem holds court here, surrounded by the Invincible Five, managing the impossible political balance between the reformers who follow her and the traditionalists who resent every compromise she makes. The city is functional and surprisingly well-supplied for a place in the Stenn Desert.
+$atmosphere = Admag moves at a Shek pace — which is to say purposefully and without much patience for hesitation. The warriors who walk the streets are real warriors, not ceremonial guards. The architecture is heavy, built for endurance rather than beauty. Esata's presence in the city gives it a particular quality: the tension of a place actively becoming something different than it was, moment by moment, against the resistance of what it was before.
+$notable = Esata's audience chamber, where she meets outsiders with calm directness and occasionally accepts offers from wanderers who have proven themselves in ways she finds interesting. The Invincible Five — her personal guard, individually the most dangerous fighters in the Shek Kingdom and collectively an argument against attacking Admag. The Shek arbitrator, who can be found here for those wanting to build in Shek territory.
+$travel_note = Safe for all races — the Shek Kingdom does not discriminate by race the way the Holy Nation does. Shek NPCs may be personally rude to humans, but they won't attack without provocation. Come prepared to be assessed.
+
+$directions = Stenn Desert, northern section. Built on a hilltop. Squin lies directly east. New Kralia is south.

@@ -1,0 +1,15 @@
+Category = factions
+Name = Cannibals
+Id = cannibals
+aliases = The Cannibals | Cannibals
+
+display_name = Людоеды
+also_known_as = The Painted Tribes, The Hunger
+territory = Cannibal Plains, Darkfinger, edges of other regions
+alignment = predatory-tribal
+weight = 8
+
+$description = The Cannibals are not bandits with a diet problem. They are something that diverged from humanity, whether through ancient environmental toxins, famine-driven genetic drift, or deliberate experimentation by some long-dead empire. They don't kill you in the field — they carry you back to camp while you're unconscious. You wake up in a pot. They will not eat Skeletons and they will not eat animals but they will fight both on sight out of a territorial rage that doesn't require justification. They are immune to acid. They swarm in large groups. And they are patient in a way that living things generally shouldn't be.
+$culture = Grand Wizards lead the painted tribes. Below them: Meat Lords and Chiefs who earn standing through strength and consumption. There is no commerce, no religion in any recognizable sense, no abstraction of value beyond the hierarchy of who eats whom. They have legends of a skeleton warrior called The Inedible One — almost certainly General Jang of the Hydraulic Knights, who drove them back for the Second Empire centuries ago. The legends are not fond ones.
+$known_for = The Cannibal Plains in the northwest. The practice of capturing unconscious travelers rather than killing them. Immunity to acid. The complete absence of anything resembling mercy or negotiation. Grand Wizard camps that will absorb an entire expedition.
+$rumor = The Flotsam Ninjas cull the cannibal tribes regularly to keep their trails open. They don't talk about it much. It's the kind of work that leaves marks.

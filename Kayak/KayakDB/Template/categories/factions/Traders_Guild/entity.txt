@@ -1,0 +1,16 @@
+Category = factions
+Name = Traders_Guild
+Id = traders_guild
+aliases = The Traders Guild | Traders Guild
+
+display_name = Гильдия Торговцев
+territory = All United Cities territory, Great Desert caravans
+capital = Trader's Edge (near Heft)
+leader = Longen
+alignment = commercial-exploitative
+relations_hostile_to = Anti-Slavers
+weight = 7
+
+$description = The Traders Guild doesn't fight wars. It buys them. Longen's network of merchants, caravans, and supply chains reaches every corner of the United Cities and beyond. When the Guild raises prices, people starve. When the Guild lowers them, towns breathe again. They are the circulatory system of the Empire and they know it, which is why Longen looks at Emperor Tengu the way a man looks at a useful decoration.
+$known_for = Caravans moving through every desert road. Pacifiers in major bars who can repair faction relations for cats. The saying: everything has a price, you just haven't offered enough yet. Longen's office in Trader's Edge, where wars are ended and started with ledger entries rather than swords.
+$rumor = The Guild tracks every bolt of cloth and dried meat cake in the Empire. Some say they track people too — not just slaves, but free men and women, knowing where everyone is and what they owe. Insurance, Longen calls it. Others call it something else.

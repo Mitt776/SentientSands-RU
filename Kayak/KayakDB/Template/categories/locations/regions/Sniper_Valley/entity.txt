@@ -1,0 +1,8 @@
+Category = locations
+Name = Sniper_Valley
+Id = sniper_valley
+display_name = Sniper Valley
+type = region
+weight = 3
+
+$description = Sniper Valley is a canyon zone in the deep south named for the tactical reality of its terrain — elevated positions on canyon walls with clear sightlines down the valley floor. Whether the name comes from past military use, current bandit practice, or simply the terrain's obvious implication is not clearly recorded. Travelers through it are visible from positions they cannot easily reach or return fire from.

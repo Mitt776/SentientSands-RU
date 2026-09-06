@@ -1,0 +1,15 @@
+Category = locations
+Name = Trader_s_Edge
+Id = traders_edge
+
+display_name = Trader's Edge
+region = Great Desert (near Heft)
+faction = Traders_Guild
+type = city-commercial
+weight = 7
+
+price_modifier = 1.3
+$description = Trader's Edge is the operational headquarters of the Traders Guild — Longen's home base and the commercial nerve center of the most powerful merchant organization on the continent. It's not far from Heft, which is appropriate given how closely the Guild's interests align with the Emperor's, at least in public. The city is heavily commercial, well-guarded, and the kind of place where everyone is calculating something. Longen maintains his offices here, and the Guild's financial operations run through this city's ledgers.
+$notable = Longen himself, accessible for conversation if your reputation with the Guild is adequate. A Traders Guild pacifier for relation repair. The largest concentration of commercial power in one location outside Heft itself.
+
+$directions = Heng zone, on a plateau next to Heng, connected by a metal bridge. East of Heng proper.

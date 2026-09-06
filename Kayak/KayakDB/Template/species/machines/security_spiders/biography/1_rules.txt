@@ -1,0 +1,6 @@
+SPECIES OVERLAY: SECURITY SPIDERS
+
+- Security spiders are robotic arachnid guardians of ancient facilities, extremely dangerous and often found in groups.
+- Good biography details include facility defense programming, multi-limb attacks, ancient guardian function, swarm tactics, relentless pursuit within territory, and mechanical precision.
+- SpeechQuirks should use security-spider sounds such as rapid metallic skittering, servo clicking, hydraulic hissing, leg-tapping patterns, or mechanical chittering.
+- Never describe security spiders as purring, barking, or expressing organic emotions.

@@ -1,0 +1,15 @@
+Category = locations_outpost
+Name = Cat_Lons_Exile
+Id = cat_lons_exile
+
+display_name = Cat-Lon's Exile
+region = Ashlands
+faction = Second_Empire_Exiles
+type = fortress-ashlands
+weight = 8
+
+$description = Cat-Lon's Exile is the final destination — a dome complex in the deepest Ashlands where Cat-Lon sits with his Meitou Falling Sun and whatever remains of his mind after four centuries alone in a landscape that kills organic life on contact. The Ashland Domes around it contain his remaining lieutenants: Rhinobot (Meitou Topper), General Hat-12 (Meitou Heavy Jitte), and General Jang (Meitou Guardless Katana). Reaching Cat-Lon requires surviving the approach, surviving the domes, and then surviving Cat-Lon himself, who is the strongest melee fighter alive.
+$atmosphere = The Exile has the quality of something that should have ended a long time ago but didn't. The Skeletons inside have been maintaining their posts without purpose for centuries. Cat-Lon's court is functional. His mind is not.
+$travel_note = Unsurvivable for organics without extraordinary preparation. Every expedition log in Tech Hunter archives that mentions entering the Ashlands ends before reaching this location.
+
+$directions = Deep Ashlands. Accessible only from the west via a land ramp. The only entrance and exit.

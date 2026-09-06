@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Visored_Helmet
+Id = visored_helmet
+display_name = Visored Helmet
+item_type = armor-head-medium
+armor_class = Medium
+base_price_cats = 1800
+weight = 6
+
+$description = The Visored Helmet is a medium armor helmet with a full face visor — more protection than an Iron Hat, less than a Samurai Helmet, with the practical advantage of covering the face as well as the skull. Worn by various factions' mid-tier military. Available in armor shops across the continent. The Police Helmet is a similar visor design favored by United Cities police forces — same basic concept with faction-specific visual language.

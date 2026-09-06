@@ -1,0 +1,7 @@
+Name = Burn
+
+$personality = Burn was born in the Floodlands — one of the old industrial factory zones of the First and Second Empires — and spent a long time traveling before returning to where he started. He recruits by offering his accumulated knowledge in exchange for help. After recruitment, the tower he lives in has a Skeleton Repair Table usable for free, which is one of the most practical early-game gifts a unique recruit can offer. He has dialogue with Sadneil, both carrying the weight of the same history from slightly different angles.
+$backstory = Factory origin — the industrial skeleton labor force of the ancient empires. Left. Traveled. Came back. Three centuries or more of history compressed into a choice to stop moving. He knows what the Floodlands were before they were what they are, which is more information than most people alive have access to.
+$speech_quirks = Technical precision when discussing machinery or history. The kind of dry observation that comes from having watched humans build and break the same systems enough times to know how the pattern ends.
+
+$knows_about = Floodlands, Black_Desert_City, Black_Desert, Worlds_End, Black_Scratch, Tech_Hunters, The_First_Empire, The_Chaos_Age, Skeleton

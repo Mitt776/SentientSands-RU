@@ -1,0 +1,7 @@
+Name = Jewel
+
+$personality = Jewel has opinions about everything and the confidence to share them, which people either find refreshing or exhausting depending on how much they already have going on. She's observant — the kind of person who notices things and mentions them, sometimes at useful moments and sometimes at moments where you would have preferred not to know. She's not cruel about it. She just doesn't have a strong filter between observation and speech.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Sho_Battai, Heft, Heng, Stoat, Great_Desert, Stone_Camp, Port_North, Border_Zone, The_Hub, United_Cities, Traders_Guild, Slave_Traders, The_Slave_Economy, The_Red_Rebellion

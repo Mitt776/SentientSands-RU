@@ -1,0 +1,14 @@
+Category = locations
+Name = Holy_Farms
+Id = holy_farms
+
+display_name = Holy Farms
+region = Okran's Pride
+faction = Holy_Nation
+type = settlement-agricultural
+weight = 6
+
+$description = The Holy Farms are the agricultural operations of the Holy Nation — slave-worked fields in the fertile interior of Okran's Pride producing wheatstraw and food for the entire faction. They are not single locations but a network of farming operations spread across the green farmland, supervised by Holy Nation overseers and staffed by Lower Servants. The farms are the material foundation of everything the Holy Nation maintains: without the food they produce, the armies can't march, the cities can't eat, and the theology becomes an academic exercise.
+$travel_note = Holy Nation territory rules apply. Non-humans will be detained. Anyone knocked unconscious near a Holy Mine or Holy Farm is subject to enslavement.
+
+$directions = Okran's Pride and Okran's Valley. Scattered across the farmland.

@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Crab_Helmet
+Id = crab_helmet
+display_name = Crab Helmet
+item_type = armor-head-heavy
+armor_class = Heavy
+base_price_cats = 5000
+weight = 8
+
+$description = The Crab Helmet is the highest coverage and protection heavy helmet available — ridged steel construction from the Crab Raiders' manufacturing tradition, providing near-maximum cut resistance for headgear. It pairs with the Crab Armour set and shares its design philosophy: maximum protection at significant dexterity and movement cost. The blueprint comes from the Crab Raiders' Crabsmith. Like Crab Armour, you don't find this in standard shops — you go to where it's made or take it from someone wearing it.

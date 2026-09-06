@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Motor
+Id = motor
+display_name = Motor
+item_type = crafting-material
+base_price_cats = 421
+weight = 3
+
+$description = Motors are mechanical components used in advanced construction — generators, processing machines, and some research equipment. Produced from base components or purchased from tech-oriented shops. They represent the mechanical engineering tier of the crafting tree: above basic iron and stone work, below the full electrical and robotics systems. Settlements building toward energy independence and processing automation need them in volume.

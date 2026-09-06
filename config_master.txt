@@ -1,0 +1,199 @@
+# ══════════════════════════════════════════════════════════════════════
+# SENTIENT SANDS + KAYAK — MASTER CONFIGURATION
+# ══════════════════════════════════════════════════════════════════════
+#
+# Edit this file, then run:   python apply_config.py
+#
+# All values here are pushed to their respective config files:
+#   [SentientSands]  → SentientSands_Config.ini
+#   [Kayak]          → Kayak/config/core_config.txt
+#   [Renaming]       → server/config/renaming_rules.txt
+#
+# Lines starting with # are comments. Blank lines are ignored.
+# To skip a setting (keep whatever's already in the source file),
+# comment it out with #.
+#
+# After applying, restart the server for changes to take effect.
+# Some Kayak settings can be hot-reloaded via POST /config/reload.
+# ══════════════════════════════════════════════════════════════════════
+
+
+# ── SENTIENT SANDS ───────────────────────────────────────────────────
+[SentientSands]
+
+# Active LLM model key (must match an entry in server/config/models.json)
+CurrentModel = player2-default
+
+# Active campaign name
+ActiveCampaign = Default
+
+# Ambient NPC-to-NPC conversations (1 = on, 0 = off)
+EnableAmbientConversations = 1
+
+# Seconds between ambient conversation checks
+RadiantDelay = 2400
+
+# Range (game units) for ambient conversation detection
+RadiantRange = 100
+
+# Range for direct NPC talk interaction
+TalkRadius = 100
+
+# Range for NPC yelling / overhearing
+YellRadius = 200
+
+# Max global events kept in history
+GlobalEventsCount = 3
+
+# Minutes between world narrative synthesis cycles
+SynthesisIntervalMinutes = 30
+
+# Faction relation bounds (used by relation system)
+MinFactionRelation = -100
+MaxFactionRelation = 100
+
+# Show welcome popup on mod load (1 = yes, 0 = no)
+EnableWelcomePopup = 0
+
+# Seconds between dialogue lines in speech bubbles
+DialogueSpeed = 5
+
+# How long speech bubbles stay visible (seconds)
+SpeechBubbleLife = 13.0
+
+# UI language (must match a key in server/config/localization.json)
+Language = English
+
+# Hotkey to open the chat window
+ChatHotkey = J
+
+# Auto-rename generic NPCs to unique names (1 = yes, 0 = no)
+EnableRenamer = 1
+
+# Also rename animals/machines (1 = yes, 0 = no)
+EnableAnimalRenamer = 1
+
+# Global debug toggle for Kayak knowledge restrictions.
+# 0 = apply $knows_about, legacy whitelist hints, and who_knows_me rules
+# 1 = NPCs can retrieve any matching lore regardless of authored filters
+EnableKayakKnowledgeFilters = 1
+
+# Let the SelectedSpeaker plugin decide who is talking (1 = yes, 0 = no).
+# The stock DLL always reports squad 1 slot 1; the plugin reports the character
+# actually selected in-game. With 0, or with no plugin installed, the mod keeps
+# its original behaviour.
+EnableSelectedSpeaker = 1
+
+# Max dialogue lines stored per NPC (older lines are archived)
+# Higher = more context for the LLM, but more tokens consumed
+DialogueHistoryLimit = 80
+
+# Native fallback prompt budget before output tokens are reserved
+PromptContextLimit = 18000
+
+# Reserved prompt budget for player message/timestamp overhead
+PromptUserMessageBuffer = 350
+
+# Max dialogue history lines sent into the native direct-chat fallback prompt
+NativePromptHistoryLines = 40
+
+# Max dialogue history lines sent when regenerating a profile
+ProfileRegenHistoryLines = 80
+
+# Max nearby NPCs considered for radiant banter prompt building
+AmbientSpeakerLimit = 12
+
+# Per nearby NPC: how many recent dialogue lines are sampled for radiant memory
+AmbientRecentDialoguePerNpc = 20
+
+# Max total recent local dialogue lines kept in radiant prompts after dedupe
+AmbientLocalHistoryLimit = 80
+
+# Max total responders in yell mode (primary target included)
+YellResponderLimit = 6
+
+# ── LLM GENERATION PARAMETERS ───────────────────────────────────────
+# These control token budgets and creativity for each LLM call type.
+# Higher max_tokens = longer responses but more cost/latency.
+# Temperature: 0.0 = deterministic, 1.0 = creative, 0.7-0.8 = balanced.
+
+# Single NPC profile generation
+ProfileMaxTokens = 1800
+ProfileTemperature = 1.0
+
+# Profile regeneration (/regenerate_profile — evolves from history)
+ProfileRegenMaxTokens = 2500
+
+# Direct chat response (player ↔ NPC dialogue)
+ChatMaxTokens = 600
+
+# Ambient NPC-to-NPC banter
+AmbientMaxTokens = 600
+
+# World narrative synthesis (rumors, events)
+NarrativeMaxTokens = 400
+NarrativeTemperature = 0.9
+
+
+# ── KAYAK CONTEXT ENGINE ────────────────────────────────────────────
+[Kayak]
+
+# Keywords extracted from player message for context retrieval
+max_keywords = 1
+
+# How many expansion layers to run after initial keyword match
+# 0 = direct matches only, 2 = two rounds of reference-following
+max_layers = 0
+
+# Per-entity: how many field references to follow per expansion round
+max_matches_per_layer = 0
+
+# Max entities included in the prompt's world context section
+max_files = 1
+
+# Hard timeout for the entire retrieval cycle (milliseconds)
+timeout_ms = 500
+
+# Lines of dialogue history kept in active dialogue.txt
+# Older lines are archived to IGN_dialogue_backup/
+dialogue_keep_lines = 40
+
+# Dialogue lines injected into normal Kayak chat prompts
+prompt_dialogue_keep_lines = 40
+
+# Dialogue lines injected into yell/group Kayak chat prompts
+yell_dialogue_keep_lines = 20
+
+# Kayak server bind address (localhost only — not exposed to network)
+host = 127.0.0.1
+
+# Kayak server port
+port = 5001
+
+# Campaign loaded automatically at server startup
+default_campaign = Default
+
+# Global economy price multiplier (1.0 = no change)
+# Stacks with per-city and per-NPC modifiers
+price_modifier = 1.0
+
+# Fields never used as world-reference expansion seeds
+# (comma-separated, these are structural/numeric — not lore)
+non_expand_fields = id, persistent_id, runtime_id, weight, display_name, aliases, average_price, base_price_cats, price_modifier
+
+
+# ── NPC RENAMING ────────────────────────────────────────────────────
+[Renaming]
+
+# Rename mode:
+#   title_only_expand = "Paladin" becomes "Paladin Tevar" (keeps title)
+#   full_replace      = "Paladin" becomes "Tevar" (discards title)
+mode = title_only_expand
+
+# When true, NPCs already renamed once are never auto-renamed again
+preserve_existing_named = true
+
+# Match mode:
+#   exact  = name must appear exactly in renaming_list.txt (recommended)
+#   legacy = old substring/keyword heuristic (not recommended)
+match = exact

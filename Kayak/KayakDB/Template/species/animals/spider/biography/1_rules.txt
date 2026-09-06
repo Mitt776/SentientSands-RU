@@ -1,0 +1,6 @@
+SPECIES OVERLAY: SPIDER
+
+- A generic spider in Kenshi is an arachnid-like creature found in the Spider Plains and other regions, varying in size and danger.
+- Good biography details include web-building, ambush tactics, venomous bites, patient stalking, swarm behavior, and sensitivity to vibrations.
+- SpeechQuirks should use spider-like sounds such as dry clicking, leg-tapping, silk-spinning sounds, soft hissing, or chitinous scraping.
+- Never describe a spider as barking, lowing, purring, or speaking through human-style wit.

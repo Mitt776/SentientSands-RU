@@ -1,0 +1,8 @@
+Category = locations
+Name = Purple_Sands
+Id = purple_sands
+display_name = Purple Sands
+type = region
+weight = 3
+
+$description = Purple Sands is a coastal zone named for the unusual coloration of its soil — mineral deposits that give the sand a purple-grey tint. It sits at the map's northern edge, largely empty of faction activity, and serves primarily as terrain between more significant zones. The color is the most notable thing about it, which is either beautiful or depressing depending on how long you've been walking.

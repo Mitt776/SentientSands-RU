@@ -1,0 +1,16 @@
+Category = locations
+Name = Brink
+Id = brink
+
+display_name = Brink
+region = Stormgap Coast
+faction = United_Cities
+type = city-coastal
+weight = 7
+
+price_modifier = 1.2
+$description = Brink is a United Cities coastal city on the Stormgap Coast — one of the more precarious Imperial outposts, entirely dependent on supply chains from Eyesocket for its economy and governed by Lady Tsugi from her Noble House. The Reavers patrol the surrounding area frequently enough to make the roads uncomfortable, and the city's position on the coast makes it feel exposed in a way that inland Imperial cities don't. It functions as the Empire's window onto the Stormgap Coast, which is strategically important and personally unpleasant.
+$atmosphere = The coast here is grey-green and loud — the Stormgap lives up to its name. Brink's buildings are built heavier than typical UC construction, against the weather rather than for appearance. The samurai here are posted to a frontier, and they carry themselves accordingly.
+$travel_note = Open to all races who can pay the gate toll. The Reavers are the main road threat — plan travel between Brink and other cities with an eye to the patrol patterns.
+
+$directions = Stormgap Coast, coastal position. Eyesocket supplies it from inland.

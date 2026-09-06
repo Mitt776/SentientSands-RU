@@ -1,0 +1,16 @@
+Category = locations
+Name = Black_Scratch
+Id = black_scratch
+
+display_name = Black Scratch
+region = The Outlands
+faction = Tech_Hunters
+type = city-library
+weight = 7
+
+price_modifier = 1.25
+$description = Black Scratch is built at the base of a massive ancient tower that rises from the desert floor and is visible from what feels like half a day's walk in every direction. Nobody knows exactly what the tower was for. The best guess is that it was part of First Empire infrastructure, possibly communications or power transmission. The Tech Hunters built their library in its shadow because the locals had been using it as a landmark for generations and good landmarks attract settlements. The Great Library here is the largest collection of blueprints and lore books in all of Kenshi.
+$atmosphere = The tower dominates. Everything in Black Scratch is oriented relative to it — you navigate by saying 'two streets tower-side' or 'the bar opposite the tower.' The city itself is a working town with real shops and real variety, less academic in feel than World's End, more commercial. Merchants who deal in rare goods end up here because the travelers who come for the library tend to have money.
+$notable = The Great Library — over a hundred blueprint types, all the major lore books, the most complete commercial knowledge base in the world. The ancient tower, which no one has reached the top of since the Second Empire. The unusual variety of goods for a city this far into the Outlands.
+
+$directions = The Outlands, built around a massive ancient tower visible from distance. East of Flats Lagoon.

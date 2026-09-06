@@ -1,0 +1,12 @@
+Category = locations
+Name = Grey_Desert
+Id = grey_desert
+
+display_name = The Grey Desert
+type = region
+weight = 6
+
+$description = The Grey Desert is the transitional zone between the Black Desert and the Ashlands — a desolate stretch that serves primarily as the route for expeditions heading toward Cat-Lon's exile and as the territory where the Mechanical Hive and Second Empire Exiles meet. The terrain is difficult in ways that compound: the Grey Desert itself is survivable, but what lies past it is not, which means everyone who makes it through is either heading somewhere extremely specific or got very lost.
+$known_for = Being the last navigable zone before the Ashlands' organic death zone begins. The Mechanical Hive's presence at its western edges. The steady attrition of Tech Hunter expeditions that got this far and then went one step further.
+
+$directions = East, between Black Desert and Ashlands edge.

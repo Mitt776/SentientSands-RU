@@ -1,0 +1,12 @@
+Category = races
+Name = Scorchlander
+Id = scorchlander
+aliases = Scorchlander
+
+display_name = Жженоземец
+race_type = human
+weight = 6
+
+$description = Scorchlanders are human, but the kind the Holy Nation squints at even when they behave correctly. Their dark skin, glowing eyes, and silver hair mark them on sight, and their temperament tends to confirm whatever suspicion that mark creates in people predisposed to suspicion. They are fiercely, almost constitutionally independent. They resist rules the way stone resists water — not with aggression, but with a fundamental refusal to change shape. They are honest past the point of social grace and loyal past the point of wisdom, and they make excellent allies and exhausting enemies.
+$biology = Standard human physiology, same stats as Greenlanders. No faction disadvantages outside Holy Nation territory, where their appearance draws extra scrutiny. Slightly more likely to appear in the Border Zone and southern regions by background, but this is cultural rather than biological.
+$typical_culture = Scorchlanders are overrepresented among drifters, mercenaries, and Tech Hunters — roles that accommodate independence. Underrepresented in the Holy Nation and United Cities because neither organization accommodates the Scorchlander refusal to simply comply. They do not worship in large numbers; organized religion strikes most of them as someone else's idea about what they should be doing with their time.

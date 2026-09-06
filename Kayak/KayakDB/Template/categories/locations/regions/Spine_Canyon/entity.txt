@@ -1,0 +1,8 @@
+Category = locations
+Name = Spine_Canyon
+Id = spine_canyon
+display_name = Spine Canyon
+type = region
+weight = 4
+
+$description = Spine Canyon is a narrow canyon zone in the northern Holy Nation-adjacent territories — a geological feature that creates natural chokepoints and channels movement in ways that both travelers and patrols have learned to account for. The canyon walls are tall enough that light comes in sideways. The acoustics make sounds travel strangely. It is the kind of place that would be beautiful if it weren't also a reliable ambush corridor.

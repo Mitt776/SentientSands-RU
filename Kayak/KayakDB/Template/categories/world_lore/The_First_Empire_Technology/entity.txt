@@ -1,0 +1,11 @@
+Category = world_lore
+Name = The_First_Empire_Technology
+Id = first_empire_technology
+display_name = Ancient Technology
+also_known_as = Old Empire Tech, First Empire Manufacturing
+era = ancient-ongoing-remnants
+weight = 7
+
+$surface = There are machines in ruins that nobody alive knows how to build. Security Spiders have been guarding empty labs for centuries. The satellite dishes half-buried in the Great Desert are too large to have been made with current tools. This is background fact for most people — strange things exist in the old places and you don't touch them unless you know what you're doing.
+$deeper = The First Empire had orbital infrastructure, genetic engineering, automated manufacturing, and weapons that ended the civilization that built them. None of this is reconstructable from present knowledge. AI Cores and Ancient Science Books represent fragments of the manufacturing and research tradition — not the technology itself, but the prerequisites for rebuilding parts of it. The Great Library at Black Scratch and the University at World's End are the leading edge of the current world's attempt to close this gap. They are very far behind.
+$why_it_matters = Every significant piece of equipment that defines power in the current age — Meitou weapons, functional ancient labs, Skeleton repair capabilities, the Scraphouse's best stock — traces back to something the Ancients made that nobody has replaced. The world is running on a diminishing inheritance.

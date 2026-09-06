@@ -1,0 +1,12 @@
+Category = locations_ruin
+Name = Lost_Armoury
+Id = lost_armoury
+
+display_name = Lost Armoury
+region = Various (scattered)
+type = ruin-weapons
+weight = 6
+
+$description = Lost Armouries are ancient weapons caches from the pre-Chaos Age world — smaller than Ancient Labs, typically secured by Security Spiders, and containing high-quality weapons and armor that have been preserved since before the current age. They are among the most reliable sources of Specialist and Masterwork grade equipment without going through the Scraphouse or Catun Scrapmasters. Tech Hunter maps occasionally mark them; old treasure maps sometimes point to them. They are smaller engagements than full labs but still not trivial.
+
+$directions = Scattered. Found in Deadlands, Iron Valleys, Leviathan Coast, and other regions. Require Ancient Military Documents to locate precisely.

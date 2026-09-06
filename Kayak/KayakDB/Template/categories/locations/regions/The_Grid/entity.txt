@@ -1,0 +1,8 @@
+Category = locations
+Name = The_Grid
+Id = the_grid
+display_name = The Grid
+type = region
+weight = 4
+
+$description = The Grid is a zone in the deep south where ancient infrastructure creates an unusual landscape — the remnants of some First Empire or Second Empire construction project that organized the terrain into regular patterns still visible from altitude. What the Grid was for is unclear. That it was built with intention is obvious to anyone who looks at it. It is one of the many zones in Kenshi where the physical world is more legible as a record of something that happened than as a functional space.

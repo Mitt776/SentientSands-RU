@@ -1,0 +1,12 @@
+Category = items_armor
+Name = Samurai_Armour
+Id = samurai_armour
+
+display_name = Samurai Armour
+item_type = armor-body-heavy
+armor_class = Heavy
+base_price_cats = 4000
+weight = 20
+
+$description = Samurai Armour is the standard combat uniform of the United Cities' professional military — lamellar steel plates assembled into a complete torso protection system that covers the chest, shoulders, upper arms, and abdomen in overlapping segments. It's heavy, it imposes combat speed and dexterity penalties, and it marks you as either a samurai or someone who took one down, neither of which goes unnoticed in Imperial territory. The visual weight of it is real: a samurai in full kit is immediately recognized as the presence they're meant to be.
+$cultural_significance = Full samurai armor is the visual language of Empire authority. Wearing it as a non-samurai is risky in United Cities territory — gate guards check papers, and the paper saying you're allowed to wear it is harder to acquire than the armor itself. Outside Imperial territory it reads as 'looted from someone dangerous,' which carries its own weight.

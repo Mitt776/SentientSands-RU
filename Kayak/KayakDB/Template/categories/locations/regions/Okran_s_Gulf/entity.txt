@@ -1,0 +1,11 @@
+Category = locations
+Name = Okran_s_Gulf
+Id = okrans_gulf
+display_name = Okran's Gulf
+type = region
+faction = Holy_Nation
+weight = 6
+
+$description = Okran's Gulf is the Holy Nation's coastal western territory — the zone containing Rebirth, the Holy Military Bases near the Fog Islands, and the Rebirth zone itself. The presence of the Fog Islands nearby gives the region a particular quality: the Holy Nation built its prison and its coastal defenses here partly because the Fogmen keep casual visitors away. The Hidden Forest where the Flotsam Ninjas shelter is technically adjacent to this zone, which creates an irony the Holy Nation would prefer not to acknowledge.
+
+$directions = West of Holy Lands, coastal. Rebirth is here. Fog Islands are offshore to the northwest.

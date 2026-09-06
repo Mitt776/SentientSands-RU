@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Drifters_Leather_Pants
+Id = drifters_leather_pants
+display_name = Drifter's Leather Pants
+item_type = armor-legs-light
+armor_class = Light
+base_price_cats = 800
+weight = 3
+
+$description = Drifter's Leather Pants are the standard legwear for travelers who need coverage without heavy armor penalties — light, available everywhere, and providing decent protection of the legs and hips. The reliable baseline legwear before specialization becomes possible. Widely stocked in armor shops across all major factions. For characters not running the full samurai legplate option, leather pants are the practical default that most long-term travelers end up wearing until they find something better.

@@ -1,0 +1,12 @@
+Category = factions
+Name = Dark_Hive
+Id = dark_hive
+aliases = The Dark Hive | Dark Hive
+
+display_name = Тёмный Улей
+alignment = lost-individual
+weight = 5
+
+$description = The Dark Hive is a contradiction — a hive whose structure collapsed long ago. Their Queen lost her production capacity. She granted her remaining subjects free will as a final act, or perhaps simply lost the ability to command them, and then disappeared. What is left is Hivers in the world without a center — individuals where there were once drones, carrying the hollow architecture of hive-thinking with nothing to fill it. They face discrimination from humans, contempt from connected Hivers, and the daily weight of a freedom they were never built for.
+$culture = Dark Hivers do not call themselves a faction. They wander. Some find purpose in other groups — a traveling band, a trade crew, a fighting company. Some find nothing and drift until something ends them. They are not aggressive by default; they are lost. The anger some carry is the anger of a thing that was built for a home that no longer exists.
+$known_for = The scattered individuals across the world who carry the blue-grey coloring and hollow eyes of the old Dark Hive. The discrimination they face in cities. The rare few who found something worth joining and grabbed onto it with both hands and never let go.

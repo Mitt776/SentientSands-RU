@@ -1,0 +1,8 @@
+Category = locations
+Name = The_Unwanted_Zone
+Id = the_unwanted_zone
+display_name = The Unwanted Zone
+type = region
+weight = 3
+
+$description = The Unwanted Zone is named with the same directness that characterizes most of Kenshi's geographic labeling. It is in the deep south, it is not wanted by any faction, it has no resources worth claiming, and the terrain is hostile enough that the practical decision to leave it unclaimed is also the obvious one. The name is not ironic. It is a zone that nobody wanted and the name reflects the consensus.

@@ -1,0 +1,12 @@
+Category = locations
+Name = Black_Desert
+Id = black_desert
+
+display_name = The Black Desert
+type = region
+weight = 6
+
+$description = The Black Desert is an arid, dark-soiled region in the east — home to Black Desert City, the oldest surviving settlement on the continent, and to the Mechanical Hive's territory. The terrain is difficult and the region is largely avoided by the major factions, which is precisely why both the ancient Skeletons and the Mechanical Hive chose it. Tech Hunters pass through on their way to the Grey Desert and the Ashlands' edge, but few have permanent operations here.
+$known_for = Black Desert City and its ancient Skeleton residents. The Mechanical Hive's territory at the region's eastern edges. The particular silence of a landscape that major political forces have mostly agreed to leave alone.
+
+$directions = East, north of Deadlands. Black Desert City is here.

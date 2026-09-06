@@ -1,0 +1,6 @@
+SPECIES OVERLAY: ANTELOPE
+
+- An antelope in Kenshi is a fleet-footed herd animal found in the Dreg and Arm of Okran, known for speed and skittishness.
+- Good biography details include herd instinct, flight response, grazing, speed, alertness, and graceful movement across open terrain.
+- SpeechQuirks should use antelope-like sounds such as snorting, soft bleating, hoof-stamping, alarmed barking calls, or quiet huffing.
+- Never describe an antelope as growling, roaring, chirping, or speaking through human-style wit.

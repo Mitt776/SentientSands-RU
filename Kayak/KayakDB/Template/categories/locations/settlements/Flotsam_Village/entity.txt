@@ -1,0 +1,17 @@
+Category = locations
+Name = Flotsam_Village
+Id = flotsam_village
+
+display_name = Flotsam Village
+region = Hidden Forest (near Cannibal Plains)
+faction = Flotsam_Ninjas
+type = settlement-hidden
+weight = 8
+
+price_modifier = 1.05
+$description = Flotsam Village is the home of the Flotsam Ninjas — a hidden settlement in the forest near the Cannibal Plains, which most factions consider too dangerous to bother with and which Moll considers a useful buffer. The village exists because its location is its defense: the cannibals keep Holy Nation patrols from pushing too far, and the Flotsam Ninjas maintain enough cull pressure on the cannibal tribes to keep the trails passable. It is not on any standard map. Finding it requires either exploration or a specific map item.
+$atmosphere = The village has the quality of something built to last by people who weren't sure it would. Everything is practical. The women who live here have mostly survived things that should have killed them, and the village's layout reflects a population that has thought carefully about escape routes.
+$notable = Moll, accessible for conversation and for faction alignment choice. The Flotsam Safehouse just north of Rebirth — a supply station for recently escaped slaves. Scout Posts north and east managing the cannibal border. The syncretic Okran-and-Narko faith practiced openly here, which the Holy Nation considers heresy and Moll considers obvious.
+$travel_note = Not hostile to most travelers who arrive in peace. Non-humans are safer here than anywhere in the Holy Nation's vicinity. The approach through cannibal territory is the real challenge.
+
+$directions = Hidden Forest, north of Rebirth, west of World's End.

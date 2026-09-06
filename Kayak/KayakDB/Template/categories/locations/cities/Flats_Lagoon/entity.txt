@@ -1,0 +1,15 @@
+Category = locations
+Name = Flats_Lagoon
+Id = flats_lagoon
+
+display_name = Flats Lagoon
+region = Flats Lagoon zone
+faction = Tech_Hunters
+type = city-platform
+weight = 7
+
+price_modifier = 1.1
+$description = Flats Lagoon is a former offshore platform converted into a walled settlement by the Tech Hunters — industrial history turned into habitable space, which is very on-brand for an organization that specializes in finding uses for abandoned infrastructure. It is well-defended, has a large selection of shops including the largest backpack inventory in Kenshi, and sits in terrain that makes it surprisingly difficult to attack at scale. The zone around it is relatively quiet, which for a Tech Hunter city means merely dangerous rather than catastrophic.
+$known_for = Largest backpack selection in the game. A United Cities pacifier for relation repair. Chad, a unique recruit found in the bar. The fact that it's both a Tech Hunter hub and commercially accessible to everyone.
+
+$directions = Flats Lagoon zone, offshore platform. West of Black Scratch.

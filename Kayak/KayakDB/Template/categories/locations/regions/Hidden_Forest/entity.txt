@@ -1,0 +1,12 @@
+Category = locations
+Name = Hidden_Forest
+Id = hidden_forest
+display_name = The Hidden Forest
+type = region
+faction = Flotsam_Ninjas
+weight = 6
+
+$description = The Hidden Forest is the dense woodland between the Holy Nation's southern territories and the Cannibal Plains — the zone where Flotsam Village is hidden and where the Flotsam Ninjas operate their scout posts. The forest provides natural concealment and the cannibal presence to the north means Holy Nation forces don't push this way with regularity. It is one of the few zones in Kenshi where a traveler moving carefully can avoid most of the hostile factions simultaneously, provided they know where the cannibal patrols are.
+$known_for = Flotsam Village and Moll's operation. The scout posts managing the cannibal border. The natural concealment that makes the Flotsam Ninjas viable as a faction at all.
+
+$directions = Between Okran's Gulf and the Cannibal Plains. Flotsam Village is inside it.

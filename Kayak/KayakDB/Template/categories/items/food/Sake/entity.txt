@@ -1,0 +1,11 @@
+Category = items_food
+Name = Sake
+Id = sake
+
+display_name = Sake
+item_type = food-alcohol
+value_cats = 70
+weight = 4
+
+base_price_cats = 450
+$description = Sake circulates primarily in United Cities territory — a refined grain drink associated with the Empire's patrician class and served at the kind of functions where samurai stand in corners and nobles watch each other for weakness. It tastes cleaner than grog, more deliberate, like something made by people who had time and materials to spare and chose to spend them on something precise. Traders Guild merchants keep a supply for closing discussions that need a neutral flavor.

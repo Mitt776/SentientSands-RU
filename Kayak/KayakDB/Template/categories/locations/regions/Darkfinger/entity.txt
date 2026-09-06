@@ -1,0 +1,12 @@
+Category = locations
+Name = Darkfinger
+Id = darkfinger
+display_name = Darkfinger
+type = region
+faction = Cannibals
+weight = 5
+
+$description = Darkfinger is a southern extension of Cannibal territory — two Cannibal Villages here including the named settlement First Village, and Armoury Ruins that occasionally contain useful loot for anyone willing to come this far. It's the southern edge of the cannibal range, which makes it slightly less densely patrolled than the Cannibal Plains proper, though the distinction between 'slightly fewer cannibals' and 'safe' is not one worth relying on.
+$known_for = Cannibal Villages including First Village. Armoury Ruins with occasional loot. Being the southern reach of cannibal territory where the density thins slightly.
+
+$directions = South of Cannibal Plains, north of the Sinkuun coast.

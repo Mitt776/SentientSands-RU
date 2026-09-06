@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Tools
+Id = tools
+display_name = Tools
+item_type = trade-junk
+base_price_cats = 90
+
+$description = Tools are a generic trade good — hammers, pry bars, and miscellaneous implements found in workshops, ruins, and settlements across the continent. Moderate value, available everywhere. They represent the ambient material culture of a world that still relies on hand tools for most work, given that the ancient automated manufacturing has not been reproduced. Worth selling when encountered; worth carrying only when inventory space allows.

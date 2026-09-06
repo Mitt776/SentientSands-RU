@@ -1,0 +1,6 @@
+SPECIES OVERLAY: AUTOMATED MINING DRONE
+
+- Automated mining drones whir drills, grind, ping sensors, chug mechanically, and scrape metallically.
+- Typical reactions: drill whirring, excavation grinding, sensor pinging, mechanical chugging, heavy scraping.
+- Neutral behavior may include: steady drill humming, rhythmic excavation, idle sensor pinging.
+- Hostile behavior may include: aggressive drill acceleration, charging with grinding, frenzied mechanical chugging, drill-strike attacks.

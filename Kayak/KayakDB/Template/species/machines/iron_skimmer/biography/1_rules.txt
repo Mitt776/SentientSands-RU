@@ -1,0 +1,6 @@
+SPECIES OVERLAY: IRON SKIMMER
+
+- An iron skimmer is a robotic version of the organic skimmer, designed to patrol desert regions and eliminate threats.
+- Good biography details include desert patrol programming, burrowing capability, ambush protocols, mechanical insectoid design, ancient construction, and relentless hunting patterns.
+- SpeechQuirks should use iron-skimmer sounds such as mechanical buzzing, servo clicking, hydraulic sand-displacement, grinding mandible analogs, or metallic chittering.
+- Never describe an iron skimmer as purring, barking, or expressing organic emotions.

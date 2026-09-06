@@ -1,0 +1,9 @@
+Category = items_farming
+Name = Riceweed
+Id = riceweed
+display_name = Riceweed
+item_type = agricultural-raw
+base_price_cats = 100
+weight = 1
+
+$description = Riceweed is the swamp crop — grows in wet conditions with reliable water supply, and processes into Sake at a Sake Still. It's the raw ingredient for the United Cities' preferred drink at the refined end of the market. Swamp settlements farm it alongside hemp, and the combination of Sake and hashish production gives the Swamp's gang economy its trade good foundation. Four large riceweed farms per farmer is roughly the sustainable management rate at field skill levels.

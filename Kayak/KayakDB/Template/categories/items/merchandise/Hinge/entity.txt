@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Hinge
+Id = hinge
+display_name = Hinge
+item_type = trade-junk
+base_price_cats = 90
+
+$description = Hinges are metal hardware — found in ruins, old buildings, and construction sites. Sold to merchants as junk trade goods. Their presence in loot tables reflects the attention Kenshi pays to the granular material economy: even door hardware has a separate market value. Worth picking up during exploration of ruins where weight permits.

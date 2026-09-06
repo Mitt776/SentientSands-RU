@@ -1,0 +1,11 @@
+Category = locations
+Name = Sinkuun
+Id = sinkuun
+display_name = Sinkuun
+type = region
+faction = United_Cities
+weight = 5
+
+$description = Sinkuun is the southern extension of Great Desert territory — United Cities jurisdiction, Western Hive outpost presence at the margins, and the general quality of a zone that is technically Imperial but doesn't receive the same level of patrol investment as the core desert cities. Distant Hive Villages sit at the zone's western edges. The terrain is harsh and the infrastructure thins noticeably as you move south through it.
+
+$directions = South-central, below Great Desert. Western Hive outposts at margins.

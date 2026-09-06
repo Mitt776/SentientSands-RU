@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Plate_Jacket
+Id = plate_jacket
+
+display_name = Plate Jacket
+item_type = armor-body-medium
+armor_class = Medium
+base_price_cats = 2800
+weight = 14
+
+$description = The Plate Jacket sits between light and heavy armor — steel plates over a leather backing, providing better cut and blunt resistance than chainmail with fewer of the extreme penalties that heavy plate imposes. It's a practical choice for fighters who want meaningful protection without fully committing to the stamina and dexterity costs of samurai-grade steel. Black and White Plate Jacket variants exist with minor stat differences. Available in most mid-tier armor shops across United Cities and tech hunter towns.

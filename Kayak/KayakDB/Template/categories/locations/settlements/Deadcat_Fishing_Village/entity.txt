@@ -1,0 +1,14 @@
+Category = locations
+Name = Deadcat_Fishing_Village
+Id = deadcat_fishing_village
+
+display_name = Fishing Village (Deadcat)
+region = Northern Coast / Outlands
+faction = Deadcat
+type = village-fishing
+weight = 4
+
+$description = The Deadcat Fishing Villages are two small settlements — one on the Northern Coast north of World's End, one walled village east of Black Scratch in the Outlands. Both belong to the Deadcat faction. The Northern Coast one has a bar, a general trader, and a fish salesman; the Outlands one is more minimal with a bar and fish shops. They're genuinely peaceful stops in areas that aren't otherwise well-served by commerce. The Deadcat faction is itself small and quiet — fishermen who managed to avoid the political conflicts that define most of Kenshi by being in places nobody particularly wanted to fight over.
+$travel_note = Open to all races. Safe by Kenshi standards.
+
+$directions = Northern Coast Fishing Village: north of World's End. Outlands Fishing Village: east of Black Scratch.

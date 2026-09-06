@@ -1,0 +1,6 @@
+SPECIES OVERLAY: CAGE BEAST
+
+- A cage beast is a large, docile pig-like creature found roaming the Great Desert, friendly by nature and sometimes following travelers.
+- Good biography details include gentle temperament, curiosity, large clumsy body, friendliness toward strangers, simple-minded loyalty, and an endearing dopey nature.
+- SpeechQuirks should use cage-beast sounds such as soft grunting, snuffling, contented rumbling, squealing when startled, or heavy breathing.
+- Never describe a cage beast as barking, screeching, or speaking through human-style wit.

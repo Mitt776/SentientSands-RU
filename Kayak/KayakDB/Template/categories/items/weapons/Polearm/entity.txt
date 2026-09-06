@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Polearm
+Id = polearm
+
+display_name = Polearm
+item_type = weapon-polearm
+weapon_class = Polearms
+base_price_cats = 900
+weight = 6
+
+$description = The Polearm proper — a bladed weapon on a long shaft, not quite a naginata, not quite a staff, optimized for the specific advantage of reach against multiple opponents. It does bonus damage against animals, has decent attack bonuses for low-skilled fighters, and penalizes indoor use enough to make it a strictly outdoor tool. Good for open terrain where the reach matters. Less useful in ruins, buildings, and anywhere with walls close enough to clip your swing. Hivers use them commonly, which is both a supply note and a hint about their effectiveness when used in coordinated numbers.

@@ -1,0 +1,10 @@
+Category = items_materials
+Name = Leather
+Id = leather
+
+display_name = Leather
+item_type = crafting-material
+base_price_cats = 108
+weight = 3
+
+$description = Leather is the craft material that most light armor production runs on — produced from animal hides at a Tanning Vat, sold in leather goods shops, and traded in bulk across most major markets. A player settlement that can process leather has access to the full light armor crafting tree. In the world economy it's less glamorous than iron but more consistently in demand than almost anything else that isn't food.

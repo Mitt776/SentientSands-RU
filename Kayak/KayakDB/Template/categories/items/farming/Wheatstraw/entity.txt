@@ -1,0 +1,10 @@
+Category = items_farming
+Name = Wheatstraw
+Id = wheatstraw
+
+display_name = Wheatstraw
+item_type = agricultural-raw
+base_price_cats = 100
+weight = 5
+
+$description = Wheatstraw is the agricultural raw material of Holy Nation farmlands — harvested from the green fields of Okran's Pride and processed into foodcubes and other staple foods that sustain the Holy Nation's population. In raw form it's a trade good with moderate value, moved from the Holy Farms to processing facilities by slaves and citizens alike. For player-run settlements, it's a farming crop and the starting point for a food production chain.

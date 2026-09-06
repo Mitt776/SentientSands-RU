@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Pearl_Urn
+Id = pearl_urn
+display_name = Pearl Urn
+item_type = trade-junk
+base_price_cats = 90
+
+$description = Pearl Urns are decorative ceramics found in United Cities noble houses and upscale locations — along with Pearl Cups, Pearl Vases, and Pearl Sword Holders that share the same value and context. They exist as ambient luxury goods that reflect the material culture of Imperial wealth. Worth 90 cats to a merchant who has customers for them; worth nothing to anyone operating outside that economy.

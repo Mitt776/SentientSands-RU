@@ -1,0 +1,15 @@
+Category = locations
+Name = Mourn
+Id = mourn
+
+display_name = Mourn
+region = Bonefields
+faction = Tech_Hunters
+type = town-waystation
+weight = 6
+
+price_modifier = 1.15
+$description = Mourn is a Tech Hunter waystation in the difficult terrain of Stobe's Gamble — a mining settlement that exists partly to support research expeditions into the surrounding ruins and partly because someone has to. It's not a comfortable place. The terrain is rough, the weather is unreliable, and the region has enough active threats to keep the residents from getting complacent. What it has is supplies, competent fighters to buy them from, and a strategic position for anyone heading deeper into the region.
+$travel_note = Open to all races. Has the adventure shops and general stores needed for serious expedition preparation. The surrounding terrain is genuinely hostile — plan the next leg carefully before leaving.
+
+$directions = Bonefields, inside an ancient metal structure. Northeast of Catun, south of Black Scratch.

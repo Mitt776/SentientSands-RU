@@ -1,0 +1,8 @@
+Category = locations
+Name = The_Crater
+Id = the_crater
+display_name = The Crater
+type = region
+weight = 4
+
+$description = The Crater is exactly what the name says — a large impact or blast formation in the southern territories. Whether it was caused by something falling from orbit, a weapon deployed during the War of Behemoths, or a geological event is not agreed upon. What is agreed upon is that the terrain at the center is strange, the mineral composition is unusual, and the zone functions as a natural boundary that most factions treat as a limit of practical operations.

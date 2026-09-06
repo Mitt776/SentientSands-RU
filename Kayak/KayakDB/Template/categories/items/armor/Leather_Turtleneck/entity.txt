@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Leather_Turtleneck
+Id = leather_turtleneck
+
+display_name = Leather Turtleneck
+item_type = armor-shirt-light
+armor_class = Light
+base_price_cats = 1000
+weight = 2
+
+$description = The Leather Turtleneck is an undergarment armor piece — a fitted leather layer worn beneath outer armor that provides full coverage of the torso and arms. Coverage-wise it's the best undergarment option for most builds: 100% torso coverage, solid arm coverage, and low enough weight to not significantly impact characters who are still developing their strength. It pairs with almost every outer armor combination and covers the gaps that most body armor leaves at the arms and collar. Craftable after researching leather armor.

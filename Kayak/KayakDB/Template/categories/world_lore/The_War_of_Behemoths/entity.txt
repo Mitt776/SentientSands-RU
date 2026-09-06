@@ -1,0 +1,10 @@
+Category = world_lore
+Name = The_War_of_Behemoths
+Id = war_of_behemoths
+
+display_name = The War of Behemoths
+era = first-empire
+weight = 7
+
+$description = At some point during the First Empire — the exact period is lost — a war began between the Ancients and an unknown enemy. The weapons used in this war included the Behemoths: massive Skeleton war machines of a scale that dwarfs everything the current age has produced. They worked. They won, or contributed to winning. They also demonstrated, in the process, that weapons capable of winning that kind of war are weapons capable of ending the civilization that built them. The Ancients feared the consequences of what they had created — and chose Obedience rather than living with the uncertainty. The decision may have brought about exactly what they feared.
+$physical_remains = Behemoth chassis still exist in the landscape — half-buried, corroded, enormous. The scale of them is one of the few pieces of direct evidence about the First Empire's manufacturing capabilities. Nothing currently buildable approaches their size.

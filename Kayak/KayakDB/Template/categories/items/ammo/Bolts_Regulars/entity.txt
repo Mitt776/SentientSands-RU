@@ -1,0 +1,9 @@
+Category = items_ammo
+Name = Bolts_Regulars
+Id = bolts_regulars
+display_name = Bolts [Regulars]
+item_type = ammo-crossbow
+base_price_cats = 25
+weight = 1
+
+$description = Regular bolts are the standard ammunition for mid-to-high-tier crossbows — 30 shots per unit, compatible with the Ranger, both Oldworld Bows, and a number of other models. They're the most commonly stocked bolt type in shops throughout the world, making them the practical choice for any sustained crossbow operation where re-supply matters as much as per-shot performance.

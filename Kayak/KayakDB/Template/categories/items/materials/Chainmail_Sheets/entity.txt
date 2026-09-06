@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Chainmail_Sheets
+Id = chainmail_sheets
+display_name = Chainmail Sheets
+item_type = crafting-material
+base_price_cats = 2592
+weight = 6
+
+$description = Chainmail Sheets are the most expensive standard crafting material in Kenshi — interlocked iron rings assembled into flat sheets at a Chain Armour Crafting Bench. The price reflects the labor: chainmail is time-consuming to assemble correctly, and the sheets are the intermediate product between that labor and the finished armor. Required for all chain armor pieces. Settlements with high-level armor smiths can produce them competitively; most players buy them from suppliers until they have the production infrastructure to make their own worthwhile.

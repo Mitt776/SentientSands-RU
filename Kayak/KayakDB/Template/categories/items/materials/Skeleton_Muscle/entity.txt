@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Skeleton_Muscle
+Id = skeleton_muscle
+display_name = Skeleton Muscle
+item_type = crafting-material
+base_price_cats = 777
+weight = 2
+
+$description = Skeleton Muscle is an artificial muscle tissue used in skeleton construction and advanced repair — a First Empire manufacturing material that current technology can produce in limited quantities at robotics workshops. It goes into the most advanced skeleton repair and construction processes. The name is a straightforward functional description that the Skin Bandits find theologically interesting for reasons they are happy to explain at length to anyone willing to visit the Skinhouse.

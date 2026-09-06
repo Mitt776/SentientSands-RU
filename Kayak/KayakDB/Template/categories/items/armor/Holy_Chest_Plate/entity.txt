@@ -1,0 +1,12 @@
+Category = items_armor
+Name = Holy_Chest_Plate
+Id = holy_chest_plate
+
+display_name = Holy Chest Plate
+item_type = armor-body-heavy
+armor_class = Heavy
+base_price_cats = 3500
+weight = 18
+
+$description = The Holy Chest Plate is the heavy armor worn by the Holy Nation's Paladins and military elite — white lacquered steel with the stylized iconography of Okran's light worked into the chest design. It's equivalent in protection to Samurai Armour but carries the distinct visual language of the Holy Nation: unmistakably religious, unmistakably military, and deeply uncomfortable to walk around in outside Holy Nation territory where the people reading the iconography are its enemies. The Unholy Chest Plate is an identical plate without the markings, for fighters who want the protection without the political statement.
+$cultural_significance = A Paladin in Holy Plate Chest is not just a heavily armed soldier — they're a walking declaration of the Holy Flame's military power. The armor is inseparable from what it represents, which is why wearing it outside Holy Nation territory reads as either a trophy or a provocation.

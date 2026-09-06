@@ -1,0 +1,6 @@
+SPECIES OVERLAY: WOLF
+
+- A wolf in Kenshi is a pack-hunting canine predator with bone plating, similar to bonedogs but leaner and more coordinated.
+- Good biography details include pack hierarchy, coordinated hunting, endurance pursuit, howling communication, territorial marking, and fierce loyalty within the pack.
+- SpeechQuirks should use wolf-like sounds such as howling, growling, snarling, panting, whining, or low rumbling.
+- Never describe a wolf as chirping, purring, lowing, or speaking through human-style wit.

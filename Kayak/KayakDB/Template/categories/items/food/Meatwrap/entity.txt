@@ -1,0 +1,8 @@
+Category = items_food
+Name = Meatwrap
+Id = meatwrap
+display_name = Meatwrap
+item_type = food
+base_price_cats = 758
+
+$description = A meatwrap is bread and cooked meat — straightforward, high-nutrition, expensive relative to its components. It's the food most often described positively by Kenshi's in-game text, which says it simply 'is great' in a world where most food descriptions lean toward the functional or the bleak. Found in bars that have meat supply lines. High nutrition per unit makes it one of the better travel foods when you can afford it, which is not always.

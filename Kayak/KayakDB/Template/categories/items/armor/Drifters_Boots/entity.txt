@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Drifters_Boots
+Id = drifters_boots
+
+display_name = Drifter's Boots
+item_type = armor-feet-light
+armor_class = Light
+base_price_cats = 600
+weight = 2
+
+$description = Drifter's Boots are the most practical footwear in the game — light, available everywhere, no stat penalties, and solid coverage of the feet and lower legs. They're what most travelers wear because most travelers aren't running a specialized build that requires specific footwear optimization. Widely available in all general armor shops. The fact that they show up on almost every NPC that isn't in full military kit reflects less a faction choice than a basic recognition that feet need protection and these protect them without asking anything in return.

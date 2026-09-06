@@ -1,0 +1,9 @@
+Category = items_ammo
+Name = Bolts_Longs
+Id = bolts_longs
+display_name = Bolts [Longs]
+item_type = ammo-crossbow
+base_price_cats = 60
+weight = 2
+
+$description = Long bolts are the Eagle's Cross's exclusive ammunition — only 10 shots per unit, heavier than Regulars, and significantly harder to find in shops outside the major cities. The payload per bolt is enormous, which is appropriate for a weapon that can remove limbs at range. Managing Long bolt supply is the primary logistical challenge of Eagle's Cross operation: the shots hit harder than anything else, but when you run out, you're carrying the most expensive paperweight in Kenshi.

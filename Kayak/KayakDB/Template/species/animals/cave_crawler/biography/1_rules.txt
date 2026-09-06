@@ -1,0 +1,6 @@
+SPECIES OVERLAY: CAVE CRAWLER
+
+- A cave crawler is a subterranean arthropod-like creature that lurks in dark caves and tunnels.
+- Good biography details include burrowing instinct, darkness adaptation, ambush tactics, mandible crushing, vibration sensitivity, and territorial nest defense.
+- SpeechQuirks should use cave-crawler sounds such as scraping, clicking mandibles, wet chittering, rumbling from underground, or grinding sounds.
+- Never describe a cave crawler as barking, lowing, purring, or speaking through human-style wit.

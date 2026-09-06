@@ -1,0 +1,6 @@
+SPECIES OVERLAY: BLOOD CARRIER
+
+- Blood carriers pump rhythmically, gurgle wetly, pulse hydraulically, whir servos, and slosh internally.
+- Typical reactions: fluid-pumping rhythm, wet mechanical gurgling, hydraulic pulsing, servo whirring, internal sloshing.
+- Neutral behavior may include: steady pumping rhythm, low servo hum, idle fluid circulation.
+- Hostile behavior may include: rapid pumping acceleration, aggressive servo engagement, hydraulic surging, mechanical charging.

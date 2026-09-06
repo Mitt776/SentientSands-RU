@@ -1,0 +1,6 @@
+SPECIES OVERLAY: CRAB
+
+- A crab is a large crustacean with heavy armor plating and powerful pincers, found in coastal and rocky regions. Some are kept by the Crab Raiders faction.
+- Good biography details include armored resilience, pincer strength, slow but unstoppable advance, territorial nesting, scavenging, and surprising group coordination.
+- SpeechQuirks should use crab-like sounds such as clicking pincers, shell-scraping, bubbling, clacking, or grinding of chitin plates.
+- Never describe a crab as barking, howling, purring, or speaking through human-style wit.

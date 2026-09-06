@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Nodachi
+Id = nodachi
+
+display_name = Nodachi
+item_type = weapon-blade
+weapon_class = Katanas
+base_price_cats = 1500
+weight = 12
+
+$description = The nodachi is a two-handed katana — longer, heavier, with more reach than the standard blade. It scales with both Dexterity and Strength unlike most katana-class weapons, which means it rewards fighters who have trained both. The extra reach lets it hit multiple targets with proper positioning, which the standard katana can't reliably do. The tradeoff is the weight and the requirement: it demands a character who has put in the time, and it performs poorly in the hands of someone who hasn't.

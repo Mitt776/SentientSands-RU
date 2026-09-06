@@ -1,0 +1,14 @@
+Category = locations_outpost
+Name = Waystation
+Id = waystation
+
+display_name = Waystation
+region = Various — Border Zone, Stenn Desert, Grey Desert, The Hook
+faction = Tech_Hunters
+type = outpost-rest
+weight = 5
+
+$description = Waystations are small Imperial outposts scattered along major roads through the Border Zone and adjacent territories — not cities, barely towns, but they have beds, basic supplies, and guards who are paid to keep the peace inside the walls. Traveling between major cities, a Waystation is the only structured rest point available. They're not exciting, but after two days on a road with Dust Bandits and the sun trying to kill you, 'not exciting' is exactly what the body ordered.
+$travel_note = Open to all races. Limited stock but enough for basics. The guards keep the immediate area around the outpost relatively clear of the smaller bandit groups.
+
+$directions = Border Zone central waystation: eastern borderlands. Stenn Desert waystation: near Squin. Hook waystation: between Clownsteady and Drifter's Last. Grey Desert waystation: eastern routes.

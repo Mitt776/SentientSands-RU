@@ -1,0 +1,12 @@
+Category = locations
+Name = Holy_Lands
+Id = holy_lands
+
+display_name = The Holy Lands
+also_known_as = Okran's Pride, Okran's Gulf, Okran's Valley
+type = region
+faction = Holy_Nation
+weight = 7
+
+$description = The Holy Lands are the jewel of the Holy Nation — the only fertile agricultural region of meaningful scale in all of Kenshi. Green fields, reliable rain, farms that actually produce food in a world where starvation is an ever-present threat. This abundance is the material foundation for the Holy Nation's power and the theological confirmation of Okran's favor. If you live here and follow the rules, life is genuinely better than most of Kenshi offers. The rules are: be human, be male, or accept absolute submission, and never carry a robot limb or question the Book.
+$known_for = The only real farmland on the continent. Holy Farms supplying food to the entire Holy Nation. Okran statues at every road junction. Paladins on every road. The contrast between the visual beauty of the landscape and the systematic brutality of the social order that maintains it.

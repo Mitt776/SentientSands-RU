@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Drifter_s_Goggles
+Id = drifters_goggles
+display_name = Drifter's Goggles
+item_type = armor-head-light
+armor_class = Light
+base_price_cats = 300
+slot = head
+
+$description = Drifter's Goggles are the most common headgear in the Border Zone and Great Desert — eye protection against sand and sun, providing minimal armor but relevant in the visual language of Kenshi as the face of the wanderer. Combined with the Drifter's Leather Jacket they constitute the standard traveler aesthetic. They have minor armor value but their main function is eye protection in dust storms and the universal signal that the wearer has been moving through desert territory long enough to have opinions about eye protection.

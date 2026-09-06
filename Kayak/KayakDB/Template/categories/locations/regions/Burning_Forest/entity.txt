@@ -1,0 +1,8 @@
+Category = locations
+Name = Burning_Forest
+Id = burning_forest
+display_name = Burning Forest
+type = region
+weight = 4
+
+$description = The Burning Forest is a zone where the vegetation has a scorched, rust-colored quality — whether from climate, mineral soil composition, or something that happened here during the Chaos Age is not definitively known. The atmosphere is distinctive and oppressive. The name is literal enough that travelers who arrive have already understood what they're entering. No permanent settlements. The indigenous fauna is adapted to the conditions in ways that make them harder than the color of their home would suggest.

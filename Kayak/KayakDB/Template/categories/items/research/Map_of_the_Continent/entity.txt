@@ -1,0 +1,10 @@
+Category = items_research
+Name = Map_of_the_Continent
+Id = map_of_the_continent
+
+display_name = Map of the Continent
+item_type = utility-navigation
+base_price_cats = 200
+weight = 1
+
+$description = A Map of the Continent is one of the most valuable early purchases a traveler can make — a geographical overview that reveals town locations and major terrain features that would otherwise require direct exploration to find. Tech Hunter waystations and shops in The Hub sell them. The map doesn't guarantee safe travel to anywhere on it, but knowing where things are is the prerequisite for all other planning. Travelers who skip the map and trust their sense of direction in the Great Desert learn to value maps relatively quickly.

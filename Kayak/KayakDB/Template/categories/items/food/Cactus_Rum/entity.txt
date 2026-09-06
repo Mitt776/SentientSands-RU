@@ -1,0 +1,12 @@
+Category = items_food
+Name = Cactus_Rum
+Id = cactus_rum
+
+display_name = Cactus Rum
+item_type = food-alcohol
+value_cats = 80
+weight = 4
+
+base_price_cats = 520
+$description = Cactus Rum is the upmarket version of grog — made from fermented cactus sap in the Great Desert regions, distilled with more care than most people put into their children, and sold at prices that reflect both the effort and the result. It is smooth in the way that expensive things learn to be smooth. United Cities merchants drink it to signal success. Border Zone drifters drink it when they get lucky. It tastes like the desert would taste if the desert decided to cooperate.
+$cultural_significance = A bottle of Cactus Rum is a social signal — you have enough cats to not drink grog, and you're sharing it anyway, which says something about you. It opens conversations. It closes deals.

@@ -1,0 +1,13 @@
+Category = locations
+Name = Stenn_Desert
+Id = stenn_desert
+
+display_name = The Stenn Desert
+type = region
+faction = Shek_Kingdom
+weight = 6
+
+$description = The Stenn Desert is Shek territory — arid, rocky, defended by the kind of warriors who view the terrain as a filter that removes the weak before they can cause problems. Admag sits in its center; Stack guards its western approach. The desert is not as lethal as the Great Desert or the Ashlands, but the Shek who patrol it are significantly more dangerous than the terrain itself. Kral's Chosen and Band of Bones operate at its edges, which adds a layer of unpredictability to travel.
+$known_for = Admag and the Shek Kingdom's military presence. The Stenn Desert's rocky terrain. Shek warrior patrols. The political tension between Esata's forces and the traditionalist factions operating at the margins.
+
+$directions = Central-north. Admag is in the north, Stack in the west, Squin in the east.

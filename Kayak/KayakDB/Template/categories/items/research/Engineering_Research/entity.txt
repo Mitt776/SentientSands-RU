@@ -1,0 +1,9 @@
+Category = items_research
+Name = Engineering_Research
+Id = engineering_research
+display_name = Engineering Research
+item_type = research-artifact
+base_price_cats = 3000
+weight = 1
+
+$description = Engineering Research is a research artifact — a compact data storage unit from the Second Empire containing engineering and manufacturing knowledge that unlocks advanced construction and production research. Found in Deadland Workshops, Post-Ancient Workshops, Dead Workshop in The Pits East, and the Workshop Complex in The Grid. Each one unlocks a research tier. They are not tradeable in the conventional sense — you use them, they're gone, and what they unlock stays unlocked. Tech Hunters track their locations carefully.

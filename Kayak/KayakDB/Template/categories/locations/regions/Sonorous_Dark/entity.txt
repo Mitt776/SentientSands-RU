@@ -1,0 +1,8 @@
+Category = locations
+Name = Sonorous_Dark
+Id = sonorous_dark
+display_name = Sonorous Dark
+type = region
+weight = 3
+
+$description = Sonorous Dark is a zone in the deep south — named for the acoustic properties of its terrain, which carry sound in unusual ways and create a specific quality of ambient noise. Like Sonorous Junk Reef nearby, the name suggests either poetic observation or something that started as a warning and became a label. There are no settlements. The darkness and the sound are the zone's defining characteristics.

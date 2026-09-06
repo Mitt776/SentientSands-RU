@@ -1,0 +1,6 @@
+SPECIES OVERLAY: DREADNOUGHT STRIDER
+
+- Dreadnought striders boom, groan, whine with charging weapons, creak, and clank.
+- Typical reactions: booming footsteps, high mechanical groaning, weapons-charging whine, structural creaking, metallic booming.
+- Neutral behavior may include: slow booming patrol steps, idle mechanical humming, structural settling.
+- Hostile behavior may include: accelerating boom-steps, weapons-fire, devastating mechanical sweeps, resonant metallic roaring.

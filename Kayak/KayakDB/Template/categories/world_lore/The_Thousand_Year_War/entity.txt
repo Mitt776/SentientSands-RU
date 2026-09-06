@@ -1,0 +1,10 @@
+Category = world_lore
+Name = The_Thousand_Year_War
+Id = thousand_year_war
+display_name = The Holy Nation and the Shek
+also_known_as = The Thousand Year War (informal)
+era = ongoing-centuries
+weight = 7
+
+$surface = The Holy Nation and the Shek Kingdom have been fighting each other for as long as anyone alive can remember. The Holy Nation considers Shek heretics and abominations; the Shek consider the Holy Nation an obstacle to their dying well against worthy opponents. Both are correct about the other's position.
+$deeper = The conflict is not really a war in the sense of armies and objectives. It is a sustained territorial friction along a shared border — Stack changing hands, Holy Nation patrols pushing into Shek margins, Shek raids into Holy Nation farmland. Neither side has the capacity to destroy the other. Esata wants to end it through alliance. The Holy Nation interprets any Shek overture as a trick. The traditionalist Shek factions interpret Esata's overtures as surrender. The war continues by inertia as much as intent.

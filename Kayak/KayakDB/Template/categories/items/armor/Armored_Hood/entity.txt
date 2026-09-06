@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Armored_Hood
+Id = armored_hood
+display_name = Armored Hood
+item_type = armor-head-medium
+armor_class = Medium
+base_price_cats = 1200
+slot = head
+
+$description = The Armored Hood is a medium headgear option — reinforced cloth hood that provides better protection than a straw hat or goggles but less than a full Samurai or Visored Helmet. Popular with characters who want head coverage without the movement penalties of full helmets. Available from armor shops across most major factions. Its practical appeal is the balance: enough protection to matter, light enough to not restrict movement significantly.

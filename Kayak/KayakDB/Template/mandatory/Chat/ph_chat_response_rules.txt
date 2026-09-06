@@ -1,0 +1,7 @@
+Placeholder for future chat response rules.
+Does not load at runtime because it has no numeric prefix.
+
+Suggested use:
+- structure rules
+- style restrictions
+- Kayak command-marker behavior

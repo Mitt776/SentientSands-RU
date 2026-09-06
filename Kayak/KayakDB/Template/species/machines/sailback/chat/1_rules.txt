@@ -1,0 +1,6 @@
+SPECIES OVERLAY: SAILBACK
+
+- Sailbacks hum, groan mechanically, creak, vibrate, and clank.
+- Typical reactions: deep servo humming, hydraulic groaning, sail vibrations, slow mechanical turning, heavy clanking.
+- Neutral behavior may include: steady patrol humming, sail adjustments, powered-down idling.
+- Hostile behavior may include: accelerating servo whine, heavy charging clanks, hydraulic engagement, metallic screeching.

@@ -1,0 +1,15 @@
+Category = locations
+Name = Ashlands_Region
+Id = ashlands_region
+
+display_name = The Ashlands
+region = Ashlands (southeastern extreme)
+type = region-forbidden
+weight = 8
+
+$description = The Ashlands are the end of the map and the end of most expeditions that attempt them. Tech Hunters classify the zone as unsurvivable for organic life — not dangerous, not risky: unsurvivable, with the distinction being that every team sent in has ended in total loss of personnel. The Ashlands are where the Second Empire's leadership retreated when their civilization collapsed. They are where Cat-Lon waits in whatever state four hundred years of isolation in an inhospitable wasteland leaves an ancient Skeleton who was already not entirely stable before any of this started.
+$atmosphere = Ash storms. Ancient structures of impossible scale. Automated machines that respond to intrusion with the full force of technology from an age when technology was indistinguishable from power. The silence between storms that is somehow worse than the storms. The domes, lit from within by something that has been running without maintenance for centuries.
+$known_for = Cat-Lon and his Meitou Falling Sun. The domes from which a hundred thralls can emerge in response to a single alarm. The fact that reaching Cat-Lon requires first surviving the Ashlands, which organics cannot reliably do. The ancient space elevator in ruins at the border of the region — the most tangible evidence of the First Empire's scale.
+$travel_note = Unsurvivable for organics without significant preparation and extraordinary luck. Skeletons can theoretically manage the terrain. Do not go alone. Do not go underprepared. Several Tech Hunter expedition logs end mid-sentence.
+
+$directions = Far southeast. Accessible from Greyshelf or Cheater's Run. Cat-Lon's Exile is deep inside.

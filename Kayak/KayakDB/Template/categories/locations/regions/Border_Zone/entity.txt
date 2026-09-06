@@ -1,0 +1,12 @@
+Category = locations
+Name = Border_Zone
+Id = border_zone
+
+display_name = The Border Zone
+type = region
+weight = 6
+
+$description = The Border Zone is the contested space between the Holy Nation's western territories and the Shek Kingdom's eastern edges, threaded through with trade roads that nobody can quite control and everybody needs. The Hub sits in the middle of it — a ruin of a waystation that functions as neutral ground by virtue of nobody having enough energy to take it properly. Dust Bandits and Starving Bandits contest the roads. Black Dragon Ninjas operate in the shadows. A Waystation provides some shelter. It is the first thing most travelers see after leaving the relative safety of the starting region, and it teaches them quickly.
+$known_for = Being the first dangerous territory most players encounter. The Hub. The Waystation. Dust Bandits who will attack groups of two or three without much concern. Starving Bandits who are barely equipped but numerous. The peculiar peace of traveling through a zone where every major faction finds the terrain too awkward to control properly.
+
+$directions = Central-west. Between Holy Nation east and Shek Kingdom west. The Hub is here.

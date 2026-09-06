@@ -1,0 +1,12 @@
+Category = factions
+Name = Holy_Nation_Outlaws
+Id = holy_nation_outlaws
+aliases = Holy Nation Outlaws
+
+display_name = Изгои Святой Нации
+territory = The Hub
+alignment = neutral-outcast
+weight = 4
+
+$description = Holy Nation Outlaws are former citizens who couldn't or wouldn't fit inside the Holy Flame's light — heretics, defectors, criminals by doctrine if not always by action. The Hub is theirs now, a ruin of a town in the Border Zone that functions as a waystation for people who need to be somewhere between two places that both want to kill them. They are not organized enough to threaten anyone significant. They are organized enough to survive, which in the Border Zone is its own achievement.
+$known_for = The Hub, which has a large functioning bar and almost nothing else that works properly. Being the most relaxed faction in an area defined by tension. Taking in whoever needs taking in, for the most part.

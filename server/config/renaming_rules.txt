@@ -1,0 +1,21 @@
+# Renaming Rules
+# ==============
+# Controls how the automatic NPC renaming system behaves.
+# Format: key = value (lines starting with # are comments)
+
+# Rename mode:
+#   title_only_expand  - Append a generated name to the title.
+#                        "Paladin" becomes "Paladin Tevar".
+#   full_replace       - Replace entirely with the generated name.
+#                        "Paladin" becomes "Tevar".
+mode = title_only_expand
+
+# When true, NPCs whose current_name differs from original_name
+# will never be renamed again automatically. This prevents the
+# system from overwriting manual renames or previous auto-renames.
+preserve_existing_named = true
+
+# Match mode:
+#   exact  - Name must match a renaming_list entry exactly (recommended).
+#   legacy - Use the old substring/keyword heuristic system (not recommended).
+match = exact

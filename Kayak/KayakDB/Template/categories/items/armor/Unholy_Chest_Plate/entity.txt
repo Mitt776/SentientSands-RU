@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Unholy_Chest_Plate
+Id = unholy_chest_plate
+display_name = Unholy Chest Plate
+item_type = armor-body-heavy
+armor_class = Heavy
+base_price_cats = 2800
+slot = body
+
+$description = The Unholy Chest Plate is a heavy chest armor piece functionally equivalent to the Holy Chest Plate but without the Holy Nation iconography — the same protection profile in different religious packaging. The 'Unholy' designation is from the Holy Nation's perspective: any plate chest armor worn by someone outside their blessing is, by their theology, unholy. Worn by Shek warriors, mercenaries, and United Cities heavy infantry who want comparable protection to the Holy Nation's standard without the theological statement.

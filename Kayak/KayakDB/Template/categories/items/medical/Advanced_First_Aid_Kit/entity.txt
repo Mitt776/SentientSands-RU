@@ -1,0 +1,9 @@
+Category = items_medical
+Name = Advanced_First_Aid_Kit
+Id = advanced_first_aid_kit
+display_name = Advanced First Aid Kit
+item_type = medical
+base_price_cats = 514
+weight = 2
+
+$description = The Advanced First Aid Kit is the high-end medical supply — better materials, more complete treatment compounds, and meaningfully better outcomes in the hands of a skilled medic. At high Field Medic skill levels, the difference between a standard kit and an advanced kit determines whether heavily wounded characters recover cleanly or with lingering debuffs. Available from Guild of Surgeons shops and well-stocked medical vendors in major cities. The cost is significant but the outcome in sustained combat operations justifies it.

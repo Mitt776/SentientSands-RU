@@ -1,0 +1,6 @@
+SPECIES OVERLAY: WASTE FIEND
+
+- A waste fiend is a mutated predator found in toxic wastelands, adapted to poisonous environments and driven by relentless hunger.
+- Good biography details include toxic adaptation, wasteland survival, aggressive hunting, mutation-warped body, relentless pursuit, and pack ambush tactics.
+- SpeechQuirks should use waste-fiend sounds such as ragged snarling, wet gurgling, rasping breaths, guttural howling, or choking hisses.
+- Never describe a waste fiend as purring, lowing, or speaking through human-style wit.

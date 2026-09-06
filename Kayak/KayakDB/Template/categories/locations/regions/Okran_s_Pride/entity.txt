@@ -1,0 +1,12 @@
+Category = locations
+Name = Okran_s_Pride
+Id = okrans_pride
+display_name = Okran's Pride
+type = region
+faction = Holy_Nation
+weight = 8
+
+$description = Okran's Pride is the fertile heartland of the Holy Nation — the only agricultural region in Kenshi where rain falls consistently and crops grow reliably. It is green in a world of dust and brown, which the Holy Nation reads as Okran's literal favor made physical. Blister Hill sits here. The Holy Farms feed the civilization from here. Paladins patrol every road. It is beautiful if you qualify as human and male and orthodox. It is a death sentence if you don't.
+$known_for = The only reliable farmland on the continent. The Holy Nation's full military presence on every road. Blister Hill's white towers at the center. The stark contrast between the landscape's fertility and the social order's brutality.
+
+$directions = Northwest continent, Holy Nation heartland. Blister Hill is central.

@@ -1,0 +1,8 @@
+Category = items_merchandise
+Name = Gurgler_Egg
+Id = gurgler_egg
+display_name = Gurgler Egg
+item_type = trade-raw
+base_price_cats = 240
+
+$description = Gurgler eggs are found near Gurgler nesting areas in the Fog Islands and similar coastal zones. Same value bracket as crab eggs. Gurglers are not the most dangerous thing in the Fog Islands — that distinction goes to the Fogmen — but getting to their nests requires passing through Fogman territory, which makes the eggs more valuable than their price suggests when the extraction cost is accounted for.

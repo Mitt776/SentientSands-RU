@@ -1,0 +1,16 @@
+Category = locations
+Name = Spring
+Id = spring
+
+display_name = Spring
+region = Stobe's Gamble
+faction = Anti_Slavers
+type = city-fortress
+weight = 7
+
+price_modifier = 0.85
+$description = Spring is a mountain city surrounded by acid rain and accessible through terrain that discourages visitors who aren't either Anti-Slavers or desperate. Tinfist has held it for decades. The United Cities have sent bounty hunters, samurai, and at least one organized military expedition, and none of them have come back with the result the Empire wanted. The acid rain helps. The Anti-Slaver Jonins who hold the approaches help more. And Tinfist himself, waiting at the center of it all, is the kind of argument that ends discussions.
+$atmosphere = Spring has the culture of an army that's been winning a war nobody else admits is happening. Former slaves live here alongside committed idealists alongside hardened fighters who have been doing this their entire lives. It is not comfortable in the conventional sense but it has a quality of genuine conviction that is rare in Kenshi — people here believe in what they're doing and can explain exactly why.
+$notable = Tinfist's residence, accessible to visitors who are not enemy to the Anti-Slavers' cause. The Anti-Slaver Jonins — among the most skilled fighters in the game, trained in Tinfist's philosophy of martial arts as the only weapon that cannot be taken away. The acid rain perimeter that makes approaching this city an exercise in careful route selection.
+
+$directions = Southwest part of Stobe's Gamble, on a mountain. Northeast of Ark (Reavers). Surrounded by acid rain approaches.

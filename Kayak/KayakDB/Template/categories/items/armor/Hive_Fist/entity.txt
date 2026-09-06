@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Hive_Fist
+Id = hive_fist
+display_name = Hive Fist
+item_type = armor-body-light
+armor_class = Light
+base_price_cats = 600
+slot = body
+
+$description = Hive Fist armor is a Hive-manufactured chest piece — lightweight, shaped for Hive physiology, and providing light protection suited to the Hive Worker Drone's role in the Hive hierarchy. Available from Hive Village traders in Vain and Dreg. Wearable by non-Hivers in the body slot, though it was not designed with human or Shek proportions in mind. Its value is in weight-to-coverage ratio for characters prioritizing speed over protection.

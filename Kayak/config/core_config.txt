@@ -1,0 +1,60 @@
+# ─── Kayak core configuration (semi-legacy) ──────────────────────────────────────────────────
+# Format: key = value   (lines starting with # are comments)
+# All values are read at server startup.
+# To reload (if in-game): restart the server by reloading your campaign in-game
+
+# ─── Retrieval limits ─────────────────────────────────────────────────────────
+
+# How many keywords to extract from the player message (Layer 0 seeds)
+max_keywords = 1
+
+# How many layer-expansion rounds to run after the initial keyword match
+# Layer 0 = direct match only.  Layer 1 = expand from matched entities. Etc.
+max_layers = 0
+
+# Per-entity: how many field-value references to follow per expansion round
+max_matches_per_layer = 0
+
+# Absolute ceiling on how many entities end up in the prompt context
+# (Priority entities like target_npc are on top of this limit)
+max_files = 1
+
+# Hard timeout in milliseconds for the entire retrieval cycle
+timeout_ms = 500
+
+# ─── Dialogue ─────────────────────────────────────────────────────────────────
+
+# How many lines of dialogue.txt to keep in the active file.
+# Lines beyond this are archived to IGN_dialogue_backup/archive.txt.
+dialogue_keep_lines = 40
+
+# How many dialogue history lines Kayak injects into normal chat prompts.
+# This can be higher than active storage only if dialogue was preserved externally.
+prompt_dialogue_keep_lines = 40
+
+# How many dialogue lines Kayak injects for yell/group chat prompts.
+# Lower helps keep crowd prompts under budget.
+yell_dialogue_keep_lines = 20
+
+# ─── Server ───────────────────────────────────────────────────────────────────
+
+host = 127.0.0.1
+port = 5001
+
+# ─── Campaign ─────────────────────────────────────────────────────────────────
+
+# Campaign to load (or create from Template) automatically at server startup.
+default_campaign = Default
+
+# ─── Non-expandable fields ────────────────────────────────────────────────────
+# Structural fields that are NEVER used as world-reference seeds.
+# (Prose fields use the $ prefix convention instead — see entity.txt examples)
+# Everything else is a valid expansion candidate.
+non_expand_fields = id, persistent_id, runtime_id, weight, display_name, aliases, average_price, base_price_cats, price_modifier
+
+# ─── Economy ──────────────────────────────────────────────────────────────────
+# Global price multiplier applied to all item base_price_cats values.
+# Acts as the world baseline. Per-city modifiers stack on top of this.
+#   effective_price = base_price_cats × price_modifier × city_price_modifier
+#   1.0 = no change   1.2 = 20% inflation   0.8 = 20% discount
+price_modifier = 1.0

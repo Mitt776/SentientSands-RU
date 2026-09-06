@@ -1,0 +1,8 @@
+Category = locations
+Name = The_Shrieking_Forest
+Id = the_shrieking_forest
+display_name = The Shrieking Forest
+type = region
+weight = 4
+
+$description = The Shrieking Forest is a dense woodland zone in the northwest — named for the sounds that come out of it, which are not all made by animals. The fauna here is aggressive and the terrain makes it difficult to see threats before they're already close. Travelers who need to cross it generally do so quickly and without stopping to investigate the source of the sounds.

@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Drifters_Leather_Jacket
+Id = drifters_leather_jacket
+
+display_name = Drifter's Leather Jacket
+item_type = armor-body-light
+armor_class = Light
+base_price_cats = 1200
+weight = 4
+
+$description = The Drifter's Leather Jacket is the starting armor for most wanderers and the reliable fallback for fighters who haven't yet found better. It's cheap, widely available, imposes minimal penalties, and provides enough cut resistance to turn some damage without making you a stationary target. It doesn't win arguments with Samurai Armour and it won't make you invulnerable, but for someone leaving a starting town with a few hundred cats and a direction in mind, it's the correct purchase.

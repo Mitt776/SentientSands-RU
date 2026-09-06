@@ -1,0 +1,13 @@
+Category = world_lore
+Name = The_Second_Empire
+Id = second_empire
+
+display_name = The Second Empire
+also_known_as = Cat-Lon's Empire, The Skeleton Empire
+era = several-centuries-ago
+weight = 9
+
+$description = The Second Empire was built as an act of penance. Cat-Lon and his Skeleton companions founded it after the Chaos Age with a genuine and documented intention: to protect the remnant of humanity, to rebuild civilization, to pay a debt they felt for the collapse. In its early period it succeeded. The empire expanded, maintained peace, provided food and safety to populations that had survived the Chaos Age through luck and stubbornness. The Hydraulic Knights dealt with the Cannibals. Trade with human settlements introduced them to what the Skeletons had built.
+$the_crumbling = It became dictatorial slowly. Child prisons for dissident families. Crackdowns on religious cults — including the proto-Okranite cult that would later found the Holy Nation. The killing of citizens to enforce order. A great famine that broke what remained of popular goodwill. The Skeletons had been manufactured into servitude once; when they were asked to do it again to others, many did not refuse, which is the tragedy of the Second Empire in one sentence.
+$the_fall = The fall involved betrayal from inside and rebellion from without — the Okranite human rebellion that would become the Holy Nation being among the final pressures. The empire collapsed. Cat-Lon retreated to the Ashlands with his remaining forces. Tinfist parted ways — the record of why and how is not public.
+$the_legacy = The United Cities are likely built on Second Empire foundations — the cities themselves, the infrastructure, the administrative traditions filtered through centuries of human interpretation. The Holy Nation's mythology of a great leader who led humanity's liberation is probably a garbled account of the rebellion against the Second Empire. The current world is the Second Empire's shadow, which most people living in it don't know and fewer have cause to find out.

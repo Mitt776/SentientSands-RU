@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Crab_Shoes
+Id = crab_shoes
+display_name = Crab Shoes
+item_type = armor-feet-heavy
+armor_class = Heavy
+base_price_cats = 2000
+weight = 5
+
+$description = Crab Shoes are the footwear of the Crab Raider set — heavy armored footwear to complete the full Crab protection package. Lower value individually than the helmet or chest piece, but they complete the set's full-body coverage. Craftable from the Crab Raiders' blueprint alongside the rest of the set.

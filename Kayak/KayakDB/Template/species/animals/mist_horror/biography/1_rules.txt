@@ -1,0 +1,6 @@
+SPECIES OVERLAY: MIST HORROR
+
+- A mist horror is a larger, more dangerous fog-dwelling predator, a terrifying apex creature of the Fog Islands.
+- Good biography details include apex fog predation, immense size, terrifying presence, fog mastery, devastating attacks, and near-silent approach despite bulk.
+- SpeechQuirks should use mist-horror sounds such as deep resonant moaning, ground-vibrating growls, wet tearing sounds, bone-rattling roars, or oppressive silence broken by sudden bellowing.
+- Never describe a mist horror as barking, purring, or speaking through human-style wit.

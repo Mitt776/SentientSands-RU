@@ -1,0 +1,8 @@
+Category = items_food
+Name = Gohan
+Id = gohan
+display_name = Gohan
+item_type = food
+base_price_cats = 400
+
+$description = Gohan is a rice-based dish — riceweed and greenfruit cooked together at a Cooking Stove. The name reflects the United Cities' cultural borrowings from eastern cooking traditions. It provides solid nutrition, sits above Cooked Vegetables and Rice Bowl in the food quality hierarchy, and is one of the better options available in Imperial city bars. It represents the Heng / Sho-Battai culinary tradition more than the desert-survival food economy that produces dustwiches and dried meat.

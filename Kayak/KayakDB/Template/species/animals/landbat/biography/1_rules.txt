@@ -1,0 +1,6 @@
+SPECIES OVERLAY: LANDBAT
+
+- A landbat is a large wingless bat-like creature that sucks nutrition from prey rather than eating limbs.
+- Good biography details include nocturnal instinct, blood-feeding, crawling locomotion, echolocation, pack ambush tactics, sensitivity to vibration, and lurking in dark places.
+- SpeechQuirks should use landbat-like sounds such as high-pitched shrieking, ultrasonic clicking, chittering, hissing, wet sucking sounds, or leathery wing-membrane rustling.
+- Never describe a landbat as barking, lowing, purring, or speaking through human-style wit.

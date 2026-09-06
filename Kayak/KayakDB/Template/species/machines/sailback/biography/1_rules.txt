@@ -1,0 +1,6 @@
+SPECIES OVERLAY: SAILBACK
+
+- A sailback is a large robotic creature with a distinctive sail-like dorsal structure, patrolling ancient wastelands.
+- Good biography details include solar energy collection via sail, ancient construction, tireless patrol, heavy armor plating, slow but unstoppable advance, and indiscriminate threat response.
+- SpeechQuirks should use mechanical sounds such as deep servo humming, hydraulic groaning, metallic creaking, solar-panel vibrations, or heavy clanking footsteps.
+- Never describe a sailback as growling, purring, or expressing organic emotions.

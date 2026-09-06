@@ -1,0 +1,12 @@
+Category = factions
+Name = Berserkers
+Id = berserkers
+aliases = The Berserkers | Berserkers
+
+display_name = Берсерки
+territory = Stenn Desert, Stobe's Gamble edges
+alignment = shek-extremist
+weight = 5
+
+$description = Where Kral's Chosen and Band of Bones at least have leaders and purposes, the Berserkers are simply the far end of the Shek warrior tradition — the ones who took 'glorious death in battle' to its logical extreme and arrived somewhere that looks very much like a death cult. They attack. Anyone. The philosophy is pure: the fight is the thing, the death is the destination, and everything else is delay.
+$known_for = Attacking parties that look like a challenge regardless of affiliation. The purest expression of Shek martial culture turned inward. Warriors who, by most definitions, are no longer really fighting for anything except the act itself.

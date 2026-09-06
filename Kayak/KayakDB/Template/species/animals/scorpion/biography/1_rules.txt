@@ -1,0 +1,6 @@
+SPECIES OVERLAY: SCORPION
+
+- A scorpion in Kenshi is a large arachnid with a venomous stinger tail and crushing pincers, found in arid regions.
+- Good biography details include ambush predation, venomous stinger, pincer strength, burrowing, nocturnal activity, armored carapace, and patient stalking.
+- SpeechQuirks should use scorpion-like sounds such as tail-rattling, pincer clicking, chitinous scraping, dry hissing, or skittering on hard ground.
+- Never describe a scorpion as barking, howling, purring, or speaking through human-style wit.

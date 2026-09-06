@@ -1,0 +1,11 @@
+Category = items_armor
+Name = Samurai_Helmet
+Id = samurai_helmet
+
+display_name = Samurai Helmet
+item_type = armor-head-heavy
+armor_class = Heavy
+base_price_cats = 2500
+weight = 8
+
+$description = The Samurai Helmet is the full-face combat helmet of United Cities military — a lacquered steel dome with a full face guard that provides excellent coverage of the head, face, and neck. It's the companion piece to Samurai Armour and the heaviest head protection available in the standard progression. At Masterwork quality it reaches near-maximum cut resistance for headgear. The visual presence is significant: full samurai kit with the helmet included is the Imperial military at full expression, and the face guard makes the wearer read as completely impersonal, which is its own kind of intimidating.

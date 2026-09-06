@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Heavy_Polearm
+Id = heavy_polearm
+display_name = Heavy Polearm
+item_type = weapon-polearm
+weapon_class = Polearms
+base_price_cats = 1400
+weight = 9
+
+$description = The Heavy Polearm is the polearm class's damage option — heavier than a standard polearm, longer reach, same animal damage bonus and indoor penalty, but with a strength requirement that rewards having actually trained. The Meitou version is on Screamer the False in the Tower of Abuse, paired with the Ponk encounter. Like all polearms it shines outdoors against multiple targets and suffers indoors where the reach becomes a liability.

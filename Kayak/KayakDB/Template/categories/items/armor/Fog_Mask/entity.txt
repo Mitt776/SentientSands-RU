@@ -1,0 +1,12 @@
+Category = items_armor
+Name = Fog_Mask
+Id = fog_mask
+
+display_name = Fog Mask
+item_type = armor-head-light
+armor_class = Light
+base_price_cats = 1500
+weight = 1
+
+$description = Fog Masks are designed specifically for travel in the Fog Islands — a sealed face covering that filters the particular miasma of the coastal fog that the Fogmen inhabit. Whether the mask provides meaningful chemical protection or is primarily psychological remains an open question among those who've survived Fog Island crossings. What's clear is that the fighters who guard Mongrel's perimeter wear them, and they've survived longer than any expedition that didn't. Available in Mongrel's shops.
+$cultural_significance = Wearing a Fog Mask outside the Fog Islands reads as either a Mongrel regular, someone preparing for a trip there, or someone who collects artifacts from the hardest places to reach in Kenshi. All three readings command some respect.

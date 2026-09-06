@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Samurai_Boots
+Id = samurai_boots
+display_name = Samurai Boots
+item_type = armor-feet-heavy
+armor_class = Heavy
+base_price_cats = 1500
+weight = 6
+
+$description = Samurai Boots are the footwear component of the full samurai kit — heavy armored boots that complete the Imperial military uniform. They provide solid foot and lower leg coverage at the cost of the usual heavy armor movement penalties. Worn by United Cities samurai across the Great Desert, and available in armor shops in Imperial territory. The visual distinction of the full samurai set — helmet, armor, legplates, boots — makes it the most recognizable kit on the continent.

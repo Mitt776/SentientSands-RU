@@ -1,0 +1,20 @@
+Category = factions
+Name = United_Cities
+Id = united_cities
+aliases = The United Cities | United Cities
+
+display_name = Союзные Города
+also_known_as = The Empire, The Third Empire
+territory = Great Desert, South Wetlands, Stormgap Coast, The Hook, Heng
+capital = Heft
+leader = Emperor Tengu
+alignment = lawful-corrupt
+relations_hostile_to = Anti-Slavers, Flotsam Ninjas, Rebel Farmers
+weight = 10
+
+$description = The United Cities is the largest power on the continent — a crumbling empire held together by commerce, cruelty, and the collective greed of its noble class. It looks like civilization from a distance. Get closer and you'll smell the slave farms. The Empire measures a man's worth in cats. Own enough and the law bends for you. Own nothing and you can be legally sold.
+$culture = Imperial society is a ladder. At the top: Emperor Tengu and his inner circle of nobles — Inaba, Nagata, Yoshinaga, Sanda, Shiro — who feast while the Great Desert bakes. In the middle: samurai, merchants, guild members, those who scrape enough to matter. At the bottom: Empire Peasants, Slave laborers, and anyone unlucky enough to have been caught not paying their taxes. Poverty is literally a crime here. Debt is punished with a collar.
+$military = The United Cities fields professional samurai — better equipped than Holy Nation forces and not fueled by religious insanity, which makes them more predictable but less terrifying. Gate guards in major cities are genuinely dangerous. Bounty Hunters operate under Imperial sanction, and Slave Traders and Manhunters are effectively auxiliary forces. In open-field warfare the Empire wins through logistics, numbers, and the cold efficiency of men who fight for pay rather than god.
+$economy = The Traders Guild controls commerce. Slave farms in Eyesocket and beyond generate enormous food and leather output through unpaid labor. The Guild taxes caravans, funds roads, and takes a cut of every transaction that matters. Longen, the Guild's supreme leader, is arguably more powerful than Tengu himself — the Emperor is the face, the Guild is the engine.
+$known_for = Slave markets at Eyesocket. Tengu's mysterious Vault where rebels disappear. The sprawling city of Heft. Samurai in lamellar armor. The sentence 'poverty is a crime.' Catun weapons made by the Scrapmasters — best blades in the world.
+$rumor = People whisper that Tengu has men who simply vanish enemies into the Vault under Heft. Nobody who goes in has ever been seen again. Tengu himself says it doesn't exist. He always smiles when he says it.

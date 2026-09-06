@@ -1,0 +1,8 @@
+Category = locations
+Name = Watcher_s_Rim
+Id = watchers_rim
+display_name = Watcher's Rim
+type = region
+weight = 3
+
+$description = Watcher's Rim is a rim zone at the edge of one of the Kenshi continent's elevated formations — the name suggests someone built observation posts here once. Whether the watchers were Holy Nation, Second Empire, or something older isn't clearly recorded. The terrain is elevated and the views are significant. There is nothing to trade, no settlements of note, and no particular reason to stay beyond the view.

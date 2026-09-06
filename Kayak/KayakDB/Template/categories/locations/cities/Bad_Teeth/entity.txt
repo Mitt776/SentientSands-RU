@@ -1,0 +1,16 @@
+Category = locations
+Name = Bad_Teeth
+Id = bad_teeth
+
+display_name = Bad Teeth
+region = Okran's Pride (eastern edge, Skinner's Roam border)
+faction = Holy_Nation
+type = city-frontier
+weight = 7
+
+price_modifier = 1.2
+$description = Bad Teeth sits at the edge of the Holy Nation's comfortable world — east of where the farmland stops being reliable, where the dust storms roll in from Skinner's Roam and leave the streets gritty for days. Dust storms and bandits have eaten at the land east of here, but the walls hold and the Holy Sentinels patrol the roads. It is a smaller, grittier version of Blister Hill, with all the same rules and less of the bread-and-incense comfort. Travelers use it as the last safe stop before heading east into increasingly hostile territory.
+$atmosphere = The guards here are more suspicious than in Blister Hill — border postings attract the zealous who want to prove something. The farmers have the look of people who have rebuilt their fields more than once. The bar serves water, as all Holy Nation establishments do, and the barman recites a prayer when he pours it.
+$travel_note = Same rules as all Holy Nation cities. Non-humans face hostility. Skeletons are killed on sight. Human males are treated with warmth. The eastern gate guards are particularly thorough.
+
+$directions = Okran's Pride eastern edge, guarding the mountain pass toward Skinner's Roam.

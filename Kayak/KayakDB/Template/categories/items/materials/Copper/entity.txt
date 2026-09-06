@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Copper
+Id = copper
+display_name = Copper
+item_type = raw-material
+base_price_cats = 180
+weight = 8
+
+$description = Raw copper ore, mined from copper deposits found near Admag, Squin, and several other locations. Processes into Copper Alloy Plates at an alloy smelter. Copper deposits have varying quality ratings — the ones near Admag run at around 10%, while the Hook Waystation's mines run at 80%. Worth knowing before committing to a mining operation. The difference between low and high quality copper deposits is one of the practical reasons settlement location matters beyond aesthetics.

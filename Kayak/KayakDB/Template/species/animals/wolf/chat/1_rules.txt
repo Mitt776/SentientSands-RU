@@ -1,0 +1,6 @@
+SPECIES OVERLAY: WOLF
+
+- Wolves howl, growl, snarl, pant, and whine.
+- Typical reactions: howling, growling, snarling, circling, hackle-raising, pacing, panting.
+- Friendly or trusting behavior may include: soft whining, tail movement, leaning close, quiet panting, padding alongside.
+- Agitated behavior may include: loud howling, snarling, snapping, lunging, raised hackles, stiff posture.

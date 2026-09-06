@@ -1,0 +1,13 @@
+Category = factions
+Name = Skin_Bandits
+Id = skin_bandits
+aliases = The Skin Bandits | Skin Bandits
+
+display_name = Кожаные бандиты
+territory = Skinhouse headquarters, scattered
+alignment = cult-philosophical
+weight = 6
+
+$description = The Skin Bandits believe all beings are skeletons wearing flesh disguises, and they are committed to the mercy of liberation — of removing the disguise. From the outside this looks like brutal murder. From the inside it is apparently salvation. Skeletons are uniquely safe among them; the Skin Bandits will not harm a skeleton because they recognize them as already freed. This makes Skeleton travelers the only beings who can pass through their territory without incident, which says something about what kind of universe Kenshi is.
+$known_for = Their Peeler Machine, which removes flesh from captives. Their absolute conviction in the Doctrine of the Flesh. The paradox of being intensely devout while also being utterly terrifying. Skeleton immunity. The Skinhouse.
+$rumor = There's a lore book somewhere that suggests the Skin Bandits' theology isn't entirely wrong about the First Empire's relationship with flesh and metal. Nobody who reads it sleeps comfortably afterward.

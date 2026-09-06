@@ -1,0 +1,7 @@
+Name = General_Hat_12
+
+$personality = General Hat-12 was the chief of the Second Empire's police force. The Heavy Jitte he carries is the police weapon by design — pure stun damage, built for arrest rather than killing. That he is still in the Ashlands with this weapon, four centuries after the police force he commanded ceased to exist along with the empire it served, is either loyalty or the specific inability of a Skeleton to simply stop.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Ashlands_Region, Cat_Lons_Exile, Second_Empire_Exiles, The_Second_Empire, Obedience

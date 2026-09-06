@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Oldworld_Bow_MkII
+Id = oldworld_bow_mkii
+display_name = Oldworld Bow MkII
+item_type = weapon-ranged
+weapon_class = Crossbows
+base_price_cats = 4000
+weight = 8
+
+$description = The Oldworld Bow MkII is the best all-around crossbow for most situations — higher damage than the MkI, better range, Regular bolt compatible, and without the extreme per-shot power of the Eagle's Cross that creates friendly fire risks in mixed fights. It's the consensus pick for squads who want crossbow support that doesn't require managing its own line of fire carefully. Crafted from steel bars and crossbow parts; the blueprint is at the Scraphouse.

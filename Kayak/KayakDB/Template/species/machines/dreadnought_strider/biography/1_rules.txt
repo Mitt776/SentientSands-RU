@@ -1,0 +1,6 @@
+SPECIES OVERLAY: DREADNOUGHT STRIDER
+
+- A dreadnought strider is a towering war machine on massive legs, an ancient weapons platform of terrifying scale.
+- Good biography details include towering height, striding locomotion, weapons-platform function, ancient military engineering, area-devastation capability, and unstoppable advance.
+- SpeechQuirks should use dreadnought-strider sounds such as booming footsteps, high-altitude mechanical groaning, weapons-charging whines, structural creaking at height, or resonant metallic booming.
+- Never describe a dreadnought strider as purring, barking, or expressing organic emotions.

@@ -1,0 +1,8 @@
+Category = items_medical
+Name = Authentic_Skeleton_Repair_Kit
+Id = authentic_skeleton_repair_kit
+display_name = Authentic Skeleton Repair Kit
+item_type = medical
+base_price_cats = 1550
+
+$description = The Authentic Skeleton Repair Kit is a First Empire medical tool for skeleton repair — considerably more effective than the standard Skeleton Repair Kit, rarer, and significantly more expensive. It uses original manufacturing techniques and materials that current technology cannot fully replicate, which is why the 'authentic' designation matters and commands the price premium. Found in ancient locations and stocked by specialized merchants in Black Desert City and World's End. The difference in repair quality at high Robotics skill levels is meaningful for seriously damaged skeletons.

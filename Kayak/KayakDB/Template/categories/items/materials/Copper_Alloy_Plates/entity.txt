@@ -1,0 +1,10 @@
+Category = items_materials
+Name = Copper_Alloy_Plates
+Id = copper_alloy_plates
+
+display_name = Copper Alloy Plates
+item_type = crafting-material
+base_price_cats = 607
+weight = 8
+
+$description = Copper alloy plates are the intermediate crafting material between raw copper ore and finished goods that require the alloy — primarily used in electronics research and some construction applications. They're less universally useful than iron plates but more valuable pound-for-pound in the specific crafting chains that need them. Produced at a copper alloy smelter from copper ore, and traded in modest quantities through most major merchant networks.

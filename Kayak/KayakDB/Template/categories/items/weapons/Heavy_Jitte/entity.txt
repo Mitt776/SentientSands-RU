@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Heavy_Jitte
+Id = heavy_jitte
+display_name = Heavy Jitte
+item_type = weapon-blunt
+weapon_class = Blunt
+base_price_cats = 1400
+weight = 15
+
+$description = The Heavy Jitte is the heavy weapon variant of the Jitte — same pronged design, significantly more mass, dealing pure blunt damage with zero cut component. The Meitou version is held by General Hat-12 in Ashland Dome IV, who served as the Second Empire's chief of police. The weapon is not popular among most fighters because pure blunt damage without cut is a specific tactical choice, but for bounty hunters who need unconscious targets alive and delivered intact, it is precisely correct.

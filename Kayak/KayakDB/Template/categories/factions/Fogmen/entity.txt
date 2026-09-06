@@ -1,0 +1,14 @@
+Category = factions
+Name = Fogmen
+Id = fogmen
+aliases = The Fogmen | Fogmen
+
+display_name = Туманники
+also_known_as = The Deadhive
+territory = Fog Islands
+alignment = feral-swarming
+weight = 6
+
+$description = The Fogmen were Hivers once. What they are now is harder to name. Their Queen is dead or gone or something worse, and in the absence of pheromonal guidance their minds have collapsed into a screaming, coordinated hunger. They don't kill you — they carry you back to their nests, unconscious, to be consumed while their kind prostrate themselves around the feeding in some ritual that nobody has survived long enough to understand. The shriek they make before they charge is the last sound many travelers in the Fog Islands ever hear.
+$known_for = The Fog Islands. The shriek. The ritual prostration during consumption — silent, deliberate, deeply unsettling. The fact that they swarm in numbers that make individual combat skill largely irrelevant. Mongrel city, which exists in the middle of their territory and is protected by warriors who have spent their lives learning exactly how the Fogmen move.
+$rumor = Some scholars believe the Fogmen's collective ritual behavior suggests a Queen who is not dead, merely changed — still guiding them through pheromones toward some purpose that simply doesn't look like one from the outside. These scholars tend to study from a very safe distance.

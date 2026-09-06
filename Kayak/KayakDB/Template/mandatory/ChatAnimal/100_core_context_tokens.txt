@@ -1,0 +1,11 @@
+<H2>WORLD CONTEXT</H2>
+
+<world_context>
+
+<H2>TARGET NPC</H2>
+
+<target_npc_context>
+
+<H2>RECENT DIALOGUE</H2>
+
+<dialogue_lines_qty 20>

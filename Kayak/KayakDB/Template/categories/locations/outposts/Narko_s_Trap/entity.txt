@@ -1,0 +1,14 @@
+Category = locations_outpost
+Name = Narko_s_Trap
+Id = narkos_trap
+
+display_name = Narko's Trap
+region = Okran's Gulf (secret location)
+faction = Holy_Nation
+type = secret-installation
+weight = 6
+
+$description = Narko's Trap is the Holy Nation's military secret — a hidden installation revealed only by the Secret Holy Nation Documents, a contraband item the Holy Nation actively suppresses. The name is revealing: the Holy Nation names its secret weapons program after the goddess it fears, which is either theological confidence or irony depending on your perspective. What exactly Narko's Trap is and what it does is the kind of information the Holy Nation would prefer travelers not have, which is precisely what makes finding the documents interesting.
+$travel_note = Accessing this location requires the Secret Holy Nation Documents. Carrying said documents near Holy Nation gate guards triggers confiscation and hostile interest.
+
+$directions = Border of Skinner's Roam and Iron Valleys.

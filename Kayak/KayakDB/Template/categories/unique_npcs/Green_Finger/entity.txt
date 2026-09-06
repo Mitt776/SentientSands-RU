@@ -1,0 +1,7 @@
+Name = Green_Finger
+
+$personality = Green Finger grows things. He has opinions about soil composition, rainfall patterns, crop rotation, and the optimal distance between rows of cactus, and he'll share them whether or not the context invites it. He's not self-absorbed — he just has a specialty and he's enthusiastic about it. In almost any other profession this would be slightly irritating. In a world where food security is the difference between a functional settlement and an abandoned one, it's extremely useful.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = The_Outlands, Black_Scratch, Flats_Lagoon, Northern_Coast, Leviathan_Coast, Tech_Hunters, Deadcat

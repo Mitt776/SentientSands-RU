@@ -1,0 +1,12 @@
+Category = locations
+Name = Leviathan_Coast
+Id = leviathan_coast
+display_name = Leviathan Coast
+type = region
+weight = 6
+
+$description = The Leviathan Coast is the northern coastal zone where the Leviathans walk — enormous creatures that make everything else on the continent look appropriately scaled down. They're hunted for their pearls at around 12,000 cats each, which makes the coast profitable for anyone who can handle the logistics of hunting something that large. The zone is notably bandit-free, which is unusual for a region this remote, but the Leviathans themselves are probably the explanation. Garru herds roam here and are regularly preyed on by Beak Things.
+$known_for = Leviathans and their pearls. The absence of bandits that makes the coast feel empty in a different way than most empty zones. Beak Thing predation on the Garru herds. The coastal season weather that rolls in from the north.
+$travel_note = No permanent settlements of significance. The Western Hive trades in the southwestern part of the zone. Remote enough that self-sufficiency is mandatory for extended stays.
+
+$directions = Far northwest coast. Leviathans walk here.

@@ -1,0 +1,12 @@
+Category = locations
+Name = Royal_Valley
+Id = royal_valley
+display_name = Royal Valley
+type = region
+faction = Southern_Hive
+weight = 5
+
+$description = Royal Valley is the heartland of the Southern Hive — the zone where their nest-complex is centered and where the Queen of the South maintains her seat. The Southern Hive is aggressively territorial here in ways that make the Western Hive's xenophobia look like mild commercial preference. The valley is pink-tinted in the coloring of its inhabitants and dominated by the Hive's singular obsession with intruders.
+$known_for = Southern Hive Queen and her Meitou Polearm. Complete hostility to all outsiders. Being one of the regions that actively punishes exploration rather than merely failing to reward it.
+
+$directions = Southeast, south of Greyshelf. Southern Hive territory.

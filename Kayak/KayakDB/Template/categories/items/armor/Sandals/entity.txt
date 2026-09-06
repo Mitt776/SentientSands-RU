@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Sandals
+Id = sandals
+display_name = Sandals
+item_type = armor-feet-light
+armor_class = None
+base_price_cats = 50
+slot = feet
+
+$description = Sandals are the most basic footwear in Kenshi — open construction, minimal protection, very light. Common among Holy Nation peasants, Swamp inhabitants, and travelers who haven't found better options. They are the footwear equivalent of starting conditions: functional, cheap, and the first thing you replace when the economy permits it. Wooden Sandals offer slightly more protection for a similar price.

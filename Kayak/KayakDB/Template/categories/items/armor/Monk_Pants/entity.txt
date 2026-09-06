@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Monk_Pants
+Id = monk_pants
+display_name = Monk Pants
+item_type = armor-legs-light
+armor_class = Light
+base_price_cats = 900
+weight = 1
+
+$description = Monk Pants pair with the Monk Robe for a complete martial arts legwear option — light cloth with modest martial arts bonus. The practical choice for martial arts characters who need leg coverage without the encumbrance of leather or plate.

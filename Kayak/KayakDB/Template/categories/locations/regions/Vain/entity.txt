@@ -1,0 +1,13 @@
+Category = locations
+Name = Vain
+Id = vain
+
+display_name = Vain
+type = region
+faction = Western_Hive
+weight = 5
+
+$description = Vain is the primary territory of the Western Hive — a river region where the Hive Villages are concentrated, where the Queen maintains her seat of power, and where the caravan routes that feed the Western Hive's trade economy begin. For non-Hivers, Vain is navigable but watched — the Hive guards their home territory with the same merchant logic they apply to everything: you can be here if you're useful, and your welcome evaporates when that changes.
+$known_for = Hive Villages with their unusual architectural style. Western Hive caravans starting their routes into the Great Desert. The Queen's residence, accessible but rarely engaged by outsiders. The particular xenophobia the Western Hive directs toward Hiveless exiles who approach their home territory.
+
+$directions = West-central. Western Hive heartland, where the Hive Villages are concentrated.

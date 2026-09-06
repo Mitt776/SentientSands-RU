@@ -1,0 +1,10 @@
+Category = items_armor
+Name = Gi
+Id = gi
+display_name = Gi
+item_type = armor-body-cloth
+armor_class = None
+base_price_cats = 100
+slot = body
+
+$description = A gi is a light cloth training garment — no armor protection, but it provides a bonus to the Martial Arts skill that makes it the base garment of choice for unarmed combat specialists. The Ninja Gi upgrades this concept with stealth bonuses; the Monk Robe takes it in a spiritual direction. The plain Gi is the utilitarian version: you wear it because you fight with your hands and you want the bonus, not because you care about the aesthetics. Available from clothing merchants.

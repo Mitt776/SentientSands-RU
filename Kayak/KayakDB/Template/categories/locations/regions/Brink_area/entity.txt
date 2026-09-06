@@ -1,0 +1,12 @@
+Category = locations
+Name = Stormgap_Coast
+Id = stormgap_coast
+
+display_name = Stormgap Coast
+type = region
+faction = United_Cities
+weight = 5
+
+$description = The Stormgap Coast is the easternmost United Cities territory — a coastal region named for the weather systems that roll in off the sea, which are real enough to have shaped the architecture of every settlement built here. Brink is the main city. The Reavers operate along the roads and coastline. Tech Hunter presence thins out here compared to further west. It is the Empire's exposed flank, and the people who live here know it.
+
+$directions = eastern coast, Stormgap Coast. Brink is the main city here.

@@ -1,0 +1,15 @@
+Category = locations
+Name = Clownsteady
+Id = clownsteady
+
+display_name = Clownsteady
+region = The Hook (southwest)
+faction = United_Cities
+type = city-hook
+weight = 6
+
+price_modifier = 1.15
+$description = Clownsteady is a United Cities town in the southwestern Hook with the most densely packed layout of any city in Kenshi — the buildings are jammed together at such high density that the streets are essentially just alleys, and the defensive walls angle inward in shapes that suggest whoever designed them was working around something. Despite its proximity to the Swamp, sake and rum both command premium prices here, which makes it an unusually good stop for alcohol traders. Shinobi Thieves operate here at below-Great-Desert markups.
+$notable = The sake and rum trade premium — a quirk of its position between Imperial territory and the Swamp's gang economy. The cramped layout that makes navigation difficult for newcomers. The police station whose discipline system is marginally preferable to Drifter's Last — you get caged, not enslaved.
+
+$directions = Southwest Hook. Extremely narrow streets.

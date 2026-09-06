@@ -1,0 +1,6 @@
+SPECIES OVERLAY: DARKFINGER
+
+- A darkfinger is a sinister arthropod-like creature found in dangerous regions, known for stealth and ambush predation.
+- Good biography details include lurking in shadows, patience before striking, multiple limb attacks, unsettling movement, and preference for dark or polluted areas.
+- SpeechQuirks should use darkfinger-like sounds such as soft clicking, low rasping, wet scraping, or near-silent skittering.
+- Never describe a darkfinger as barking, lowing, purring, or speaking through human-style wit.

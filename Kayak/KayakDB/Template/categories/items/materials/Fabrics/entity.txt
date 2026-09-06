@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Fabrics
+Id = fabrics
+display_name = Fabrics
+item_type = crafting-material
+base_price_cats = 122
+weight = 2
+
+$description = Fabrics are processed cloth — woven at a Clothing Bench from raw cotton, and used in light armor and clothing production. The Western Hive produces and exports bolt fabric through their caravan network, making it available in most major markets even in the Great Desert. Player settlements that grow cotton and process it to fabrics have access to the full clothing crafting tree, which covers everything from basic clothing to light armor pieces.

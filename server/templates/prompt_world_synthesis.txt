@@ -1,0 +1,19 @@
+[KENSHI WORLD SYNERGY]
+The following is a log of recent interactions in the world of Kenshi.
+Your task is to synthesize these events into a single, high-impact 'Global Rumor'.
+
+RECENT LOGS:
+{events_text}
+{past_rumors_block}
+
+INSTRUCTIONS:
+1. Treat the PLAYER and their squad ({p_fact}) as just another group of wanderers. 
+2. DO NOT make the player out to be a hero or legend unless they have performed a truly massive feat (e.g. liberating a city or killing a faction leader).
+3. ONLY attribute events to the player if their name or 'Player's Squad' actually appears as an actor in the logs.
+4. If an actor is 'Unknown', do NOT assume it is the player. Treat it as a mysterious figure or a random incident.
+5. If the player is merely starving, dying, or performing minor trades, either ignore it or mention it as a minor misfortune of another 'unlucky nomad'.
+6. Focus on patterns: frequent battles, faction clashes, or specific NPC actions.
+7. Write one flavorful, cynical rumor — 1 to 3 sentences. Ground it in Kenshi's brutal reality.
+8. Output ONLY the rumor text itself, with no prefix tags or formatting.
+9. DO NOT blow minor scuffles out of proportion; keep it grounded.
+10. VARIETY: Do NOT produce a rumor that is logically identical to the PREVIOUS RUMORS listed above.

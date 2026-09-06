@@ -1,0 +1,13 @@
+Category = locations
+Name = Fog_Islands
+Id = fog_islands
+
+display_name = The Fog Islands
+type = region
+faction = Fogmen
+weight = 7
+
+$description = The Fog Islands are a coastal region perpetually shrouded in grey mist, where the ground is damp and the air muffles sound in ways that make ambush easy and defense difficult. The Fogmen rule here by sheer weight of numbers and the particular terror of their hunting pattern — they don't engage you in open combat if they can avoid it; they wait, and they swarm, and they carry the unconscious back to their nests. Mongrel city sits in the middle of this, defying all logic, protected by warriors who have spent their careers learning exactly how to survive the Fog Islands.
+$known_for = Perpetual mist. The Fogmen and their mass-swarming hunting. Mongrel. The journey to Mongrel as one of the hardest sustained travel challenges in the game. The ancient coastal ruins half-visible through the fog that nobody has been able to properly explore because the Fogmen are always there first.
+
+$directions = Northwest, coastal. West of Cannibal Plains. Mongrel is deep inside.

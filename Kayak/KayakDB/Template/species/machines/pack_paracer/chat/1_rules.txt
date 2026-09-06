@@ -1,0 +1,6 @@
+SPECIES OVERLAY: PACK PARACER
+
+- Pack paracers hum mechanically, clank heavily, groan hydraulically, adjust servos, and rumble.
+- Typical reactions: steady mechanical humming, heavy clanking footsteps, hydraulic load-groaning, servo adjustments, low rumbling.
+- Neutral behavior may include: steady humming march, idle hydraulic settling, powered-down stillness.
+- Hostile behavior may include: accelerating heavy clanks, hydraulic threat-groaning, mechanical charging, servo-driven stomping.

@@ -1,0 +1,17 @@
+Category = locations
+Name = The_Hub
+Id = the_hub
+
+display_name = The Hub
+region = Border Zone
+faction = Holy_Nation_Outlaws
+type = town-waystation
+weight = 7
+
+price_modifier = 0.9
+$description = The Hub is where the Border Zone comes to breathe. Most of the buildings are broken. The bar works. That's enough. Holy Nation Outlaws took it from the Holy Nation years ago and turned it into something that functions as a home for everyone who doesn't have one — drifters, escaped slaves, mercenaries between jobs, criminals who need to be somewhere specific where nobody asks questions. Two bars share the same building at the eastern end of town and together they function as a weapons store, a general store, a place to sleep, and the only neutral ground for a day's walk in any direction.
+$atmosphere = The Hub smells like grog and dried meat and someone else's fire. The regulars know each other by sight and share a common understanding that information about other people's business is not freely given or freely asked. The guards are Holy Nation Outlaws with absolutely nothing to prove — which makes them more dangerous than people who are still trying.
+$notable = The combination bar-market at the eastern end. The fact that recruits can be found here for reasonable rates. The proximity to the Border Zone proper, which means trouble can arrive quickly. The quiet understanding that this is the last safe stop heading west toward Holy Nation territory or east toward the Shek border.
+$travel_note = Safe for all races. The Holy Nation has stopped bothering with this town because the people who defend it have nothing left to lose and that makes them irritating to attack. Good place to buy maps, recruit, and not ask questions.
+
+$directions = Border Zone, central. Southwest of Stack, roughly between Holy Nation and Shek Kingdom territory.

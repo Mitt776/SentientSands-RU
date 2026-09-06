@@ -1,0 +1,12 @@
+Category = items_equipment
+Name = Camping_Supplies
+Id = camping_supplies
+
+display_name = Camping Supplies
+item_type = survival-gear
+value_cats = 30
+weight = 5
+
+base_price_cats = 30
+$description = Camping Supplies are the unglamorous foundation of long travel — fire-starting materials, water purification tablets, basic tools for making a temporary camp functional and secure. Nobody thinks much about them until they don't have them, at which point they think about almost nothing else. Sold by general goods merchants, Nomad caravans, and the bars in towns that understand their customer base is largely people about to do something dangerous in the wilderness.
+$cultural_significance = A pack with camping supplies on a traveler's back is one of the few visual signals in Kenshi that suggests the person carrying it has done this before. They've learned which nights get cold, which terrain requires specific preparation, which meal schedule prevents the kind of hunger that turns decisions bad.

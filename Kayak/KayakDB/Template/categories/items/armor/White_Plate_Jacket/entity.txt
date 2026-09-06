@@ -1,0 +1,10 @@
+Category = items_armor
+Name = White_Plate_Jacket
+Id = white_plate_jacket
+display_name = White Plate Jacket
+item_type = armor-body-heavy
+armor_class = Heavy
+base_price_cats = 3200
+slot = body
+
+$description = The White Plate Jacket is a Holy Nation heavy armor variant — distinctive white lacquered finish over the standard Plate Jacket base, worn by Holy Nation Paladins and higher-ranking military personnel. Heavier than the standard jacket, more protective, and specifically associated with the Holy Nation's military aesthetic. Outside Holy Nation territory it functions as armor with a very clear political statement attached. Wearing it in Shek territory produces a specific kind of reception.

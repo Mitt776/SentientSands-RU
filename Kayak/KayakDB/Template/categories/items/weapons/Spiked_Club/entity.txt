@@ -1,0 +1,12 @@
+Category = items_weapons
+Name = Spiked_Club
+Id = spiked_club
+
+display_name = Spiked Club
+item_type = weapon-blunt
+weapon_class = Blunt
+base_price_cats = 400
+weight = 7
+
+$description = Blunt weapons deal stun damage — they knock targets down without the blood loss that makes wounded enemies die inconveniently before you get them to the bounty collection point. The Spiked Club is the most used blunt weapon in the game for exactly this reason: it's heavy enough to stagger humanoid targets reliably, it has an armor penetration bonus that most blunt weapons lack, and the spikes add cut damage that prevents it from being completely ineffective against unarmored opponents. Bounty hunters, slavers, and anyone in the business of taking people alive use them.
+$cultural_significance = Slave Traders and Manhunters carry spiked clubs almost universally. It's one of the few visual signals that definitively communicates someone's business model.

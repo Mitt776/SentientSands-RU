@@ -1,0 +1,9 @@
+Category = items_farming
+Name = Cactus
+Id = cactus
+display_name = Cactus
+item_type = agricultural-raw
+base_price_cats = 50
+weight = 1
+
+$description = Cactus is a desert crop — grows in arid conditions without reliable rainfall, which makes it one of the few crops viable across large parts of the Great Desert and Border Zone. Raw cactus converts to Cactus Rum at a Rum Still. Eight raw cactus combined with bread makes a dustwich. The practical value of cactus farming is that it produces in places where wheat and riceweed won't, giving desert settlements a food and alcohol economy that doesn't require importing from the Holy Lands.

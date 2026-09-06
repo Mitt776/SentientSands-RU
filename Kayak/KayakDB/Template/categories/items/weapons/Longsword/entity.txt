@@ -1,0 +1,11 @@
+Category = items_weapons
+Name = Longsword
+Id = longsword
+
+display_name = Longsword
+item_type = weapon-blade
+weapon_class = Sabres
+base_price_cats = 1400
+weight = 8
+
+$description = The longsword is the sabre class's heavy option — more cut than blunt, more reach than most sabres, and a weapon that scales better with strength than the lighter sabre variants. It lands somewhere between a sabre and a hacker in feel: slower and heavier than the Desert Sabre, better against armored targets, good in open fights where the reach and weight matter more than the quick draw. Longen carries a Meitou-grade longsword, which is the universe's way of saying that the most powerful merchant in the world has very expensive weapons and bodyguards who don't need any.

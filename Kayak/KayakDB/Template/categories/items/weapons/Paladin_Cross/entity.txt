@@ -1,0 +1,12 @@
+Category = items_weapons
+Name = Paladin_Cross
+Id = paladin_cross
+
+display_name = Paladin's Cross
+item_type = weapon-hacker
+weapon_class = Hackers
+base_price_cats = 1100
+weight = 9
+
+$description = The Paladin's Cross is the Holy Nation's military weapon for its front-line fighters — a heavy cleaving blade with a cross-shaped guard that is both a weapon and a visible declaration of faith. It deals mixed cut and blunt damage, has solid armor penetration, and does bonus damage against robots — the Holy Nation treats Skeletons as abominations, so a weapon that cuts through them efficiently is theologically appropriate as well as practically useful. Paladins carry them in large groups and they are competent with them, which makes taking one from its original owner a more involved process than some other acquisition methods.
+$cultural_significance = In Holy Nation territories, the Paladin's Cross is shorthand for 'a group of Paladins is near.' Travelers learn to notice them. Non-humans learn to avoid them.

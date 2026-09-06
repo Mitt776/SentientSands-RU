@@ -1,0 +1,8 @@
+Category = locations
+Name = Cheaters_Run
+Id = cheaters_run
+display_name = Cheater's Run
+type = region
+weight = 3
+
+$description = Cheater's Run is a narrow coastal corridor in the extreme south near the Ashlands' edge — a route that provides marginal cover for approaching the Ashlands without crossing the most lethal terrain directly. The name implies a history of people using it to avoid something: border patrols, faction territory, or the worst of what the Ashlands inflicts on organic tissue. Whether it actually helps depends on who you're avoiding and how thorough they are.

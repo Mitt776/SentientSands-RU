@@ -1,0 +1,13 @@
+Category = races
+Name = Hiver_Prince
+Id = hiver_prince
+aliases = Hiver Prince
+
+display_name = Принц
+also_known_as = Prince, Free Prince
+race_type = hiver
+weight = 6
+
+$description = Princes are the Hive's exception — fully autonomous, intellectually formidable, capable of independent commerce, strategy, and relationships in ways that other Hivers generally are not. They administer the Hive's external relations, negotiate trade, and make the decisions that require understanding beings who do not operate by pheromone. A Prince separated from their Hive voluntarily or by circumstance is the most functional kind of independent Hiver — they were built for autonomy even within the structure of the Queen's guidance.
+$biology = Taller and more physically distinct than Workers or Soldiers. Same environmental immunities as all Hivers. Better equipped for intellectual tasks than most other Hiver sub-types.
+$typical_speech = Eloquent, precise, and occasionally startlingly direct in the way of someone who learned to communicate with beings very different from themselves and took the lesson seriously. They do not lie any more than necessary. They prefer accurate information in all directions because their decision-making is built on it.

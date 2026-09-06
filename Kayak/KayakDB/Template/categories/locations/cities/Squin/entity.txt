@@ -1,0 +1,17 @@
+Category = locations
+Name = Squin
+Id = squin
+
+display_name = Squin
+region = Border Zone / Stenn Desert edge
+faction = Shek_Kingdom
+type = city-canyon
+weight = 8
+
+price_modifier = 1.1
+$description = Squin is the Shek Kingdom's second city — a long, narrow settlement built between high cliff walls in the Border Zone, accessible from both the desert and the border approaches. It is the first city most new players encounter with any depth of commerce, which is why it works as a natural base of operations early on: Shek Kingdom territory means it's open to all races, there's a Shinobi Thieves tower, a bar with unique recruits, and enough of an economy to get a traveler equipped before heading deeper into the world. It is, by Admag standards, quiet. By most other standards, functional.
+$atmosphere = The canyon walls that bracket the city create a specific quality of light and wind — shaded in the morning, the afternoon sun catches only the upper levels. The Shek guards are real warriors, not ceremonial. They stand with the particular stillness of people who aren't waiting for permission to act.
+$notable = Unique recruits in the bar — Horse, Oron, Rane the Giant, Ruka, and Kang have all been found here at various times. A Flotsam Ninjas pacifier. Proximity to Admag, making it a good staging point for deeper Shek Kingdom engagement. The nearby Shek Ruins east of town, remnants of an old border post.
+$travel_note = Open to all races. Shek guards will assess you but won't cause trouble without provocation. Wind power means occasional outages — expect some buildings to be dark when the wind drops.
+
+$directions = Border Zone / Stenn Desert edge, in a narrow canyon. Directly east of Admag.

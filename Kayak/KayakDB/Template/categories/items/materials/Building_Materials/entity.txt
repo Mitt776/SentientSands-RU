@@ -1,0 +1,9 @@
+Category = items_materials
+Name = Building_Materials
+Id = building_materials
+display_name = Building Materials
+item_type = crafting-material
+base_price_cats = 108
+weight = 8
+
+$description = Building Materials are the processed construction medium — stone and iron processed into a usable building form. Most base construction in Kenshi consumes them in volume, which is why the slave camps at Stone Camp and Port South exist: the Empire's construction economy runs on this material, extracted by labor that isn't paid for it. Player settlements need significant stockpiles before attempting serious construction, and the weight makes them expensive to transport over long distances.

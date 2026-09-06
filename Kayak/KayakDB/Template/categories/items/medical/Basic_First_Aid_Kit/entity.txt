@@ -1,0 +1,9 @@
+Category = items_medical
+Name = Basic_First_Aid_Kit
+Id = basic_first_aid_kit
+display_name = Basic First Aid Kit
+item_type = medical
+base_price_cats = 70
+weight = 2
+
+$description = The Basic First Aid Kit is the starter tier of medical supplies — fewer bandages, simpler compounds, less effective in the hands of low-skill medics than the standard kit. It stops bleeding and handles minor wounds. Available everywhere. Its main use case is early game when money is tight and the standard kit is a meaningful purchase; it is always better than nothing, which in Kenshi is the relevant comparison. Upgraded to the standard First Aid Kit as soon as resources allow.

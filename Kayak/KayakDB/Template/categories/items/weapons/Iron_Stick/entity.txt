@@ -1,0 +1,10 @@
+Category = items_weapons
+Name = Iron_Stick
+Id = iron_stick
+display_name = Iron Stick
+item_type = weapon-blunt
+weapon_class = Blunt
+base_price_cats = 120
+weight = 4
+
+$description = An iron stick is what it is — a length of iron rod used as a bludgeoning implement by people who can't afford or access anything more refined. It has the same reach as an Iron Club and deals comparable blunt damage at a lighter weight. The practical value is primarily in how cheap and available it is: any settlement with a scrap pile has the raw material. Carried by the most destitute fighters in the world, and occasionally by skeleton fighters as an early weapon before anything better becomes available.

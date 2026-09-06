@@ -1,0 +1,3 @@
+SPECIES OVERLAY PLACEHOLDER: FOGMAN
+
+- Replace this file with fogman-specific radiant speech guidance.

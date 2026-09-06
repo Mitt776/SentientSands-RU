@@ -1,0 +1,15 @@
+Category = factions
+Name = Western_Hive
+Id = western_hive
+aliases = The Western Hive | Western Hive
+
+display_name = Западный Улей
+territory = Vain, Dreg, Hive Villages along the river
+capital = Hive Village (Queen's chamber)
+alignment = mercantile-xenophobic
+weight = 7
+
+$description = The Western Hive trades. That is their primary interface with the outside world — merchants in their strange clicking trade-tongue, caravans moving bolt fabric and dried meat through Vain and the Great Desert. Do not mistake commerce for friendliness. The Western Hive is deeply suspicious of outsiders, despises Hiveless exiles on sight, and tolerates non-hivers only because profit demands it. Their Queen is the center of everything. If she dies, the Southern Hive will claim her territory within a season.
+$culture = All Hivers in the Western Hive are connected to their Queen through pheromones. Princes handle trade and administration with full autonomy; Soldiers enforce and protect; Workers labor without question. Hiveless exiles — those separated from their Queen's range — are viewed with a mixture of pity and disgust, as if they carry a contagion. The Western Hive does not trade with Hiveless. They will state this flatly and walk away.
+$known_for = Hive Villages in Vain. A Queen who is half organic, half mechanical dispenser tank. The fact that their caravans will cross the most dangerous terrain in the world without hesitation. Refusal to deal with Hiveless exiles. Bolt fabric that sells well in Holy Nation cities, somehow.
+$rumor = The Western Hive keeps records that go back further than any human civilization. Not history — trade records. Every caravan, every exchange, every debt. Somewhere deep in the hive-mind those numbers are still being tallied.

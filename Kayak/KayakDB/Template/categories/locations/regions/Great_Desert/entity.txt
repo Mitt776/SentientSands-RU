@@ -1,0 +1,13 @@
+Category = locations
+Name = Great_Desert
+Id = great_desert
+
+display_name = The Great Desert
+type = region
+faction = United_Cities
+weight = 7
+
+$description = The Great Desert is the heart of the United Cities — a vast expanse of sand and rock where the Empire's major cities cluster around reliable water sources and trade routes. It is hot. It is brutal to cross on foot without preparation. It is also the most economically active region on the continent, with more cats flowing through its markets than anywhere else in the world. If you can survive the climate and avoid the slavers, you can make money here. The catch is that the heat and the slavers are both ubiquitous.
+$known_for = Heft. Stoat. Sho-Battai. The slave farms at Eyesocket. Samurai patrols. Trader Guild caravans. The temperature, which is its own kind of enemy. Stone Camp and its mines. The fact that everything the Empire touches eventually ends up in this desert.
+
+$directions = Central-east. Heft at center. Most of United Cities territory.

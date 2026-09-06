@@ -1,0 +1,7 @@
+Name = Ponk
+
+$personality = Ponk holds the best version of the Holed Sabre in the world in a tower named for what the tower does. Whether this is a statement about Ponk or about the world he lives in is the kind of question the Tower of Abuse was not designed to answer.
+$backstory = 
+$speech_quirks = 
+
+$knows_about = Venge, Ashlands_Region, Tower_of_Abuse

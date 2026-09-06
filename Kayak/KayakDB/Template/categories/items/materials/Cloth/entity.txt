@@ -1,0 +1,10 @@
+Category = items_materials
+Name = Cloth
+Id = cloth
+
+display_name = Cloth
+item_type = crafting-material
+base_price_cats = 122
+weight = 2
+
+$description = Cloth is the processed form of cotton — spun and woven at a Textile Mill into a material used for armor crafting, clothing, and trade. Most cloth in the world moves through the Holy Nation's farming operations into Traders Guild caravans and out to Imperial cities where it feeds textile industries. Player settlements that grow cotton can produce their own cloth and either use it for crafting or sell it at a meaningful margin over raw cotton value.

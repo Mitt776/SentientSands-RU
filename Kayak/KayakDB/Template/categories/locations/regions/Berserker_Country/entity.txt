@@ -1,0 +1,9 @@
+Category = locations
+Name = Berserker_Country
+Id = berserker_country
+display_name = Berserker Country
+type = region
+faction = Berserkers
+weight = 4
+
+$description = Berserker Country is a zone in the northern reaches that looks, according to those who have seen it, like the ground itself was drenched in something red — a scarred, harsh terrain that matches its inhabitants. The Berserkers operate here, which means anything moving through it is considered a valid target. No resources worth the risk, no settlements, no political interest from any major faction. The only reason to come here is if you want to find Berserkers, which is generally not a reason.

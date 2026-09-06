@@ -1,0 +1,11 @@
+Category = world_lore
+Name = Okran_and_Narko
+Id = okran_and_narko
+display_name = Okran and Narko
+also_known_as = The Holy Flame, The Dark Goddess
+era = theological-present
+weight = 8
+
+$surface = Okran is the god of the Holy Nation — the light, the sun, the source of everything righteous. Narko is his enemy, the dark goddess, the corruption, the thing that tempted women and non-humans away from the true path. Every Holy Nation citizen knows this. It is the architecture of their world.
+$deeper = Scholars at World's End note that the Chaos Age produced a period of catastrophe that ended, according to legend, when a figure named Chitrin stopped it. The Holy Nation's theology apparently developed from this event, with the names changing over centuries. The entity originally associated with the catastrophe's end may have been what the Flotsam Ninjas identify as Narko — not a demon but a balancing force. The Holy Nation's version of events removed this nuance completely, which is what theologies generally do to nuance over five thousand years.
+$flotsam_view = Moll and the Flotsam Ninjas follow a syncretic path that honors both Okran and Narko as necessary and balanced — light and dark as two halves of the same truth. The Holy Nation calls this heresy. The Flotsam call it reading more carefully than the Holy Nation has in several centuries.

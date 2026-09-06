@@ -1,0 +1,12 @@
+Category = items_weapons
+Name = Toothpick_Crossbow
+Id = toothpick_crossbow
+
+display_name = Toothpick (Crossbow)
+item_type = weapon-ranged
+value_cats = 1500
+weight = 4
+
+base_price_cats = 1500
+$description = The Toothpick is one of the most practical weapons in Kenshi's arsenal — a lightweight crossbow that can be carried in the secondary weapon slot, drawn and fired in the middle of a melee exchange, and aimed with enough accuracy at range to meaningfully affect the outcome of most engagements. Crossbows stagger humanoid targets when they land, which is worth more than the raw damage numbers suggest. The Toothpick specifically is valued for its combination of accuracy, light carry weight, and the fact that it fits in the secondary slot where heavier crossbows do not.
+$use = Secondary weapon slot compatible. Excellent for ranged support in mixed fights. High crossbow skill dramatically increases accuracy and damage. Good for wearing down targets before they reach melee range.

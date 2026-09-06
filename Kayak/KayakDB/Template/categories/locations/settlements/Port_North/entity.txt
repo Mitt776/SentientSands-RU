@@ -1,0 +1,15 @@
+Category = locations
+Name = Port_North
+Id = port_north
+
+display_name = Port North
+region = Great Desert (northern coast)
+faction = Slave_Traders
+type = settlement-slave-camp
+weight = 6
+
+$description = Port North is a slave camp on the northern shore of the Great Desert — stone mines, raw material processing, a Noble House for Lady Kana, and no harbor despite the name. The designation suggests the world once had meaningful maritime transport; the walled-off shoreline says that trade has been replaced by other arrangements. Lady Kana lives here with her hooded Empire Noble Guards, overseeing the most economically significant labor camp in the northern United Cities. Its destruction ripples outward — Sho-Battai malnourishes, Anti-Slaver presence in the desert increases, the whole regional economy adjusts.
+$notable = Lady Kana and her Meitou Wakizashi. The strategic importance of the camp to northern UC supply chains. The name's implication about maritime history the current world has mostly forgotten.
+$travel_note = Hostile to anyone who isn't working or buying. Anti-Slavers avoid it. The roads approaching from the west are Manhunter territory.
+
+$directions = Northern coast of the Great Desert.
