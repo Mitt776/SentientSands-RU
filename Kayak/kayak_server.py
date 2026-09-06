@@ -37,6 +37,7 @@ POST /events/parse           clean + split raw event log
 import os
 import re
 import sys
+import hashlib
 import logging
 import threading
 import pathlib
@@ -164,19 +165,32 @@ def _resolve_target(data: dict):
         return None, None
 
     # Try IDs first (most reliable)
+    requested = []
     for id_key in ("target_npc_id", "persistent_id", "runtime_id"):
         val = (data.get(id_key) or "").strip()
         if val:
+            requested.append(val)
             uid = idx.find_by_id(val)
             if uid:
                 return idx.get(uid), uid
 
-    # Fall back to name
+    # Fall back to name, but never onto a different character. Kenshi names
+    # most NPCs by role — Стражник, Житель, Бандит — so a name match alone
+    # would hand over someone else's dialogue, stats and relation.
     name = (data.get("target_npc") or "").strip()
     if name:
-        uids = idx.find_by_name(name)
-        if uids:
-            return idx.get(uids[0]), uids[0]
+        strong = _strong_ids_in(*requested)
+        for uid in idx.find_by_name(name):
+            entity = idx.get(uid)
+            if entity is None:
+                continue
+            if _entity_is_someone_else(entity, strong):
+                log.info(
+                    f"Name fallback rejected for '{name}': entity '{uid}' holds a "
+                    f"different persistent ID"
+                )
+                continue
+            return entity, uid
 
     return None, None
 
@@ -344,6 +358,92 @@ def _extract_entity_field_value(content: str, field: str):
     if not match:
         return None
     return match.group("value").strip()
+
+
+# Постоянный идентификатор персонажа Kenshi: пять числовых частей через дефис
+# (например "1-2522094848-4-127075192-1"). runtime_id живёт одну сессию игры,
+# меняется при каждой загрузке и для различения персонажей не годится.
+_STRONG_ID_RE = re.compile(r"\d+(?:-\d+){4}")
+
+
+def _is_strong_entity_id(value) -> bool:
+    text = str(value or "").strip()
+    if not text or text.isdigit() or text.lower().startswith("hand_"):
+        return False
+    return bool(_STRONG_ID_RE.fullmatch(text))
+
+
+def _strong_ids_in(*values) -> set:
+    return {str(v).strip() for v in values if _is_strong_entity_id(v)}
+
+
+def _entity_is_someone_else(entity, requested_strong_ids: set) -> bool:
+    """True, если у записи свой постоянный ID и он не тот, который спрашивают."""
+    if not requested_strong_ids:
+        return False
+    own = _strong_ids_in(
+        getattr(entity, "persistent_id", ""),
+        getattr(entity, "entity_id", ""),
+    )
+    if not own:
+        return False  # запись без ID — к ней можно привязаться
+    return own.isdisjoint(requested_strong_ids)
+
+
+def _entity_ids_in_file(entity_file) -> set:
+    try:
+        text = entity_file.read_text(encoding="utf-8")
+    except OSError:
+        return set()
+    return _strong_ids_in(
+        _extract_entity_field_value(text, "persistent_id"),
+        _extract_entity_field_value(text, "Id"),
+    )
+
+
+def _folder_for_npc_write(category: str, name: str, content: str) -> str:
+    """Выбрать папку так, чтобы разные NPC с одним именем не слились.
+
+    Возвращает папку уже записанного персонажа, если этот ID известен;
+    добавляет короткий суффикс, если имя занято кем-то другим.
+    """
+    if category not in ("campaign_npcs", "base_npcs") or not cm.active_path:
+        return name
+
+    ids = _strong_ids_in(
+        _extract_entity_field_value(content, "persistent_id"),
+        _extract_entity_field_value(content, "Id"),
+    )
+    if not ids:
+        return name  # различать нечем — прежнее поведение
+
+    # Этот персонаж уже где-то записан: пишем туда же, даже если папку
+    # переименовали вслед за игровым именем.
+    if cm.indexer:
+        for value in sorted(ids):
+            uid = cm.indexer.find_by_id(value)
+            if uid:
+                entity = cm.indexer.get(uid)
+                folder = os.path.basename(str(getattr(entity, "path", "") or ""))
+                if folder:
+                    return folder
+
+    categories_root = pathlib.Path(cm.active_path) / "categories"
+
+    def _occupant(folder: str) -> set:
+        return _entity_ids_in_file(categories_root / category / folder / "entity.txt")
+
+    taken = _occupant(name)
+    if not taken or not taken.isdisjoint(ids):
+        return name  # свободно, без ID, или это наша же запись
+
+    suffix = hashlib.sha1(sorted(ids)[0].encode("utf-8")).hexdigest()[:6]
+    for attempt in range(20):
+        candidate = f"{name}__{suffix}" if attempt == 0 else f"{name}__{suffix}_{attempt + 1}"
+        other = _occupant(candidate)
+        if not other or not other.isdisjoint(ids):
+            return candidate
+    return name
 
 
 def _merge_unique_npc_fields_on_first_create(category: str, name: str, content: str) -> str:
@@ -757,6 +857,14 @@ def write_npc():
     try:
         category = _safe_segment(category, "category")
         name = _safe_segment(name, "name")
+        resolved_name = _folder_for_npc_write(category, name, content)
+        if resolved_name != name:
+            log.info(
+                f"NPC folder disambiguated: {category}/{name} is taken by another "
+                f"character -> {resolved_name}"
+            )
+            content = _upsert_entity_field_line(content, "Name", resolved_name)
+            name = resolved_name
         content = _merge_unique_npc_fields_on_first_create(category, name, content)
     except ValueError as e:
         return jsonify({"error": str(e)}), 400
