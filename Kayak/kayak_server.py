@@ -1209,11 +1209,18 @@ def prompt_chat():
     disable_knowledge_rules = bool(data.get("disable_knowledge_rules", False))
     token_ctx = _token_context(data, target_entity=target_entity, player_message=player_message)
     token_resolver = TokenResolver(indexer=indexer, prompt_builder=pb)
-    current_location_uids = set()
+    # Сущности, которые промпт покажет и без world_context: текущий город с
+    # регионом плюс раса, фракция и родной город самой цели. Иначе NPC читает
+    # своё описание дважды.
+    already_shown_uids = set()
     try:
-        current_location_uids = token_resolver.current_location_entity_uids(token_ctx)
+        already_shown_uids = token_resolver.current_location_entity_uids(token_ctx)
     except Exception:
-        current_location_uids = set()
+        already_shown_uids = set()
+    try:
+        already_shown_uids |= token_resolver.target_profile_entity_uids(token_ctx)
+    except Exception:
+        pass
 
     # Update live stats
     if target_entity and stats_str:
@@ -1243,7 +1250,7 @@ def prompt_chat():
     world_ents = [
         e for e in all_ents
         if (target_uid is None or e.uid != target_uid)
-        and e.uid not in current_location_uids
+        and e.uid not in already_shown_uids
     ]
     if cm.active_path:
         _log_perf(cm.active_path, _perf_meta, "chat",
@@ -1263,7 +1270,7 @@ def prompt_chat():
             if not token:
                 continue
             for uid in indexer.find_by_name(token):
-                if uid == target_uid or uid in current_location_uids or uid in allowed_set:
+                if uid == target_uid or uid in already_shown_uids or uid in allowed_set:
                     continue
                 allowed_set.add(uid)
                 allowed_uids.append(uid)
@@ -1272,7 +1279,7 @@ def prompt_chat():
             filtered = [e for e in world_ents if e.uid in allowed_set]
             if not filtered:
                 filtered = [indexer.get(uid) for uid in allowed_uids]
-                filtered = [e for e in filtered if e is not None and e.uid not in current_location_uids]
+                filtered = [e for e in filtered if e is not None and e.uid not in already_shown_uids]
             world_ents = filtered[: cm.config.get("max_files", 5)]
 
     # Assemble

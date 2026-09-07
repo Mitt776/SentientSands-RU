@@ -655,6 +655,32 @@ class TokenResolver:
                 out.add(uid)
         return out
 
+    def target_profile_entity_uids(self, ctx: TokenResolverContext) -> set[str]:
+        """Сущности, которые промпт уже показывает отдельными токенами.
+
+        Раса, фракция, бывшая фракция и город цели попадают в промпт через
+        <target_npc_race_entity>, <target_npc_faction_entity> и соседние
+        токены. Белый список знаний NPC состоит в основном из них же, поэтому
+        без этого исключения те же описания приезжают вторым экземпляром
+        внутри <world_context>.
+        """
+        meta = self.target_meta(ctx) or {}
+        out: set[str] = set()
+        for field in (
+            "race", "Race",
+            "faction", "Faction",
+            "origin_faction", "OriginFaction",
+            "town", "town_name", "location", "home_town", "city",
+        ):
+            value = str(meta.get(field) or "").strip()
+            if not value:
+                continue
+            entity = self.resolve_entity_by_name(value)
+            uid = str(getattr(entity, "uid", "") or "").strip()
+            if uid:
+                out.add(uid)
+        return out
+
     def filter_current_location_keywords(self, ctx: TokenResolverContext, keywords: list[str]) -> list[str]:
         excluded_uids = self.current_location_entity_uids(ctx)
         filtered = []
