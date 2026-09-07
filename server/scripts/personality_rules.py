@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import random
+import re
 
 
 log = logging.getLogger("ss.personality")
@@ -11,6 +12,82 @@ _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 _PERSONA_RACES_PRIMARY_PATH = os.path.normpath(os.path.join(_SCRIPT_DIR, "..", "..", "config", "persona_races.json"))
 _PERSONA_RACES_LEGACY_PATH = os.path.normpath(os.path.join(_SCRIPT_DIR, "..", "config", "persona_races.json"))
 PERSONA_RACES_PATH = _PERSONA_RACES_PRIMARY_PATH
+
+
+# Мост к локализации игры. Все таблицы ниже построены на английских ключах, а
+# русская Kenshi присылает «Зеленоземец» и «Рабовладельцы». Без перевода каждая
+# раса уходит в «неизвестна», а каждая фракция — в `_default`.
+try:
+    import game_locale as _game_locale
+except Exception:                                        # pragma: no cover
+    _game_locale = None
+
+_ARTICLE_RE = re.compile(r"^the\s+", re.IGNORECASE)
+
+
+# Имена, которые файл игры не раскрывает: в gamedata.po одна строка отвечает
+# нескольким английским оригиналам, и мост честно отказывается угадывать.
+# Список получен сплошной проверкой «английское имя -> как пишет игра ->
+# обратно» по всем спискам рас и всем ключам таблиц фракций; других пробелов
+# нет. Всё остальное либо переводится, либо игрой не переводится вовсе — тогда
+# имя приходит по-английски и совпадает само (так со всеми 16 машинными
+# расами).
+_LOCAL_NAME_OVERRIDES = {
+    # раса: игра пишет одинаково для нескольких оригиналов
+    "скелет":           "Skeleton",
+    "улей":             "Hive",
+    "принц":            "Hive Prince",
+    "трутень-солдат":   "Soldier Drone",
+    "рабочий трутень":  "Worker Drone",
+    "ползучая мышь":    "Landbat",
+    # фракция
+    "людоеды":          "Cannibals",
+    "чёрная пустыня":   "Black Desert City",
+}
+
+
+def name_forms(text):
+    """Имя в нижнем регистре и его английский оригинал, если игра локализована.
+
+    Возвращает обе формы: в английской игре перевода нет, и работает первая.
+    """
+    raw = str(text or "").strip()
+    if not raw:
+        return ()
+    forms = [raw.lower()]
+    if _game_locale is not None:
+        try:
+            english = str(_game_locale.to_english(raw) or "").strip().lower()
+        except Exception:
+            english = ""
+        if english and english not in forms:
+            forms.append(english)
+    if len(forms) == 1:
+        override = _LOCAL_NAME_OVERRIDES.get(forms[0])
+        if override:
+            forms.append(override.lower())
+    return tuple(forms)
+
+
+def english_name(text):
+    """Одна лучшая форма имени для проверок вида «hive in race»."""
+    forms = name_forms(text)
+    return forms[-1] if forms else ""
+
+
+def table_lookup(table, *names):
+    """Значение из таблицы с английскими ключами по имени на любом языке.
+
+    Артикль пробуется в обе стороны: в базе фракция записана и как
+    «the holy nation», и как «hounds», а перевод отдаёт то с ним, то без.
+    """
+    for name in names:
+        for form in name_forms(name):
+            bare = _ARTICLE_RE.sub("", form)
+            for key in (form, bare, "the " + bare):
+                if key in table:
+                    return table[key]
+    return None
 
 
 MAJOR_FACTIONS = [
@@ -135,8 +212,12 @@ reload_persona_race_registry()
 
 
 def race_matches_any(race, candidates):
-    race_lower = (race or "").lower()
-    return any(str(token).lower() in race_lower for token in (candidates or []))
+    forms = name_forms(race)
+    if not forms:
+        return False
+    return any(str(token).lower() in form
+               for form in forms
+               for token in (candidates or []))
 
 
 def is_known_race(race):
@@ -332,21 +413,22 @@ _MOTIVATION_TABLE = {
 
 def generate_npc_traits(faction, race, origin_faction=""):
     """Generate weighted-random NPC traits at profile creation. Returns {} for animals/machines."""
-    race_lower = (race or "").lower()
-    if any(a.lower() in race_lower for a in ANIMAL_RACES):
+    if race_matches_any(race, ANIMAL_RACES):
         return {}
-    if any(m.lower() in race_lower for m in MACHINE_RACES):
+    if race_matches_any(race, MACHINE_RACES):
         return {}
 
-    faction_lower = (faction or "").lower().strip()
-    origin_lower = (origin_faction or "").lower().strip()
+    # Дальше — подстрочные проверки, поэтому нужна одна английская форма имени.
+    race_lower = english_name(race)
+    faction_lower = english_name(faction)
+    origin_lower = english_name(origin_faction)
     is_skeleton = "skeleton" in race_lower
     is_hiver = "hive" in race_lower
     is_shek = "shek" in race_lower
     # Dark Hive excluded: its Queen-structure collapsed; members are effectively severed
     is_in_hive_faction = "hive" in faction_lower and faction_lower != "dark hive"
 
-    loy_w = _LOYALTY_WEIGHTS.get(faction_lower) or _LOYALTY_WEIGHTS.get(origin_lower) or _LOYALTY_WEIGHTS["_default"]
+    loy_w = table_lookup(_LOYALTY_WEIGHTS, faction, origin_faction) or _LOYALTY_WEIGHTS["_default"]
     loyalty = random.choices(_LOYALTY_OPTIONS, weights=loy_w, k=1)[0]
 
     if is_skeleton:
@@ -362,8 +444,7 @@ def generate_npc_traits(faction, race, origin_faction=""):
         religion = "Fogmen"
     else:
         rel_pool = (
-            _RELIGION_TABLE.get(faction_lower)
-            or _RELIGION_TABLE.get(origin_lower)
+            table_lookup(_RELIGION_TABLE, faction, origin_faction)
             or _RELIGION_TABLE["_default"]
         )
         if not is_shek:
@@ -373,7 +454,7 @@ def generate_npc_traits(faction, race, origin_faction=""):
         labels, weights = zip(*rel_pool)
         religion = random.choices(labels, weights=weights, k=1)[0]
 
-    out_w = _OUTLOOK_WEIGHTS.get(faction_lower) or _OUTLOOK_WEIGHTS.get(origin_lower) or _OUTLOOK_WEIGHTS["_default"]
+    out_w = table_lookup(_OUTLOOK_WEIGHTS, faction, origin_faction) or _OUTLOOK_WEIGHTS["_default"]
     outlook = random.choices(_OUTLOOK_OPTIONS, weights=out_w, k=1)[0]
 
     if is_skeleton and faction_lower == "skin bandits":
@@ -382,8 +463,7 @@ def generate_npc_traits(faction, race, origin_faction=""):
         mot_prob, mot_pool = _MOTIVATION_TABLE["_skeleton"]
     else:
         mot_prob, mot_pool = (
-            _MOTIVATION_TABLE.get(faction_lower)
-            or _MOTIVATION_TABLE.get(origin_lower)
+            table_lookup(_MOTIVATION_TABLE, faction, origin_faction)
             or _MOTIVATION_TABLE["_default"]
         )
     motivation = random.choice(mot_pool) if random.random() < mot_prob else None
@@ -400,7 +480,9 @@ def build_loyalty_note(npc_name, faction, player_faction, faction_id=None):
             f"THE PLAYER IS THE LEADER of this group. {npc_name} understand that they and the player are cooperating, "
             "this can take many forms such as direct leadership, partnership, or even just individuals traveling together."
         )
-    elif any(f.lower() in faction.lower() for f in MAJOR_FACTIONS):
+    elif any(f.lower() in form
+             for form in name_forms(faction)
+             for f in MAJOR_FACTIONS):
         notes.append(
             f"LOYALTY NOTE: {npc_name} belongs to {faction}, a major world power. They are deeply rooted in their society. "
             "They will NOT desert their faction to join the player's minor squad without an EXTREMELY compelling narrative reason, "
