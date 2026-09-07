@@ -6584,7 +6584,12 @@ def chat():
 
         events_str = build_events_block()
         cdir = get_campaign_dir()
-        chronicle_str = build_chronicle_block(primary_data, cdir)
+        _chron_env = (get_effective_player_context() or {}).get("environment", {})
+        chronicle_str = build_chronicle_block(
+            primary_data, cdir,
+            current_location=(_chron_env.get("town_name", "")
+                              if isinstance(_chron_env, dict) else ""),
+        )
         # added by Pineaxe v04 - Kayak builds the prompt when available
         # Lazy reconnect: if Kayak was down at startup, try once per 60s
         global _KAYAK_LAST_RETRY

@@ -329,9 +329,14 @@ def consider_event(cdir, etype, actor, target, message,
 # Prompt injection
 # ---------------------------------------------------------------------------
 
-def build_chronicle_block(npc_data, cdir):
+def build_chronicle_block(npc_data, cdir, current_location=""):
     """Build the [CAMPAIGN CHRONICLE] block for this NPC.
-    Returns a formatted string, or '' if no relevant events exist."""
+
+    current_location — город, где идёт разговор. О случившемся здесь же
+    говорят все местные, кем бы они ни были; без этого уровня убийство
+    бандита знали бы только бандиты.
+    Returns a formatted string, or '' if no relevant events exist.
+    """
     npc_faction = _clean((npc_data or {}).get("Faction", ""))
     npc_key = faction_key(npc_faction)
     full_lines, vague_lines = [], []
@@ -370,7 +375,15 @@ def build_chronicle_block(npc_data, cdir):
         if any(_same_faction(f, npc_faction) for f in _ISOLATED_FACTIONS):
             continue
 
-        # Уровень Б: смутная осведомлённость по радиусу
+        # Уровень Б: случилось прямо здесь — в городе об этом говорят.
+        # Игра присылает регион равным названию города, поэтому радиусный
+        # уровень ниже почти никогда не срабатывает, а этот — работает всегда.
+        here = _clean(current_location)
+        if here and _clean(location) and here.casefold() == _clean(location).casefold():
+            vague_lines.append(f"- {day_prefix}{summary_vague}")
+            continue
+
+        # Уровень В: смутная осведомлённость по радиусу
         region_key = _clean(location_region)
         if _game_locale is not None and region_key:
             try:
