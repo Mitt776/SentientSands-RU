@@ -71,7 +71,7 @@ from server_runtime import (
     set_model_configs,
     set_player2_session_key,
 )
-from campaign_chronicle import append_major_event, build_chronicle_block, load_chronicle, save_chronicle
+from campaign_chronicle import append_major_event, build_chronicle_block, consider_event, load_chronicle, save_chronicle
 from personality_rules import (
     ANIMAL_RACES,
     MACHINE_RACES,
@@ -7790,6 +7790,21 @@ def record_event_to_history(etype, actor, target, msg, actor_faction="None", tar
         return
 
     if evt_str not in EVENT_HISTORY_SET:
+        # Летопись: сюда попадают только смерти, тюрьма и смена владельца
+        # города. Бои запоминаются отдельно, чтобы у смерти был виновник.
+        try:
+            _env = ctx.get("environment", {}) if ctx else {}
+            consider_event(
+                get_campaign_dir(), etype, actor, target, msg,
+                actor_faction=a_fact_display,
+                target_faction=t_fact_display,
+                location=(_env.get("town_name", "") if isinstance(_env, dict) else ""),
+                region=(_env.get("biome", "") if isinstance(_env, dict) else ""),
+                day=(ctx.get("day") if ctx else None),
+            )
+        except Exception as _chron_err:
+            logging.warning(f"CHRONICLE: hook failed: {_chron_err}")
+
         EVENT_HISTORY.append(evt_str)
         EVENT_HISTORY_SET.add(evt_str)
         GLOBAL_EVENT_COUNTER += 1
