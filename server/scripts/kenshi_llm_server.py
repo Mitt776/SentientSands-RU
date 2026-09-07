@@ -1874,6 +1874,38 @@ def _has_speaker_prefix(line):
     return not any(ch in head for ch in ".!?,;")
 
 
+# Отпечаток сделки: что выдано и сколько взято. Нужен, чтобы отличить
+# повторную оплату того же заказа от нового.
+_TRADE_TAG_RE = re.compile(
+    r"\[ACTION:\s*(GIVE_ITEM|SPAWN_ITEM|TAKE_CATS)\s*:([^\]]*)\]", re.IGNORECASE)
+_HISTORY_PREFIX_RE = re.compile(r"^\[Day[^\]]*\]\s*(?:\(Overheard\)\s*)?")
+
+
+def _trade_signature(text):
+    """Сравнимый набор торговых тегов строки или списка действий."""
+    if isinstance(text, (list, tuple)):
+        text = " ".join(str(x) for x in text)
+    found = []
+    for kind, body in _TRADE_TAG_RE.findall(str(text or "")):
+        found.append(f"{kind.upper()}:{' '.join(body.split()).casefold()}")
+    return tuple(sorted(found))
+
+
+def _last_own_history_line(history, npc_name):
+    """Последняя реплика самого NPC в его истории, без штампа времени."""
+    target = str(_clean_npc_name(npc_name) or "").casefold()
+    if not target:
+        return ""
+    for raw in reversed(list(history or [])):
+        line = _HISTORY_PREFIX_RE.sub("", str(raw or ""))
+        if not _has_speaker_prefix(line):
+            continue
+        head = line.partition(":")[0].split("|")[0].strip()
+        if str(_clean_npc_name(head) or "").casefold() == target:
+            return line
+    return ""
+
+
 def get_current_time_prefix():
     if PLAYER_CONTEXT:
         day = PLAYER_CONTEXT.get('day', 0)
@@ -7405,6 +7437,29 @@ def chat():
                     f"TRADE: cancelled TAKE_ITEM for {primary_npc} — the player offered "
                     f"a swap but nothing came back"
                 )
+
+            # 5h. Тот же заказ оплачен второй раз. Товар лавочника падает на
+            # землю, игрок его не видит и переспрашивает — а строка истории
+            # хранит теги действий, и модель повторяет весь прошлый блок
+            # целиком: коты списываются снова, товар дублируется. Настоящий
+            # повторный заказ игрок называет словами, по ним и отличаем.
+            _repeat_words = (
+                "ещё", "еще", "повтори", "снова", "опять", "добавь", "докупл",
+                "another", "one more", "again", "repeat", "more",
+            )
+            _this_deal = _trade_signature(actions)
+            if _this_deal and any(s.startswith("TAKE_CATS:") for s in _this_deal):
+                _prev_line = _last_own_history_line(
+                    (char_datas.get(primary_npc) or {}).get("ConversationHistory"),
+                    primary_npc,
+                )
+                _wants_more = _is_swap or any(w in _pm_intent for w in _repeat_words)
+                if _trade_signature(_prev_line) == _this_deal and not _wants_more:
+                    actions = [a for a in actions if not _TRADE_TAG_RE.search(a)]
+                    logging.warning(
+                        f"TRADE: dropped a repeat of the previous deal by {primary_npc} — "
+                        f"the player never ordered again ({', '.join(_this_deal)})"
+                    )
 
             # 6. Clean Dialogue Text - strip backend action tags but preserve narrative
             # brackets like [laughter] or [sighs]. Anchored to known tag prefixes so
