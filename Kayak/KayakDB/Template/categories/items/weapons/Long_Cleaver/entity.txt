@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Long_Cleaver
 Id = long_cleaver
+aliases = Длинный тесак
 
 display_name = Long Cleaver
 item_type = weapon-hacker

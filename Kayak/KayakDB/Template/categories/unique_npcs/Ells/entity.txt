@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Ells
+Id = ells
+
+aliases = Эллс
 
 $personality = Ells is quiet in the way that people are quiet when they've had a bad run and haven't fully processed it yet. He's not unfriendly — he'll talk, he'll buy a round, he'll answer questions — but there's a careful quality to how he presents himself, like someone who has learned that volunteering information is a form of vulnerability. He's reliable when he commits to something, which he doesn't do quickly.
 $backstory = 

@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Mercenary_Club
 Id = mercenary_club
+aliases = Булава наёмника
 display_name = Mercenary Club
 item_type = weapon-blunt
 weapon_class = Blunt

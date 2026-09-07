@@ -1,6 +1,7 @@
 Category = locations
 Name = Cheaters_Run
 Id = cheaters_run
+aliases = Тропа хитрецов
 display_name = Cheater's Run
 type = region
 weight = 3

@@ -1,6 +1,7 @@
 Category = locations
 Name = Free_City
 Id = free_city
+aliases = Свободный город
 
 display_name = The Free City
 region = South Wetlands

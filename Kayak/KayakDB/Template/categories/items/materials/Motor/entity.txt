@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Motor
 Id = motor
+aliases = Мотор
 display_name = Motor
 item_type = crafting-material
 base_price_cats = 421

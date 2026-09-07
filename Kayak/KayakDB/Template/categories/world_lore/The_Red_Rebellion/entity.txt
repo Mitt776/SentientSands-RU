@@ -1,6 +1,7 @@
 Category = world_lore
 Name = The_Red_Rebellion
 Id = red_rebellion
+aliases = Красный мятеж
 display_name = The Red Rebellion
 era = recent-history
 weight = 6

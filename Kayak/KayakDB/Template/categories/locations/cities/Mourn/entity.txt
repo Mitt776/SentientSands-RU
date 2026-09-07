@@ -1,6 +1,7 @@
 Category = locations
 Name = Mourn
 Id = mourn
+aliases = Траур
 
 display_name = Mourn
 region = Bonefields

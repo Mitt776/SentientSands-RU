@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Flying_Bull
+Id = flying_bull
+
+aliases = Летящий Бык
 
 $personality = Flying Bull leads Kral's Chosen with the absolute conviction of a Shek who has decided that Esata is wrong and that the question is not even worth debating further. He does not acknowledge the legitimacy of her reforms. He does not consider the possibility that a people need to survive in order to fight. He has the blunt certainty of someone who has never been seriously challenged in the particular argument he cares most about, which is the argument that dying well is the only death worth having.
 $backstory = Kral's Chosen operates at the Hook edges and in the Stenn Desert margins — territory where they can pursue their philosophy without direct interference from Admag. Flying Bull is the face of the most organized traditionalist rejection of Esata's reforms.

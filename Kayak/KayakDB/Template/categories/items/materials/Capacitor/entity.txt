@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Capacitor
 Id = capacitor
+aliases = Конденсатор
 display_name = Capacitor
 item_type = crafting-material
 base_price_cats = 90

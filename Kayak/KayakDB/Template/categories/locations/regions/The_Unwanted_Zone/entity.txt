@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Unwanted_Zone
 Id = the_unwanted_zone
+aliases = Ненужная зона
 display_name = The Unwanted Zone
 type = region
 weight = 3

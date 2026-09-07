@@ -1,6 +1,7 @@
 Category = locations
 Name = Leviathan_Coast
 Id = leviathan_coast
+aliases = Берег левиафанов
 display_name = Leviathan Coast
 type = region
 weight = 6

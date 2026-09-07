@@ -1,6 +1,7 @@
 Category = locations
 Name = Deadlands
 Id = deadlands
+aliases = Гиблые земли
 display_name = The Deadlands
 type = region
 weight = 7

@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Beak_Thing_Egg
 Id = beak_thing_egg
+aliases = Яйцо клювастой твари
 display_name = Beak Thing Egg
 item_type = trade-rare
 base_price_cats = 4200

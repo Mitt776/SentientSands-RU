@@ -1,6 +1,7 @@
 Category = locations
 Name = Stone_Camp
 Id = stone_camp
+aliases = Каменный лагерь
 
 display_name = Stone Camp
 region = Great Desert (between Stoat and Sho-Battai)

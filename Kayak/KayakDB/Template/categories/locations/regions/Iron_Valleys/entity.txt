@@ -1,6 +1,7 @@
 Category = locations
 Name = Iron_Valleys
 Id = iron_valleys
+aliases = Железные долины
 display_name = Iron Valleys
 type = region
 weight = 5

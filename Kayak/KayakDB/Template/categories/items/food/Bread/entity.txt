@@ -1,6 +1,7 @@
 Category = items_food
 Name = Bread
 Id = bread
+aliases = Хлеб
 display_name = Bread
 item_type = food
 base_price_cats = 614

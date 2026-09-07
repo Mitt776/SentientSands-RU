@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Drifters_Leather_Pants
 Id = drifters_leather_pants
+aliases = Кожаные штаны скитальца
 display_name = Drifter's Leather Pants
 item_type = armor-legs-light
 armor_class = Light

@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Ranger
 Id = ranger
+aliases = Диверсант
 display_name = Ranger
 item_type = weapon-ranged
 weapon_class = Crossbows

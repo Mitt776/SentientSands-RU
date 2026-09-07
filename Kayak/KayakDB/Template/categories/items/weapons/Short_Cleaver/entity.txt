@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Short_Cleaver
 Id = short_cleaver
+aliases = Короткий тесак
 display_name = Short-Cleaver
 item_type = weapon-hacker
 weapon_class = Hackers

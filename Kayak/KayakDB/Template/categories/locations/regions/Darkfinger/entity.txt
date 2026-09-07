@@ -1,6 +1,7 @@
 Category = locations
 Name = Darkfinger
 Id = darkfinger
+aliases = Тёмный палец
 display_name = Darkfinger
 type = region
 faction = Cannibals

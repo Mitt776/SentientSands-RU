@@ -1,6 +1,7 @@
 Category = locations
 Name = Purple_Sands
 Id = purple_sands
+aliases = Пурпурные пески
 display_name = Purple Sands
 type = region
 weight = 3

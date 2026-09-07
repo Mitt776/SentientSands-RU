@@ -1,4 +1,6 @@
+Category = unique_npcs
 Name = Cat_Lon
+Id = cat_lon
 
 $personality = Cat-Lon was the most principled leader of his age — a Skeleton who built an empire out of genuine moral conviction, who wanted to end suffering, who surrounded himself with advisors he trusted and trusted them past the point of wisdom. What he became after the empire fell is something else. He has been alone in the Ashlands for four centuries with the weight of every decision that led to collapse. The mind does not do well with that. The body — a Skeleton's body — has not deteriorated at all. He is the strongest Heavy Weapons user alive, his mind is fractured, and he will defend his ash-throne against anything that approaches it.
 $backstory = Co-founder of the Second Empire with Tinfist. The empire started as genuine altruism — a skeleton civilization built to protect humanity's recovery after the Chaos Age. It became dictatorial slowly, through accumulated compromises and then through the kind of iron determination that can't distinguish between saving people and controlling them. The collapse came from inside. Cat-Lon retreated into the Ashlands with his remaining forces and has been there since.

@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = General_Jang
+Id = general_jang
+
+aliases = Генерал Джан
 
 $personality = Jang was the professional's professional — a military commander who did his job so thoroughly that the people he fought still have nightmares about it a thousand years later. The Cannibal tribes call them The Inedible One, which is accurate in the most mechanical sense and also somehow the best tribute a general could receive from an enemy whose tribute usually involves eating you. Jang operated in the Second Empire's middle period, when the empire still believed in what it was doing and gave its military officers the resources to do it properly.
 $backstory = Commander of the Hydraulic Knights, the Second Empire's elite Skeleton military unit. Their campaigns against the Cannibal Plains tribes in the northwest drove the tribes back with enough force and consistency that the Cannibal oral tradition encoded a specific warning about Skeleton warriors — a warning that has persisted through a thousand years of generations who have never met a Skeleton and wouldn't recognize one if they did. What became of Jang after the empire's fall is not clearly recorded.

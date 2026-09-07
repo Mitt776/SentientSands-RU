@@ -1,6 +1,7 @@
 Category = items_food
 Name = Foodcube
 Id = foodcube
+aliases = Съедобный брикет
 
 display_name = Foodcube
 item_type = food

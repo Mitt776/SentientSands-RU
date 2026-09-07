@@ -1,6 +1,7 @@
 Category = locations
 Name = Clownsteady
 Id = clownsteady
+aliases = Клаунстэди
 
 display_name = Clownsteady
 region = The Hook (southwest)

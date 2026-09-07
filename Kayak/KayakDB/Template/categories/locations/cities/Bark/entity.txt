@@ -1,6 +1,7 @@
 Category = locations
 Name = Bark
 Id = bark
+aliases = Барк
 
 display_name = Bark
 region = Great Desert (northeastern coast)

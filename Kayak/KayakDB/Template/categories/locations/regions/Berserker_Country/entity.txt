@@ -1,6 +1,7 @@
 Category = locations
 Name = Berserker_Country
 Id = berserker_country
+aliases = Страна Берсерков
 display_name = Berserker Country
 type = region
 faction = Berserkers

@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Dustcoat
 Id = dustcoat
+aliases = Пыльник
 
 display_name = Dustcoat
 item_type = armor-body-light

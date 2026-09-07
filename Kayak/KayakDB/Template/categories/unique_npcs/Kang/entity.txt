@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Kang
+Id = kang
+
+aliases = Кан
 
 $personality = Kang is big even by Shek standards and fights like he knows it. He's not stupid about it — he knows his size is an advantage and he doesn't rely on it when it's not the right tool — but he's comfortable taking up space physically and metaphorically. He's cheerful in a way that surprises people who expect big fighters to be grim. He's not grim. He likes fighting, he likes eating, he likes people who are interesting, and he's found that being cheerful makes the dying easier when it comes.
 $backstory = 

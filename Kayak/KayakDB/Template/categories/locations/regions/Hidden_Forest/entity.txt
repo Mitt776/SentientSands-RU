@@ -1,6 +1,7 @@
 Category = locations
 Name = Hidden_Forest
 Id = hidden_forest
+aliases = Скрытый лес
 display_name = The Hidden Forest
 type = region
 faction = Flotsam_Ninjas

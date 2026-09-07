@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Wakizashi
 Id = wakizashi
+aliases = Вакидзаси
 
 display_name = Wakizashi
 item_type = weapon-blade

@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Wrench
 Id = wrench
+aliases = Разводник
 display_name = Wrench
 item_type = trade-junk
 base_price_cats = 150

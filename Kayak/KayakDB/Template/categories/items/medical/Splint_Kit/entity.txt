@@ -1,6 +1,7 @@
 Category = items_medical
 Name = Splint_Kit
 Id = splint_kit
+aliases = Набор шин
 display_name = Splint Kit
 item_type = medical
 base_price_cats = 410

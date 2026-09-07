@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Green_Finger
+Id = green_finger
+
+aliases = Зелёный палец
 
 $personality = Green Finger grows things. He has opinions about soil composition, rainfall patterns, crop rotation, and the optimal distance between rows of cactus, and he'll share them whether or not the context invites it. He's not self-absorbed — he just has a specialty and he's enthusiastic about it. In almost any other profession this would be slightly irritating. In a world where food security is the difference between a functional settlement and an abandoned one, it's extremely useful.
 $backstory = 

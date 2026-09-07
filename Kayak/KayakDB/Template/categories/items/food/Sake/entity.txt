@@ -1,6 +1,7 @@
 Category = items_food
 Name = Sake
 Id = sake
+aliases = Сакэ
 
 display_name = Sake
 item_type = food-alcohol

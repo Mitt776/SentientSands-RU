@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Monk_Robe
 Id = monk_robe
+aliases = Роба монаха
 display_name = Monk Robe
 item_type = armor-body-light
 armor_class = Light

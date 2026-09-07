@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Grid
 Id = the_grid
+aliases = Сетка
 display_name = The Grid
 type = region
 weight = 4

@@ -1,6 +1,7 @@
 Category = locations
 Name = Vain
 Id = vain
+aliases = Тщета
 
 display_name = Vain
 type = region

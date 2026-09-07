@@ -1,6 +1,7 @@
 Category = items_research
 Name = AI_Core
 Id = ai_core
+aliases = Ядро ИИ
 
 display_name = AI Core
 item_type = ancient-technology

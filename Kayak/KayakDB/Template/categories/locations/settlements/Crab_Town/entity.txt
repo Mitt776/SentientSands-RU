@@ -1,6 +1,7 @@
 Category = locations
 Name = Crab_Town
 Id = crab_town
+aliases = Город крабов
 
 display_name = Crab Town
 region = Shun / southern coast

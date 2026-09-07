@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Fragment_Axe
 Id = fragment_axe
+aliases = Составной топор
 
 display_name = Fragment Axe
 item_type = weapon-heavy

@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Valamon
+Id = valamon
+
+aliases = Валамон
 
 $personality = Valamon is a Shek who leads the Reavers — a faction built on enslaving defeated enemies and forcing them to fight the next enemies. The Shek value warrior culture; the Reavers are the specific dark expression of what happens when that culture removes the part where the fighting has a point beyond more fighting. Valamon carries a Meitou Longsword, shared with Longen, making him one of two beings with the same weapon at the top of the world's most dangerous hierarchy.
 $backstory = 

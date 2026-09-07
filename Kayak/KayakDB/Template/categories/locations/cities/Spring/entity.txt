@@ -1,6 +1,7 @@
 Category = locations
 Name = Spring
 Id = spring
+aliases = Скачок
 
 display_name = Spring
 region = Stobe's Gamble

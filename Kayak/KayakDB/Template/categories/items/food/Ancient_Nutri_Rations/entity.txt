@@ -1,6 +1,7 @@
 Category = items_food
 Name = Ancient_Nutri_Rations
 Id = ancient_nutri_rations
+aliases = Древний пищ-паёк
 display_name = Ancient Nutri-Rations
 item_type = food-ancient
 base_price_cats = 500

@@ -1,6 +1,7 @@
 Category = world_lore
 Name = The_Second_Empire
 Id = second_empire
+aliases = Вторая империя
 
 display_name = The Second Empire
 also_known_as = Cat-Lon's Empire, The Skeleton Empire

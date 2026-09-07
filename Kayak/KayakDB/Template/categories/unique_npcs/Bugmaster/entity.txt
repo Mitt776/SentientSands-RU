@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Bugmaster
+Id = bugmaster
+
+aliases = Хозяин жуков
 
 $personality = The Bugmaster is the bounty target that brings specialized hunters to the Spider Plains with Desert Sabres specifically chosen for spider damage. He carries a Meitou Foreign Sabre — the best defensive sabre in the world — which means killing him requires either outranging him or enduring the fight until it ends, and it is not a short fight. He leads the Spider Clan, which operates in the Spider Plains, which is a geographic statement about how much the factions that control adjacent territory care about the Spider Plains.
 $backstory = 

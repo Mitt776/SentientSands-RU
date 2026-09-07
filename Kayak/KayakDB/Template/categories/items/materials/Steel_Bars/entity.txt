@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Steel_Bars
 Id = steel_bars
+aliases = Слитки стали
 
 display_name = Steel Bars
 item_type = crafting-material

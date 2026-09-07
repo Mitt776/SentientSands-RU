@@ -1,6 +1,7 @@
 Category = locations
 Name = Hive_Village
 Id = hive_village
+aliases = Улей
 
 display_name = Hive Village
 region = Vain / Dreg / Sinkuun

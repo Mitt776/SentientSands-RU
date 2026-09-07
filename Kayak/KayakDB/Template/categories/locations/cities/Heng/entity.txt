@@ -1,6 +1,7 @@
 Category = locations
 Name = Heng
 Id = heng
+aliases = Хэн
 
 display_name = Heng
 region = Heng zone

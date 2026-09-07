@@ -1,6 +1,7 @@
 Category = locations
 Name = Stoat
 Id = stoat
+aliases = Стоат
 
 display_name = Stoat
 region = Okran's Pride border / Border Zone edge

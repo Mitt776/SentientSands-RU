@@ -1,6 +1,7 @@
 Category = locations
 Name = Dreg
 Id = dreg
+aliases = Обломки
 display_name = Dreg
 type = region
 faction = Deadcat

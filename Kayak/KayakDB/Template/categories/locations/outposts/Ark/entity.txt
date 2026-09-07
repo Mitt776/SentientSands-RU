@@ -1,6 +1,7 @@
 Category = locations_outpost
 Name = Ark
 Id = ark
+aliases = Ковчег
 
 display_name = Ark
 region = Stobe's Garden (north-center)

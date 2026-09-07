@@ -1,6 +1,7 @@
 Category = items_medical
 Name = Authentic_Skeleton_Repair_Kit
 Id = authentic_skeleton_repair_kit
+aliases = Настоящий ремкомплект
 display_name = Authentic Skeleton Repair Kit
 item_type = medical
 base_price_cats = 1550

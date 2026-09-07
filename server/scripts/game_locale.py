@@ -44,7 +44,10 @@ _STATE = {
 # "The Hub" and "Hub" must answer to the same key: the lore base spells factions
 # and regions both ways ("Holy_Nation" vs "The Holy Nation").
 _LEADING_ARTICLE_RE = re.compile(r"^the\s+", re.IGNORECASE)
-_WHITESPACE_RE = re.compile(r"[\s_]+")
+# Дефис к пробелу, апостроф прочь: игра пишет "Cat-Lon" и "World's End",
+# а папки базы — Cat_Lon и Worlds_End.
+_WHITESPACE_RE = re.compile(r"[\s_-]+")
+_APOSTROPHE_RE = re.compile(r"[’']")
 
 # Russian Kenshi marks gendered nouns inline: "Стражни/кца1/" yields
 # "Стражник" and "Стражница". We keep the stem so such names still normalize
@@ -58,6 +61,7 @@ def normalize(name) -> str:
     if not text:
         return ""
     text = _GENDER_MARKUP_RE.sub("", text)
+    text = _APOSTROPHE_RE.sub("", text)
     text = _WHITESPACE_RE.sub(" ", text).strip()
     text = _LEADING_ARTICLE_RE.sub("", text)
     return text.casefold()

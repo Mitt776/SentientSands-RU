@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Samurai_Boots
 Id = samurai_boots
+aliases = Боты самурая
 display_name = Samurai Boots
 item_type = armor-feet-heavy
 armor_class = Heavy

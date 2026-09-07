@@ -1,6 +1,7 @@
 Category = locations
 Name = Greenbeach
 Id = greenbeach
+aliases = Зелёный пляж
 display_name = Greenbeach
 type = region
 weight = 3

@@ -1,6 +1,7 @@
 Category = locations
 Name = Great_Desert
 Id = great_desert
+aliases = Великая пустыня
 
 display_name = The Great Desert
 type = region

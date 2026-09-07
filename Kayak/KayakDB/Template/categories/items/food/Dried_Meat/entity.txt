@@ -1,6 +1,7 @@
 Category = items_food
 Name = Dried_Meat
 Id = dried_meat
+aliases = Вяленое мясо
 
 display_name = Dried Meat
 item_type = food

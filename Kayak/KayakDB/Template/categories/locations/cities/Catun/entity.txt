@@ -1,6 +1,7 @@
 Category = locations
 Name = Catun
 Id = catun
+aliases = Катун
 
 display_name = Catun
 region = Bonefields

@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Hook
 Id = the_hook
+aliases = Крюк
 
 display_name = The Hook
 type = region

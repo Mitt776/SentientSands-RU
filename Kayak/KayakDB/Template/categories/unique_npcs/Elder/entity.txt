@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Elder
+Id = elder
+
+aliases = Старейшина
 
 $personality = Meitou Ringed Sabre. The Skeleton Bandits — a faction of rogue Skeletons that represents one of the uses ancient beings found for their immortality that the Second Empire probably didn't intend.
 $backstory = 

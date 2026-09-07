@@ -1,6 +1,7 @@
 Category = items_food
 Name = Strawflour
 Id = strawflour
+aliases = Мука
 display_name = Strawflour
 item_type = food-processed
 base_price_cats = 500

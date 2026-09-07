@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Building_Materials
 Id = building_materials
+aliases = Стройматериалы
 display_name = Building Materials
 item_type = crafting-material
 base_price_cats = 108

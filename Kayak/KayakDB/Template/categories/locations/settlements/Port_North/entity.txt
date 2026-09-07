@@ -1,6 +1,7 @@
 Category = locations
 Name = Port_North
 Id = port_north
+aliases = Порт Север
 
 display_name = Port North
 region = Great Desert (northern coast)

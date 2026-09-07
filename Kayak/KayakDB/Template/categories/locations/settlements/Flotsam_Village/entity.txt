@@ -1,6 +1,7 @@
 Category = locations
 Name = Flotsam_Village
 Id = flotsam_village
+aliases = Деревня Отщепенцев
 
 display_name = Flotsam Village
 region = Hidden Forest (near Cannibal Plains)

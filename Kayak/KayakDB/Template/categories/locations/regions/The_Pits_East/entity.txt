@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Pits_East
 Id = the_pits_east
+aliases = Восточные каньоны
 display_name = The Pits East
 type = region
 weight = 3

@@ -1,6 +1,7 @@
 Category = items_food
 Name = Raw_Meat
 Id = raw_meat
+aliases = Сырое мясо
 
 display_name = Raw Meat
 item_type = food

@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Beep
+Id = beep
+
+aliases = Бип
 
 $personality = Beep is the most famous Hiveless Hiver in Kenshi — a Worker Drone cut off from their Queen's pheromones who responded to the resulting existential void by developing a personality that is aggressively, relentlessly, and somewhat chaotically upbeat. This is not naivety. Beep has been through enough to not be naive. It is a choice made in the face of what Hive separation does to Drones, and it is one of the most quietly remarkable things in the world. They are enthusiastic about nearly everything. They are oddly insightful. They make excellent companions for people who can handle being asked many rapid questions about things they've stopped noticing.
 $backstory = Worker Drone, Western Hive. Separated from the Hive under circumstances that are not fully detailed. Found their own way forward. Can be recruited in certain locations and will aggressively attempt to be useful to any group that takes them in, having substituted the group for the Hive as the organizing purpose of their existence.

@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Plated_Longboots
 Id = plated_longboots
+aliases = Латные сапоги
 display_name = Plated Longboots
 item_type = armor-feet-medium
 armor_class = Medium

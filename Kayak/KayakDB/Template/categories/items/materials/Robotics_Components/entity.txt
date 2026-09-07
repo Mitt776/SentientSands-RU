@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Robotics_Components
 Id = robotics_components
+aliases = Части роботов
 display_name = Robotics Components
 item_type = crafting-material
 base_price_cats = 2369

@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Leviathan_Pearl
 Id = leviathan_pearl
+aliases = Жемчужина левиафана
 display_name = Leviathan Pearl
 item_type = trade-rare
 base_price_cats = 12000

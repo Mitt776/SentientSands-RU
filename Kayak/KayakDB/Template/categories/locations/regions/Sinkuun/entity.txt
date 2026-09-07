@@ -1,6 +1,7 @@
 Category = locations
 Name = Sinkuun
 Id = sinkuun
+aliases = Синкаан
 display_name = Sinkuun
 type = region
 faction = United_Cities

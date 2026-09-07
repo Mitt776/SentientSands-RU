@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Raw_Stone
 Id = raw_stone
+aliases = Камень
 display_name = Raw Stone
 item_type = raw-material
 base_price_cats = 36

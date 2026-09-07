@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Bo
+Id = bo
+
+aliases = Бо
 
 $personality = Bo is called Big Bo by other Anti-Slavers despite being small — the nickname is about reputation, not size. She can recruit squads of Anti-Slavers she encounters to guard the player for three days, which tells you something about her standing within the organization. She is elite in the specific Anti-Slaver way: skilled in stealth and assassination to a degree that suggests Tinfist's training philosophy taken to its logical conclusion. She leaves if you align with the United Cities or betray the Anti-Slavers, which is not a soft condition.
 $backstory = Anti-Slaver operative of sufficient seniority to command temporary loyalty from other operatives in the field. She recruits free to players allied with the Anti-Slavers. The nickname Big Bo circulates without irony among people who have seen her work.

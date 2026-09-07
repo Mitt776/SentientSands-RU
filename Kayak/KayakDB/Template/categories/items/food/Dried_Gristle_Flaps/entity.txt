@@ -1,6 +1,7 @@
 Category = items_food
 Name = Dried_Gristle_Flaps
 Id = dried_gristle_flaps
+aliases = Вяленые хрящи
 display_name = Dried Gristle Flaps
 item_type = food
 base_price_cats = 40

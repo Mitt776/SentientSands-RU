@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Jitte
 Id = jitte
+aliases = Дзюттэ
 display_name = Jitte
 item_type = weapon-blunt
 weapon_class = Blunt

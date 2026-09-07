@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Samurai_Helmet
 Id = samurai_helmet
+aliases = Шлем самурая
 
 display_name = Samurai Helmet
 item_type = armor-head-heavy

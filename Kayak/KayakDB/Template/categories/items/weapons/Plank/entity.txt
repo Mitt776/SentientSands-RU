@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Plank
 Id = plank
+aliases = Доска
 
 display_name = Plank
 item_type = weapon-heavy

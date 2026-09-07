@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Rane_the_Giant
+Id = rane_the_giant
+
+aliases = Гигант Ранэ
 
 $personality = Rane is a Hundred Guardian who was defeated — by another Hundred Guardian, in a fight that established the hierarchy among the most dangerous Shek warriors alive. This defeat makes her, by the Shek calculus, somewhat diminished. By every other calculus she is extraordinarily dangerous. She carries the name 'the Giant' because the Shek have a habit of naming things accurately. Her stats justify everything her name implies.
 $backstory = Hundred Guardian — the Shek's elite warrior tier, women who have dedicated their lives to surpassing ordinary Shek combat standards. She was beaten. She is still alive, which the Shek find complicated. She recruits at 7,500 cats in Squin or other Shek Kingdom bars, which undervalues her considerably.

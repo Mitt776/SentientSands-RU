@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Iron_Hat
 Id = iron_hat
+aliases = Железная шляпа
 
 display_name = Iron Hat
 item_type = armor-head-medium

@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Assassins_Rags
 Id = assassins_rags
+aliases = Обноски убийцы
 
 display_name = Assassin's Rags
 item_type = armor-body-light

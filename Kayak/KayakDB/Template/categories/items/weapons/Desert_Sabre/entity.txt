@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Desert_Sabre
 Id = desert_sabre
+aliases = Пустынная сабля
 
 display_name = Desert Sabre
 item_type = weapon-blade

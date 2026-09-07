@@ -1,6 +1,7 @@
 Category = locations
 Name = Heft
 Id = heft
+aliases = Груз
 
 display_name = Heft
 region = Great Desert

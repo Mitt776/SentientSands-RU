@@ -1,6 +1,7 @@
 Category = locations
 Name = Gut
 Id = gut
+aliases = Кишка
 display_name = The Gut
 type = region
 weight = 5

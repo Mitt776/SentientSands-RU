@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Fuel
 Id = fuel
+aliases = Топливо
 display_name = Fuel
 item_type = crafting-material
 base_price_cats = 480

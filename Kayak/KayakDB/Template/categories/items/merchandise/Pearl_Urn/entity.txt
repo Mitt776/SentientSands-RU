@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Pearl_Urn
 Id = pearl_urn
+aliases = Жемчужная урна
 display_name = Pearl Urn
 item_type = trade-junk
 base_price_cats = 90

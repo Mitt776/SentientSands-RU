@@ -1,6 +1,7 @@
 Category = items_research
 Name = Engineering_Research
 Id = engineering_research
+aliases = Инженерные исследования
 display_name = Engineering Research
 item_type = research-artifact
 base_price_cats = 3000

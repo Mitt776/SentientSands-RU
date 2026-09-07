@@ -1,6 +1,7 @@
 Category = locations_ruin
 Name = Bast
 Id = bast
+aliases = Мочалка
 
 display_name = Bast
 region = Bast zone (United Cities territory)

@@ -1,6 +1,7 @@
 Category = locations
 Name = South_Wetlands
 Id = south_wetlands
+aliases = Южные болота
 display_name = South Wetlands
 type = region
 faction = United_Cities

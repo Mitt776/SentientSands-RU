@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Swamp
 Id = the_swamp
+aliases = Болото
 
 display_name = The Swamp
 type = region

@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Drifters_Boots
 Id = drifters_boots
+aliases = Ботинки скитальца
 
 display_name = Drifter's Boots
 item_type = armor-feet-light

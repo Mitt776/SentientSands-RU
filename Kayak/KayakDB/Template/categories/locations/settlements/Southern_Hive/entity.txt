@@ -1,6 +1,7 @@
 Category = locations
 Name = Southern_Hive
 Id = southern_hive
+aliases = Южный улей
 
 display_name = Southern Hive (Location)
 region = Royal Valley / Greyshelf

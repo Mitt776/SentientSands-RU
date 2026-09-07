@@ -1,6 +1,7 @@
 Category = locations
 Name = Raptor_Island
 Id = raptor_island
+aliases = Остров Ящера
 display_name = Raptor Island
 type = region
 weight = 4

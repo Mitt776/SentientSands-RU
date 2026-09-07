@@ -1,6 +1,7 @@
 Category = locations_ruin
 Name = Lost_Armoury
 Id = lost_armoury
+aliases = Затерянный арсенал
 
 display_name = Lost Armoury
 region = Various (scattered)

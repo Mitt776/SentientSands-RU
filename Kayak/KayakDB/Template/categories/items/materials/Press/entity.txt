@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Press
 Id = press
+aliases = Пресс
 display_name = Press
 item_type = crafting-material
 base_price_cats = 324

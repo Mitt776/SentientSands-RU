@@ -1,6 +1,7 @@
 Category = locations
 Name = Arach
 Id = arach
+aliases = Арах
 display_name = Arach
 type = region
 weight = 4

@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Monk_Pants
 Id = monk_pants
+aliases = Штаны монаха
 display_name = Monk Pants
 item_type = armor-legs-light
 armor_class = Light

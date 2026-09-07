@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Crater
 Id = the_crater
+aliases = Кратер
 display_name = The Crater
 type = region
 weight = 4

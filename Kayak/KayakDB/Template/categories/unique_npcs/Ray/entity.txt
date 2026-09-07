@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Ray
+Id = ray
+
+aliases = Рэй
 
 $personality = Ray is a Hiver Soldier Drone who is mute. His entire documented dialogue consists of two lines: a nod after defeating enemies, and an exclamation point when he sees an animal eating farm crops. This is not nothing — it is a complete personality expressed in the minimum possible output. He is what he is, which is a Soldier Drone without a Queen, doing work that makes sense to a thing built to protect and guard.
 $backstory = Soldier Drone, separated from the Hive, found doing what Soldier Drones do without a hive to do it for. Recruits for 1,000 cats, which is very cheap for a Soldier Drone's combat capability.

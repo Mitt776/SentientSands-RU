@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Pits
 Id = the_pits
+aliases = Каньоны
 display_name = The Pits
 type = region
 weight = 4

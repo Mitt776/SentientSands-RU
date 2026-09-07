@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Megacrab_Ganglion
 Id = megacrab_ganglion
+aliases = Ганглий Мегакраба
 display_name = Megacrab Ganglion
 item_type = trade-rare
 base_price_cats = 3000

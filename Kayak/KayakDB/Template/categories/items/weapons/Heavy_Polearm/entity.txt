@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Heavy_Polearm
 Id = heavy_polearm
+aliases = Бердыш
 display_name = Heavy Polearm
 item_type = weapon-polearm
 weapon_class = Polearms

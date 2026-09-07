@@ -1,6 +1,7 @@
 Category = locations_ruin
 Name = Drin
 Id = drin
+aliases = Дрин
 
 display_name = Drin
 region = Bast zone

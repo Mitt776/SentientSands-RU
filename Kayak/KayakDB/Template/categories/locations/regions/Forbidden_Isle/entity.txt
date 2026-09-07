@@ -1,6 +1,7 @@
 Category = locations
 Name = Forbidden_Isle
 Id = forbidden_isle
+aliases = Запретный остров
 display_name = Forbidden Isle
 type = region
 weight = 3

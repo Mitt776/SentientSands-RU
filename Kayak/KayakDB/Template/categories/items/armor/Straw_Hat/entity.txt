@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Straw_Hat
 Id = straw_hat
+aliases = Плетёная шляпа
 
 display_name = Straw Hat
 item_type = armor-head-light

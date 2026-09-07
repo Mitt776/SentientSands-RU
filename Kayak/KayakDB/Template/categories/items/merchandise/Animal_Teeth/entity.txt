@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Animal_Teeth
 Id = animal_teeth
+aliases = Зуб животного
 display_name = Animal Teeth
 item_type = trade-junk
 base_price_cats = 30

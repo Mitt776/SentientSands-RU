@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Skeleton_Muscle
 Id = skeleton_muscle
+aliases = Мышца скелета
 display_name = Skeleton Muscle
 item_type = crafting-material
 base_price_cats = 777

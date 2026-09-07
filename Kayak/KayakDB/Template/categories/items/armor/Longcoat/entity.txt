@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Longcoat
 Id = longcoat
+aliases = Пальто
 display_name = Longcoat
 item_type = armor-body-light
 armor_class = Light

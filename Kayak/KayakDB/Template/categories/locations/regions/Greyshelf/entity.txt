@@ -1,6 +1,7 @@
 Category = locations
 Name = Greyshelf
 Id = greyshelf
+aliases = Серый шельф
 display_name = Greyshelf
 type = region
 faction = Second_Empire_Exiles

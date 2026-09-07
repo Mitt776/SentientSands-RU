@@ -1,6 +1,7 @@
 Category = locations_outpost
 Name = Last_Stand
 Id = last_stand
+aliases = Последний Бой
 
 display_name = Last Stand
 region = Stenn Desert (Hook edge)

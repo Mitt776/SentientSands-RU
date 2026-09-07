@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Shryke
+Id = shryke
+
+aliases = Шрайк
 
 $personality = Shryke was traveling to Mongrel with her brother when the Fogmen attacked. She made it. He didn't. The screaming still follows her. She has a scar on her hand as the physical record of what happened, and a deep reluctance to leave Mongrel unless the squad around her is large enough that the math feels different. She is not broken by what happened. She has restructured herself around the survival of it, which looks different from the outside but is its own kind of strength.
 $backstory = Treasure hunter by trade, which means she was already traveling dangerous ground before the Fog Islands happened. Shares some dialogue patterns with Horse — two people who ended up in Mongrel through hard routes. She won't leave with a small squad, which isn't cowardice; it's the specific calculation of someone who has seen the Fogmen work.

@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Sinklyde
+Id = sinklyde
+
+aliases = Синклайд
 
 $personality = Sinklyde is a scavenger in the technical sense — someone who has organized their entire skill set around finding things in places other people have already left. He's meticulous in ruins in a way he isn't anywhere else, patient in ancient labs, careful around Security Spiders. Outside of ruins he's variable. He'll follow whoever seems to be going somewhere with good ruins at the end of it.
 $backstory = 

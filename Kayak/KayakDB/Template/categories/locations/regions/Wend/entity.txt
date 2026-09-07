@@ -1,6 +1,7 @@
 Category = locations
 Name = Wend
 Id = wend
+aliases = Путь
 display_name = Wend
 type = region
 weight = 3

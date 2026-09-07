@@ -1,6 +1,7 @@
 Category = locations_ruin
 Name = Endin
 Id = endin
+aliases = Эндин
 
 display_name = Endin
 region = Bast zone

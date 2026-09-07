@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Copper_Alloy_Plates
 Id = copper_alloy_plates
+aliases = Пластины медного сплава
 
 display_name = Copper Alloy Plates
 item_type = crafting-material

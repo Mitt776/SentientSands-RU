@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Hub
 Id = the_hub
+aliases = Хаб
 
 display_name = The Hub
 region = Border Zone

@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Ninja_Mask
 Id = ninja_mask
+aliases = Маска ниндзя
 display_name = Ninja Mask
 item_type = armor-head-light
 armor_class = Light

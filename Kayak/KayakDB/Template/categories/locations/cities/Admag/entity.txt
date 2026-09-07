@@ -1,6 +1,7 @@
 Category = locations
 Name = Admag
 Id = admag
+aliases = Адмаг
 
 display_name = Admag
 region = Stenn Desert

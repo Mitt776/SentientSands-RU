@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Riddly
+Id = riddly
+
+aliases = Ридли
 
 $personality = Riddly is the kind of person who seems like she's about to make a bad decision, and then doesn't, and then you're not sure which way it was going to go either. She's sharp in a way that doesn't announce itself — she presents as casual and then the casual thing she just said turns out to have been the correct assessment of the situation. She's good company and she knows it, and she uses that as a way of being underestimated by people who mistake likeability for simplicity.
 $backstory = 

@@ -1,6 +1,7 @@
 Category = locations_ruin
 Name = Ancient_Labs
 Id = ancient_labs
+aliases = Древние лабы
 
 display_name = Ancient Labs
 region = Various (scattered across the continent)

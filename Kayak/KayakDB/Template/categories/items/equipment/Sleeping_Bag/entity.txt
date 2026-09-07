@@ -1,6 +1,7 @@
 Category = items_equipment
 Name = Sleeping_Bag
 Id = sleeping_bag
+aliases = Спальный мешок
 display_name = Sleeping Bag
 item_type = equipment-utility
 base_price_cats = 300

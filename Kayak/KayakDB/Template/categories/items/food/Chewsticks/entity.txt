@@ -1,6 +1,7 @@
 Category = items_food
 Name = Chewsticks
 Id = chewsticks
+aliases = Жевательные палочки
 display_name = Chewsticks
 item_type = food
 base_price_cats = 134

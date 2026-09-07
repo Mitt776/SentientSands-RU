@@ -1,6 +1,7 @@
 Category = locations
 Name = Border_Zone
 Id = border_zone
+aliases = Пограничная зона
 
 display_name = The Border Zone
 type = region

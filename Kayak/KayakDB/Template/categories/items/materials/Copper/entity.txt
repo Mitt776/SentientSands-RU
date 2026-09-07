@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Copper
 Id = copper
+aliases = Медь
 display_name = Copper
 item_type = raw-material
 base_price_cats = 180

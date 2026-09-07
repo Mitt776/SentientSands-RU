@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Holy_Chest_Plate
 Id = holy_chest_plate
+aliases = Святой нагрудник
 
 display_name = Holy Chest Plate
 item_type = armor-body-heavy

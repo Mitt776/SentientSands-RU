@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Rhinobot
+Id = rhinobot
+
+aliases = Носорог
 
 $personality = Rhinobot operated the child prisons of the Second Empire. The wiki describes him as callous and emotionless, which is a Skeleton's expression of someone who executed policy without moral friction. He is now a guard in Ashland Dome II, watching over Cat-Lon's exile with a Meitou Topper — the best top-heavy katana in the world. The centuries between the child prisons and the Ashland dome vigil are not documented.
 $backstory = 

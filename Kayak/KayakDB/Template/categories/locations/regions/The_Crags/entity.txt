@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Crags
 Id = the_crags
+aliases = Утёсы
 display_name = The Crags
 type = region
 faction = Tech_Hunters

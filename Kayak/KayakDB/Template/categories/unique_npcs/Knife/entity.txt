@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Knife
+Id = knife
+
+aliases = Финка
 
 $personality = Knife's name is a statement of intent or a history — she doesn't explain which. She's direct in communication the way that people are direct when they've decided that being indirect costs more than it's worth. She'll tell you what she thinks. She'll tell you what she's going to do. She'll do it. The gap between what she says and what she does is very small, which makes her reliable and occasionally confrontational.
 $backstory = 

@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Topper
 Id = topper
+aliases = Топпер
 display_name = Topper
 item_type = weapon-blade
 weapon_class = Katanas

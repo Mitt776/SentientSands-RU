@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Drifters_Leather_Jacket
 Id = drifters_leather_jacket
+aliases = Косуха скитальца
 
 display_name = Drifter's Leather Jacket
 item_type = armor-body-light

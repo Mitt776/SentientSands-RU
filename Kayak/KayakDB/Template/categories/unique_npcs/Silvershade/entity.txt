@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Silvershade
+Id = silvershade
+
+aliases = Седая тень
 
 $personality = Silvershade is a Hive Prince with a gambling problem, which is a remarkable combination of things to be simultaneously. Hive Princes are autonomous, intelligent, and built to handle external commerce and negotiation for the Hive. A Prince with a gambling problem has taken that autonomy and applied it to a very specific self-destructive use. He's exiled — from the Hive, from the Queen's pheromonal guidance — and has filled the resulting void with the next-best simulation of stakes and consequence he could find.
 $backstory = Western Hive Prince, separated or exiled, ended up in the Swamp's gambling establishments. The route from Hive Prince to Shark bar regular is not documented but the destination says a lot. Recruits for 3,000 cats.

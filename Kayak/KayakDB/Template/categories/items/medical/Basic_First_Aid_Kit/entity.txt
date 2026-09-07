@@ -1,6 +1,7 @@
 Category = items_medical
 Name = Basic_First_Aid_Kit
 Id = basic_first_aid_kit
+aliases = Простая аптечка
 display_name = Basic First Aid Kit
 item_type = medical
 base_price_cats = 70

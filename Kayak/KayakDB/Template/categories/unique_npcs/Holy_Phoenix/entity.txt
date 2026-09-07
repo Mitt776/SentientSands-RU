@@ -1,4 +1,6 @@
+Category = unique_npcs
 Name = Holy_Phoenix
+Id = holy_phoenix
 
 $personality = The Phoenix believes. That is the most important thing about him — not the political power, not the armies, not the title. He believes in Okran with the clean, unambiguous certainty of a man who has never needed to question it because every structure around him has confirmed it since birth. He is not cruel by nature. He is sincere. The suffering he causes is the suffering of a person who is genuinely, absolutely certain that they are doing the right thing, which in Kenshi as in most places turns out to be worse than cruelty.
 $backstory = The 62nd Holy Lord Phoenix, reincarnation of the line stretching back to the first Phoenix who led humanity's rebellion against the Second Empire. He carries the weight of that lineage — or more precisely, the weight of believing in it completely. The Holy Nation's current strength and direction reflect his governance: more orthodox than some predecessors, less willing to bend.

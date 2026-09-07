@@ -1,6 +1,7 @@
 Category = items_food
 Name = Dustwich
 Id = dustwich
+aliases = Бутергроб
 display_name = Dustwich
 item_type = food
 base_price_cats = 856

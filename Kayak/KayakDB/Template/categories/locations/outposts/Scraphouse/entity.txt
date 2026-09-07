@@ -1,6 +1,7 @@
 Category = locations_outpost
 Name = Scraphouse
 Id = scraphouse
+aliases = Хламилище
 
 display_name = The Scraphouse
 region = Deadlands (east of Black Desert City)

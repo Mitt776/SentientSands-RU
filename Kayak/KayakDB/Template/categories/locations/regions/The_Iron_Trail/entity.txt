@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Iron_Trail
 Id = the_iron_trail
+aliases = Железный шлейф
 display_name = The Iron Trail
 type = region
 weight = 3

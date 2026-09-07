@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Katana
 Id = katana
+aliases = Катана
 
 display_name = Katana
 item_type = weapon-blade

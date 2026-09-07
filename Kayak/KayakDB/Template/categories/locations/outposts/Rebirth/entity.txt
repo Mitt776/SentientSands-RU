@@ -1,6 +1,7 @@
 Category = locations_outpost
 Name = Rebirth
 Id = rebirth
+aliases = Возрождение
 
 display_name = Rebirth
 region = Okran's Gulf

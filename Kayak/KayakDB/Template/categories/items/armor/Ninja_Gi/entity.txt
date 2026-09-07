@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Ninja_Gi
 Id = ninja_gi
+aliases = Ги ниндзя
 display_name = Ninja Gi
 item_type = armor-body-light
 armor_class = Light

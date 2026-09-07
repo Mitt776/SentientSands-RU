@@ -1,6 +1,7 @@
 Category = locations_outpost
 Name = Cat_Lons_Exile
 Id = cat_lons_exile
+aliases = Ссылка Кат-Лона
 
 display_name = Cat-Lon's Exile
 region = Ashlands

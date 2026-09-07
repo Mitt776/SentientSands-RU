@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Guardless_Katana
 Id = guardless_katana
+aliases = Катана без цубы
 display_name = Guardless Katana
 item_type = weapon-blade
 weapon_class = Katanas

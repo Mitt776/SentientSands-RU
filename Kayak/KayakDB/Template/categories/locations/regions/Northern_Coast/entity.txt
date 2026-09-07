@@ -1,6 +1,7 @@
 Category = locations
 Name = Northern_Coast
 Id = northern_coast
+aliases = Северный берег
 display_name = Northern Coast
 type = region
 weight = 5

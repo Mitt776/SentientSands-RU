@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Longsword
 Id = longsword
+aliases = Меч
 
 display_name = Longsword
 item_type = weapon-blade

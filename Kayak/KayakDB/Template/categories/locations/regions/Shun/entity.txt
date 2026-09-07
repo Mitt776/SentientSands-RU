@@ -1,6 +1,7 @@
 Category = locations
 Name = Shun
 Id = shun
+aliases = Шан
 display_name = Shun
 type = region
 weight = 6

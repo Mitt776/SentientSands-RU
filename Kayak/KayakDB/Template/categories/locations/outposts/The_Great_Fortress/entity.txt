@@ -1,6 +1,7 @@
 Category = locations_outpost
 Name = The_Great_Fortress
 Id = the_great_fortress
+aliases = Великая крепость
 
 display_name = The Great Fortress
 region = Stenn Desert

@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Horse_Chopper
 Id = horse_chopper
+aliases = Конеруб
 
 display_name = Horse Chopper
 item_type = weapon-blade

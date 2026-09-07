@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Doctor_Chung
+Id = doctor_chung
+
+aliases = Доктор Чон
 
 $personality = Doctor Chung is a surgeon practicing in the Swamp, which is either dedication to a vocation or a sign that he couldn't get work anywhere else and the gangs need someone who knows what they're doing. His dialogue is heavily about healing and surgery. He recruits free and his Field Medic skill is one of the highest available in a starting recruit. He doesn't actually provide surgery as a service — that's not how his character is implemented — but the conversation implies he should.
 $backstory = Medical training of unspecified origin. Current posting: wherever someone needs a surgeon badly enough to not ask questions about the doctor's location choices. Found in Mud Town and Shark.

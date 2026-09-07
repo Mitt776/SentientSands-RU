@@ -1,6 +1,7 @@
 Category = items_food
 Name = Cooked_Vegetables
 Id = cooked_vegetables
+aliases = Варёные овощи
 display_name = Cooked Vegetables
 item_type = food
 base_price_cats = 300

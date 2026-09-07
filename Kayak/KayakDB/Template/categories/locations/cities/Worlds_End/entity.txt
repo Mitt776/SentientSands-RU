@@ -1,6 +1,7 @@
 Category = locations
 Name = Worlds_End
 Id = worlds_end
+aliases = Край Мира
 
 display_name = World's End
 region = Arm of Okran (despite the name, independent of Holy Nation control)

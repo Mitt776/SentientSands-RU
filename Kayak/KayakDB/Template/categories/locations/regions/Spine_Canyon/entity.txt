@@ -1,6 +1,7 @@
 Category = locations
 Name = Spine_Canyon
 Id = spine_canyon
+aliases = Хребтовый каньон
 display_name = Spine Canyon
 type = region
 weight = 4

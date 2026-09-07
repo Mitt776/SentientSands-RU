@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Spiked_Club
 Id = spiked_club
+aliases = Шипастая дубина
 
 display_name = Spiked Club
 item_type = weapon-blunt

@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Junkbow
 Id = junkbow
+aliases = Хламбалет
 display_name = Junkbow
 item_type = weapon-ranged
 weapon_class = Crossbows

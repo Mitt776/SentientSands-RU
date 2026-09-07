@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Chainmail
 Id = chainmail
+aliases = Кольчуга
 
 display_name = Chainmail
 item_type = armor-body-medium

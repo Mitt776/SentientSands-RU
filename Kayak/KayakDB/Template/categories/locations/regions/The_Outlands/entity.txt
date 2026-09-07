@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Outlands
 Id = the_outlands
+aliases = Дальние земли
 display_name = The Outlands
 type = region
 faction = Tech_Hunters

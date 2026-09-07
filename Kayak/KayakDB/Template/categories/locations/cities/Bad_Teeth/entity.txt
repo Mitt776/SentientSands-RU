@@ -1,6 +1,7 @@
 Category = locations
 Name = Bad_Teeth
 Id = bad_teeth
+aliases = Плохие Зубы
 
 display_name = Bad Teeth
 region = Okran's Pride (eastern edge, Skinner's Roam border)

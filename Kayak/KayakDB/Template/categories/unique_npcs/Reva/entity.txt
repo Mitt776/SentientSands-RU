@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Reva
+Id = reva
+
+aliases = Рева
 
 $personality = Reva came from Holy Nation territory and left, which required more than she expected and cost more than she anticipated. She's committed to what the Flotsam Ninjas stand for — Narko and Okran as balance, women as full people, the Holy Nation's theology as the problem rather than the answer. She's not gentle about this. She's been on the other side of the Holy Nation's gentleness and knows what it actually looks like.
 $backstory = 

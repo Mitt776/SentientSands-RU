@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Horse
+Id = horse
+
+aliases = Конь
 
 $personality = Horse heard about a pillar of sand somewhere north of the Cannibal Plains, guarded by a monster, full of old empire tech. He tells you this on recruitment, implying this is where he wants to go. He has the particular restlessness of someone who has committed to a direction without fully knowing what's there, which is either courage or lack of imagination depending on your perspective. Whatever it is, it keeps him moving.
 $backstory = Wanderer and treasure hunter, found in bars from Squin to elsewhere. The pillar story may be real or may be the kind of thing people tell themselves to justify the next journey. Has some dialogue overlap with Shryke — two people who navigate the world by following interesting leads rather than by following maps.

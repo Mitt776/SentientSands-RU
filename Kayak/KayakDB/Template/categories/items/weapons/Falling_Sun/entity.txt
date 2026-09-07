@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Falling_Sun
 Id = falling_sun
+aliases = Падающее солнце
 
 display_name = Falling Sun
 item_type = weapon-heavy-unique

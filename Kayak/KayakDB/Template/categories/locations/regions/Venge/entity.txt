@@ -1,6 +1,7 @@
 Category = locations
 Name = Venge
 Id = venge
+aliases = Мщение
 display_name = Venge
 type = region
 weight = 6

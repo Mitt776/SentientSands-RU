@@ -1,6 +1,7 @@
 Category = locations
 Name = Brink
 Id = brink
+aliases = Грань
 
 display_name = Brink
 region = Stormgap Coast

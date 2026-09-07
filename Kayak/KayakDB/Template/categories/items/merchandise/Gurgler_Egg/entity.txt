@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Gurgler_Egg
 Id = gurgler_egg
+aliases = Яйцо гурчащего
 display_name = Gurgler Egg
 item_type = trade-raw
 base_price_cats = 240

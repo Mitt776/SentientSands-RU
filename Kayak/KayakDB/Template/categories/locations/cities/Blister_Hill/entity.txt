@@ -1,6 +1,7 @@
 Category = locations
 Name = Blister_Hill
 Id = blister_hill
+aliases = Бугристый Холм
 
 display_name = Blister Hill
 region = Okran's Pride

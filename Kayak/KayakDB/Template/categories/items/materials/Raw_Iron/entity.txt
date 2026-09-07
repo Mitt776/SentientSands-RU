@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Raw_Iron
 Id = raw_iron
+aliases = Железо
 
 display_name = Raw Iron
 item_type = raw-material

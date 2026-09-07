@@ -1,6 +1,7 @@
 Category = items_food
 Name = Bloodrum
 Id = bloodrum
+aliases = Кровором
 display_name = Bloodrum
 item_type = food-alcohol
 base_price_cats = 420

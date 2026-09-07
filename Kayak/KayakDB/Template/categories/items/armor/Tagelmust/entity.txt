@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Tagelmust
 Id = tagelmust
+aliases = Тагельмуст
 
 display_name = Tagelmust
 item_type = armor-head-medium

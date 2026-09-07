@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Water_Jug
 Id = water_jug
+aliases = Кувшин воды
 display_name = Water Jug
 item_type = trade-junk
 base_price_cats = 30

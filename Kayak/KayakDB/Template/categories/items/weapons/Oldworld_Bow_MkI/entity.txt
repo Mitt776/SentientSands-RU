@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Oldworld_Bow_MkI
 Id = oldworld_bow_mki
+aliases = Старый балет MкI
 display_name = Oldworld Bow MkI
 item_type = weapon-ranged
 weapon_class = Crossbows

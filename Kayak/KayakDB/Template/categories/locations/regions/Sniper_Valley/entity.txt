@@ -1,6 +1,7 @@
 Category = locations
 Name = Sniper_Valley
 Id = sniper_valley
+aliases = Долина снайперов
 display_name = Sniper Valley
 type = region
 weight = 3

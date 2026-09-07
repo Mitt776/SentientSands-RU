@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Pia
+Id = pia
+
+aliases = Пиа
 
 $personality = Pia is the most personality-rich of the Flotsam Ninja recruits — the one whose dialogue extends furthest past the recruitment conversation into the daily life of someone who chose this faction deliberately. She carries the Flotsam worldview: the Holy Nation is wrong, the syncretic faith is right, and surviving to fight another day is more valuable than dying correctly. She has high athletics and field medic skills, making her practical as well as interesting.
 $backstory = Flotsam Ninja, which means escaped the Holy Nation, found Moll's village, was accepted, trained. The specifics of her departure from the Holy Nation involve harder decisions than most of her companions are willing to think about.

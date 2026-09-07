@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Samurai_Armour
 Id = samurai_armour
+aliases = Доспех самурая
 
 display_name = Samurai Armour
 item_type = armor-body-heavy

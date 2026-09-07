@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Yamdu
+Id = yamdu
+
+aliases = Ямду
 
 $personality = Yamdu has been everywhere twice and remembers most of it. He's the kind of traveler who accumulates stories the way other people accumulate debts — constantly, and in ways that aren't always immediately useful but occasionally become exactly what's needed. He's generous with the stories and selective about the facts inside them, which is a distinction worth making. He's survived by being perceptive and sociable and by leaving places at the right time.
 $backstory = 

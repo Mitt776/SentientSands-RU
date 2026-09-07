@@ -1,6 +1,7 @@
 Category = items_armor
 Name = White_Plate_Jacket
 Id = white_plate_jacket
+aliases = Белая куртка с латами
 display_name = White Plate Jacket
 item_type = armor-body-heavy
 armor_class = Heavy

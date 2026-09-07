@@ -1,6 +1,7 @@
 Category = items_food
 Name = Grog
 Id = grog
+aliases = Грог
 
 display_name = Grog
 item_type = food-alcohol

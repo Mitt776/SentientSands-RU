@@ -1,6 +1,7 @@
 Category = locations
 Name = Black_Scratch
 Id = black_scratch
+aliases = Чёрная Ссадина
 
 display_name = Black Scratch
 region = The Outlands

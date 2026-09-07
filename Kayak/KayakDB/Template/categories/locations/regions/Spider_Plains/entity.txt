@@ -1,6 +1,7 @@
 Category = locations
 Name = Spider_Plains
 Id = spider_plains
+aliases = Паучьи равнины
 display_name = Spider Plains
 type = region
 weight = 5

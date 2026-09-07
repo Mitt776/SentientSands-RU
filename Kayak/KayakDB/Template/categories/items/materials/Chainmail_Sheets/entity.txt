@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Chainmail_Sheets
 Id = chainmail_sheets
+aliases = Кольчужное полотно
 display_name = Chainmail Sheets
 item_type = crafting-material
 base_price_cats = 2592

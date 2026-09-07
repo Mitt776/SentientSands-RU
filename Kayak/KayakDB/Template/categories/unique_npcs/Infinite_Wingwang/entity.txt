@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Infinite_Wingwang
+Id = infinite_wingwang
+
+aliases = Вечный Суньвынь
 
 $personality = Infinite Wingwang was once described as the strongest recruit in the game, which was true at a specific point in development and is still impressive if no longer definitively accurate. The name is either a title or a statement of personal philosophy. He costs between 100,000 and 5,000 cats depending on something in his encounter logic, which makes him either the most expensive or one of the cheaper recruits depending on circumstances that are not fully transparent.
 $backstory = Wanderer of unclear history. The name 'Infinite Wingwang' is not explained by any discoverable lore. He either named himself or was named by someone with a specific sense of what names should accomplish.

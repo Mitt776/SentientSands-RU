@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Hashish
 Id = hashish
+aliases = Гашиш
 
 display_name = Hashish
 item_type = trade-contraband

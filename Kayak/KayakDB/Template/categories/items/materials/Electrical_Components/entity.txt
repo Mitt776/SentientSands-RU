@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Electrical_Components
 Id = electrical_components
+aliases = Электродетали
 
 display_name = Electrical Components
 item_type = crafting-material

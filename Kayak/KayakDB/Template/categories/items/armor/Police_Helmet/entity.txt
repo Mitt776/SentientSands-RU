@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Police_Helmet
 Id = police_helmet
+aliases = Полицейский шлем
 display_name = Police Helmet
 item_type = armor-head-medium
 armor_class = Medium

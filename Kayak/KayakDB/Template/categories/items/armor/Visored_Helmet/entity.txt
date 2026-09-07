@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Visored_Helmet
 Id = visored_helmet
+aliases = Шлем с забралом
 display_name = Visored Helmet
 item_type = armor-head-medium
 armor_class = Medium

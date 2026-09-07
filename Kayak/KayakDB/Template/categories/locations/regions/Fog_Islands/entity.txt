@@ -1,6 +1,7 @@
 Category = locations
 Name = Fog_Islands
 Id = fog_islands
+aliases = Острова тумана
 
 display_name = The Fog Islands
 type = region

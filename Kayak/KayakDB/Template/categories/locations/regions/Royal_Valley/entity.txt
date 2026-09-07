@@ -1,6 +1,7 @@
 Category = locations
 Name = Royal_Valley
 Id = royal_valley
+aliases = Царская долина
 display_name = Royal Valley
 type = region
 faction = Southern_Hive

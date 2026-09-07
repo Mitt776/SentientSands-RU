@@ -1,6 +1,7 @@
 Category = items_medical
 Name = Skeleton_Repair_Kit
 Id = skeleton_repair_kit
+aliases = Ремкомплект скелета
 
 display_name = Skeleton Repair Kit
 item_type = medical-mechanical

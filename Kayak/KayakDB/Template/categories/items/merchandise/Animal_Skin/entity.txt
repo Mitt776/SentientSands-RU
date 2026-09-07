@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Animal_Skin
 Id = animal_skin
+aliases = Шкура животного
 display_name = Animal Skin
 item_type = trade-raw
 base_price_cats = 360

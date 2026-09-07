@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Wooden_Sandals
 Id = wooden_sandals
+aliases = Деревянные сандали
 
 display_name = Wooden Sandals
 item_type = armor-feet-light

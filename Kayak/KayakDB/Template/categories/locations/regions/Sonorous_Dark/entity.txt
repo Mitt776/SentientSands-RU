@@ -1,6 +1,7 @@
 Category = locations
 Name = Sonorous_Dark
 Id = sonorous_dark
+aliases = Звонкий мрак
 display_name = Sonorous Dark
 type = region
 weight = 3

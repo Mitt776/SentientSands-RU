@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Screamer_the_False
+Id = screamer_the_false
+
+aliases = Ложный крикун
 
 $personality = Meitou Heavy Polearm. The Tower of Abuse. The Second Empire Exile designation — one of Cat-Lon's remnant forces still active enough to be at a named location with a specific weapon.
 $backstory = 

@@ -1,6 +1,7 @@
 Category = locations
 Name = Squin
 Id = squin
+aliases = Скуин
 
 display_name = Squin
 region = Border Zone / Stenn Desert edge

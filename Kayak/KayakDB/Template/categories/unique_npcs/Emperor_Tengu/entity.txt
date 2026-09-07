@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Emperor_Tengu
+Id = emperor_tengu
+
+aliases = Император Тэньгу
 
 $personality = Tengu is impulsive, vain, and possessed of a certainty about his own importance that the evidence does not fully support. He is not stupid — a stupid man could not hold together an empire this large against this much pressure — but his judgment is the kind that works well in good times and catastrophically in bad ones. He surrounded himself with capable nobles because capable nobles make him look effective. He has a Vault under Heft. Nobody who has been invited to it has come back to correct any misconceptions about what it contains.
 $backstory = Tengu came to power after the Red Rebellion overthrew his predecessor — a starkly more competent ruler whose competence apparently included not dying when a rebellion came for him, which his successor has not reproduced. The tradition of an Inner Circle of four powerful nobles predates Tengu; the tradition of those nobles being feared throughout the Empire is something he amplified deliberately. Fear is a governance tool he understands well.

@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Flesh_Cleaver
 Id = flesh_cleaver
+aliases = Тесак для мяса
 display_name = Flesh Cleaver
 item_type = weapon-hacker
 weapon_class = Hackers

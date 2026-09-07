@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Naginata_Katana
 Id = naginata_katana
+aliases = Нагината катана
 display_name = Naginata Katana
 item_type = weapon-polearm
 weapon_class = Polearms

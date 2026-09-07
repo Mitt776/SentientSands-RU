@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Luquin
+Id = luquin
+
+aliases = Лукин
 
 $personality = Luquin knows everyone in Shark and has an arrangement with most of them. He's not a criminal in the sense of running operations — he's a social connector, the person who knows who has what and who needs what and how to make the introduction without anyone getting shot. He's good at reading rooms and better at reading people, and he's been in Shark long enough that his reading is usually accurate. He doesn't judge. He also doesn't forget.
 $backstory = 

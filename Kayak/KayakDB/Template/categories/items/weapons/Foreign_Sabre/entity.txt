@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Foreign_Sabre
 Id = foreign_sabre
+aliases = Иноземная сабля
 display_name = Foreign Sabre
 item_type = weapon-blade
 weapon_class = Sabres

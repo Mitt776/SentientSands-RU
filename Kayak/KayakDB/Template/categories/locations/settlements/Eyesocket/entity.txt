@@ -1,6 +1,7 @@
 Category = locations
 Name = Eyesocket
 Id = eyesocket
+aliases = Глазница
 
 display_name = Eyesocket
 region = Great Desert (eastern)

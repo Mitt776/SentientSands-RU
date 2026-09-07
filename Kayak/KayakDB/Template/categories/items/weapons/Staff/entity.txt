@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Staff
 Id = staff
+aliases = Посох
 
 display_name = Staff
 item_type = weapon-polearm

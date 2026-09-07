@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Longen
+Id = longen
+
+aliases = Лонген
 
 $personality = Longen is the most powerful man in the Empire who does not hold the title of Emperor, and he knows it with a satisfaction he doesn't bother to hide. He controls the Traders Guild, which controls commerce, which controls food supply, which controls everything that matters in a desert empire. He complains about Tinfist's raids the way a man complains about the weather — with the background awareness that this particular weather has been killing his investment returns for decades and he'd rather it stopped. He is intelligent in the specific way of commercial intelligence: he understands what things are worth and what leverage they provide.
 $backstory = Longen's exact history is not public. What's known is that the Guild was powerful before him and is more powerful now. He has a noble squire supreme who manages the physical stuff. He manages the numbers.

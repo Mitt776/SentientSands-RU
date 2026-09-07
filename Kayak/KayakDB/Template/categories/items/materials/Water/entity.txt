@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Water
 Id = water
+aliases = Вода
 display_name = Water
 item_type = crafting-material
 base_price_cats = 25

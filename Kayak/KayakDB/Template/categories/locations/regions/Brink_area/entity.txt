@@ -1,6 +1,7 @@
 Category = locations
 Name = Stormgap_Coast
 Id = stormgap_coast
+aliases = Берег грозового ущелья
 
 display_name = Stormgap Coast
 type = region

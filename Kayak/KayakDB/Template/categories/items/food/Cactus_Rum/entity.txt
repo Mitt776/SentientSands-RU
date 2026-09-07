@@ -1,6 +1,7 @@
 Category = items_food
 Name = Cactus_Rum
 Id = cactus_rum
+aliases = Кактусовый ром
 
 display_name = Cactus Rum
 item_type = food-alcohol

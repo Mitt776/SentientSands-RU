@@ -1,6 +1,7 @@
 Category = locations
 Name = Stenn_Desert
 Id = stenn_desert
+aliases = Пустыня Стэнн
 
 display_name = The Stenn Desert
 type = region

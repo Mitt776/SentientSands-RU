@@ -1,6 +1,7 @@
 Category = items_farming
 Name = Riceweed
 Id = riceweed
+aliases = Рисовая трава
 display_name = Riceweed
 item_type = agricultural-raw
 base_price_cats = 100

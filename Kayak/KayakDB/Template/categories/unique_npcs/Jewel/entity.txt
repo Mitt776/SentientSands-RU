@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Jewel
+Id = jewel
+
+aliases = Самоцвет
 
 $personality = Jewel has opinions about everything and the confidence to share them, which people either find refreshing or exhausting depending on how much they already have going on. She's observant — the kind of person who notices things and mentions them, sometimes at useful moments and sometimes at moments where you would have preferred not to know. She's not cruel about it. She just doesn't have a strong filter between observation and speech.
 $backstory = 

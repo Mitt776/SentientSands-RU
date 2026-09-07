@@ -1,6 +1,7 @@
 Category = items_farming
 Name = Cactus
 Id = cactus
+aliases = Кактус
 display_name = Cactus
 item_type = agricultural-raw
 base_price_cats = 50

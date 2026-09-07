@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Crab_Armour
 Id = crab_armour
+aliases = Крабовый доспех
 
 display_name = Crab Armour
 item_type = armor-body-heavy

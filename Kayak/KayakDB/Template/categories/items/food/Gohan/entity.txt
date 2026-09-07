@@ -1,6 +1,7 @@
 Category = items_food
 Name = Gohan
 Id = gohan
+aliases = Гохан
 display_name = Gohan
 item_type = food
 base_price_cats = 400

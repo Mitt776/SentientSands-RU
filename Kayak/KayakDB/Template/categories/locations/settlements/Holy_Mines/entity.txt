@@ -1,6 +1,7 @@
 Category = locations
 Name = Holy_Mines
 Id = holy_mines
+aliases = Святые шахты
 
 display_name = Holy Mines
 region = Holy Nation territory (various)

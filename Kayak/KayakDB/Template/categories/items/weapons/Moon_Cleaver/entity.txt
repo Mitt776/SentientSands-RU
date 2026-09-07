@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Moon_Cleaver
 Id = moon_cleaver
+aliases = Лунный тесак
 display_name = Moon Cleaver
 item_type = weapon-hacker
 weapon_class = Hackers

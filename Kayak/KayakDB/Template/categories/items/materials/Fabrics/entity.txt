@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Fabrics
 Id = fabrics
+aliases = Ткани
 display_name = Fabrics
 item_type = crafting-material
 base_price_cats = 122

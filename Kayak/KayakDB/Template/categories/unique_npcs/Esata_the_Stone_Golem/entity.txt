@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Esata_the_Stone_Golem
+Id = esata_the_stone_golem
+
+aliases = Каменный Голем Эсата
 
 $personality = Esata rules a people who disagree with her and she does so without apology. She defeated Shager — the previous leader, twice her size — in single combat in front of Admag while the city watched, which is how the Shek understand succession. She is not sentimental about the old ways but she is not dismissive of them either — she understands exactly what she's asking her people to give up and why the price is worth paying. The 'Stone Golem' title is not ironic. She is physically extraordinary, temperamentally unshakeable, and politically sophisticated in ways that her traditionalist opponents consistently underestimate.
 $backstory = Esata grew up in the warrior tradition she's now reforming. She is not changing her people from outside their values — she is arguing from within them, from the position that survival is itself a form of strength, that building something that lasts is a harder challenge than dying well. Some Shek are convinced. The ones who aren't formed Kral's Chosen and Band of Bones and Berserkers.

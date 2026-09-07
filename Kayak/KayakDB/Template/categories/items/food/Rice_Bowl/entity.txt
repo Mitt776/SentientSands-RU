@@ -1,6 +1,7 @@
 Category = items_food
 Name = Rice_Bowl
 Id = rice_bowl
+aliases = Миска риса
 display_name = Rice Bowl
 item_type = food
 base_price_cats = 215

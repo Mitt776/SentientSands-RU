@@ -1,6 +1,7 @@
 Category = locations
 Name = Burning_Forest
 Id = burning_forest
+aliases = Горящий лес
 display_name = Burning Forest
 type = region
 weight = 4

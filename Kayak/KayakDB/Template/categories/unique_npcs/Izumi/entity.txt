@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Izumi
+Id = izumi
+
+aliases = Изуми
 
 $personality = Izumi is precise and organized in a way that makes her useful in almost any operational context and occasionally irritating in informal ones. She keeps track of things — inventory, plans, what people said they were going to do versus what they did. She's not controlling about it; she just finds it natural to maintain that kind of accounting and genuinely doesn't understand why others find it surprising. She's loyal to people who are straight with her and has a memory for those who aren't.
 $backstory = 

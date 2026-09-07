@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Ancient_Samurai_Armour
 Id = ancient_samurai_armour
+aliases = Древний доспех самурая
 display_name = Ancient Samurai Armour
 item_type = armor-body-heavy
 armor_class = Heavy

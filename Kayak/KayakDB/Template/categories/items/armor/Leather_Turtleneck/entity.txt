@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Leather_Turtleneck
 Id = leather_turtleneck
+aliases = Кожаная водолазка
 
 display_name = Leather Turtleneck
 item_type = armor-shirt-light

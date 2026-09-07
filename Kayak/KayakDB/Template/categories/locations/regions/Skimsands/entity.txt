@@ -1,6 +1,7 @@
 Category = locations
 Name = Skimsands
 Id = skimsands
+aliases = Рвущие пески
 display_name = Skimsands
 type = region
 faction = United_Cities

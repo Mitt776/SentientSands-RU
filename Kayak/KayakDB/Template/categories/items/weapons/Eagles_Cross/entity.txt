@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Eagles_Cross
 Id = eagles_cross
+aliases = Орлиный крест
 display_name = Eagle's Cross
 item_type = weapon-ranged
 weapon_class = Crossbows

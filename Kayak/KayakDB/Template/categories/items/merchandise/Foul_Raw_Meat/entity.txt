@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Foul_Raw_Meat
 Id = foul_raw_meat
+aliases = Плохое сырое мясо
 display_name = Foul Raw Meat
 item_type = trade-junk
 base_price_cats = 0

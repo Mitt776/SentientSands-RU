@@ -1,6 +1,7 @@
 Category = locations
 Name = Floodlands
 Id = floodlands
+aliases = Пойма
 display_name = Floodlands
 type = region
 weight = 4

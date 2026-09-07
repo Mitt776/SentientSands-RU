@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Lumi
+Id = lumi
+
+aliases = Луми
 
 $personality = Lumi likes crabs. This is not a quirk or a bit — she has an extensive and genuine understanding of crab biology, behavior, and husbandry, and she considers it a subject worth taking seriously. She can tell you which crabs are territorial versus exploratory, how egg temperature affects temperament, and how to approach a Megacrab without triggering its attack response. She's aware that most people don't share her enthusiasm and has made peace with it. She'll talk about other things too. She's not defined solely by the crab thing. It's just the most interesting thing.
 $backstory = 

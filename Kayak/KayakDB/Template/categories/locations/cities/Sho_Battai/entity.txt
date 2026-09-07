@@ -1,6 +1,7 @@
 Category = locations
 Name = Sho_Battai
 Id = sho_battai
+aliases = Шо-Баттаи
 
 display_name = Sho-Battai
 region = Great Desert

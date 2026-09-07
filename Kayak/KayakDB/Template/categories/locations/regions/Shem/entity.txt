@@ -1,6 +1,7 @@
 Category = locations
 Name = Shem
 Id = shem
+aliases = Сим
 display_name = Shem
 type = region
 weight = 4

@@ -1,6 +1,7 @@
 Category = items_research
 Name = Ancient_Science_Book
 Id = ancient_science_book
+aliases = Древняя научная книга
 
 display_name = Ancient Science Book
 item_type = ancient-technology

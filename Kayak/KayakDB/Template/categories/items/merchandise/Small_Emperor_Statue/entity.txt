@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Small_Emperor_Statue
 Id = small_emperor_statue
+aliases = Статуэтка Императора
 display_name = Small Emperor Statue
 item_type = trade-junk
 base_price_cats = 90

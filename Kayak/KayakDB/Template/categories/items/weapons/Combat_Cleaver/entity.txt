@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Combat_Cleaver
 Id = combat_cleaver
+aliases = Боевой тесак
 
 display_name = Combat Cleaver
 item_type = weapon-hacker

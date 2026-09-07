@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Spring_Bat
 Id = spring_bat
+aliases = Рессоробой
 display_name = Spring Bat
 item_type = weapon-ranged
 weapon_class = Crossbows

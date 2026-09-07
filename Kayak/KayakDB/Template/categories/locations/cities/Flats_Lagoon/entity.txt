@@ -1,6 +1,7 @@
 Category = locations
 Name = Flats_Lagoon
 Id = flats_lagoon
+aliases = Ровная лагуна
 
 display_name = Flats Lagoon
 region = Flats Lagoon zone

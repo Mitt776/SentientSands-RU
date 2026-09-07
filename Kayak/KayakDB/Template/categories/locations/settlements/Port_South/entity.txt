@@ -1,6 +1,7 @@
 Category = locations
 Name = Port_South
 Id = port_south
+aliases = Порт Юг
 
 display_name = Port South
 region = Great Desert (southern area)

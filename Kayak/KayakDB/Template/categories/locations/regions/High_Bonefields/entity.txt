@@ -1,6 +1,7 @@
 Category = locations
 Name = High_Bonefields
 Id = high_bonefields
+aliases = Верхние поля костей
 display_name = High Bonefields
 type = region
 faction = United_Cities

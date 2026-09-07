@@ -1,6 +1,7 @@
 Category = locations_outpost
 Name = Waystation
 Id = waystation
+aliases = Путевая станция
 
 display_name = Waystation
 region = Various — Border Zone, Stenn Desert, Grey Desert, The Hook

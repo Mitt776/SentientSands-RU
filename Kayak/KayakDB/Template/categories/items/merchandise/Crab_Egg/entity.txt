@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Crab_Egg
 Id = crab_egg
+aliases = Яйцо краба
 display_name = Crab Egg
 item_type = trade-raw
 base_price_cats = 240

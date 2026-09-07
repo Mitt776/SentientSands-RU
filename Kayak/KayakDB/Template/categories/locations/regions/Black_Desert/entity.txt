@@ -1,6 +1,7 @@
 Category = locations
 Name = Black_Desert
 Id = black_desert
+aliases = Чёрная пустыня
 
 display_name = The Black Desert
 type = region

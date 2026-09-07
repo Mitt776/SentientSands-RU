@@ -1,6 +1,7 @@
 Category = locations
 Name = Mongrel
 Id = mongrel
+aliases = Безродный
 
 display_name = Mongrel
 region = Fog Islands

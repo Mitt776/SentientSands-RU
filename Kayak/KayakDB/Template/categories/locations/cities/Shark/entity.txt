@@ -1,6 +1,7 @@
 Category = locations
 Name = Shark
 Id = shark
+aliases = Акула
 
 display_name = Shark
 region = The Swamp

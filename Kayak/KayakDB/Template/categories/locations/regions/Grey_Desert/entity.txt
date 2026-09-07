@@ -1,6 +1,7 @@
 Category = locations
 Name = Grey_Desert
 Id = grey_desert
+aliases = Серая пустыня
 
 display_name = The Grey Desert
 type = region

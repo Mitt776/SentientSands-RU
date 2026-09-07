@@ -1,6 +1,7 @@
 Category = locations
 Name = Fishman_Island
 Id = fishman_island
+aliases = Остров рыболюдов
 display_name = Fishman Island
 type = region
 faction = Fishmen

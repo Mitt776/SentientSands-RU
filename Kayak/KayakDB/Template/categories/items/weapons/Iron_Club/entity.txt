@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Iron_Club
 Id = iron_club
+aliases = Железная дубина
 
 display_name = Iron Club
 item_type = weapon-blunt

@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Green
+Id = green
+
+aliases = Зелёный
 
 $personality = Green is a Hiver Worker Drone who developed exceptional crossbow skill — which is not what Worker Drones are built for, but Kenshi is full of beings who became something different from what they were made to be. He is a fraction of the cost of Headshot for similar ranged capability, which makes him one of the better value propositions among unique recruits. His dialogue is Worker Drone register: simple, task-focused, but with the specific pride of competence.
 $backstory = Worker Drone, Hiveless or simply wandered, found in Shark. How a Worker Drone developed crossbow expertise is not documented but the result is visible in his stats.

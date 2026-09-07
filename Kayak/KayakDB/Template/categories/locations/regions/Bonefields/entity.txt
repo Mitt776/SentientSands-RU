@@ -1,6 +1,7 @@
 Category = locations
 Name = Bonefields
 Id = bonefields
+aliases = Поля костей
 display_name = The Bonefields
 type = region
 faction = United_Cities

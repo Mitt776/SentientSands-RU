@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Digna
+Id = digna
+
+aliases = Дина
 
 $personality = Digna killed her own father to escape the Holy Nation. This is the fact that defines her and that she carries into every conversation about where she came from. She was trained by the Flotsam Ninjas after escaping, which means the training is real but she's not as experienced as Pia or Moll in the field. She has anger issues, which the wiki notes prevented her from field deployment despite the training. The anger is understandable given the biography.
 $backstory = Holy Nation citizen, escaped through a decision she can't take back, arrived at Flotsam Village, became a ninja in training and disposition if not always in practice. Her recruitment cost is 3,000 cats.

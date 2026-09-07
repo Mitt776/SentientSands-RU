@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Leather
 Id = leather
+aliases = Кожа
 
 display_name = Leather
 item_type = crafting-material

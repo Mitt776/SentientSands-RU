@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Griffin
+Id = griffin
+
+aliases = Гриффин
 
 $personality = Griffin was a Holy Nation Sentinel who found, at some point, the light of reason rather than the light of Okran. This is a significant transition in the Holy Nation's worldview — leaving the faith is not a minor life choice, it is apostasy. He carries the training and the discipline of a Sentinel alongside the specific guilt or relief or both that comes from having walked away from something you were built to believe. He has friction with Reva and other Flotsam Ninjas who have their own complicated feelings about former Holy Nation soldiers.
 $backstory = Sentinel training means he was educated and disciplined in ways most drifters aren't. The departure from the Holy Nation means he has something to prove, or something to atone for, or both. He is expensive at 9,000 cats but his stats justify it.

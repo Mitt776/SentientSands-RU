@@ -446,6 +446,42 @@ def _folder_for_npc_write(category: str, name: str, content: str) -> str:
     return name
 
 
+def _canon_source_file(name: str):
+    """Файл канонического персонажа с таким именем, или None.
+
+    Сначала кампания, потом Template. Имя ищется через индекс, поэтому русское
+    «Бип» из игры находит английскую папку базы по псевдониму.
+    """
+    candidates = [name]
+    if cm.indexer:
+        for uid in cm.indexer.find_by_name(name):
+            entity = cm.indexer.get(uid)
+            path = str(getattr(entity, "path", "") or "").replace("\\", "/")
+            if "/unique_npcs/" not in f"/{path}/":
+                continue
+            folder = os.path.basename(path)
+            if folder and folder not in candidates:
+                candidates.append(folder)
+
+    roots = []
+    if cm.active_path:
+        roots.append((pathlib.Path(cm.active_path), "campaign"))
+    if getattr(cm, "template_dir", ""):
+        roots.append((pathlib.Path(cm.template_dir), "template"))
+
+    for root, label in roots:
+        for candidate in candidates:
+            source = root / "categories" / "unique_npcs" / candidate / "entity.txt"
+            try:
+                _assert_path_within(root, source, "unique_npc source")
+            except ValueError as e:
+                log.warning(f"Unique NPC merge: rejected source path for {candidate}: {e}")
+                continue
+            if source.exists():
+                return source, label, candidate
+    return None, "", ""
+
+
 def _merge_unique_npc_fields_on_first_create(category: str, name: str, content: str) -> str:
     if category != "campaign_npcs" or not cm.active_path:
         return content
@@ -459,31 +495,15 @@ def _merge_unique_npc_fields_on_first_create(category: str, name: str, content: 
             log.info(f"Unique NPC merge skipped: live entity already exists for {category}/{name}")
             return content
 
-        campaign_source = campaign_root / "unique_npcs" / name / "entity.txt"
-        template_root = pathlib.Path(cm.template_dir)
-        template_source = template_root / "unique_npcs" / name / "entity.txt"
-        try:
-            _assert_path_within(campaign_root, campaign_source, "unique_npc campaign source")
-            _assert_path_within(template_root, template_source, "unique_npc template source")
-        except ValueError as e:
-            log.warning(f"Unique NPC merge skipped: invalid source path for {category}/{name}: {e}")
+        source_path, source_label, source_folder = _canon_source_file(name)
+        if source_path is None:
+            log.info(f"Unique NPC merge skipped: no canon entry for {category}/{name}")
             return content
-
-        source_path = None
-        source_label = ""
-        if campaign_source.exists():
-            source_path = campaign_source
-            source_label = "campaign"
-        elif template_source.exists():
+        if source_folder != name:
             log.info(
-                f"Unique NPC merge fallback: campaign source missing for {category}/{name}; "
-                f"using template source"
+                f"Unique NPC merge: '{name}' matched canon entry '{source_folder}' "
+                f"({source_label})"
             )
-            source_path = template_source
-            source_label = "template"
-        else:
-            log.info(f"Unique NPC merge skipped: no template found for {category}/{name}")
-            return content
 
         try:
             source_content = source_path.read_text(encoding="utf-8")

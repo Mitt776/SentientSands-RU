@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Ninja_Blade
 Id = ninja_blade
+aliases = Клинок ниндзя
 
 display_name = Ninja Blade
 item_type = weapon-blade

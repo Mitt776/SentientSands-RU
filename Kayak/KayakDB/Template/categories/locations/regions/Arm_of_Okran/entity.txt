@@ -1,6 +1,7 @@
 Category = locations
 Name = Arm_of_Okran
 Id = arm_of_okran
+aliases = Рука Окрана
 display_name = Arm of Okran
 type = region
 faction = Tech_Hunters

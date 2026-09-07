@@ -1,6 +1,7 @@
 Category = locations
 Name = The_Shrieking_Forest
 Id = the_shrieking_forest
+aliases = Верещащий лес
 display_name = The Shrieking Forest
 type = region
 weight = 4

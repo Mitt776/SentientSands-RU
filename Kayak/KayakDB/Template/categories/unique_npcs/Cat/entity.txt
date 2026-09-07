@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Cat
+Id = cat
+
+aliases = Кот
 
 $personality = Cat is imprisoned in the Dust King Tower because she was in the wrong place and the Dust King thought she might be useful. She was not useful in the way he intended, but she's been useful enough to herself to still be alive, which is the relevant metric. She's a scientist and medic with a dry and precise way of talking about things — not because she's cold, but because she's been in a situation where imprecision could get her killed and the habit stuck. She's not bitter about being a prisoner. She's analytical about it.
 $backstory = 

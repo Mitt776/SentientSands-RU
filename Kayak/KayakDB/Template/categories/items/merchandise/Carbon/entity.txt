@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Carbon
 Id = carbon
+aliases = Уголь
 display_name = Carbon
 item_type = trade-junk
 base_price_cats = 90

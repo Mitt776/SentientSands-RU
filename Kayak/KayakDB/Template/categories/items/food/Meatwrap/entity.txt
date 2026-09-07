@@ -1,6 +1,7 @@
 Category = items_food
 Name = Meatwrap
 Id = meatwrap
+aliases = Шаурма
 display_name = Meatwrap
 item_type = food
 base_price_cats = 758

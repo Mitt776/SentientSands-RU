@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Tools
 Id = tools
+aliases = Инструменты
 display_name = Tools
 item_type = trade-junk
 base_price_cats = 90

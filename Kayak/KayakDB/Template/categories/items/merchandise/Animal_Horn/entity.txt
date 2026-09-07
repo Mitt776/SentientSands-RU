@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Animal_Horn
 Id = animal_horn
+aliases = Рог животного
 display_name = Animal Horn
 item_type = trade-junk
 base_price_cats = 150

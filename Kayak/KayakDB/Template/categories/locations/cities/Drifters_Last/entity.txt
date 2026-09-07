@@ -1,6 +1,7 @@
 Category = locations
 Name = Drifters_Last
 Id = drifters_last
+aliases = Выдержка Скитальца
 
 display_name = Drifter's Last
 region = The Hook (southwest)

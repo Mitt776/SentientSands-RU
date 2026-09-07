@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Fog_Mask
 Id = fog_mask
+aliases = Противомгла
 
 display_name = Fog Mask
 item_type = armor-head-light

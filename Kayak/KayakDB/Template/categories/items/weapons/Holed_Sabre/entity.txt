@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Holed_Sabre
 Id = holed_sabre
+aliases = Сабля с отверстием
 display_name = Holed Sabre
 item_type = weapon-blade
 weapon_class = Sabres

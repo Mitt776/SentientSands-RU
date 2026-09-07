@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Polearm
 Id = polearm
+aliases = Глефа
 
 display_name = Polearm
 item_type = weapon-polearm

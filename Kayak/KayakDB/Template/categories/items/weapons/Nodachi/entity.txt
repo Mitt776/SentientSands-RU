@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Nodachi
 Id = nodachi
+aliases = Нодати
 
 display_name = Nodachi
 item_type = weapon-blade

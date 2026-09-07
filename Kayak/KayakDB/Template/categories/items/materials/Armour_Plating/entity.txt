@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Armour_Plating
 Id = armour_plating
+aliases = Латы
 display_name = Armour Plating
 item_type = crafting-material
 base_price_cats = 504

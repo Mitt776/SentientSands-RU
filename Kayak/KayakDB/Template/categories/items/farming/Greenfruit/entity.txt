@@ -1,6 +1,7 @@
 Category = items_farming
 Name = Greenfruit
 Id = greenfruit
+aliases = Зеленофрукт
 display_name = Greenfruit
 item_type = agricultural-raw
 base_price_cats = 15

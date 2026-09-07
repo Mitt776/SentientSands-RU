@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Seto
+Id = seto
+
+aliases = Сэто
 
 $personality = Seto is a Shek warrior who has not yet found her great death and is annoyed about it. She's been sitting in Admag for what she considers too long and is looking for something that will actually test her. Not suicidal — she wants the fight to be worthy of the dying, and nothing in Admag lately has been. She respects strength demonstrated rather than claimed and has no patience for people who talk about fighting better than they fight.
 $backstory = 

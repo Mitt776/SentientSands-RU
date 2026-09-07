@@ -1,6 +1,7 @@
 Category = locations
 Name = Stack
 Id = stack
+aliases = Стопка
 
 display_name = Stack
 region = Border Zone / Stenn Desert edge, southwestern corner of Holy Nation territory

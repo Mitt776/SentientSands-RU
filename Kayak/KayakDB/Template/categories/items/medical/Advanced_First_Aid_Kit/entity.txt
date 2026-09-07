@@ -1,6 +1,7 @@
 Category = items_medical
 Name = Advanced_First_Aid_Kit
 Id = advanced_first_aid_kit
+aliases = Хорошая аптечка
 display_name = Advanced First Aid Kit
 item_type = medical
 base_price_cats = 514

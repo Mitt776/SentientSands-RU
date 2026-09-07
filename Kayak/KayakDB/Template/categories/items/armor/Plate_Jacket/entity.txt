@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Plate_Jacket
 Id = plate_jacket
+aliases = Куртка с латами
 
 display_name = Plate Jacket
 item_type = armor-body-medium

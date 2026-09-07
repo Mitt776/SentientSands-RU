@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Animal_Claw
 Id = animal_claw
+aliases = Коготь животного
 display_name = Animal Claw
 item_type = trade-raw
 base_price_cats = 90

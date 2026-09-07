@@ -1,6 +1,7 @@
 Category = items_materials
 Name = Iron_Plates
 Id = iron_plates
+aliases = Железные листы
 
 display_name = Iron Plates
 item_type = crafting-material

@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Arc
+Id = arc
+
+aliases = Дуга
 
 $personality = Arc is a named bandit leader — the kind of character who acquired a Ringed Sabre through unclear means and kept it, which is the specific resume of someone who wins fights. Not much is known about their history beyond what the weapon implies.
 $backstory = 

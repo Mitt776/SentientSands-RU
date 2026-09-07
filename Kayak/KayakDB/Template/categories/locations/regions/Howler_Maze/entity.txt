@@ -1,6 +1,7 @@
 Category = locations
 Name = Howler_Maze
 Id = howler_maze
+aliases = Ревущий лабиринт
 display_name = Howler Maze
 type = region
 weight = 3

@@ -1,6 +1,7 @@
 Category = items_equipment
 Name = Lantern
 Id = lantern
+aliases = Фонарь
 
 display_name = Lantern
 item_type = equipment-utility

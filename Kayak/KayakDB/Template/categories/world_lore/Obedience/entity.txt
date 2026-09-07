@@ -1,6 +1,7 @@
 Category = world_lore
 Name = Obedience
 Id = obedience
+aliases = Смирение
 
 display_name = Obedience
 era = first-empire-final-period

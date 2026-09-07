@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Crab_Shoes
 Id = crab_shoes
+aliases = Крабовые боты
 display_name = Crab Shoes
 item_type = armor-feet-heavy
 armor_class = Heavy

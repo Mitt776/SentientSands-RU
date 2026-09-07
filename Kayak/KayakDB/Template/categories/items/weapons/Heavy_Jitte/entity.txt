@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Heavy_Jitte
 Id = heavy_jitte
+aliases = Тяжелый дзюттэ
 display_name = Heavy Jitte
 item_type = weapon-blunt
 weapon_class = Blunt

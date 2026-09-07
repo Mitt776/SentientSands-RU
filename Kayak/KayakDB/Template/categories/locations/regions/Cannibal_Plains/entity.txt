@@ -1,6 +1,7 @@
 Category = locations
 Name = Cannibal_Plains
 Id = cannibal_plains
+aliases = Равнины людоедов
 
 display_name = The Cannibal Plains
 type = region

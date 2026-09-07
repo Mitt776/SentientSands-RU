@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Tinfist
+Id = tinfist
+
+aliases = Жестькулак
 
 $personality = Tinfist does not perform. He has had centuries to work out what he believes and why, and the result is a clarity of purpose that is either inspiring or terrifying depending on which side of it you're standing on. He is not angry — anger requires surprise, and nothing the United Cities does surprises him anymore. What he has instead is a patient, methodical commitment to a project that the rest of the world calls impossible and he calls unfinished. He is the strongest martial artist alive. He never carries a weapon. His mentor Gatwood the Soft never killed a man in his life and was never beaten. Tinfist carries that legacy imperfectly.
 $backstory = Tinfist was present during the Second Empire. He was a friend of Cat-Lon's. He watched the empire he helped build become the thing he now fights the inheritors of. The centuries between then and now are not something he discusses readily, but they are present in the way he moves, the way he speaks, the particular quality of his patience — the patience of something that has had long enough to understand that the world moves slowly and that is exactly why it needs pushing.

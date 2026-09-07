@@ -1,6 +1,7 @@
 Category = items_merchandise
 Name = Hinge
 Id = hinge
+aliases = Шарнир
 display_name = Hinge
 item_type = trade-junk
 base_price_cats = 90

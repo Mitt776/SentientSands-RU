@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Ringed_Sabre
 Id = ringed_sabre
+aliases = Сабля с кольцами
 display_name = Ringed Sabre
 item_type = weapon-blade
 weapon_class = Sabres

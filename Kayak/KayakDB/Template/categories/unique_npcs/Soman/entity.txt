@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Soman
+Id = soman
+
+aliases = Соман
 
 $personality = Soman fishes. He's good at it in a way that extends beyond the physical act — he understands patience, conditions, timing, and the difference between what you can control and what you can't. He applies this to situations outside fishing with mixed results but genuine effort. He's not deep in the sense of being complicated; he's deep in the sense of having done one thing carefully for a long time and learned something about doing things carefully.
 $backstory = 

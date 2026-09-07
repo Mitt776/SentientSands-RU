@@ -1,6 +1,7 @@
 Category = items_medical
 Name = Advanced_Splint_Kit
 Id = advanced_splint_kit
+aliases = Хороший набор шин
 display_name = Advanced Splint Kit
 item_type = medical
 base_price_cats = 600

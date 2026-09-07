@@ -1,6 +1,7 @@
 Category = items_weapons
 Name = Iron_Stick
 Id = iron_stick
+aliases = Железная палка
 display_name = Iron Stick
 item_type = weapon-blunt
 weapon_class = Blunt

@@ -1,6 +1,7 @@
 Category = items_armor
 Name = Ninja_Rags
 Id = ninja_rags
+aliases = Обноски ниндзя
 display_name = Ninja Rags
 item_type = armor-body-cloth
 armor_class = None

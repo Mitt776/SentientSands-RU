@@ -1,4 +1,8 @@
+Category = unique_npcs
 Name = Burn
+Id = burn
+
+aliases = Ожог
 
 $personality = Burn was born in the Floodlands — one of the old industrial factory zones of the First and Second Empires — and spent a long time traveling before returning to where he started. He recruits by offering his accumulated knowledge in exchange for help. After recruitment, the tower he lives in has a Skeleton Repair Table usable for free, which is one of the most practical early-game gifts a unique recruit can offer. He has dialogue with Sadneil, both carrying the weight of the same history from slightly different angles.
 $backstory = Factory origin — the industrial skeleton labor force of the ancient empires. Left. Traveled. Came back. Three centuries or more of history compressed into a choice to stop moving. He knows what the Floodlands were before they were what they are, which is more information than most people alive have access to.
