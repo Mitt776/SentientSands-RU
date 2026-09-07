@@ -28,7 +28,8 @@ import time
 from collections import defaultdict
 from typing import Any, Dict, FrozenSet, List, Optional, Set, Tuple
 
-from .indexer import Indexer, Entity, AccessRule, _norm, _tokenize, _is_text_field
+from .indexer import (Indexer, Entity, AccessRule, _norm, _tokenize,
+                      _is_text_field, stem_key)
 
 _STOP = frozenset({
     "the", "a", "an", "is", "are", "was", "were", "be", "been",
@@ -46,6 +47,47 @@ _STOP = frozenset({
     "some", "there", "then", "than", "so", "as", "up", "out",
     "been", "each", "very",
 })
+
+# Русские служебные слова. Без них «Расскажи», «что» и даже одинокая «А»
+# занимали места среди трёх ключей, которые достаются поиску по лору.
+# Сюда же глаголы обращения: разговор с NPC почти всегда начинается с них,
+# а имени в них нет.
+_STOP_RU = frozenset({
+    # местоимения
+    "я", "ты", "он", "она", "оно", "мы", "вы", "они", "меня", "тебя", "его",
+    "её", "ее", "нас", "вас", "их", "мне", "тебе", "ему", "ей", "нам", "вам",
+    "им", "мной", "тобой", "себя", "себе", "сам", "сама", "сами",
+    # притяжательные и указательные
+    "мой", "моя", "моё", "мое", "мои", "твой", "твоя", "твоё", "твое", "твои",
+    "наш", "наша", "наши", "ваш", "ваша", "ваши", "свой", "своя", "свои",
+    "этот", "эта", "это", "эти", "тот", "та", "то", "те", "такой", "такая",
+    "такое", "такие",
+    # вопросы
+    "что", "кто", "где", "куда", "откуда", "когда", "как", "почему", "зачем",
+    "какой", "какая", "какое", "какие", "сколько", "чей", "чего", "чем",
+    "кого", "кому", "чём", "чем-то", "что-то", "что-нибудь", "кто-нибудь",
+    # союзы, частицы, предлоги
+    "и", "а", "но", "или", "либо", "да", "нет", "не", "ни", "же", "ли", "бы",
+    "ведь", "вот", "уж", "разве", "неужели", "если", "чтобы", "хотя", "тоже",
+    "также", "ещё", "еще", "уже", "только", "просто", "очень", "совсем",
+    "в", "во", "на", "за", "из", "от", "до", "по", "под", "над", "при",
+    "про", "для", "без", "к", "ко", "с", "со", "у", "о", "об", "обо",
+    "через", "между", "около", "перед", "после",
+    # наречия места и времени
+    "там", "тут", "здесь", "сюда", "туда", "сейчас", "потом", "теперь",
+    "всегда", "никогда", "нынче",
+    # обращение к собеседнику: с них начинается почти каждая реплика
+    "расскажи", "скажи", "говори", "говорит", "говорят", "знаешь", "знаю",
+    "знает", "знаете", "слышал", "слышала", "слышали", "слышишь", "думаешь",
+    "думаю", "помнишь", "помню", "подскажи", "ответь", "спроси", "объясни",
+    "привет", "здравствуй", "здорово", "слушай", "слышь", "давай", "ладно",
+    "пожалуйста", "спасибо",
+    # прочее частое
+    "всё", "все", "весь", "вся", "ничего", "что-нибудь", "кое-что",
+    "стоит", "надо", "нужно", "можно", "хочу", "хочешь",
+})
+
+_STOP = _STOP | _STOP_RU
 
 
 class Retriever:
@@ -121,7 +163,8 @@ class Retriever:
                 _timeout_hit = True
                 break
             norm = _norm(kw)
-            for uid in self.indexer.find_by_name(kw):
+            for uid in (self.indexer.find_by_name(kw)
+                        or self.indexer.find_by_stem(kw)):
                 ent = self.indexer.get(uid)
                 _add(uid, (ent.weight if ent else 5) + 50, 0, chain_weight=1.0)
                 if _non_priority_count() >= max_files:
@@ -234,6 +277,23 @@ class Retriever:
 
 # ─── KEYWORD EXTRACTION ──────────────────────────────────────────────────────
 
+def _canonical_name(indexer: Optional[Indexer], phrase: str) -> str:
+    """Имя сущности по фразе игрока — точно, иначе с учётом падежа.
+
+    Возвращается имя, как оно записано в базе: дальше по цепочке работает
+    обычный точный поиск, и падежи больше нигде знать не нужно.
+    """
+    if not indexer or not phrase:
+        return ""
+    if indexer.find_by_name(phrase):
+        return phrase
+    uids = indexer.find_by_stem(phrase)
+    if not uids:
+        return ""
+    entity = indexer.get(uids[0])
+    return entity.name if entity else ""
+
+
 def extract_keywords(
     text:         str,
     indexer:      Optional[Indexer],
@@ -264,20 +324,37 @@ def extract_keywords(
             return len(found) >= max_keywords
         return False
 
+    # Слова, ушедшие в найденное имя. Без этого «Святой Нации» находилось
+    # целиком, а два оставшихся места забирали его же половинки, которые сами
+    # по себе не находят ничего.
+    consumed: Set[int] = set()
+
     if indexer:
-        for n in (3, 2):
+        for n in (3, 2, 1):
             for i in range(len(words) - n + 1):
+                if any(j in consumed for j in range(i, i + n)):
+                    continue
                 phrase = " ".join(words[i : i + n])
-                if indexer.find_by_name(phrase) and _push(phrase):
+                if n == 1 and phrase.lower() in _STOP:
+                    continue
+                canonical = _canonical_name(indexer, phrase)
+                if not canonical:
+                    continue
+                consumed.update(range(i, i + n))
+                if _push(canonical):
                     return found
 
-    for w in words:
+    for i, w in enumerate(words):
+        if i in consumed:
+            continue
         clean = w.strip(".,;:!?'\"")
         if clean and clean[0].isupper() and clean.lower() not in _STOP:
             if _push(clean):
                 return found
 
-    for w in words:
+    for i, w in enumerate(words):
+        if i in consumed:
+            continue
         clean = w.strip(".,;:!?'\"").lower()
         if len(clean) > 2 and clean not in _STOP:
             if _push(clean):

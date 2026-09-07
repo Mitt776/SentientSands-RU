@@ -117,6 +117,8 @@ class Indexer:
         self.config               = config
         self.entities:            Dict[str, Entity]    = {}
         self.name_index:          Dict[str, List[str]] = defaultdict(list)
+        # основа имени → нормализованные имена, которые её дали
+        self._stem_to_names:      Dict[str, Set[str]]  = defaultdict(set)
         self.keyword_index:       Dict[str, Set[str]]  = defaultdict(set)
         self.id_index:            Dict[str, str]       = {}
         self.persistent_id_index: Dict[str, str]       = {}
@@ -130,6 +132,7 @@ class Indexer:
         """Full (re)index from categories_path."""
         self.entities.clear()
         self.name_index.clear()
+        self._stem_to_names.clear()
         self.keyword_index.clear()
         self.id_index.clear()
         self.persistent_id_index.clear()
@@ -168,6 +171,21 @@ class Indexer:
                 seen.add(uid)
                 result.append(uid)
         return result
+
+    def find_by_stem(self, name: str) -> List[str]:
+        """Поиск имени в косвенном падеже: «Чёрную Ссадину» → Black_Scratch.
+
+        Отказывается отвечать, когда основа ведёт к разным именам: подставить
+        наугад значит выдать NPC чужой лор. Мёртвые записи отсеиваются по
+        живому name_index, поэтому отдельной чистки при удалении не нужно.
+        """
+        stem = stem_key(name)
+        if not stem:
+            return []
+        names = [n for n in self._stem_to_names.get(stem, ()) if self.name_index.get(n)]
+        if len(names) != 1:
+            return []
+        return list(self.name_index.get(names[0], []))
 
     def find_by_keyword(self, token: str) -> Set[str]:
         return self.keyword_index.get(_norm(token), set())
@@ -267,7 +285,11 @@ class Indexer:
 
         # Name index
         for n in self._all_names(entity):
-            self.name_index[_norm(n)].append(uid)
+            key = _norm(n)
+            self.name_index[key].append(uid)
+            stem = stem_key(n)
+            if stem:
+                self._stem_to_names[stem].add(key)
 
         # ID indexes
         for id_val, idx in (
@@ -522,6 +544,42 @@ def _norm(text: str) -> str:
     clean = re.sub(r"[^\w\-]", "_", text.strip().lower())
     # 2. Collapse double underscores and strip ends (pragmatic normalization)
     return re.sub(r"_+", "_", clean).strip("_")
+
+
+_CYRILLIC_RE = re.compile(r"[\u0400-\u04FF]")
+
+# Окончания русских существительных и прилагательных. Отсекаем только их:
+# «Чёрную Ссадину» и «Чёрная Ссадина» должны сойтись на «черн_ссадин».
+# Полноценной морфологии тут нет и не нужно — задача узкая: узнать имя
+# собственное в косвенном падеже.
+_RU_ENDINGS = tuple(sorted({
+    "ами", "ями", "ого", "его", "ому", "ему", "ыми", "ими",
+    "ах", "ях", "ов", "ев", "ам", "ям", "ая", "яя", "ое", "ее",
+    "ый", "ий", "ой", "ым", "им", "ом", "ем", "ую", "юю", "ые", "ие", "ей",
+    "а", "я", "о", "е", "ы", "и", "у", "ю", "ь", "й",
+}, key=len, reverse=True))
+
+# Короткое слово без окончания уже не слово: «Улей» -> «Ул» слилось бы с чем
+# угодно. Три буквы — предел, ниже которого основу не режем.
+_MIN_STEM = 3
+
+
+def _stem_ru(word: str) -> str:
+    """Слово без падежного окончания. Английское возвращается нетронутым."""
+    if not _CYRILLIC_RE.search(word):
+        return word
+    for ending in _RU_ENDINGS:
+        if word.endswith(ending) and len(word) - len(ending) >= _MIN_STEM:
+            return word[: -len(ending)]
+    return word
+
+
+def stem_key(text: str) -> str:
+    """Ключ поиска, нечувствительный к падежу и к букве «ё»."""
+    parts = [p for p in _norm(text).replace("\u0451", "\u0435").split("_") if p]
+    if not parts:
+        return ""
+    return "_".join(_stem_ru(p) for p in parts)
 
 
 def _strip_bypass_prefix(text: str) -> str:
