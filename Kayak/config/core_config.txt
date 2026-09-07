@@ -6,18 +6,18 @@
 # ─── Retrieval limits ─────────────────────────────────────────────────────────
 
 # How many keywords to extract from the player message (Layer 0 seeds)
-max_keywords = 1
+max_keywords = 3
 
 # How many layer-expansion rounds to run after the initial keyword match
 # Layer 0 = direct match only.  Layer 1 = expand from matched entities. Etc.
-max_layers = 0
+max_layers = 1
 
 # Per-entity: how many field-value references to follow per expansion round
-max_matches_per_layer = 0
+max_matches_per_layer = 3
 
 # Absolute ceiling on how many entities end up in the prompt context
 # (Priority entities like target_npc are on top of this limit)
-max_files = 1
+max_files = 4
 
 # Hard timeout in milliseconds for the entire retrieval cycle
 timeout_ms = 500

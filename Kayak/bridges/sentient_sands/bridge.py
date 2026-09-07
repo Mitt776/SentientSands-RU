@@ -26,71 +26,177 @@ from typing import Any, Dict, List, Optional
 from .hub import KayakHub
 from ..kayak_keys import Ops
 
+try:
+    # Живёт на стороне SentientSands; при отдельном запуске Kayak его нет,
+    # и перевод имён просто отключается.
+    import game_locale as _game_locale
+except Exception:  # pragma: no cover - зависит от того, кто запустил процесс
+    _game_locale = None
+
 log = logging.getLogger("kayak.ss.bridge")
 
 
 # ─── FACTION KNOWLEDGE TABLE ──────────────────────────────────────────────────
 
+def _knowledge_key(name) -> str:
+    """Ключ таблиц знаний: без регистра, артикля, апострофов и подчёркиваний."""
+    text = str(name or "").strip().lower().replace("'", "").replace("\u2019", "")
+    text = re.sub(r"[\s_-]+", " ", text).strip()
+    return re.sub(r"^the\s+", "", text)
+
+
 _FACTION_KNOWLEDGE: dict = {
+    "anti slavers": {
+        "Anti_Slavers", "Manhunters", "Slave_Traders", "Spring", "Stobe_s_Gamble",
+        "Traders_Guild", "United_Cities",
+    },
+    "band of bones": {"Band_of_Bones", "Stenn_Desert", "The_Hook"},
+    "berserkers": {"Berserkers", "Stenn_Desert", "Stobe_s_Gamble"},
+    "cannibals": {"Cannibal_Plains", "Cannibals", "Darkfinger"},
+    "dark hive": {"Dark_Hive"},
+    "drifters": {"Drifters"},
+    "dust bandits": {"Border_Zone", "Dust_Bandits", "Great_Desert"},
+    "flotsam ninjas": {"Cannibal_Plains", "Flotsam_Ninjas", "Flotsam_Village", "Holy_Nation"},
+    "fogmen": {"Fog_Islands", "Fogmen"},
     "holy nation": {
-        "Blister_Hill", "Bad_Teeth", "Stack", "Rebirth", "Holy_Lands",
-        "Holy_Farms", "Holy_Mines", "Holy_Military_Bases",
-        "Narko_s_Trap", "Okran_s_Fist", "Okran_s_Shield",
-        "Okran_s_Pride", "Okran_s_Valley", "Okran_s_Gulf", "Skinner_s_Roam",
-        "Arm_of_Okran",
-        "Holy_Nation", "Shek_Kingdom", "United_Cities",
-        "Flotsam_Ninjas", "Tech_Hunters", "Worlds_End",
-        "Holy_Phoenix",
-        "Okran_and_Narko", "The_Okranite_Rebellion",
-        "The_Thousand_Year_War", "The_Slave_Economy",
+        "Anti_Slavers", "Arm_of_Okran", "Bad_Teeth", "Blister_Hill", "Flotsam_Ninjas",
+        "Holy_Farms", "Holy_Lands", "Holy_Military_Bases", "Holy_Mines", "Holy_Nation",
+        "Holy_Phoenix", "Narko_s_Trap", "Okran_and_Narko", "Okran_s_Fist", "Okran_s_Gulf",
+        "Okran_s_Pride", "Okran_s_Shield", "Okran_s_Valley", "Rebirth", "Shek_Kingdom",
+        "Skinner_s_Roam", "Stack", "Tech_Hunters", "The_Okranite_Rebellion",
+        "The_Slave_Economy", "The_Thousand_Year_War", "United_Cities", "Worlds_End",
+    },
+    "holy nation outlaws": {"Holy_Nation_Outlaws", "The_Hub"},
+    "hounds": {"Hounds"},
+    "kral s chosen": {"Kral_s_Chosen", "Stenn_Desert", "The_Hook"},
+    "manhunters": {"Manhunters"},
+    "mercenary guild": {"Mercenary_Guild"},
+    "nameless": {"Nameless"},
+    "nomads": {"Border_Zone", "Great_Desert", "Nomads"},
+    "reavers": {"Reavers", "South_Wetlands", "The_Hook"},
+    "second empire exiles": {"Greyshelf", "Second_Empire_Exiles"},
+    "shek kingdom": {
+        "Admag", "Band_of_Bones", "Berserkers", "Border_Zone", "Esata_the_Stone_Golem",
+        "Holy_Nation", "Kral_s_Chosen", "Last_Stand", "Okran_s_Gulf", "Shek_Kingdom",
+        "Squin", "Stenn_Desert", "The_Great_Fortress", "The_Hook",
+        "The_Shek_Extinction_Crisis", "The_Thousand_Year_War", "United_Cities",
+    },
+    "shinobi thieves": {"Mongrel", "Shinobi_Thieves"},
+    "skin bandits": {"Skin_Bandits"},
+    "slave traders": {"Anti_Slavers", "Eyesocket", "Slave_Traders", "Stone_Camp"},
+    "tech hunters": {"Black_Scratch", "Flats_Lagoon", "Mourn", "Tech_Hunters", "Worlds_End"},
+    "trade ninjas": {"Trade_Ninjas"},
+    "traders guild": {
+        "Anti_Slavers", "Great_Desert", "Heft", "Trader_s_Edge", "Traders_Guild",
+        "United_Cities",
     },
     "united cities": {
-        "Heft", "Heng", "Catun", "Black_Scratch", "Flats_Lagoon",
-        "Stoat", "Bark", "Brink", "Sho_Battai", "Eyesocket",
-        "Port_North", "Port_South", "Stone_Camp",
-        "Drifters_Last", "Clownsteady", "Trader_s_Edge",
-        "Great_Desert", "Bonefields", "South_Wetlands", "Stormgap_Coast",
-        "The_Hook", "Skimsands", "Sinkuun",
-        "Border_Zone", "The_Hub",
-        "United_Cities", "Traders_Guild", "Slave_Traders", "Manhunters",
-        "Anti_Slavers", "Holy_Nation", "Shek_Kingdom", "Tech_Hunters",
-        "Emperor_Tengu", "Longen",
-        "The_Slave_Economy", "The_Red_Rebellion",
+        "Anti_Slavers", "Bark", "Black_Scratch", "Bonefields", "Border_Zone", "Brink",
+        "Brink_area", "Catun", "Clownsteady", "Drifters_Last", "Emperor_Tengu", "Eyesocket",
+        "Flats_Lagoon", "Flotsam_Ninjas", "Great_Desert", "Heft", "Heng", "Holy_Nation",
+        "Longen", "Manhunters", "Port_North", "Port_South", "Shek_Kingdom", "Sho_Battai",
+        "Sinkuun", "Skimsands", "Slave_Traders", "South_Wetlands", "Stoat", "Stone_Camp",
+        "Stormgap_Coast", "Tech_Hunters", "The_Hook", "The_Hub", "The_Red_Rebellion",
+        "The_Slave_Economy", "Trader_s_Edge", "Traders_Guild", "United_Cities",
     },
-    "shek kingdom": {
-        "Admag", "Squin", "The_Great_Fortress", "Last_Stand",
-        "Stenn_Desert", "Border_Zone",
-        "Shek_Kingdom", "Holy_Nation", "United_Cities",
-        "Kral_s_Chosen", "Band_of_Bones", "Berserkers",
-        "Esata_the_Stone_Golem",
-        "The_Shek_Extinction_Crisis", "The_Thousand_Year_War",
-    },
-    "^default": {
-        "The_Hub", "Border_Zone",
-    },
+    "vagrants": {"Vagrants"},
+    "western hive": {"Dreg", "Hive_Village", "Vain", "Western_Hive"},
+    "^default": {"The_Hub", "Border_Zone"},
 }
 
-_RACE_KNOWLEDGE: dict = {
-    "greenlander": {"Holy_Nation", "United_Cities", "Border_Zone", "The_Hub"},
-    "scorchlander": {"United_Cities", "Great_Desert", "Border_Zone", "The_Hub"},
-    "shek": {"Shek_Kingdom", "Stenn_Desert", "Admag", "Squin"},
-    "hiver": {"Vain", "Hive_Villages", "United_Cities", "The_Hub"},
-    "skeleton": {"Black_Desert", "Worlds_End", "Ancient_Labs", "The_Hub"},
+# Русские написания из display_name сущностей базы и объявленных aliases.
+_FACTION_ALIASES: dict = {
+    "krals chosen": "kral s chosen",
+    "безымянные": "nameless",
+    "берсерки": "berserkers",
+    "бродяги": "vagrants",
+    "воры шиноби": "shinobi thieves",
+    "гильдия наёмников": "mercenary guild",
+    "гильдия торговцев": "traders guild",
+    "гончие": "hounds",
+    "груда костей": "band of bones",
+    "западный улей": "western hive",
+    "избранный крала": "kral s chosen",
+    "изгнанники второй империи": "second empire exiles",
+    "изгои святой нации": "holy nation outlaws",
+    "кожаные бандиты": "skin bandits",
+    "королевство шеков": "shek kingdom",
+    "кочевники": "nomads",
+    "людоеды": "cannibals",
+    "ниндзя отщепенцы": "flotsam ninjas",
+    "ниндзя торговцы": "trade ninjas",
+    "охотники на людей": "manhunters",
+    "противники рабства": "anti slavers",
+    "пыльные бандиты": "dust bandits",
+    "рабовладельцы": "slave traders",
+    "разбойники": "reavers",
+    "святая нация": "holy nation",
+    "скитальцы": "drifters",
+    "союзные города": "united cities",
+    "техохотники": "tech hunters",
+    "туманники": "fogmen",
+    "тёмный улей": "dark hive",
 }
+
+# Значения — как и у фракций, имена папок сущностей базы.
+_RACE_KNOWLEDGE: dict = {
+    "greenlander":  {"Greenlander", "Holy_Nation", "United_Cities", "Border_Zone", "The_Hub"},
+    "scorchlander": {"Scorchlander", "United_Cities", "Great_Desert", "Border_Zone", "The_Hub"},
+    "shek":         {"Shek", "Shek_Kingdom", "Stenn_Desert", "Admag", "Squin"},
+    "hiver":        {"Vain", "Hive_Village", "Western_Hive", "United_Cities", "The_Hub"},
+    "skeleton":     {"Skeleton", "Black_Desert", "Worlds_End", "Ancient_Labs", "The_Hub"},
+}
+
+# Русские написания из display_name сущностей рас. Три касты Улья ведут к
+# общему набору: место обитания у них одно, различает их сама сущность расы.
+_RACE_ALIASES: dict = {
+    "зеленоземец": "greenlander",
+    "жженоземец": "scorchlander",
+    "шек": "shek",
+    "скелет": "skeleton",
+    "принц": "hiver",
+    "солдат дрон": "hiver",
+    "рабочий дрон": "hiver",
+    "hiver prince": "hiver",
+    "hiver soldier drone": "hiver",
+    "hiver worker drone": "hiver",
+}
+
+
+def _canonical_key(raw, aliases: dict) -> str:
+    """Привести имя к ключу таблицы: как есть, через псевдоним, через игру."""
+    key = _knowledge_key(raw)
+    if not key:
+        return ""
+    if key in aliases:
+        return aliases[key]
+    if _game_locale is not None:
+        # Имени нет в базе — спросим локализацию самой Kenshi.
+        english = _knowledge_key(_game_locale.to_english_key(raw))
+        if english and english != key:
+            return aliases.get(english, english)
+    return key
+
+
+def _faction_seed(raw) -> set:
+    key = _canonical_key(raw, _FACTION_ALIASES)
+    return set(_FACTION_KNOWLEDGE.get(key, ()))
+
+
+def _race_seed(raw) -> set:
+    key = _canonical_key(raw, _RACE_ALIASES)
+    return set(_RACE_KNOWLEDGE.get(key, ()))
 
 
 def _build_initial_knowledge(faction: str, origin_faction: str = "") -> set:
     """Seed NPC's $knows_about field based on faction."""
-    f1 = faction.lower().strip()
-    f2 = origin_faction.lower().strip()
-    seed = (
-        _FACTION_KNOWLEDGE.get(f1)
-        or _FACTION_KNOWLEDGE.get(f2)
-        or _FACTION_KNOWLEDGE.get("^default", set())
-    ).copy()
-    if f2 and f2 != f1:
-        extra = _FACTION_KNOWLEDGE.get(f2, set())
-        seed |= extra
+    seed = _faction_seed(faction)
+    if not seed:
+        seed = _faction_seed(origin_faction)
+    if not seed:
+        seed = set(_FACTION_KNOWLEDGE.get("^default", set()))
+    if origin_faction and _knowledge_key(origin_faction) != _knowledge_key(faction):
+        seed |= _faction_seed(origin_faction)
     return seed
 
 
@@ -757,7 +863,7 @@ class SentientSandsBridge:
         race = str(fields.get("race") or "").strip().lower()
 
         merged = set(_build_initial_knowledge(faction, origin_faction))
-        merged |= _RACE_KNOWLEDGE.get(race, set())
+        merged |= _race_seed(race)
 
         # If entity has explicit location-like fields, always include them.
         for lk in ("location", "town", "town_name", "home_region", "region"):

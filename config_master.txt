@@ -139,17 +139,17 @@ NarrativeTemperature = 0.9
 [Kayak]
 
 # Keywords extracted from player message for context retrieval
-max_keywords = 1
+max_keywords = 3
 
 # How many expansion layers to run after initial keyword match
 # 0 = direct matches only, 2 = two rounds of reference-following
-max_layers = 0
+max_layers = 1
 
 # Per-entity: how many field references to follow per expansion round
-max_matches_per_layer = 0
+max_matches_per_layer = 3
 
 # Max entities included in the prompt's world context section
-max_files = 1
+max_files = 4
 
 # Hard timeout for the entire retrieval cycle (milliseconds)
 timeout_ms = 500
