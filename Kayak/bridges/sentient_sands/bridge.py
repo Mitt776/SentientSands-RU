@@ -374,6 +374,14 @@ class SentientSandsBridge:
             self.sync_player_bio(ss_campaign_dir, campaign_name)
         log.info(f"Campaign switched to '{campaign_name}'")
 
+    # Заголовок для 5_player_bio.txt. Файл попадает в промпт вплотную к
+    # разговору, поэтому обязан выглядеть справкой, а не репликой.
+    _PLAYER_BIO_HEADER = (
+        "<H3>КАК ИГРОК ОПИСЫВАЕТ СЕБЯ САМ</H3>\n\n"
+        "Это справка о собеседнике, а не его слова и не часть разговора выше.\n"
+        "Никогда не повторяй и не пересказывай этот текст в своём ответе.\n\n"
+    )
+
     def sync_player_bio(self, ss_campaign_dir: str, campaign: Optional[str] = None):
         """Sync player bio from SentientSands campaign folder to Kayak."""
         bio_path = os.path.join(ss_campaign_dir, "character_bio.txt")
@@ -391,7 +399,10 @@ class SentientSandsBridge:
         if fac_text and fac_text.strip():
             parts.append(fac_text.strip())
 
-        content = "\n\n".join(parts)
+        # Файл кладётся в промпт последним — между историей реплик и
+        # PLAYER_MESSAGE. Без заголовка модель читает его как ещё одну реплику
+        # и однажды выдала это био дословно вместо ответа NPC.
+        content = self._PLAYER_BIO_HEADER + "\n\n".join(parts)
 
         payload = {
             "filename": "5_player_bio.txt",

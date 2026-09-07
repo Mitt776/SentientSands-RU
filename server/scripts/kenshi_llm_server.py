@@ -1856,6 +1856,24 @@ def generate_unique_lore_name(gender="Neutral", used_names=None, title_prefix=""
             return candidate
     return _make_full(f"{base}_{random.randint(1000, 9999)}")
 
+# Имя говорящего короткое и без знаков конца предложения. Ответ NPC вроде
+# «У меня стройка: доски, ткани» двоеточие содержит, но префиксом не является:
+# раньше такая реплика уходила в историю без имени, а в глобальные события —
+# с целым абзацем вместо имени актёра.
+_SPEAKER_PREFIX_MAX_CHARS = 48
+
+
+def _has_speaker_prefix(line):
+    """True, если строка начинается с «Имя: », а не просто содержит двоеточие."""
+    head, sep, _ = str(line or "").partition(":")
+    if not sep:
+        return False
+    head = head.strip()
+    if not head or len(head) > _SPEAKER_PREFIX_MAX_CHARS:
+        return False
+    return not any(ch in head for ch in ".!?,;")
+
+
 def get_current_time_prefix():
     if PLAYER_CONTEXT:
         day = PLAYER_CONTEXT.get('day', 0)
@@ -7587,10 +7605,10 @@ def chat():
                         # Ensure the line has a speaker attribution in the history
                         history_line = line
                         # Strip pipe IDs from speaker names (e.g. "Name|12345: text" → "Name: text")
-                        if ':' in history_line and '|' in history_line.split(':', 1)[0]:
+                        if _has_speaker_prefix(history_line) and '|' in history_line.split(':', 1)[0]:
                             _spk, _rest = history_line.split(':', 1)
                             history_line = f"{_spk.split('|')[0].strip()}: {_rest.strip()}"
-                        if ':' not in history_line:
+                        if not _has_speaker_prefix(history_line):
                             # Append primary name if LLM forgot the prefix in single-responder modes
                             history_line = f"{primary_npc}: {history_line}"
 
@@ -7601,7 +7619,7 @@ def chat():
                         char_datas[name]["ConversationHistory"].append(f"{time_prefix}{overheard_tag}{history_line}")
 
                         # Log NPC speech to global history
-                        if ':' in history_line:
+                        if _has_speaker_prefix(history_line):
                             h, m = history_line.split(':', 1)
                             speaker_name = h.strip()
                             speaker_faction = char_datas.get(speaker_name, {}).get("Faction", "None")
@@ -7615,10 +7633,10 @@ def chat():
                     # Fallback for single-line responses
                     history_line = content
                     # Strip pipe IDs from speaker names (e.g. "Name|12345: text" → "Name: text")
-                    if ':' in history_line and '|' in history_line.split(':', 1)[0]:
+                    if _has_speaker_prefix(history_line) and '|' in history_line.split(':', 1)[0]:
                         _spk, _rest = history_line.split(':', 1)
                         history_line = f"{_spk.split('|')[0].strip()}: {_rest.strip()}"
-                    if ':' not in history_line:
+                    if not _has_speaker_prefix(history_line):
                          history_line = f"{primary_npc}: {history_line}"
                 
                     history_entry = f"{time_prefix}{overheard_tag}{history_line}"

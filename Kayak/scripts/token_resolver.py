@@ -45,6 +45,8 @@ _RANDOM_FOLDER_RE = re.compile(r"^random_entity_folder\s+([A-Za-z0-9_\- ]+)\s+wi
 _DIRECT_ENTITY_RE = re.compile(r"^entity\s+(.+?)\s+with\s+(\d+)\s+children$", re.IGNORECASE)
 _WORLD_RUMORS_RE = re.compile(r"^world_rumors\s+(\d+)$", re.IGNORECASE)
 _DIALOGUE_LINES_RE = re.compile(r"^dialogue_lines_qty\s+(\d+)$", re.IGNORECASE)
+# Штамп реплики в dialogue.txt: "[Day 3, 07:41] Имя: текст".
+_DIALOGUE_STAMP_RE = re.compile(r"^\[Day\s+(\d+),\s*(\d{1,2}):(\d{2})\]")
 _NEARBY_NPCS_RE = re.compile(r"^nearby_npcs\s+(\d+)$", re.IGNORECASE)
 _NPC_NEARBY_RE = re.compile(r"^npc_nearby\s+(\d+)$", re.IGNORECASE)
 _CURRENT_LOCATION_FIELD_RE = re.compile(
@@ -1009,6 +1011,31 @@ class TokenResolver:
         """
         return str(getattr(ctx, block_name, "") or "").strip()
 
+    def drop_abandoned_timeline(self, lines: list, ctx: TokenResolverContext) -> list:
+        """Убрать реплики, помеченные временем позже текущего игрового.
+
+        Kenshi позволяет загрузить ранний сейв, и день откатывается назад.
+        dialogue.txt при этом общий: в промпт попадают разговоры из брошенной
+        ветки времени. NPC «помнит» то, чего в этой линии не было, и склонен
+        повторить оттуда готовый ответ вместо ответа на заданный вопрос.
+
+        Без внятного игрового времени ничего не отсеиваем.
+        """
+        pc = ctx.player_context if isinstance(ctx.player_context, dict) else {}
+        try:
+            now = (int(pc.get("day")), int(pc.get("hour")), int(pc.get("minute")))
+        except (TypeError, ValueError):
+            return lines
+        if now[0] <= 0:
+            return lines
+        kept = []
+        for line in lines:
+            m = _DIALOGUE_STAMP_RE.match(line)
+            if m and (int(m.group(1)), int(m.group(2)), int(m.group(3))) > now:
+                continue
+            kept.append(line)
+        return kept
+
     def resolve_dialogue_lines(self, ctx: TokenResolverContext, count: int) -> str:
         """Inject the target NPC dialogue history, bounded by the token value.
 
@@ -1017,9 +1044,13 @@ class TokenResolver:
         if count <= 0 or ctx.target_entity is None or not self.prompt_builder:
             return ""
         try:
-            return self.prompt_builder.load_dialogue(ctx.target_entity, keep_lines=count)
+            # С запасом: часть строк может отсеяться как след другого сейва.
+            raw = self.prompt_builder.load_dialogue(ctx.target_entity, keep_lines=count * 3)
         except Exception:
             return ""
+        lines = [line for line in raw.splitlines() if line.strip()]
+        lines = self.drop_abandoned_timeline(lines, ctx)
+        return "\n".join(lines[-count:])
 
 
     def get_nearby_npcs(self, ctx: TokenResolverContext) -> list[dict]:
