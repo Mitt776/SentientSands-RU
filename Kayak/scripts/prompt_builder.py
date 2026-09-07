@@ -248,6 +248,11 @@ class PromptBuilder:
         for fname in os.listdir(directory):
             if fname.startswith("IGN_"):
                 continue
+            # Только .txt. Префикса мало: редакторский бэкап "1_core.txt.bak"
+            # тоже начинается с "1_" и грузился бы наравне с оригиналом,
+            # молча удваивая промпт.
+            if not fname.lower().endswith(".txt"):
+                continue
             m = re.match(r'^(\d+)[_\-]', fname)
             if m:
                 numbered.append((int(m.group(1)), fname))
