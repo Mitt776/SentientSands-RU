@@ -7947,11 +7947,6 @@ INSTRUCTIONS:
 """)
     prompt = template.format(events_text=events_text, past_rumors_block=past_rumors_block, p_fact=p_fact)
 
-    # Apply language instruction so rumors respect the UI language setting
-    language = settings.get("language", "English")
-    if language and language.lower() != "english":
-        prompt += f"\nLANGUAGE: You MUST write the rumor ONLY in {language}. Do not use English."
-
     # added by Pineaxe v04 - use Kayak loremaster prompt if available
     if KAYAK_ENABLED:
         try:
@@ -7961,6 +7956,12 @@ INSTRUCTIONS:
                 logging.info("KAYAK: Using Kayak loremaster prompt for narrative synthesis")
         except Exception as _kle:
             logging.warning(f"KAYAK: build_loremaster_prompt failed ({_kle}) - using native prompt")
+
+    # Язык — последним. Промпт летописца из Kayak заменяет собой весь текст,
+    # и раньше указание языка терялось именно здесь.
+    language = settings.get("language", "English")
+    if language and language.lower() != "english":
+        prompt += f"\nLANGUAGE: You MUST write the rumor ONLY in {language}. Do not use English."
     messages = [
         {"role": "system", "content": prompt},
         {"role": "user", "content": "Synthesize one grounded Kenshi rumor from these recent events."}

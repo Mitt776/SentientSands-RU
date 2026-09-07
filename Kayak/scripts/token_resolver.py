@@ -182,6 +182,7 @@ class TokenResolverContext:
     server_town: str = ""
     server_region: str = ""
     world_synthesis_path: str = ""
+    world_events_path: str = ""
     world_synthesis: str = ""
     player_context: dict = field(default_factory=dict)
     player_status: str = ""
@@ -437,7 +438,14 @@ class TokenResolver:
                 exclude = {self.resolve_target_metadata(ctx, "target_npc_faction").lower()}
                 result = self.resolve_named_entity_text(self.extract_latest_active_faction(self.get_world_synthesis_tail(ctx), exclude), token.args["child_count"])
             elif kind == "world_rumors":
-                result = self.render_rumors(self.extract_recent_rumors(self.get_world_synthesis_tail(ctx), token.args["count"]))
+                # Слухи живут в world_events.txt; лог синтеза оставлен запасным
+                # вариантом для старых кампаний.
+                _rumors = self.extract_rumor_entries(
+                    self.get_world_events_tail(ctx), token.args["count"])
+                if not _rumors:
+                    _rumors = self.extract_recent_rumors(
+                        self.get_world_synthesis_tail(ctx), token.args["count"])
+                result = self.render_rumors(_rumors)
             elif kind == "violence_summary":
                 result = self.extract_latest_violence_summary(self.get_world_synthesis_tail(ctx)) or ""
             elif kind == "trade_summary":
@@ -1460,6 +1468,88 @@ class TokenResolver:
         rng = random.Random(ctx.rng_seed) if ctx.rng_seed is not None else random
         ent = rng.choice(ents)
         return self.render_entities(self.resolve_entity_chain(ent, child_count))
+
+    def world_events_file(self, ctx: TokenResolverContext) -> str:
+        """Файл слухов кампании на стороне SentientSands.
+
+        Отдельного параметра не заводим: путь к логу синтеза уже приходит, а
+        оба файла лежат внутри server/ одной и той же копии мода.
+        """
+        explicit = str(getattr(ctx, "world_events_path", "") or "").strip()
+        if explicit:
+            return explicit
+        synthesis = str(ctx.world_synthesis_path or "").strip()
+        campaign = os.path.basename(str(ctx.campaign_root or "").rstrip("\\/"))
+        if not synthesis or not campaign:
+            return ""
+        server_dir = os.path.dirname(os.path.dirname(synthesis))   # .../server
+        return os.path.join(server_dir, "campaigns", campaign, "world_events.txt")
+
+    def get_world_events_tail(self, ctx: TokenResolverContext, max_bytes: int = 32768) -> str:
+        path = self.world_events_file(ctx)
+        cache_key = f"__world_events_tail__:{path}:{max_bytes}"
+        if cache_key in self._prompt_cache:
+            return self._prompt_cache[cache_key]
+        if not path or not os.path.isfile(path):
+            self._prompt_cache[cache_key] = ""
+            return ""
+        try:
+            size = os.path.getsize(path)
+            with open(path, "rb") as f:
+                if size > max_bytes:
+                    f.seek(-max_bytes, os.SEEK_END)
+                data = f.read().decode("utf-8", errors="replace")
+        except OSError:
+            data = ""
+        self._prompt_cache[cache_key] = data
+        return data
+
+    def extract_rumor_entries(self, text: str, count: int, max_chars: int = 600) -> list[str]:
+        """Слухи из world_events.txt: `- [Day N, HH:MM] [RUMOR: текст]`.
+
+        Текст бывает многострочным и содержит вложенные скобки, поэтому
+        закрывающую ищем по балансу, а не регулярным выражением.
+        """
+        if not text or count <= 0:
+            return []
+        marker = "[RUMOR:"
+        found, pos = [], 0
+        while True:
+            start = text.find(marker, pos)
+            if start < 0:
+                break
+            depth, i = 0, start
+            while i < len(text):
+                if text[i] == "[":
+                    depth += 1
+                elif text[i] == "]":
+                    depth -= 1
+                    if depth == 0:
+                        break
+                i += 1
+            body = text[start + len(marker):i]
+            pos = i + 1 if i < len(text) else len(text)
+
+            # Модель иногда предваряет слух собственным заголовком.
+            for lead in ("**Synthesized Rumor:**", "Synthesized Rumor:", "**Слух:**"):
+                if lead in body:
+                    body = body.split(lead, 1)[1]
+            body = " ".join(body.split()).strip()
+            # Слух — одно-три предложения. Простыня осталась от сбоя, когда
+            # модель размышляла вслух прямо в ответ; такое в промпт не несём.
+            if body and len(body) <= max_chars:
+                found.append(body)
+
+        seen, out = set(), []
+        for rumor in reversed(found):
+            key = rumor.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(rumor)
+            if len(out) >= count:
+                break
+        return list(reversed(out))
 
     def get_world_synthesis_tail(self, ctx: TokenResolverContext, max_bytes: int = 32768) -> str:
         cache_key = f"__world_tail__:{ctx.world_synthesis_path}:{max_bytes}"
