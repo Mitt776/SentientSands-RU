@@ -2524,6 +2524,22 @@ def init_server_state():
         # The INI is user-editable, so treat the stored campaign as untrusted too.
         ACTIVE_CAMPAIGN = _safe_campaign_name(settings.get("current_campaign", "Default")) or "Default"
         CURRENT_MODEL_KEY = settings.get("current_model", "player2-default")
+        if MODELS_CONFIG and CURRENT_MODEL_KEY not in MODELS_CONFIG:
+            # models.json is edited by hand, so a model can be renamed or dropped
+            # while the INI still names it. Without this the server starts and
+            # reports itself healthy, then answers every single line with silence:
+            # call_llm bails out at "Model Error: <key> not configured" and the
+            # player just sees an NPC that never speaks.
+            _model_fallback = (
+                "player2-default" if "player2-default" in MODELS_CONFIG
+                else next(iter(MODELS_CONFIG))
+            )
+            logging.error(
+                f"INIT: model '{CURRENT_MODEL_KEY}' from the INI does not exist in "
+                f"{MODELS_PATH}. Falling back to '{_model_fallback}' so NPCs can still "
+                f"talk. Pick the model you want in the F8 menu to make it stick."
+            )
+            CURRENT_MODEL_KEY = _model_fallback
         DIALOGUE_HISTORY_LIMIT = int(settings.get("dialogue_history_limit", 45))
         character_gateway.set_dialogue_limit(DIALOGUE_HISTORY_LIMIT)
         set_current_model_key(CURRENT_MODEL_KEY)
