@@ -1,6 +1,8 @@
 import configparser
 import logging
 import os
+import tempfile
+import threading
 
 SCRIPT_PATH = os.path.abspath(__file__)
 SCRIPT_DIR = os.path.dirname(SCRIPT_PATH)
@@ -44,6 +46,7 @@ GENERIC_NAMES_PATH = os.path.join(KENSHI_SERVER_DIR, "config", "generic_names.js
 RENAMING_LIST_PATH = os.path.join(KENSHI_SERVER_DIR, "config", "renaming_list.txt")
 RENAMING_RULES_PATH = os.path.join(KENSHI_SERVER_DIR, "config", "renaming_rules.txt")
 LOCALIZATION_PATH = os.path.join(KENSHI_SERVER_DIR, "config", "localization.json")
+INTENT_PHRASES_PATH = os.path.join(KENSHI_SERVER_DIR, "config", "intent_phrases.json")
 
 INI_KEY_MAP = {
     "current_model": "CurrentModel",
@@ -76,6 +79,7 @@ INI_KEY_MAP = {
     "narrative_max_tokens": "NarrativeMaxTokens",
     "narrative_temperature": "NarrativeTemperature",
     "retry_silent_reply": "RetrySilentReply",
+    "llm_timeout_seconds": "LlmTimeoutSeconds",
     # Dialogue history
     "dialogue_history_limit": "DialogueHistoryLimit",
     "prompt_context_limit": "PromptContextLimit",
@@ -90,6 +94,62 @@ INI_KEY_MAP = {
 
 _SETTINGS_CACHE = None
 _SETTINGS_CACHE_MTIME = 0.0
+_INI_WRITE_LOCK = threading.RLock()
+
+
+def _read_ini(config, path):
+    """Read an INI as UTF-8, tolerating a file left over from the old locale writes.
+
+    Everything is written as UTF-8 now. Older installs wrote the INI in the system
+    codepage, so a campaign or hotkey with non-ASCII characters would raise
+    UnicodeDecodeError here — which used to be swallowed and silently reset every
+    setting to its default, including the active campaign.
+    """
+    try:
+        config.read(path, encoding="utf-8")
+        return
+    except UnicodeDecodeError:
+        pass
+    try:
+        config.read(path)  # legacy locale-encoded file; rewritten as UTF-8 on next save
+        logging.warning(f"Settings INI at {path} is not UTF-8; it will be rewritten on the next save.")
+    except Exception as exc:
+        logging.error(f"Could not read settings INI at {path}: {exc}")
+
+
+def _atomic_write_ini(config, path):
+    """Write the INI through a neighbouring temp file, then rename it into place.
+
+    A direct open(path, "w") leaves a truncated file if the process dies mid-write,
+    and _restart_self_async does exactly that: save_settings() followed by
+    os._exit(0). A half-written INI means every setting silently reverts to its
+    default on the next start, active campaign included.
+    """
+    directory = os.path.dirname(path) or "."
+    os.makedirs(directory, exist_ok=True)
+    handle = None
+    tmp_path = None
+    try:
+        fd, tmp_path = tempfile.mkstemp(prefix=".ss_ini_", suffix=".tmp", dir=directory)
+        handle = os.fdopen(fd, "w", encoding="utf-8")
+        config.write(handle)
+        handle.flush()
+        os.fsync(handle.fileno())
+        handle.close()
+        handle = None
+        os.replace(tmp_path, path)
+        tmp_path = None
+    finally:
+        if handle is not None:
+            try:
+                handle.close()
+            except Exception:
+                pass
+        if tmp_path and os.path.exists(tmp_path):
+            try:
+                os.remove(tmp_path)
+            except Exception:
+                pass
 
 
 def _save_settings_raw(settings):
@@ -98,7 +158,7 @@ def _save_settings_raw(settings):
         config = configparser.ConfigParser()
         config.optionxform = str  # preserve PascalCase when writing
         if os.path.exists(INI_PATH):
-            config.read(INI_PATH)
+            _read_ini(config, INI_PATH)
 
         if "Settings" not in config:
             config["Settings"] = {}
@@ -120,8 +180,7 @@ def _save_settings_raw(settings):
                 else:
                     config["Settings"][ini_key] = str(value)
 
-        with open(INI_PATH, "w") as handle:
-            config.write(handle)
+        _atomic_write_ini(config, INI_PATH)
     except Exception as exc:
         logging.error(f"Error saving Settings to INI at {INI_PATH}: {exc}")
 
@@ -169,6 +228,9 @@ def load_settings():
         "narrative_temperature": 0.8,
         # Переспросить, если модель ответила одними служебными тегами
         "retry_silent_reply": True,
+        # Потолок одного обращения к модели. Раньше было 120с и три слепых
+        # повтора подряд, то есть до шести минут тишины в игре.
+        "llm_timeout_seconds": 60,
         # Dialogue history
         "dialogue_history_limit": 45,
         "prompt_context_limit": 11000,
@@ -186,7 +248,7 @@ def load_settings():
         try:
             config = configparser.ConfigParser()
             config.optionxform = str  # preserve case on disk
-            config.read(INI_PATH)
+            _read_ini(config, INI_PATH)
             if "Settings" in config:
                 # Build case-insensitive lookup so we match regardless of
                 # whether the INI was written with PascalCase or lowercase keys.
@@ -223,7 +285,10 @@ def load_settings():
     except Exception:
         pass
 
-    return settings
+    # Always a copy. The cache-hit branch above already returns one; handing out
+    # the cached object here let the first caller mutate global settings for
+    # every other thread.
+    return settings.copy()
 
 
 def save_settings(new_settings):
@@ -239,9 +304,12 @@ def save_settings(new_settings):
         else:
             flat_changes[key] = value
 
-    settings = load_settings()
-    settings.update(flat_changes)
-    _save_settings_raw(settings)
+    # Read-modify-write must be one step: two threads saving different keys at
+    # the same time would otherwise each write a copy built before the other's.
+    with _INI_WRITE_LOCK:
+        settings = load_settings()
+        settings.update(flat_changes)
+        _save_settings_raw(settings)
 
 
 def persist_current_settings():

@@ -143,6 +143,11 @@ SELECTED_TTL_SECONDS = 10.0
 
 # Locks defined here, exported to server
 PRIORITY_LOCK = threading.Lock()
+# Guards LIVE_CONTEXTS and LIVE_NAME_INDEX together. They are two halves of one
+# structure -- the index points into the dict -- and Flask runs threaded, so
+# /context, /chat and every listener thread mutate them concurrently. Reentrant
+# because store_live_context() calls resolve_live_context() on the way through.
+IDENTITY_LOCK = threading.RLock()
 SELECTED_LOCK = threading.Lock()
 
 
@@ -626,8 +631,10 @@ def _collect_target_candidates(clean_name, context=None, nearby_data=None):
         _add_candidate("nearby", npc)
 
     if clean_name:
-        for live_key in [k for k in LIVE_NAME_INDEX.get(clean_name, []) if k in LIVE_CONTEXTS]:
-            _add_candidate("live", LIVE_CONTEXTS[live_key])
+        with IDENTITY_LOCK:
+            live_hits = [LIVE_CONTEXTS[k] for k in LIVE_NAME_INDEX.get(clean_name, []) if k in LIVE_CONTEXTS]
+        for live_ctx in live_hits:
+            _add_candidate("live", live_ctx)
 
     return candidates
 
@@ -758,21 +765,29 @@ def _context_faction(context):
 def _register_live_name(key, name):
     if not key or not name:
         return
-    bucket = LIVE_NAME_INDEX.setdefault(name, [])
-    if key not in bucket:
-        bucket.append(key)
+    with IDENTITY_LOCK:
+        bucket = LIVE_NAME_INDEX.setdefault(name, [])
+        if key not in bucket:
+            bucket.append(key)
 
 def _unregister_live_aliases(key, ctx=None):
-    target = ctx or LIVE_CONTEXTS.get(key) or {}
-    for alias in target.get("_aliases", []):
-        bucket = LIVE_NAME_INDEX.get(alias)
-        if not bucket:
-            continue
-        LIVE_NAME_INDEX[alias] = [candidate for candidate in bucket if candidate != key]
-        if not LIVE_NAME_INDEX[alias]:
-            del LIVE_NAME_INDEX[alias]
+    with IDENTITY_LOCK:
+        target = ctx or LIVE_CONTEXTS.get(key) or {}
+        for alias in target.get("_aliases", []):
+            bucket = LIVE_NAME_INDEX.get(alias)
+            if not bucket:
+                continue
+            LIVE_NAME_INDEX[alias] = [candidate for candidate in bucket if candidate != key]
+            if not LIVE_NAME_INDEX[alias]:
+                del LIVE_NAME_INDEX[alias]
 
 def resolve_live_context(name=None, context=None, explicit_id=None):
+    """Find the cached live context for an NPC. Serialised against writers."""
+    with IDENTITY_LOCK:
+        return _resolve_live_context_locked(name, context, explicit_id)
+
+
+def _resolve_live_context_locked(name=None, context=None, explicit_id=None):
     ctx_dict = _parse_context_dict(context, fallback_name=name)
     clean_name = _context_name(ctx_dict, name)
     faction = _context_faction(ctx_dict)
@@ -824,7 +839,21 @@ def resolve_live_context(name=None, context=None, explicit_id=None):
     return None, None
 
 def store_live_context(context, name=None, explicit_id=None):
+    """Record an NPC's live context.
 
+    The body is a read-modify-write across two structures: resolve, evict the
+    old key, insert the new one, re-register the alias, then trim the cache.
+    Run unsynchronised, two threads could interleave anywhere in there and
+    leave LIVE_NAME_INDEX pointing at a key that no longer exists -- which is
+    how an NPC ends up answering with somebody else's personality. The cap
+    eviction below is also a next(iter(...)) over a dict another thread may be
+    inserting into, which raises RuntimeError outright.
+    """
+    with IDENTITY_LOCK:
+        return _store_live_context_locked(context, name, explicit_id)
+
+
+def _store_live_context_locked(context, name=None, explicit_id=None):
     ctx_dict = _parse_context_dict(context, fallback_name=name)
     if not isinstance(ctx_dict, dict):
         return None, {}
@@ -901,8 +930,9 @@ def store_live_context(context, name=None, explicit_id=None):
     return key, merged
 
 def clear_live_context_cache():
-    LIVE_CONTEXTS.clear()
-    LIVE_NAME_INDEX.clear()
+    with IDENTITY_LOCK:
+        LIVE_CONTEXTS.clear()
+        LIVE_NAME_INDEX.clear()
     _istate.last_npc_key = None
     _istate.last_npc_name = None
     _istate.last_direct_chat_key = None
@@ -911,10 +941,13 @@ def clear_live_context_cache():
         AMBIENT_SPEAKER_LAST_AT.clear()
     with _sv().PROGRESS_LOCK:
         _sv().PROFILES_IN_PROGRESS.clear()
+        # Same lock as the rest of the profile pipeline. It used to be cleared
+        # under PRIORITY_LOCK while the live code path guards it with
+        # PROGRESS_LOCK, so the two never actually excluded each other.
+        _sv().DEFERRED_PROFILE_QUEUE.clear()
     with PRIORITY_LOCK:
         _istate.active_direct_chat_count = 0
         _istate.chat_priority_until = 0.0
-        _sv().DEFERRED_PROFILE_QUEUE.clear()
 
 def _ambient_identity_key(name=None, context=None, explicit_id=None):
     clean_name = _clean_npc_name(name)
@@ -993,45 +1026,12 @@ def direct_chat_active():
     with PRIORITY_LOCK:
         return _istate.active_direct_chat_count > 0 or time.time() < _istate.chat_priority_until
 
-def defer_profile_batch(npc_list):
-    if not npc_list:
-        return 0
-    with PRIORITY_LOCK:
-        for npc in npc_list:
-            sid = npc.get("storage_id")
-            if sid:
-                _sv().DEFERRED_PROFILE_QUEUE[sid] = dict(npc)
-        return len(_sv().DEFERRED_PROFILE_QUEUE)
-
-def drain_deferred_profile_queue():
-    with PRIORITY_LOCK:
-        if not _sv().DEFERRED_PROFILE_QUEUE:
-            return []
-        queued = list(_sv().DEFERRED_PROFILE_QUEUE.values())
-        _sv().DEFERRED_PROFILE_QUEUE.clear()
-        return queued
-
-def _launch_batch_profile_generation(batch):
-    if not batch:
-        return 0
-
-    def _bg_generate(items):
-        try:
-            _sv().generate_batch_profiles(items)
-        finally:
-            with _sv().PROGRESS_LOCK:
-                for ctx in items:
-                    sid = ctx.get("storage_id")
-                    if sid in _sv().PROFILES_IN_PROGRESS:
-                        _sv().PROFILES_IN_PROGRESS.remove(sid)
-
-    threading.Thread(target=_bg_generate, args=(batch,), daemon=True).start()
-    return len(batch)
-
-def flush_deferred_profile_batches():
-    if direct_chat_active():
-        return 0
-    return _launch_batch_profile_generation(drain_deferred_profile_queue())
+# NOTE: defer_profile_batch / drain_deferred_profile_queue /
+# _launch_batch_profile_generation / flush_deferred_profile_batches used to be
+# duplicated here under PRIORITY_LOCK while kenshi_llm_server.py kept its own
+# copies under PROGRESS_LOCK -- both writing the same DEFERRED_PROFILE_QUEUE, so
+# neither lock excluded the other and a fix applied to one copy never reached
+# the other. Nothing imported these, so the server's versions are the only ones.
 
 class _DirectChatLease:
     """Small route-scope guard so direct chat priority is always released on return/exception."""

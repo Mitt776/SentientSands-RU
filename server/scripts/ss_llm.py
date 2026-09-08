@@ -16,6 +16,7 @@ Extracted from kenshi_llm_server.py — [Design: Pineaxe]
 import json
 import logging
 import os
+import random
 import re
 import time
 import traceback
@@ -24,6 +25,24 @@ from urllib.parse import urlparse
 
 import requests
 from server_runtime import runtime, set_player2_session_key
+
+# How long a single LLM call may take. The old value was 120 seconds with three
+# blind retries, so one unlucky reply could hold the game for six minutes.
+LLM_CONNECT_TIMEOUT = 10
+LLM_DEFAULT_READ_TIMEOUT = 60
+LLM_MAX_BACKOFF = 8.0
+
+
+def _llm_read_timeout() -> float:
+    """Read timeout for one attempt, overridable via LlmTimeoutSeconds in the INI."""
+    try:
+        from configuration import load_settings
+        value = float(load_settings().get("llm_timeout_seconds", LLM_DEFAULT_READ_TIMEOUT))
+    except Exception:
+        return float(LLM_DEFAULT_READ_TIMEOUT)
+    # Anything below 10s cannot fit a real generation; anything above 180s is
+    # longer than a player will sit and stare at a silent NPC.
+    return min(180.0, max(10.0, value))
 
 
 _COMPAT_LOGGER_NAME = "ss.model_compat"
@@ -245,12 +264,45 @@ def call_llm(messages, max_tokens=2048, temperature=0.8):
                 removed.append(k)
         return removed
     
+    def _is_retryable_status(code: int) -> bool:
+        """Would the very same request plausibly succeed if we sent it again?
+
+        A 4xx is the provider saying the request itself is wrong -- bad key,
+        unknown model, malformed payload. Repeating it verbatim cannot help and
+        just burns the player's turn, so only the transient codes come back True.
+        """
+        if code in (408, 409, 425, 429):
+            return True
+        return code >= 500
+
+    def _retry_delay(attempt_index: int, response=None) -> float:
+        if response is not None and getattr(response, "headers", None):
+            raw = response.headers.get("Retry-After")
+            if raw is not None:
+                try:
+                    return max(0.5, min(float(str(raw).strip()), LLM_MAX_BACKOFF))
+                except (TypeError, ValueError):
+                    pass
+        # Exponential with jitter: several NPCs answering at once must not
+        # resynchronise onto the same retry moment.
+        return min(LLM_MAX_BACKOFF, 0.75 * (2 ** attempt_index)) + random.uniform(0.0, 0.4)
+
+    read_timeout = _llm_read_timeout()
+    # Hard ceiling on the whole call, retries and backoff included.
+    deadline = time.time() + max(read_timeout * 2.0, read_timeout + 20.0)
+    player2_reauth_attempted = False
+
     last_error = None
     for attempt in range(3):
+        if attempt and time.time() >= deadline:
+            last_error = last_error or "LLM call budget exhausted"
+            logging.error(f"Giving up on the LLM call: the {int(deadline - time.time() + read_timeout * 2)}s budget is spent.")
+            break
         try:
             getattr(runtime, "debug_logger", logging).debug(f"LLM REQUEST [{provider_name}] to {target_url} (Payload omitted for security)")
             start_time = time.time()
-            response = requests.post(target_url, headers=headers, json=payload, timeout=120)
+            response = requests.post(target_url, headers=headers, json=payload,
+                                     timeout=(LLM_CONNECT_TIMEOUT, read_timeout))
             elapsed = time.time() - start_time
             
             if response.status_code == 200:
@@ -350,6 +402,8 @@ def call_llm(messages, max_tokens=2048, temperature=0.8):
                     status_code=response.status_code,
                     elapsed_ms=int(elapsed * 1000),
                 )
+                already_tried = player2_reauth_attempted
+                player2_reauth_attempted = True
                 try:
                     auth_url = f"http://localhost:4315/v1/login/web/019c93fc-7a93-7ac4-8c6e-df0fd09bec01"
                     auth_resp = requests.post(auth_url, timeout=5)
@@ -385,8 +439,13 @@ def call_llm(messages, max_tokens=2048, temperature=0.8):
                         continue
 
                 logging.error(f"Attempt {attempt+1} failed after {elapsed:.1f}s: {last_error}")
+                if already_tried:
+                    # The token was refreshed once and the provider still says 401.
+                    # The key is wrong, not stale; further attempts are noise.
+                    logging.error("Player2 still returns 401 after a token refresh; giving up.")
+                    break
                 if attempt < 2:
-                    time.sleep(1)
+                    time.sleep(_retry_delay(attempt, response))
             else:
                 last_error = f"API ERROR {response.status_code}: {_compact_error(getattr(response, 'reason', 'HTTP error'))}"
                 logging.error(f"Attempt {attempt+1} failed after {elapsed:.1f}s: {last_error}")
@@ -420,8 +479,23 @@ def call_llm(messages, max_tokens=2048, temperature=0.8):
                             ", ".join(removed),
                         )
                         continue
-                elif attempt < 2:
-                    time.sleep(1)
+                if not _is_retryable_status(response.status_code):
+                    _log_model_compat(
+                        logging.ERROR,
+                        "api_error_final",
+                        **base_meta,
+                        attempt=attempt + 1,
+                        status_code=response.status_code,
+                        reason=_compact_error(getattr(response, "reason", "")),
+                    )
+                    logging.error(
+                        f"HTTP {response.status_code} rejects the request itself, so a repeat "
+                        f"cannot succeed. Giving up after attempt {attempt+1}. Check the API key "
+                        f"and the model name in server/config/."
+                    )
+                    break
+                if attempt < 2:
+                    time.sleep(_retry_delay(attempt, response))
 
         except Exception as e:
             last_error = str(e)
@@ -456,7 +530,7 @@ def call_llm(messages, max_tokens=2048, temperature=0.8):
                     )
                     continue
             if attempt < 2:
-                time.sleep(1)
+                time.sleep(_retry_delay(attempt))
     
     _log_model_compat(
         logging.ERROR,

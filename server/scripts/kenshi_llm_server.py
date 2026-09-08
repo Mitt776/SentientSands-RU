@@ -31,6 +31,7 @@ import hashlib
 import threading
 import random
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import TimeoutError as FuturesTimeoutError
 from flask import Flask, request, jsonify
 import sys
 import logging.handlers
@@ -53,7 +54,7 @@ from configuration import (
     GENERIC_NAMES_PATH,
     KENSHI_MOD_DIR,
     KENSHI_SERVER_DIR,
-    LOCALIZATION_PATH,
+    LOCALIZATION_PATH, INTENT_PHRASES_PATH,
     MODELS_PATH,
     NAMES_PATH,
     PROVIDERS_PATH,
@@ -103,7 +104,7 @@ from ss_identity import (
     LIVE_CONTEXTS, LIVE_NAME_INDEX, PLAYER_CONTEXT,
     AMBIENT_SPEAKER_LAST_AT, _istate,
     AMBIENT_DIRECT_CHAT_COOLDOWN, AMBIENT_SPEAKER_COOLDOWN,
-    DIRECT_CHAT_GRACE_SECONDS, PRIORITY_LOCK,
+    DIRECT_CHAT_GRACE_SECONDS, PRIORITY_LOCK, IDENTITY_LOCK,
     # Utility
     _build_name_faction_id,
     # Identity functions
@@ -169,41 +170,167 @@ except ImportError:
     logging.warning("simplify_global_events.py not found — narrative synthesis will use raw events.")
 
 # added by AntiGravity - kill old servers BEFORE we start any child processes (like Kayak)
+def _listeners_on_port(port: int) -> set:
+    """PIDs listening on exactly `port`, parsed from netstat.
+
+    The local-address column is split on its last colon so that ':5000' cannot
+    match ':50001' — the old substring test killed anything listening on
+    50000-50009 as well.
+    """
+    pids = set()
+    out = ""
+    for args in (['netstat', '-aon', '-p', 'TCP'], ['netstat', '-aon']):
+        try:
+            result = subprocess.run(
+                args, capture_output=True, text=True, shell=False, timeout=5
+            )
+        except Exception as e:
+            logging.warning(f"Port cleanup: could not run {' '.join(args)} ({e})")
+            continue
+        if result.stdout and result.stdout.strip():
+            out = result.stdout
+            break
+    if not out:
+        logging.warning("Port cleanup: netstat produced no output; skipping cleanup.")
+        return pids
+
+    want = str(port)
+    for line in out.splitlines():
+        parts = line.split()
+        # TCP rows carry a state column (UDP rows have four fields and none).
+        if len(parts) < 5:
+            continue
+        local, foreign = parts[1], parts[2]
+        if ':' not in local or local.rsplit(':', 1)[1] != want:
+            continue
+        # Windows localises the State column in some locales, so do not depend on
+        # the word "LISTENING": a listening socket is the one with no peer.
+        listening = 'LISTENING' in parts or foreign in ('0.0.0.0:0', '[::]:0', '*:*')
+        if not listening:
+            continue
+        try:
+            pid = int(parts[-1])
+        except ValueError:
+            continue
+        if pid > 0:
+            pids.add(pid)
+    return pids
+
+
+def _port_5000_is_sentient_sands() -> bool:
+    """Ask whatever holds port 5000 whether it is one of our servers.
+
+    Identifying by behaviour rather than by process name is the only check that
+    cannot misfire: a non-HTTP listener, a different app, or an unrelated Flask
+    service all fail it and are left alone.
+    """
+    try:
+        resp = requests.get("http://127.0.0.1:5000/status", timeout=1.5)
+    except Exception:
+        return False
+    if resp.status_code != 200:
+        return False
+    try:
+        body = resp.json()
+    except Exception:
+        return False
+    if not isinstance(body, dict):
+        return False
+    if body.get("service") == "sentientsands":
+        return True
+    # Builds before this marker existed still answer with this exact shape.
+    return "active_campaign" in body and "active_model" in body
+
+
+def _pid_command_line(pid: int) -> str:
+    """Command line of a process, or "" when it cannot be read.
+
+    Only used as a second opinion when the listener on port 5000 does not answer
+    /status: a server of ours that is hung must still be recognised, or the
+    replacement process would politely refuse to clear the port and then fail to
+    bind — leaving the game with no server at all.
+    """
+    try:
+        result = subprocess.run(
+            [
+                "powershell", "-NoProfile", "-NonInteractive", "-Command",
+                f"(Get-CimInstance Win32_Process -Filter 'ProcessId={int(pid)}').CommandLine",
+            ],
+            capture_output=True, text=True, errors="replace", shell=False, timeout=8,
+        )
+        return (result.stdout or "").strip()
+    except Exception:
+        return ""
+
+
 def kill_old_servers():
-    """Cleanup any orphaned SentientSands servers on port 5000 before we begin.
-    
+    """Cleanup an orphaned SentientSands server on port 5000 before we begin.
+
+    Two rules keep this from touching anything that is not ours:
+
+    1. The listener must answer GET /status like a SentientSands server. Port
+       5000 is one of the most contested ports on a developer machine, and the
+       previous version killed whatever held it, sight unseen.
+    2. No /T. Killing the process tree contradicted this function's own intent:
+       Kayak is started as a child of the old server, and /T took it down every
+       time — which is exactly the repeated-reconnect failure the note below
+       says we wanted to avoid.
+
     NOTE: We deliberately do NOT kill port 5001 (Kayak). Kayak is a long-running
     daemon that should survive across SentientSands server restarts. Killing it
     caused repeated connection failures every time the game reloaded.
     """
-    import subprocess
-    import time
     try:
-        # Windows specific: find processes on port 5000/5001
-        result = subprocess.run(
-            ['netstat', '-aon'], capture_output=True, text=True, shell=False, timeout=5
-        )
-        _seen = set()
-        for line in result.stdout.splitlines():
-            if ':5000' in line and 'LISTENING' in line:
-                parts = line.strip().split()
-                if not parts: continue
-                try:
-                    pid = int(parts[-1])
-                except Exception: continue
-                if pid in _seen: continue
-                _seen.add(pid)
-                if pid > 0 and pid != os.getpid():
-                    logging.info(f"Port cleanup: Terminating old SentientSands process {pid} on {parts[1]}...")
-                    subprocess.run(['taskkill', '/F', '/T', '/PID', str(pid)], capture_output=True, shell=False, timeout=5)
+        pids = {p for p in _listeners_on_port(5000) if p != os.getpid()}
+        if not pids:
+            return
+
+        if not _port_5000_is_sentient_sands():
+            # No answer on /status. Either it is somebody else's program — leave it
+            # alone — or one of ours that has hung, which we still have to clear.
+            hung = {p for p in pids if "kenshi_llm_server.py" in _pid_command_line(p).lower()}
+            foreign = pids - hung
+            if foreign:
+                logging.warning(
+                    f"Port cleanup: port 5000 is held by PID(s) {sorted(foreign)}, which do not "
+                    f"answer as a SentientSands server. Leaving them alone — close that program "
+                    f"or free the port, because this server cannot start while it is taken."
+                )
+            if not hung:
+                return
+            logging.warning(
+                f"Port cleanup: PID(s) {sorted(hung)} are SentientSands servers that stopped "
+                f"answering; terminating them so this one can bind."
+            )
+            pids = hung
+
+        for pid in sorted(pids):
+            logging.info(f"Port cleanup: terminating old SentientSands server (PID {pid})...")
+            try:
+                subprocess.run(
+                    ['taskkill', '/F', '/PID', str(pid)],
+                    capture_output=True, shell=False, timeout=5
+                )
+            except Exception as e:
+                logging.warning(f"Port cleanup: could not terminate PID {pid} ({e})")
+
         # Sockets take a moment to release
         time.sleep(0.5)
     except Exception as e:
-        if 'logging' in globals():
-            logging.warning(f"Port cleanup fallback: {e}")
+        logging.warning(f"Port cleanup fallback: {e}")
 
-kill_old_servers()
+# NOTE: kill_old_servers() is deliberately NOT called here. At this point in the
+# module logging still has no handlers, so everything it reported — including the
+# "port 5000 is held by somebody else" warning, which is the whole point of the
+# check — went nowhere. It runs right after the log files are opened instead,
+# still well before Kayak is started or port 5000 is bound.
 
+# Declared here, not only inside load_configs(). A missing or malformed
+# models.json used to leave these names undefined, so the very next line of
+# load_configs() raised NameError — at module scope, which killed the import
+# and left the game with no server at all.
+MODELS_CONFIG = {}
+PROVIDERS_CONFIG = {}
 NAMES_CONFIG = {}
 GENERIC_CONFIG = {}
 LOCALIZATION_CONFIG = {}
@@ -234,6 +361,9 @@ THROTTLE_LOCK = threading.Lock()
 LAST_STATE_LOG = {} # { "NPCName|etype": "last_msg" }
 STATE_LOCK = threading.Lock()
 AMBIENT_LOCK = threading.Lock()
+# Ceiling on how long /chat waits for listener context before it answers with
+# whatever arrived in time.
+CHAT_FETCH_BUDGET_SECONDS = 20.0
 # AMBIENT_SPEAKER_LAST_AT, AMBIENT_DIRECT_CHAT_COOLDOWN, AMBIENT_SPEAKER_COOLDOWN live in ss_identity
 # PRIORITY_LOCK, ACTIVE_DIRECT_CHAT_COUNT, CHAT_PRIORITY_UNTIL, DIRECT_CHAT_GRACE_SECONDS live in ss_identity
 DEFERRED_PROFILE_QUEUE = {}
@@ -1084,6 +1214,10 @@ except Exception as e:
 
 set_debug_logger(debug_logger)
 
+# Clear a stale server off port 5000 now that logging can actually record what
+# happened. Still runs before Kayak is auto-started and long before app.run().
+kill_old_servers()
+
 # Filtered support log: warnings/errors only, easy for players to send.
 try:
     ss_error_report_log = setup_server_error_report_logger(_log_dir, debug_logger)
@@ -1156,15 +1290,30 @@ def _kayak_try_connect():
             character_gateway.set_bridge(None)
             logging.warning('KAYAK: Server not reachable on port 5001 - falling back. Start START_KAYAK.bat or it will auto-start next retry.')
     except Exception as _ke:
+        # Release the half-built bridge before dropping the reference, or its
+        # music heartbeat thread outlives it and pins the player process.
+        _dead_bridge = kayak
         kayak = None
         kayak_hub = None
         character_gateway.set_bridge(None)
         KAYAK_ENABLED = False
+        if _dead_bridge is not None:
+            try:
+                _dead_bridge.shutdown()
+            except Exception:
+                pass
         logging.warning(f'KAYAK: Import/connect failed ({_ke}) - falling back to native prompts.')
 
 def _stop_kayak_autostarted():
-    """Stop Kayak only if this server spawned it."""
+    """Stop Kayak (if this server spawned it) and release the bridge."""
     global _KAYAK_PROCESS, _KAYAK_STARTED_BY_SERVER
+    # Unconditional: the music player keeps running as long as a controller
+    # heartbeats at it, so stop the heartbeat even when Kayak was not ours.
+    if kayak is not None:
+        try:
+            kayak.shutdown()
+        except Exception as _b_stop_e:
+            logging.warning(f"SYSTEM: Bridge shutdown failed ({_b_stop_e})")
     if not _KAYAK_STARTED_BY_SERVER:
         return
     try:
@@ -1344,7 +1493,7 @@ def load_configs():
 
     if os.path.exists(MODELS_PATH):
         try:
-            with open(MODELS_PATH, "r") as f:
+            with open(MODELS_PATH, "r", encoding="utf-8") as f:
                 MODELS_CONFIG = json.load(f)
             logging.debug(f"Loaded {len(MODELS_CONFIG)} models.")
         except Exception as e:
@@ -1352,7 +1501,7 @@ def load_configs():
             
     if os.path.exists(PROVIDERS_PATH):
         try:
-            with open(PROVIDERS_PATH, "r") as f:
+            with open(PROVIDERS_PATH, "r", encoding="utf-8") as f:
                 PROVIDERS_CONFIG = json.load(f)
             logging.debug(f"Loaded {len(PROVIDERS_CONFIG)} providers.")
         except Exception as e:
@@ -1364,7 +1513,7 @@ def load_configs():
 
     if os.path.exists(NAMES_PATH):
         try:
-            with open(NAMES_PATH, "r") as f:
+            with open(NAMES_PATH, "r", encoding="utf-8") as f:
                 NAMES_CONFIG = json.load(f)
             logging.debug(f"Loaded {len(NAMES_CONFIG)} gender pools from names.json.")
         except Exception as e:
@@ -1373,7 +1522,7 @@ def load_configs():
     if os.path.exists(GENERIC_NAMES_PATH):
         try:
             global GENERIC_CONFIG
-            with open(GENERIC_NAMES_PATH, "r") as f:
+            with open(GENERIC_NAMES_PATH, "r", encoding="utf-8") as f:
                 GENERIC_CONFIG = json.load(f)
             logging.debug(f"Loaded {len(GENERIC_CONFIG.get('prefixes', []))} generic prefixes from generic_names.json.")
         except Exception as e:
@@ -1446,12 +1595,55 @@ def load_renaming_config():
 GLOBAL_EVENT_COUNTER = 0
 
 # --- CAMPAIGN MANAGEMENT ---
+def _safe_campaign_name(name):
+    """Reduce a campaign name to something that cannot escape CAMPAIGNS_DIR.
+
+    isalnum() is unicode-aware, so Russian campaign names survive intact; path
+    separators, drive letters, dots and NULs do not. Returns "" when nothing
+    usable is left, and the caller must treat that as a rejected name.
+    """
+    raw = str(name or "").strip()
+    safe = "".join(c for c in raw if c.isalnum() or c in (' ', '_', '-')).strip()
+    safe = safe.strip('. ')
+    if safe in ('', '.', '..'):
+        return ""
+    # Windows reserved device names would resolve to a device, not a folder.
+    if safe.upper() in {
+        "CON", "PRN", "AUX", "NUL",
+        *(f"COM{i}" for i in range(1, 10)),
+        *(f"LPT{i}" for i in range(1, 10)),
+    }:
+        return ""
+    return safe
+
+
+def _campaign_path(name):
+    """Absolute path for a campaign, or None when it would leave CAMPAIGNS_DIR."""
+    safe = _safe_campaign_name(name)
+    if not safe:
+        return None
+    root = os.path.abspath(CAMPAIGNS_DIR)
+    path = os.path.abspath(os.path.join(root, safe))
+    try:
+        if os.path.commonpath([root, path]) != root:
+            return None
+    except ValueError:
+        return None
+    return path
+
+
 def get_campaign_dir():
     if not os.path.exists(CAMPAIGNS_DIR):
         os.makedirs(CAMPAIGNS_DIR)
         logging.info(f"Created base campaigns directory: {CAMPAIGNS_DIR}")
-        
-    cdir = os.path.join(CAMPAIGNS_DIR, ACTIVE_CAMPAIGN)
+
+    cdir = _campaign_path(ACTIVE_CAMPAIGN)
+    if not cdir:
+        logging.error(
+            f"CAMPAIGN: active campaign {ACTIVE_CAMPAIGN!r} is not a valid folder name; "
+            f"falling back to 'Default'."
+        )
+        cdir = os.path.join(os.path.abspath(CAMPAIGNS_DIR), "Default")
     if not os.path.exists(cdir):
         os.makedirs(cdir)
         logging.info(f"Created campaign directory: {cdir}")
@@ -2259,7 +2451,19 @@ def update_world_index():
 # GENERIC_CONFIG, and LOCALIZATION_CONFIG from their JSON files on disk.
 # Without this, the /settings endpoint returns empty model/provider lists
 # and the UI renders blank.
-load_configs()
+try:
+    load_configs()
+except Exception as _cfg_boot_err:
+    # Never let a broken config file stop the import: the server still has to
+    # come up so the player can see the error and fix models.json from the UI.
+    logging.error(f"INIT: load_configs() failed ({_cfg_boot_err}); continuing with empty configs.")
+    logging.error(traceback.format_exc())
+
+if not MODELS_CONFIG:
+    logging.error(
+        f"INIT: no models loaded from {MODELS_PATH}. Chat will fail until this file "
+        f"is valid UTF-8 JSON. Run LAUNCH_CLEANER.bat to restore the defaults."
+    )
 
 def _load_event_history_from_log():
     """Re-populate EVENT_HISTORY from the on-disk log so synthesis works after a server restart."""
@@ -2317,7 +2521,8 @@ def init_server_state():
     global ACTIVE_CAMPAIGN, CURRENT_MODEL_KEY, DIALOGUE_HISTORY_LIMIT
     try:
         settings = load_settings()
-        ACTIVE_CAMPAIGN = settings.get("current_campaign", "Default")
+        # The INI is user-editable, so treat the stored campaign as untrusted too.
+        ACTIVE_CAMPAIGN = _safe_campaign_name(settings.get("current_campaign", "Default")) or "Default"
         CURRENT_MODEL_KEY = settings.get("current_model", "player2-default")
         DIALOGUE_HISTORY_LIMIT = int(settings.get("dialogue_history_limit", 45))
         character_gateway.set_dialogue_limit(DIALOGUE_HISTORY_LIMIT)
@@ -2802,7 +3007,7 @@ def load_canon_characters():
     global CANON_CHARACTERS
     if os.path.exists(CANON_CHARACTERS_PATH):
         try:
-            with open(CANON_CHARACTERS_PATH, "r") as f:
+            with open(CANON_CHARACTERS_PATH, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 for char in data:
                     CANON_CHARACTERS[char["Name"].lower()] = char
@@ -6300,47 +6505,53 @@ def chat():
         # Only NPCs who will actually answer should get a real profile, and that
         # happens synchronously after the lightweight fetch below.
 
+        # Lightweight context fetch for everyone who can hear this line.
+        #
+        # This used to be one raw thread per listener with a cumulative +1s sleep
+        # in front of each unprofiled NPC, joined without a timeout: twenty NPCs
+        # meant the last thread slept twenty seconds and the player's request sat
+        # there for all of it. The stagger protected nothing either -- these
+        # fetches pass skip_generate=True and never call the model -- and working
+        # out who deserved a delay cost a full gateway read per listener, in the
+        # request thread, before a single fetch had started.
         char_datas = {}
-        threads = []
-        def fetch_npc_thread(name, cid, delay):
-            if delay > 0:
-                time.sleep(delay)
-            try:
-                npc_context, local_cid = get_local_context_and_id(name)
-                thread_cid = cid if cid else local_cid
-                char_datas[name] = get_character_data(name, npc_context, char_id=thread_cid, skip_generate=True)
-            except Exception as e:
-                logging.error(f"Thread Error fetching {name}: {e}")
+        _fetch_targets = [
+            (name, primary_id if name == primary_npc else None)
+            for name in save_listeners
+        ]
 
-        delay_counter = 0
-        for name in save_listeners:
-            cid = primary_id if name == primary_npc else None
+        def fetch_npc(name, cid):
             npc_context, local_cid = get_local_context_and_id(name)
-            effective_id = cid if cid else local_cid
-            ctx_dict = _parse_context_dict(npc_context)
-            _, live_ctx = resolve_live_context(name=name, context=ctx_dict, explicit_id=effective_id)
-            live_ctx = live_ctx or {}
-        
-            # Collision-safe storage ID for delay-check
-            storage_id = (
-                ctx_dict.get("storage_id")
-                or live_ctx.get("storage_id")
-                or make_storage_id(name, ctx_dict.get("faction") or live_ctx.get("faction", ""))
+            thread_cid = cid if cid else local_cid
+            return get_character_data(name, npc_context, char_id=thread_cid, skip_generate=True)
+
+        if _fetch_targets:
+            _fetch_pool = ThreadPoolExecutor(
+                max_workers=min(4, len(_fetch_targets)),
+                thread_name_prefix="ChatFetch",
             )
-
-            existing_profile = character_gateway.read(name, storage_id, ACTIVE_CAMPAIGN)
-
-            delay = 0
-            if (not existing_profile) or profile_needs_upgrade(existing_profile):
-                delay = delay_counter
-                delay_counter += 1
-            
-            t = threading.Thread(target=fetch_npc_thread, args=(name, cid, delay), daemon=True)
-            t.start()
-            threads.append(t)
-        
-        for t in threads:
-            t.join()
+            _futures = {}
+            try:
+                _futures = {
+                    _fetch_pool.submit(fetch_npc, _n, _c): _n
+                    for _n, _c in _fetch_targets
+                }
+                for _fut in as_completed(_futures, timeout=CHAT_FETCH_BUDGET_SECONDS):
+                    _fetch_name = _futures[_fut]
+                    try:
+                        char_datas[_fetch_name] = _fut.result()
+                    except Exception as e:
+                        logging.error(f"Thread Error fetching {_fetch_name}: {e}")
+            except FuturesTimeoutError:
+                _late = sorted(n for f, n in _futures.items() if not f.done())
+                logging.warning(
+                    f"CHAT: context fetch exceeded {CHAT_FETCH_BUDGET_SECONDS}s; "
+                    f"answering without {_late}."
+                )
+            finally:
+                # Do not wait on stragglers: whoever is late has already missed
+                # this reply, and the player must not wait for them.
+                _fetch_pool.shutdown(wait=False)
 
         # First contact generation: actual responders and the speaking player
         # get a full profile before persistence. The player is not added to the
@@ -6687,11 +6898,24 @@ def chat():
                 except Exception as _sp_err:
                     logging.error(f"KAYAK: build_speak_prompt failed ({_sp_err}); native fallback disabled.")
             if not _speak_prompt:
-                return jsonify({"text": "[KAYAK PROMPT ERROR] Speak prompt unavailable and native fallback is disabled.", "actions": []}), 500
+                return jsonify({
+                    "text": _service_notice(
+                        user_lang,
+                        ru=("[SentientSands] Kayak не отвечает — /k_speak собрать не из чего. "
+                            "Запусти Kayak/START_KAYAK.bat."),
+                        en=("[SentientSands] Kayak is not responding — /k_speak has nothing "
+                            "to build from. Start Kayak/START_KAYAK.bat."),
+                    ),
+                    "actions": [],
+                }), 200
             rich_prompt = _speak_prompt
             _kayak_used_this_request = True
             logging.info(f"KAYAK: Speak prompt ready for {primary_npc}")
-        if _kayak_vlow_avail and not is_ambient and not _k_speak_mode:
+        # Ambient turns build the same way as a normal chat turn. They used to be
+        # excluded here, which left _kayak_used_this_request False and sent every
+        # ambient_flavor request straight into the error return below — the whole
+        # is_ambient branch of this route was unreachable in practice.
+        if _kayak_vlow_avail and not _k_speak_mode:
             try:
                 _, _live_ctx_for_kayak = resolve_live_context(
                     name=primary_npc, context=primary_data,
@@ -6808,7 +7032,31 @@ def chat():
             except Exception as _kayak_prompt_err:
                 logging.error(f"KAYAK: Prompt build failed ({_kayak_prompt_err}); native fallback disabled for token prompt testing.")
         if not _kayak_used_this_request:
-            return jsonify({"text": "[KAYAK PROMPT ERROR] Kayak prompt unavailable and native fallback is disabled for token prompt testing.", "actions": []}), 500
+            # The native prompt builder is still disabled, so there is nothing to
+            # fall back to. Say so in the player's language and return 200: a 500
+            # here reached the player as a dead, unexplained silence, and the DLL
+            # has no way to show why.
+            _kayak_down_reason = (
+                "circuit breaker open" if (kayak_hub and getattr(kayak_hub, "_circuit_broken", False))
+                else ("not connected" if not KAYAK_ENABLED else "prompt build failed")
+            )
+            logging.error(
+                f"KAYAK: no prompt for {primary_npc} ({_kayak_down_reason}); "
+                f"answering the player with a service notice."
+            )
+            return jsonify({
+                "text": _service_notice(
+                    user_lang,
+                    ru=("[SentientSands] Движок знаний Kayak не отвечает, поэтому "
+                        "реплику собрать не из чего. Запусти Kayak/START_KAYAK.bat "
+                        "или проверь порт 5001 — подробности в server/logs/server.log."),
+                    en=("[SentientSands] The Kayak knowledge engine is not responding, "
+                        "so there is nothing to build a reply from. Start "
+                        "Kayak/START_KAYAK.bat or check port 5001 — details in "
+                        "server/logs/server.log."),
+                ),
+                "actions": [],
+            }), 200
 
         # --- Pre-flight context guard ---
         # LM Studio context: 16384 tokens. 15000 cap leaves headroom for output + buffer.
@@ -6826,21 +7074,10 @@ def chat():
         def _est_tokens(text):
             return len(text) * 2 // 7  # ≈ chars ÷ 3.5
 
-        while (not _kayak_used_this_request) and _est_tokens(rich_prompt) > _PROMPT_BUDGET and history_lines:
-            history_lines.pop(0)  # Drop oldest history line
-            history_str = "\n".join(history_lines)
-            rich_prompt = template.format(
-                system_prompt=dynamic_system_prompt,
-                primary_npc=primary_npc,
-                npc_profiles=npc_profiles,
-                chronicle_str=chronicle_str,
-                events_str="",  # added by Pineaxe v07 - raw log excluded from chat prompt
-                player_status_str=format_player_status(_eff_player),
-                player_inventory_str=format_player_inventory(_eff_player),
-                history_str=history_str,
-                final_instruction=final_instruction,
-                language_str=user_lang
-            )
+        # (The native shrink loop that used to sit here was unreachable: this point
+        # is only ever reached with _kayak_used_this_request True, because the
+        # branch above returns otherwise. Kayak prompts are shrunk below instead,
+        # by asking the bridge to rebuild with fewer dialogue lines.)
 
         est_tokens = _est_tokens(rich_prompt)
         logging.info(f"PROMPT: {primary_npc} | ~{est_tokens} tokens | {len(history_lines)} history lines")
@@ -7075,18 +7312,11 @@ def chat():
 
                         # Yell recruitment safeguard: inject JOIN_PARTY if speaker agreed without tag
                         if not _has_join:
-                            _yell_affirm = [
-                                "count me in", "i'm with you", "i'm in", "lead the way",
-                                "right behind you", "i'll follow", "i'll come", "let's go",
-                                "stand with you", "i'll join", "by your side"
-                            ]
-                            _yell_refusals = [
-                                r"\bno\b", r"\bnope\b", r"\bwon't\b", r"\bcan't\b",
-                                r"\brefuse\b", r"\bnever\b", r"\bdecline\b"
-                            ]
+                            _yell_affirm = intent_phrases("yell_affirm")
+                            _yell_refusals = intent_phrases("yell_refusals")
                             _pm_lower_y = player_message.lower()
                             _pay_lower = payload.lower()
-                            _is_recruit_y = any(k in _pm_lower_y for k in ["join", "recruit", "follow me", "come with", "squad", "crew"])
+                            _is_recruit_y = any(k in _pm_lower_y for k in intent_phrases("yell_recruit_asks"))
                             _affirmed_y = any(p in _pay_lower for p in _yell_affirm)
                             _refused_y = any(re.search(p, _pay_lower) for p in _yell_refusals)
                             if _is_recruit_y and _affirmed_y and not _refused_y:
@@ -7347,21 +7577,9 @@ def chat():
             # Detect when: player asked NPC to join + NPC agreed in prose + tag was omitted by model
             _join_tag = "[ACTION: JOIN_PARTY]"
             if _join_tag not in " ".join(actions) and mode != 'yell':
-                _recruit_asks = [
-                    "join", "recruit", "come with me", "travel with me", "follow me",
-                    "part of my squad", "part of my group", "my crew", "my team"
-                ]
-                _affirm_phrases = [
-                    "stand with you", "i'll follow", "follow you", "count me in",
-                    "lead the way", "right behind you", "i'm in", "i'm with you",
-                    "i'll come", "by your side", "i'll join", "signed on",
-                    "let's go", "i'll stand"
-                ]
-                _refusal_patterns = [
-                    r"\bno\b", r"\bnope\b", r"\bwon't\b", r"\bcan't\b", r"\bcannot\b",
-                    r"\brefuse\b", r"\bnever\b", r"\bnot going\b", r"\bstay here\b",
-                    r"\bdecline\b", r"\bnot interested\b"
-                ]
+                _recruit_asks = intent_phrases("recruit_asks")
+                _affirm_phrases = intent_phrases("affirm_phrases")
+                _refusal_patterns = intent_phrases("refusal_patterns")
                 _pm_lower = player_message.lower()
                 _ct_lower = content.lower()
                 _is_recruit_ask = any(kw in _pm_lower for kw in _recruit_asks)
@@ -7374,12 +7592,7 @@ def chat():
             # 5c. Trade payment safeguard (direct talk only)
             # Detect when: player explicitly paid/agreed + amount in message + TAKE_CATS was omitted
             if "[ACTION: TAKE_CATS" not in " ".join(actions) and mode != 'yell':
-                _pay_confirms = [
-                    "deal", "take the cats", "here are the cats", "here's the cats",
-                    "here are your", "here is your", "here are my", "here is my",
-                    "here you go", "i'll pay", "i'll take it", "take it", "agreed",
-                    "take the money", "here's the money"
-                ]
+                _pay_confirms = intent_phrases("pay_confirms")
                 _pm_lower_t = player_message.lower()
                 _is_paying = any(k in _pm_lower_t for k in _pay_confirms)
                 if _is_paying:
@@ -7482,19 +7695,8 @@ def chat():
             # nothing demanded in return is a gift and must go through; a purchase
             # or a swap only earns the payment once the goods actually moved.
             _pm_intent = str(player_message or "").lower()
-            _gift_words = (
-                "подар", "дарю", "дарк", "просто так", "бесплатн", "за службу",
-                "за помощь", "за работу", "награда", "награду", "премия", "премию",
-                "чаевые", "угощаю", "от меня", "это тебе", "тебе за", "на выпивку",
-                "не надо ничего", "ничего не надо", "ничего взамен", "без обмена",
-                "gift", "for free", "no charge", "keep it", "reward",
-            )
-            _swap_words = (
-                "куплю", "купить", "покупаю", "продай", "продаш", "продаёш",
-                "продашь", "беру у теб", "сколько стоит", "почём", "почем",
-                "за это дай", "взамен", "в обмен", "обменя", "меняю", "махнём",
-                "buy", "sell", "trade me", "how much", "in exchange",
-            )
+            _gift_words = intent_phrases("gift_words")
+            _swap_words = intent_phrases("swap_words")
             _is_gift = any(w in _pm_intent for w in _gift_words)
             _is_swap = any(w in _pm_intent for w in _swap_words)
             _gave_item = any(
@@ -7557,10 +7759,7 @@ def chat():
             # хранит теги действий, и модель повторяет весь прошлый блок
             # целиком: коты списываются снова, товар дублируется. Настоящий
             # повторный заказ игрок называет словами, по ним и отличаем.
-            _repeat_words = (
-                "ещё", "еще", "повтори", "снова", "опять", "добавь", "докупл",
-                "another", "one more", "again", "repeat", "more",
-            )
+            _repeat_words = intent_phrases("repeat_words")
             _this_deal = _trade_signature(actions)
             if _this_deal and any(s.startswith("TAKE_CATS:") for s in _this_deal):
                 _prev_line = _last_own_history_line(
@@ -7666,25 +7865,55 @@ def chat():
                 if lower_line.startswith("*") and persona_category not in ("animal", "feral"):
                     continue
             
-                # Skip separator lines
-                if line.startswith('=') or line.startswith('-') or len(set(line)) <= 2:
+                # Skip separator and banner lines ("---", "===", "=== SYSTEM ===").
+                # The old test also dropped any line with two or fewer unique
+                # characters, which silently ate the shortest real replies in the
+                # game: "Да", "Нет", "Ok" and "No" all have exactly two, so a curt
+                # answer collapsed to "..." and the NPC looked mute for no reason.
+                # A single leading dash is left alone — that is how Russian
+                # dialogue is punctuated.
+                if re.match(r'^[=\-–—_*~#]{3,}', line):
                     continue
                 
                 # Remove "CHARACTER_NAME: " prefixes ONLY if NOT in multi/squad mode
                 if len(npcs) <= 1:
-                    # Hallucination Filter: If talking to ONE person, ensure they don't speak as the player or someone else
-                    prefix_match = re.match(r'^([A-Za-z0-9 _\-\.]+):\s*', line)
-                    if prefix_match:
-                        p = prefix_match.group(1).strip().lower()
-                        if p == player_name.lower():
+                    # Hallucination Filter: if talking to ONE person, make sure they
+                    # do not speak as the player or as somebody else.
+                    #
+                    # This used to match on [A-Za-z0-9 _\-\.], which never matched a
+                    # Cyrillic name: in a Russian game the filter silently did nothing
+                    # and the speaker's name stayed glued to the front of the bubble.
+                    # _has_speaker_prefix is language-neutral and already rejects a
+                    # sentence that merely contains a colon.
+                    if _has_speaker_prefix(line):
+                        head, _sep, rest = line.partition(":")
+                        p = head.strip().lower()
+                        expected = _clean_npc_name(primary_npc).lower()
+                        # Models often expand the name ("Бек" -> "Бек, стражник"), so
+                        # accept a prefix that is clearly the same character.
+                        same_speaker = bool(expected) and (
+                            p == expected or p.startswith(expected) or expected.startswith(p)
+                        )
+                        is_player = p in (player_name_clean.lower(), player_name.lower())
+                        # Only treat the head as a speaker tag when it names somebody
+                        # we actually know. Otherwise it is ordinary speech that
+                        # happens to contain a colon ("Слушай: я не знаю") and
+                        # discarding it would swallow the whole reply.
+                        known_other = (not same_speaker) and not is_player and (
+                            p in {str(n).lower() for n in name_to_id}
+                            or p in {str(n).lower() for n in char_datas}
+                        )
+                        if is_player:
                             logging.info(f"Hallucination Filter: Discarded player entry {line}")
                             continue
-                        if p != primary_npc.lower():
-                            # Discard line for a different persona
+                        if known_other:
                             logging.info(f"Hallucination Filter: Discarded line from {p} (expected {primary_npc})")
                             continue
-                    # Strip the prefix if it existed
-                    line = re.sub(r'^[A-Za-z0-9 _\-\.]+:\s*', '', line)
+                        if same_speaker:
+                            # Strip the prefix now that we know whose line it is.
+                            line = rest.strip()
+                            if not line:
+                                continue
                     # Discard lines that are solely an NPC name (e.g. "Benek\n" before the dialogue)
                     if line.lower() in [n.lower() for n in npcs]:
                         continue
@@ -7694,7 +7923,11 @@ def chat():
                     # Find all "Name: Dialogue" blocks
                     # We look for a name followed by a colon, then text until the next name: or string end
                     # The name must avoid common dialogue words
-                    pattern = r'([A-Z][A-Za-z0-9 _\-\.\'\"“”‘’`]+):\s*([^:]+?)(?=\s+[A-Z][A-Za-z0-9 _\-\.\'\"“”‘’`]+:\s*|$)'
+                    # [A-Z] never matched "Бек:", so packed crowd lines were never
+                    # split apart in a Russian game. The leading capital is kept —
+                    # without it "…there. Tealc" gets read as a speaker name.
+                    _nm = r'[A-ZА-ЯЁ][\w _\-\.\'\"“”‘’`]*'
+                    pattern = rf'({_nm}):\s*([^:]+?)(?=\s+{_nm}:\s*|$)'
                     sub_matches = re.findall(pattern, line)
                     if sub_matches:
                         for actor, speech in sub_matches:
@@ -8019,28 +8252,154 @@ def record_event_to_history(etype, actor, target, msg, actor_faction="None", tar
             del EVENT_HISTORY[:-500]
             EVENT_HISTORY_SET = set(EVENT_HISTORY)
 
+AUTO_SYNTHESIS_LOCK = threading.Lock()
+AUTO_SYNTHESIS_RUNNING = False
+
+
+
+# ─── INTENT PHRASES ──────────────────────────────────────────────────────────
+# The model is asked to emit [ACTION: ...] tags, but it forgets. These lists are
+# the safety net that reads the intent out of plain prose instead. They used to
+# be English literals inlined at six different call sites, so with a Russian
+# model none of those safety nets ever fired: agreeing to join, paying, and
+# making a gift all silently did nothing.
+_INTENT_PHRASES = {}
+_INTENT_PHRASES_MTIME = 0.0
+_INTENT_PHRASES_LOCK = threading.Lock()
+
+# Used only when the JSON is missing or unreadable, so a damaged install still
+# has working safeguards in both languages.
+_INTENT_PHRASES_FALLBACK = {
+    "recruit_asks": ("join", "recruit", "follow me", "come with me",
+                     "присоединя", "в отряд", "идём со мной", "иди со мной", "за мной"),
+    "affirm_phrases": ("count me in", "i'm in", "i'll follow", "lead the way",
+                       "я с тобой", "я в деле", "иду с тобой", "по рукам", "согласен"),
+    "refusal_patterns": (r"\bno\b", r"\brefuse\b", r"\bnever\b",
+                         r"\bнет\b", r"\bне буду\b", r"\bотказ", r"\bникогда\b"),
+    "pay_confirms": ("deal", "here you go", "take the money", "agreed",
+                     "держи", "вот тебе", "по рукам", "плачу", "забирай"),
+    "yell_affirm": ("count me in", "i'm in", "lead the way",
+                    "я с тобой", "я в деле", "иду с тобой", "веди"),
+    "yell_refusals": (r"\bno\b", r"\brefuse\b", r"\bnever\b",
+                      r"\bнет\b", r"\bне буду\b", r"\bотказ"),
+    "yell_recruit_asks": ("join", "recruit", "follow me", "squad",
+                          "присоединя", "в отряд", "за мной"),
+    "gift_words": ("gift", "for free", "keep it", "reward",
+                   "подар", "дарю", "просто так", "бесплатн", "за помощь", "держи"),
+    "swap_words": ("buy", "sell", "how much", "in exchange",
+                   "куплю", "продай", "сколько стоит", "взамен", "в обмен"),
+    "repeat_words": ("another", "again", "more", "ещё", "еще", "повтори", "снова"),
+}
+
+
+def _reload_intent_phrases_if_changed():
+    """Re-read intent_phrases.json whenever it changes on disk."""
+    global _INTENT_PHRASES, _INTENT_PHRASES_MTIME
+    try:
+        mtime = os.path.getmtime(INTENT_PHRASES_PATH)
+    except OSError:
+        if not _INTENT_PHRASES:
+            logging.error(
+                f"INTENT: {INTENT_PHRASES_PATH} is missing; falling back to the built-in "
+                f"phrase lists. Action safeguards will be less accurate."
+            )
+            _INTENT_PHRASES = {k: tuple(v) for k, v in _INTENT_PHRASES_FALLBACK.items()}
+        return
+    if _INTENT_PHRASES and mtime == _INTENT_PHRASES_MTIME:
+        return
+    try:
+        with open(INTENT_PHRASES_PATH, "r", encoding="utf-8") as handle:
+            raw = json.load(handle)
+    except Exception as exc:
+        logging.error(f"INTENT: could not read {INTENT_PHRASES_PATH} ({exc}); keeping previous lists.")
+        if not _INTENT_PHRASES:
+            _INTENT_PHRASES = {k: tuple(v) for k, v in _INTENT_PHRASES_FALLBACK.items()}
+        _INTENT_PHRASES_MTIME = mtime
+        return
+
+    merged = {}
+    for key, buckets in raw.items():
+        if key.startswith("_") or not isinstance(buckets, dict):
+            continue
+        phrases = []
+        for lang in sorted(buckets):
+            for phrase in buckets.get(lang) or []:
+                phrase = str(phrase).strip().lower()
+                if phrase and phrase not in phrases:
+                    phrases.append(phrase)
+        merged[key] = tuple(phrases)
+
+    for key, value in _INTENT_PHRASES_FALLBACK.items():
+        if not merged.get(key):
+            logging.warning(f"INTENT: '{key}' is empty in the config; using the built-in list.")
+            merged[key] = tuple(value)
+
+    _INTENT_PHRASES = merged
+    _INTENT_PHRASES_MTIME = mtime
+    logging.info(
+        f"INTENT: loaded {sum(len(v) for v in merged.values())} phrases "
+        f"across {len(merged)} intents."
+    )
+
+
+def intent_phrases(key):
+    """Phrases for one intent, from every language section at once.
+
+    Deliberately not narrowed to settings["language"]: the player types in their
+    own language while the model frequently answers in another, and a model told
+    to speak Russian still emits English stock phrases. These are substring and
+    word-boundary tests, and Cyrillic cannot appear inside a Latin word or the
+    reverse, so keeping both languages costs nothing in false positives.
+    """
+    with _INTENT_PHRASES_LOCK:
+        _reload_intent_phrases_if_changed()
+        return _INTENT_PHRASES.get(key, ())
+
+
 def _queue_auto_synthesis():
-    """Mark an automatic world synthesis request for later foreground execution."""
+    """Mark an automatic world synthesis request for later execution."""
     global AUTO_SYNTHESIS_PENDING, AUTO_SYNTHESIS_PENDING_AT
-    AUTO_SYNTHESIS_PENDING = True
-    AUTO_SYNTHESIS_PENDING_AT = time.time()
+    with AUTO_SYNTHESIS_LOCK:
+        AUTO_SYNTHESIS_PENDING = True
+        AUTO_SYNTHESIS_PENDING_AT = time.time()
 
 
 def _drain_auto_synthesis_if_pending():
-    """Run queued automatic synthesis from a foreground request thread."""
-    global AUTO_SYNTHESIS_PENDING, AUTO_SYNTHESIS_PENDING_AT
-    if not AUTO_SYNTHESIS_PENDING:
-        return None
-    AUTO_SYNTHESIS_PENDING = False
-    queued_at = AUTO_SYNTHESIS_PENDING_AT
-    AUTO_SYNTHESIS_PENDING_AT = 0.0
-    try:
-        age = max(0.0, time.time() - float(queued_at or 0.0))
-        logging.info(f"NARRATIVE: Draining queued automatic synthesis on foreground request (age={age:.1f}s).")
-        return generate_global_narrative_thread(notify_player=False)
-    except Exception as e:
-        logging.error(f"NARRATIVE: Queued automatic synthesis failed: {e}")
-        return None
+    """Start queued automatic synthesis on a background thread.
+
+    This used to run inline as the first statement of /chat, and synthesis is a
+    full LLM call: once per interval some unlucky player line stalled for the
+    whole narrative generation before the NPC even began thinking. Clearing the
+    flag was also unguarded, so two simultaneous /chat requests could each read
+    it as True and run the synthesis twice.
+
+    The trigger stays where it was -- a request arriving means the player is
+    actually playing -- only the work moves off the request thread.
+    """
+    global AUTO_SYNTHESIS_PENDING, AUTO_SYNTHESIS_PENDING_AT, AUTO_SYNTHESIS_RUNNING
+    with AUTO_SYNTHESIS_LOCK:
+        if not AUTO_SYNTHESIS_PENDING or AUTO_SYNTHESIS_RUNNING:
+            return None
+        AUTO_SYNTHESIS_PENDING = False
+        queued_at = AUTO_SYNTHESIS_PENDING_AT
+        AUTO_SYNTHESIS_PENDING_AT = 0.0
+        AUTO_SYNTHESIS_RUNNING = True
+
+    def _run_auto_synthesis():
+        global AUTO_SYNTHESIS_RUNNING
+        try:
+            age = max(0.0, time.time() - float(queued_at or 0.0))
+            logging.info(f"NARRATIVE: Running queued automatic synthesis in the background (age={age:.1f}s).")
+            generate_global_narrative_thread(notify_player=False)
+        except Exception as e:
+            logging.error(f"NARRATIVE: Queued automatic synthesis failed: {e}")
+            logging.error(traceback.format_exc())
+        finally:
+            with AUTO_SYNTHESIS_LOCK:
+                AUTO_SYNTHESIS_RUNNING = False
+
+    threading.Thread(target=_run_auto_synthesis, name="AutoSynthesis", daemon=True).start()
+    return None
 
 
 def generate_global_narrative_thread(notify_player=True):
@@ -8400,11 +8759,15 @@ def get_context():
     """Returns the most recent player and NPC context for the debugger/UI."""
     # Try to grab the last active NPC from live contexts
     last_npc = None
-    if _istate.last_npc_key and _istate.last_npc_key in LIVE_CONTEXTS:
-        last_npc = LIVE_CONTEXTS[_istate.last_npc_key]
-    elif LIVE_CONTEXTS:
-        last_npc_id = list(LIVE_CONTEXTS.keys())[-1]
-        last_npc = LIVE_CONTEXTS[last_npc_id]
+    # Snapshot under the lock: this route is polled constantly while /chat
+    # threads insert into the same dict, and list(...)[-1] over a dict being
+    # mutated raises RuntimeError.
+    with IDENTITY_LOCK:
+        if _istate.last_npc_key and _istate.last_npc_key in LIVE_CONTEXTS:
+            last_npc = dict(LIVE_CONTEXTS[_istate.last_npc_key])
+        elif LIVE_CONTEXTS:
+            last_npc_id = list(LIVE_CONTEXTS.keys())[-1]
+            last_npc = dict(LIVE_CONTEXTS[last_npc_id])
     
     # Use the global tracking for synthesis
     elapsed = SYNTHESIS_STATUS.get("elapsed", 0)
@@ -8648,10 +9011,11 @@ def create_campaign_route():
     if not name: return jsonify({"status": "error", "message": "Missing name"}), 400
     
     # Sanitize
-    safe_name = "".join([c for c in name if c.isalnum() or c in (' ', '_', '-')]).strip()
+    safe_name = _safe_campaign_name(name)
     if not safe_name: return jsonify({"status": "error", "message": "Invalid name"}), 400
-    
-    cdir = os.path.join(CAMPAIGNS_DIR, safe_name)
+
+    cdir = _campaign_path(safe_name)
+    if not cdir: return jsonify({"status": "error", "message": "Invalid name"}), 400
     if os.path.exists(cdir):
         return jsonify({"status": "error", "message": "Campaign already exists"}), 400
         
@@ -8767,8 +9131,15 @@ def switch_campaign(name):
     if not KAYAK_ENABLED and (time.monotonic() - _KAYAK_LAST_RETRY > 60.0):
         logging.info("KAYAK: Opportunistic reconnect from switch_campaign...")
         _kayak_try_connect()
-    cdir = os.path.join(CAMPAIGNS_DIR, name)
+    # Sanitize before anything derives a path from it: ACTIVE_CAMPAIGN feeds
+    # get_campaign_dir(), which creates directories and seeds files.
+    safe_name = _safe_campaign_name(name)
+    cdir = _campaign_path(safe_name)
+    if not cdir:
+        logging.warning(f"CAMPAIGN: rejected switch to invalid campaign name {name!r}")
+        return False
     if os.path.exists(cdir):
+        name = safe_name
         ACTIVE_CAMPAIGN = name
         save_settings({"current_campaign": name})  # Persist across restarts
         _clear_campaign_runtime_state()
@@ -9237,6 +9608,9 @@ def serve_debugger():
 @app.route('/status')
 def status():
     return jsonify({
+        # Identity marker: kill_old_servers() uses this to be sure the process
+        # holding port 5000 is ours before terminating anything.
+        "service": "sentientsands",
         "status": "online",
         "active_campaign": ACTIVE_CAMPAIGN,
         "active_model": CURRENT_MODEL_KEY

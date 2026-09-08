@@ -29,11 +29,27 @@ import requests
 
 log = logging.getLogger("kayak.ss.hub")
 
+# Endpoints that legitimately take a long time. Everything else must answer
+# within the default timeout or be treated as a hung server.
+_SLOW_ENDPOINTS = {
+    "/campaign/switch": 60.0,
+    "/campaign/reload_index": 60.0,
+    "/campaign/create": 60.0,
+    "/entity/all_npcs": 20.0,
+}
+
+# Calls whose payload is gone for good if the breaker swallows them. A lost
+# read just degrades the prompt; a lost write silently drops dialogue.
+_WRITE_PREFIXES = (
+    "/write/", "/rename/", "/entity/clear_fields",
+    "/dialogue/save", "/dialogue/replace", "/dialogue/cull_future",
+)
+
 
 class KayakHub:
     """Thin HTTP client router to Kayak server. No business logic."""
 
-    def __init__(self, kayak_url: str = "http://127.0.0.1:5001", timeout: float = 10.0):
+    def __init__(self, kayak_url: str = "http://127.0.0.1:5001", timeout: float = 5.0):
         self.kayak_url = kayak_url.rstrip("/")
         self.timeout = timeout
         self._last_status = None
@@ -69,17 +85,43 @@ class KayakHub:
             self._last_status = False
             return False
 
-    def _post(self, endpoint: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    def _note_failure(self, endpoint: str, what: str, detail: str = "") -> None:
+        """Count one dead call towards the breaker.
+
+        A hung Kayak accepts the connection and then says nothing, so it never
+        raises ConnectionError. Counting only refused connections meant the
+        breaker could not trip in exactly the case it exists for: every call
+        would sit out the full timeout, forever.
+        """
+        self._consecutive_failures = getattr(self, "_consecutive_failures", 0) + 1
+        if self._consecutive_failures >= getattr(self, "_max_failures", 3):
+            if not getattr(self, "_circuit_broken", False):
+                log.warning(
+                    f"Kayak {endpoint}: {what} {self._consecutive_failures} times in a row. "
+                    f"Tripping circuit breaker."
+                )
+                self._circuit_broken = True
+        elif detail:
+            log.debug(f"Kayak {endpoint}: {what} ({detail})")
+
+    def _post(self, endpoint: str, payload: Dict[str, Any],
+              timeout: float = None) -> Dict[str, Any]:
         """
         POST to Kayak endpoint. Returns response JSON.
         Raises on network/timeout errors (caller decides fallback).
         """
         if getattr(self, "_circuit_broken", False):
+            if endpoint.startswith(_WRITE_PREFIXES):
+                log.warning(
+                    f"Kayak {endpoint}: circuit breaker is open, so this write was "
+                    f"DROPPED, not queued. The data it carried is lost."
+                )
             return {"status": "fallback", "error": "circuit breaker tripped"}
 
+        effective_timeout = timeout or _SLOW_ENDPOINTS.get(endpoint, self.timeout)
         try:
             url = f"{self.kayak_url}{endpoint}"
-            resp = requests.post(url, json=payload, timeout=self.timeout)
+            resp = requests.post(url, json=payload, timeout=effective_timeout)
             
             # Successful connection, reset error counters
             self._consecutive_failures = 0
@@ -99,17 +141,11 @@ class KayakHub:
                 log.warning(f"Kayak {endpoint}: HTTP {resp.status_code} — {result.get('error', 'unknown')}")
             return result
         except requests.Timeout:
-            log.error(f"Kayak {endpoint}: timeout after {self.timeout}s")
+            log.error(f"Kayak {endpoint}: timeout after {effective_timeout}s")
+            self._note_failure(endpoint, "timed out")
             raise
         except requests.ConnectionError as e:
-            self._consecutive_failures = getattr(self, "_consecutive_failures", 0) + 1
-            if self._consecutive_failures >= getattr(self, "_max_failures", 3):
-                if not getattr(self, "_circuit_broken", False):
-                    log.warning(f"Kayak {endpoint}: connection refused {self._consecutive_failures} times. Tripping circuit breaker.")
-                    self._circuit_broken = True
-            else:
-                # Use debug for the first few transient connection errors to avoid console noise
-                log.debug(f"Kayak {endpoint}: connection refused ({e})")
+            self._note_failure(endpoint, "connection refused", str(e))
             raise
         except Exception as e:
             log.error(f"Kayak {endpoint}: {type(e).__name__}: {e}")

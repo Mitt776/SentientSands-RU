@@ -20,6 +20,7 @@ This bridge focuses purely on WHAT to write/read and HOW to transform it.
 import logging
 import os
 import re
+import threading
 import uuid
 from typing import Any, Dict, List, Optional
 
@@ -331,7 +332,7 @@ class SentientSandsBridge:
         self,
         kayak_url: str = "http://127.0.0.1:5001",
         campaign: Optional[str] = None,
-        timeout: float = 10.0,
+        timeout: float = 5.0,
     ):
         self.kayak_url = kayak_url
         self.campaign = campaign
@@ -339,16 +340,33 @@ class SentientSandsBridge:
         # Prevent repeated WRITE_PROFILE saves from re-appending the same
         # dialogue exchange when older Kayak builds lack /dialogue/replace.
         self._last_dialogue_sync_sig: Dict[str, str] = {}
+        # The music player is started lazily, on the first /m_* command. Doing it
+        # here spawned the process and blocked for up to ten seconds inside
+        # whatever request happened to build the bridge -- usually a /chat, so a
+        # player who never uses music still paid for it on their first line.
         self.sentient_songs = None
-        try:
-            from ..SentientSongs import SentientSongsClient
+        self._songs_started = False
+        self._songs_lock = threading.Lock()
 
-            self.sentient_songs = SentientSongsClient(controller_name="kayak", auto_start=True)
-            _songs_ok, _songs_msg = self.sentient_songs.start_heartbeat()
-            if not _songs_ok:
-                log.warning(f"SentientSongs heartbeat startup failed: {_songs_msg}")
+    def shutdown(self) -> None:
+        """Release what this bridge owns. Safe to call repeatedly.
+
+        Must run before a bridge object is replaced. The music heartbeat runs on
+        a plain daemon thread, so a discarded bridge would otherwise keep pinging
+        the player for the rest of the process's life -- and keep it alive, since
+        the player exits only when no controller has checked in.
+        """
+        with self._songs_lock:
+            client = self.sentient_songs
+            self.sentient_songs = None
+            self._songs_started = False
+        if client is None:
+            return
+        try:
+            client.stop_heartbeat()
+            log.info("SentientSongs heartbeat stopped; the player will exit on its idle timeout.")
         except Exception as exc:
-            log.warning(f"SentientSongs client unavailable: {exc}")
+            log.warning(f"Could not stop the SentientSongs heartbeat: {exc}")
 
     def is_alive(self, force: bool = False) -> bool:
         """Proxy for hub.is_alive."""
@@ -1587,8 +1605,31 @@ class SentientSandsBridge:
     # ─── IN-GAME KAYAK COMMANDS ───────────────────────────────────────
 
     def _sentient_songs(self):
-        """Return the SentientSongs controller client."""
-        return self.sentient_songs
+        """Return the controller client, starting the player on first use."""
+        with self._songs_lock:
+            if self.sentient_songs is None:
+                if self._songs_started:
+                    # The import itself failed once; it will not start working.
+                    return None
+                self._songs_started = True
+                try:
+                    from ..SentientSongs import SentientSongsClient
+
+                    self.sentient_songs = SentientSongsClient(
+                        controller_name="kayak", auto_start=True
+                    )
+                except Exception as exc:
+                    log.warning(f"SentientSongs client unavailable: {exc}")
+                    return None
+            client = self.sentient_songs
+            thread = getattr(client, "_heartbeat_thread", None)
+            if thread is None or not thread.is_alive():
+                # Only ever here on an explicit /m_* command, so the wait for the
+                # player to come up is something the player actually asked for.
+                ok, message = client.start_heartbeat()
+                if not ok:
+                    log.warning(f"SentientSongs heartbeat startup failed: {message}")
+            return client
 
     def k_help(self) -> str:
         return (
