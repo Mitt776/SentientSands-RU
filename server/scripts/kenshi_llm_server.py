@@ -1906,6 +1906,20 @@ def _last_own_history_line(history, npc_name):
     return ""
 
 
+# Служебные теги, которые срезаются перед отправкой реплики в игру. Если
+# после них не остаётся ни слова, игрок видит «...» и немого собеседника.
+_SERVICE_TAG_RE = re.compile(
+    r"\[\s*(?:ACTION|TASK|TAG|STATUS|EFFECT|EMOTE|THOUGHT|JUDGMENT)"
+    r"(?:\s*:\s*[^\]]+)?\s*\]", re.IGNORECASE)
+# Теги, меняющие мир. В отличие от JUDGMENT их нельзя потерять при переспросе.
+_GAME_TAG_RE = re.compile(r"\[\s*(?:ACTION|TASK)\s*:[^\]]*\]", re.IGNORECASE)
+
+
+def _spoken_text(reply):
+    """Что останется от ответа модели, когда служебные теги срежут."""
+    return _SERVICE_TAG_RE.sub("", str(reply or "")).strip()
+
+
 def get_current_time_prefix():
     if PLAYER_CONTEXT:
         day = PLAYER_CONTEXT.get('day', 0)
@@ -6877,7 +6891,46 @@ def chat():
 
         logging.info(f"Calling main chat LLM...")
         content = call_llm(messages, max_tokens=_MAX_DIAL_TOKENS, temperature=_narrative_temp)
-    
+
+        # Ответ из одних служебных тегов — примерно каждый двадцать третий.
+        # Теги срежутся, реплика схлопнется в «...», и NPC будет выглядеть
+        # немым без причины внутри вымысла. Переспрашиваем один раз, прямо
+        # назвав промах: модель видит собственный пустой ответ и обычно
+        # исправляется. Отключается настройкой RetrySilentReply.
+        if (content and not _spoken_text(content)
+                and settings.get("retry_silent_reply", True)):
+            logging.warning(
+                f"LLM: {primary_npc} answered with tags only "
+                f"({content.strip()[:60]!r}) — retrying once"
+            )
+            _retry_messages = list(messages) + [
+                {"role": "assistant", "content": content},
+                {"role": "user", "content": (
+                    "Your reply contained no spoken words - only tags. The game "
+                    "strips tags, so the player saw silence. Answer again as the "
+                    "same character: one or two sentences your character actually "
+                    "says out loud, and only then the tags. A curt, reluctant or "
+                    "dismissive line is still a line. "
+                    f"Write it exclusively in {user_lang}."
+                )},
+            ]
+            _retry = call_llm(_retry_messages, max_tokens=_MAX_DIAL_TOKENS,
+                              temperature=min(1.0, _narrative_temp + 0.2))
+            if _retry and _spoken_text(_retry):
+                # Действие первой попытки не теряем: она могла молча освободить
+                # пленника и не сказать ни слова.
+                if not _GAME_TAG_RE.search(_retry):
+                    _carried = " ".join(_GAME_TAG_RE.findall(content))
+                    if _carried:
+                        _retry = f"{_retry.rstrip()} {_carried}"
+                content = _retry
+                logging.info(f"LLM: {primary_npc} spoke up on the retry")
+            else:
+                logging.warning(
+                    f"LLM: {primary_npc} stayed silent on the retry too — "
+                    f"falling back to '...'"
+                )
+
         # Debug Logging: Log the response
         if content:
             try:

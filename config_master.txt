@@ -130,6 +130,10 @@ ChatMaxTokens = 600
 # Ambient NPC-to-NPC banter
 AmbientMaxTokens = 600
 
+# Ответ из одних служебных тегов доходит до игры как «...».
+# 1 — переспросить модель один раз, 0 — оставить как есть.
+RetrySilentReply = 1
+
 # World narrative synthesis (rumors, events)
 NarrativeMaxTokens = 400
 NarrativeTemperature = 0.9

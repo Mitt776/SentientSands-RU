@@ -75,6 +75,7 @@ INI_KEY_MAP = {
     "ambient_max_tokens": "AmbientMaxTokens",
     "narrative_max_tokens": "NarrativeMaxTokens",
     "narrative_temperature": "NarrativeTemperature",
+    "retry_silent_reply": "RetrySilentReply",
     # Dialogue history
     "dialogue_history_limit": "DialogueHistoryLimit",
     "prompt_context_limit": "PromptContextLimit",
@@ -166,6 +167,8 @@ def load_settings():
         "ambient_max_tokens": 400,
         "narrative_max_tokens": 150,
         "narrative_temperature": 0.8,
+        # Переспросить, если модель ответила одними служебными тегами
+        "retry_silent_reply": True,
         # Dialogue history
         "dialogue_history_limit": 45,
         "prompt_context_limit": 11000,
