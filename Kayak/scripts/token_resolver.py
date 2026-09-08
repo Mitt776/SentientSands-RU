@@ -185,6 +185,9 @@ class TokenResolverContext:
     server_region: str = ""
     world_synthesis_path: str = ""
     world_events_path: str = ""
+    # Потолок на число реплик истории. -1 — без потолка; ставится сервером,
+    # когда промпт не влезает в бюджет модели.
+    dialogue_lines_cap: int = -1
     world_synthesis: str = ""
     player_context: dict = field(default_factory=dict)
     player_status: str = ""
@@ -1041,6 +1044,9 @@ class TokenResolver:
 
         Example: <dialogue_lines_qty 15> injects the last 15 cleaned dialogue lines.
         """
+        cap = getattr(ctx, "dialogue_lines_cap", -1)
+        if isinstance(cap, int) and cap >= 0:
+            count = min(count, cap)
         if count <= 0 or ctx.target_entity is None or not self.prompt_builder:
             return ""
         try:

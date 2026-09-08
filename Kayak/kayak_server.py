@@ -258,6 +258,7 @@ def _token_context(data: dict, *, target_entity=None, player_message: str = "", 
         server_region=str(data.get("server_region") or data.get("region") or ""),
         world_synthesis_path=str(data.get("world_synthesis_path") or ""),
         world_events_path=str(data.get("world_events_path") or ""),
+        dialogue_lines_cap=_as_int(data.get("dialogue_lines_cap"), -1),
         world_synthesis=str(data.get("world_synthesis") or ""),
         player_context=player_context,
         current_location=str(data.get("current_location") or ""),
@@ -272,6 +273,14 @@ def _token_context(data: dict, *, target_entity=None, player_message: str = "", 
         profile_json_contract=str(data.get("profile_json_contract") or ""),
         campaign_chronicle=str(data.get("campaign_chronicle") or data.get("extra_context") or ""),
     )
+
+
+def _as_int(value, default):
+    """int() без исключений. Ноль здесь значимое значение, `or` не годится."""
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
 
 
 def _build_knower_context(target_entity, raw_context):

@@ -1920,6 +1920,16 @@ def _spoken_text(reply):
     return _SERVICE_TAG_RE.sub("", str(reply or "")).strip()
 
 
+def _service_notice(language, ru, en):
+    """Служебное сообщение игроку на языке игры.
+
+    Это не реплика персонажа, а объяснение, почему её нет: пузырь речи —
+    единственный канал до игрока, который у мода есть.
+    """
+    lang = str(language or "").strip().lower()
+    return ru if lang.startswith(("rus", "рус")) else en
+
+
 def get_current_time_prefix():
     if PLAYER_CONTEXT:
         day = PLAYER_CONTEXT.get('day', 0)
@@ -6834,6 +6844,41 @@ def chat():
 
         est_tokens = _est_tokens(rich_prompt)
         logging.info(f"PROMPT: {primary_npc} | ~{est_tokens} tokens | {len(history_lines)} history lines")
+
+        # Цикл выше ужимает только родную сборку. Промпт от Kayak собран в
+        # одну строку, поэтому просим пересобрать его с меньшим числом реплик
+        # истории: это самая крупная и самая выбрасываемая часть.
+        if est_tokens > _PROMPT_BUDGET and _kayak_used_this_request:
+            for _cap in (12, 6, 2, 0):
+                try:
+                    _shrunk = kayak.build_chat_prompt(
+                        player_message = player_message,
+                        target_npc     = primary_npc,
+                        target_npc_id  = primary_id,
+                        race           = primary_race,
+                        persona_category = persona_category,
+                        mode           = mode,
+                        extra_context  = _ss_extra or None,
+                        campaign       = ACTIVE_CAMPAIGN,
+                        knower_context = _live_ctx_for_kayak if isinstance(_live_ctx_for_kayak, dict) else None,
+                        knowledge_filters_enabled = _knowledge_filters_enabled,
+                        knowledge_filter = _knowledge_filter if _knowledge_filter else None,
+                        runtime_blocks = dict(_runtime_blocks, dialogue_lines_cap=_cap),
+                    )
+                except Exception as _shrink_err:
+                    logging.warning(f"PROMPT: shrink to {_cap} history lines failed ({_shrink_err})")
+                    break
+                if not _shrunk:
+                    break
+                rich_prompt = _shrunk
+                est_tokens = _est_tokens(rich_prompt)
+                logging.info(
+                    f"PROMPT: {primary_npc} trimmed to {_cap} history lines "
+                    f"— ~{est_tokens} tokens (budget {_PROMPT_BUDGET})"
+                )
+                if est_tokens <= _PROMPT_BUDGET:
+                    break
+
         if est_tokens > _PROMPT_BUDGET:
             logging.warning(f"PROMPT: Budget exceeded even with empty history (~{est_tokens} tokens). "
                             f"NPC profile too large for {_CONTEXT_LIMIT}-token context budget.")
@@ -6846,7 +6891,23 @@ def chat():
                     f.write(f"EST. TOKENS: ~{est_tokens} | BUDGET: {_PROMPT_BUDGET}\n")
                     f.write(f"{'='*50}\n")
             except: pass
-            return jsonify({"text": "...", "actions": []}), 200
+            # Раньше здесь возвращалось «...» — неотличимо от немногословного
+            # NPC. Игрок гадал, почему собеседник молчит, вместо того чтобы
+            # прочитать причину и поднять лимит.
+            return jsonify({
+                "text": _service_notice(
+                    user_lang,
+                    ru=(f"[SentientSands] Промпт для «{primary_npc}» не влезает: "
+                        f"~{est_tokens} токенов при лимите {_PROMPT_BUDGET}. "
+                        f"История разговора уже вырезана целиком. Подними "
+                        f"PromptContextLimit в config_master.txt."),
+                    en=(f"[SentientSands] Prompt for '{primary_npc}' does not fit: "
+                        f"~{est_tokens} tokens against a {_PROMPT_BUDGET} budget. "
+                        f"Dialogue history is already gone. Raise "
+                        f"PromptContextLimit in config_master.txt."),
+                ),
+                "actions": [],
+            }), 200
 
         # Tag the player message with mode for history clarity
         mode_action = ""
@@ -7833,7 +7894,20 @@ def chat():
 
             return jsonify({"text": content, "actions": actions})
         pass  # Released by context manager
-        return jsonify({"text": "...", "actions": []})
+        # Сюда попадаем, когда call_llm вернул None: провайдер не ответил или
+        # упёрся в лимит. Раньше это тоже выглядело как «...», и отличить сбой
+        # связи от неразговорчивого NPC было невозможно.
+        return jsonify({
+            "text": _service_notice(
+                user_lang,
+                ru=("[SentientSands] Модель не ответила. Проверь связь и лимиты "
+                    "провайдера — подробности в server/logs/error_report.log."),
+                en=("[SentientSands] The model did not answer. Check the provider "
+                    "connection and rate limits — details in "
+                    "server/logs/error_report.log."),
+            ),
+            "actions": [],
+        })
 
 
 def record_event_to_history(etype, actor, target, msg, actor_faction="None", target_faction="None"):
