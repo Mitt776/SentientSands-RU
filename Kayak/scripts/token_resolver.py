@@ -1039,6 +1039,28 @@ class TokenResolver:
             kept.append(line)
         return kept
 
+    def _cap_overheard(self, lines: list, count: int) -> list:
+        """Последние `count` реплик, но подслушанного — не больше трети.
+
+        История торговца легко забивается чужими разговорами, которые он
+        случайно услышал; в окне из `count` строк на саму сделку не остаётся
+        места. Освободившиеся слоты занимают прямые реплики поглубже.
+        """
+        if count <= 0:
+            return []
+        over_budget = max(2, count // 3)
+        picked, over_used = [], 0
+        for line in reversed(lines):
+            if len(picked) >= count:
+                break
+            if "(Overheard)" in line:
+                if over_used >= over_budget:
+                    continue
+                over_used += 1
+            picked.append(line)
+        picked.reverse()
+        return picked
+
     def resolve_dialogue_lines(self, ctx: TokenResolverContext, count: int) -> str:
         """Inject the target NPC dialogue history, bounded by the token value.
 
@@ -1050,13 +1072,15 @@ class TokenResolver:
         if count <= 0 or ctx.target_entity is None or not self.prompt_builder:
             return ""
         try:
-            # С запасом: часть строк может отсеяться как след другого сейва.
-            raw = self.prompt_builder.load_dialogue(ctx.target_entity, keep_lines=count * 3)
+            # load_dialogue уже отсортировал по времени и вычистил мусор;
+            # берём всё, окно и лимит подслушанного применяем здесь.
+            raw = self.prompt_builder.load_dialogue(ctx.target_entity, keep_lines=0)
         except Exception:
             return ""
         lines = [line for line in raw.splitlines() if line.strip()]
         lines = self.drop_abandoned_timeline(lines, ctx)
-        return "\n".join(lines[-count:])
+        lines = self._cap_overheard(lines, count)
+        return "\n".join(lines)
 
 
     def get_nearby_npcs(self, ctx: TokenResolverContext) -> list[dict]:

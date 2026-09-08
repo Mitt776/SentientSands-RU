@@ -42,6 +42,75 @@ from .token_resolver import TokenResolver, TokenResolverContext
 SEP = "---"
 _JUDGMENT_TAG_RE = re.compile(r"\[\s*JUDGMENT\s*:\s*[^\]]+\]", re.IGNORECASE)
 
+# ─── DIALOGUE HYGIENE ────────────────────────────────────────────────────────
+# Легальная строка истории: "[Day D, HH:MM] (Overheard)? Имя: текст".
+# Файл dialogue.txt накапливается несколькими проходами (прямые реплики +
+# отдельная запись подслушанного), поэтому строки приходят не по порядку и
+# иногда битые. Здесь — единственное место, где это чистится: на чтении и
+# перед перезаписью файла.
+_DIALOGUE_STAMP_RE = re.compile(r"^\[Day\s+(\d+),\s*(\d{1,2}):(\d{2})\]\s*")
+_OVERHEARD_RE = re.compile(r"^\(Overheard\)\s*", re.IGNORECASE)
+_SPEAKER_PREFIX_MAX = 48
+
+
+def _dialogue_body(line: str) -> str:
+    """Строка без метки времени и пометки (Overheard)."""
+    s = _DIALOGUE_STAMP_RE.sub("", line, count=1)
+    s = _OVERHEARD_RE.sub("", s, count=1)
+    return s.strip()
+
+
+def _dialogue_has_speaker(body: str) -> bool:
+    """True, если строка начинается с «Имя: », а не просто содержит двоеточие."""
+    head, sep, _ = body.partition(":")
+    if not sep:
+        return False
+    head = head.strip()
+    if not head or len(head) > _SPEAKER_PREFIX_MAX:
+        return False
+    return not any(ch in head for ch in ".!?,;")
+
+
+def _dialogue_stamp_key(line: str):
+    m = _DIALOGUE_STAMP_RE.match(line)
+    if m:
+        return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    return None
+
+
+def _sort_dialogue_by_time(lines: List[str]) -> List[str]:
+    """Стабильная сортировка по игровому времени. Строки без метки наследуют
+    время предыдущей — так продолжения реплики держатся своего места."""
+    keyed = []
+    last = (0, 0, 0)
+    for idx, line in enumerate(lines):
+        k = _dialogue_stamp_key(line)
+        if k is not None:
+            last = k
+        keyed.append(((last[0], last[1], last[2], idx), line))
+    keyed.sort(key=lambda x: x[0])
+    return [ln for _, ln in keyed]
+
+
+def _sanitize_dialogue_lines(lines: List[str]) -> List[str]:
+    """Выкинуть мусор: строки без говорящего (сюда же попадает влипшая
+    биография игрока), обрывки, разделители, точные повторы подряд."""
+    out: List[str] = []
+    for raw in lines:
+        line = _JUDGMENT_TAG_RE.sub("", str(raw))
+        line = re.sub(r"\s{2,}", " ", line).strip()
+        if not line:
+            continue
+        body = _dialogue_body(line)
+        if len(body) < 2 or not any(ch.isalpha() for ch in body):
+            continue
+        if not _dialogue_has_speaker(body):
+            continue
+        if out and out[-1] == line:
+            continue
+        out.append(line)
+    return out
+
 
 # ─── PROMPT POLICY ───────────────────────────────────────────────────────────
 
@@ -352,17 +421,20 @@ class PromptBuilder:
     # ── DIALOGUE ─────────────────────────────────────────────────────────
 
     def load_dialogue(self, entity: Entity, keep_lines: int = 30) -> str:
-        """Return the most recent lines of an entity's dialogue.txt."""
-        raw = _tail(os.path.join(entity.path, "dialogue.txt"), keep_lines)
+        """Return dialogue.txt cleaned and ordered by game time.
+
+        The whole file is read, sanitized and time-sorted *before* trimming —
+        the last N lines by file position are not the last N by time.
+        keep_lines <= 0 returns everything (caller trims).
+        """
+        raw = _tail(os.path.join(entity.path, "dialogue.txt"), 0)
         if not raw:
             return ""
-        clean_lines = []
-        for line in raw.splitlines():
-            line = _JUDGMENT_TAG_RE.sub("", line)
-            line = re.sub(r"\s{2,}", " ", line).strip()
-            if line:
-                clean_lines.append(line)
-        return "\n".join(clean_lines)
+        lines = _sanitize_dialogue_lines(raw.splitlines())
+        lines = _sort_dialogue_by_time(lines)
+        if keep_lines and len(lines) > keep_lines:
+            lines = lines[-keep_lines:]
+        return "\n".join(lines)
 
     def get_dialogue(self, entity: Entity, keep_lines: int = 30) -> List[str]:
         """Compatibility helper for callers that expect dialogue as a list of lines."""
@@ -407,10 +479,15 @@ class PromptBuilder:
             f.write("\n".join(lines))
 
     def replace_dialogue(self, entity: Entity, lines: List[str], keep_lines: int = 30):
-        """Replace dialogue.txt with a normalized set of lines."""
+        """Replace dialogue.txt with a sanitized, time-ordered set of lines.
+
+        This is the single write chokepoint, so cleaning here lets the file
+        heal itself: junk and out-of-order lines do not survive the next turn.
+        """
         path = os.path.join(entity.path, "dialogue.txt")
         os.makedirs(entity.path, exist_ok=True)
-        clean_lines = [str(line).rstrip("\n") for line in (lines or []) if str(line).strip()]
+        clean_lines = _sanitize_dialogue_lines(lines or [])
+        clean_lines = _sort_dialogue_by_time(clean_lines)
         if keep_lines and len(clean_lines) > keep_lines:
             clean_lines = clean_lines[-keep_lines:]
         with open(path, "w", encoding="utf-8") as f:
