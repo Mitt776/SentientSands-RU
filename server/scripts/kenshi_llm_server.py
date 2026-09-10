@@ -7720,6 +7720,72 @@ def chat():
                 for a in actions
             )
 
+            # 5e-bis. Reversed sale. A shopkeeper answered a purchase with the
+            # buy-from-player combo — TAKE_ITEM + GIVE_CATS — instead of the
+            # sell combo SPAWN_ITEM + TAKE_CATS. The DLL runs it literally: it
+            # credits the player the cats and tries to strip goods they never
+            # carried, so the buyer leaves richer and empty-handed. The bad
+            # turn then lands in history and the model copies it every turn
+            # after. Flip it only when the player was not selling and every
+            # taken item is missing from their bags — true together only for a
+            # botched buy, never for an honest "I'll sell you this".
+            _rev_take_tags = [a for a in actions if "[ACTION: TAKE_ITEM" in a]
+            if (_rev_take_tags
+                    and any("[ACTION: GIVE_CATS" in a for a in actions)
+                    and not _gave_item
+                    and not any("[ACTION: TAKE_CATS" in a for a in actions)):
+                _sell_words = ("продам", "продаю", "прода", "купи у меня",
+                               "купите у меня", "хочу продать", "sell you",
+                               "buy from me", "buy my", "i'm selling",
+                               "i am selling")
+                _player_selling = any(w in _pm_intent for w in _sell_words)
+                try:
+                    _, _rev_ctx = resolve_live_context(
+                        name=primary_npc, context=primary_data,
+                        explicit_id=primary_data.get("ID"))
+                except Exception:
+                    _rev_ctx = None
+                _player_bag = [
+                    str(i.get("name", "")).lower()
+                    for i in (_eff_player.get("inventory", []) or [])
+                    if i.get("name")
+                ]
+
+                def _bag_has(_item):
+                    _il = re.sub(r":\s*\d+\s*$", "", _item).strip().lower()
+                    return bool(_il) and any(_il in n or n in _il for n in _player_bag)
+
+                _taken_items = [
+                    m.group(1).strip()
+                    for a in _rev_take_tags
+                    for m in [re.search(r"\[ACTION:\s*TAKE_ITEM\s*:?\s*(.+?)\s*\]", a)]
+                    if m
+                ]
+                _all_phantom = bool(_taken_items) and not any(_bag_has(t) for t in _taken_items)
+
+                if (_rev_ctx or {}).get("is_trader") and not _player_selling and _all_phantom:
+                    _new_actions = []
+                    for _a in actions:
+                        if "[ACTION: TAKE_ITEM" in _a:
+                            _m = re.search(r"\[ACTION:\s*TAKE_ITEM\s*:?\s*(.+?)\s*\]", _a)
+                            _body = _m.group(1).strip() if _m else ""
+                            if _body:
+                                _new_actions.append(
+                                    f"[ACTION: SPAWN_ITEM: {_body} | {_body} | A trade item.]")
+                            continue
+                        _mc = re.search(r"\[ACTION:\s*GIVE_CATS\s*:?\s*(\d+)", _a)
+                        if _mc:
+                            _new_actions.append(f"[ACTION: TAKE_CATS:{_mc.group(1)}]")
+                            continue
+                        _new_actions.append(_a)
+                    actions = _new_actions
+                    _gave_item = True
+                    logging.warning(
+                        f"TRADE: {primary_npc} is a shop and the player was buying, "
+                        f"but the reply used TAKE_ITEM + GIVE_CATS — flipped to "
+                        f"SPAWN_ITEM + TAKE_CATS so goods and payment run the right way"
+                    )
+
             if any("[ACTION: TAKE_CATS" in a for a in actions) and not _gave_item:
                 if _is_gift and not _is_swap:
                     logging.info(
