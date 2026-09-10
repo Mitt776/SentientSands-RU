@@ -23,6 +23,10 @@
         "provider": "openrouter",
         "model": "google/gemma-4-26b-a4b-it:free"
     },
+    "gemma-4": {
+        "provider": "openrouter",
+        "model": "google/gemma-4-26b-a4b-it"
+    },
     "inkling-small-free": {
         "provider": "openrouter",
         "model": "thinkingmachines/inkling-small:free",
